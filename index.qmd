@@ -1,0 +1,5 @@
+---
+title: "Introduction to Experimental Design"
+---
+
+This is to be the course website for Boston University course PS211.

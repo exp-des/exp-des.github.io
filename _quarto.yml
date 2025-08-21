@@ -1,0 +1,28 @@
+project:
+  type: website
+
+website:
+  title: "Introduction to Experimental Design"
+  page-navigation: true
+  reader-mode: true
+  sidebar:
+    style: "docked"
+    search: true
+    contents: auto
+  page-footer: "Copyright &copy; 2025 The course authors. CC-BY-NC."
+
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
+    date-format: full
+    author: 
+      - name: Arthur Lee, Ph.D.
+        affiliation: Michael Pascale
+    author-title: Course Instructor
+    affiliation-title: Teaching Fellow
+    published-title: Lecture Date
