@@ -4,19 +4,37 @@ project:
 website:
   title: "Introduction to Experimental Design"
   page-navigation: true
+  back-to-top-navigation: true
   reader-mode: true
   sidebar:
     style: "docked"
-    search: true
     contents: auto
-  page-footer: "Copyright &copy; 2025 The course authors. CC-BY-NC."
-
+  navbar:
+    background: dark
+  search:
+    location: navbar
+    type: textbox
+    copy-button: true
+    show-item-context: true
+  # announcement: 
+  #   icon: info-circle
+  #   dismissable: true
+  #   content: "e.g. 'Homework 2 has been rescheduled'"
+  #   type: info
+  #   position: below-navbar
+  page-footer: |
+    Copyright &copy; 2025 The course authors.
+    Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+    <img class="cc-icon" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg">
+    <img class="cc-icon" src="https://mirrors.creativecommons.org/presskit/icons/by.svg">
+    <img class="cc-icon" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg">
+    <img class="cc-icon" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg">
 
 format:
   html:
     theme:
-      - cosmo
-      - brand
+      light: united
+      dark: solar
     css: styles.css
     toc: true
     date-format: full
