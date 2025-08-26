@@ -1,0 +1,6 @@
+---
+title: "Syllabus for Fall 2025"
+date-modified: 2025-08-26
+---
+
+![Fall 2025 Syllabus](assets/PS211 B1 FL25 Syllabus.pdf){width=8.5in height=11in}

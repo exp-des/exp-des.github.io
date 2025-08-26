@@ -6,17 +6,23 @@ website:
   page-navigation: true
   back-to-top-navigation: true
   reader-mode: true
+  draft-mode: gone
   sidebar:
     style: floating
     border: true
     contents:
       - section: Introduction
         contents: Introduction/*
+      - text: "Syllabus for Fall 2025"
+        href: syllabus.qmd
+
   navbar:
     background: dark
     left:
     - text: Home
       href: "index.qmd"
+    - text: Syllabus
+      href: "syllabus.qmd"
     - text: Announcements
       href: "https://learn.bu.edu/ultra/courses/_261733_1/announcements"
       target: _blank
@@ -28,12 +34,12 @@ website:
     type: textbox
     copy-button: true
     show-item-context: true
-  # announcement: 
-  #   icon: info-circle
-  #   dismissable: true
-  #   content: "e.g. 'Homework 2 has been rescheduled'"
-  #   type: info
-  #   position: below-navbar
+  announcement: 
+    icon: info-circle
+    dismissable: true
+    content: "The course syllabus has been updated."
+    type: info
+    position: below-navbar
   page-footer: |
     Copyright &copy; 2025 The Authors.
     Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
@@ -51,3 +57,4 @@ format:
     toc: true
     date-format: full
     published-title: Lecture Date
+
