@@ -7,10 +7,22 @@ website:
   back-to-top-navigation: true
   reader-mode: true
   sidebar:
-    style: "docked"
-    contents: auto
+    style: floating
+    border: true
+    contents:
+      - section: Introduction
+        contents: Introduction/*
   navbar:
     background: dark
+    left:
+    - text: Home
+      href: "index.qmd"
+    - text: Announcements
+      href: "https://learn.bu.edu/ultra/courses/_261733_1/announcements"
+      target: _blank
+    - text: Grades
+      href: "https://learn.bu.edu/ultra/courses/_261733_1/grades"
+      target: _blank
   search:
     location: navbar
     type: textbox
@@ -23,7 +35,7 @@ website:
   #   type: info
   #   position: below-navbar
   page-footer: |
-    Copyright &copy; 2025 The course authors.
+    Copyright &copy; 2025 The Authors.
     Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
     <img class="cc-icon" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg">
     <img class="cc-icon" src="https://mirrors.creativecommons.org/presskit/icons/by.svg">
@@ -38,9 +50,4 @@ format:
     css: styles.css
     toc: true
     date-format: full
-    author: 
-      - name: Arthur Lee, Ph.D.
-        affiliation: Michael Pascale
-    author-title: Course Instructor
-    affiliation-title: Teaching Fellow
     published-title: Lecture Date

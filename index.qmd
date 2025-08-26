@@ -1,5 +1,65 @@
 ---
 title: "Introduction to Experimental Design"
+toc: false
+author: 
+  - name: Arthur S. Lee
+    degrees: Ph.D.
+    affiliation:
+      id: bu
+      name: Boston University
+      department: Psychological and Brain Sciences
+    roles: Course Instructor
+    orcid: 0000-0002-4443-9926
+  - name: Michael P. Pascale
+    degrees: M.A.
+    affiliation:
+      ref: bu
+    roles: Teaching Fellow
+    orcid: 0000-0002-4381-224X
+date-modified: today
 ---
 
-This is to be the course website for Boston University course PS211.
+### Welcome!
+
+This website contains materials for course CAS PS 211 at Boston University, which serves as a primer for undergraduate psychology majors in statistical and experimental methods for psychological research. The materials here are speific to **Fall 2025, Section B1**.
+
+Announcements and assignments will come through [Blackboard](https://learn.bu.edu/ultra/courses/_261733_1/announcements). See the links above.
+
+
+#### Additional Resources
+
+Students are likely to find useful the following _free_ online resources:
+
+- [R for Data Science](https://r4ds.hadley.nz/)  
+  [Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund]{.small}
+
+  If this is your first time programming in **R**, sections of this book may aid your understanding of the language.
+
+- [Answering Questions with Data](https://www.crumplab.com/statistics/)  
+  [Matthew J. C. Crump, Danielle J. Navarro, and Jeffrey Suzuki]{.small}
+
+- [Introduction to Modern Statistics](https://openintro-ims.netlify.app/)  
+  [Mine Çetinkaya-Rundel and Johanna Hardin]{.small}
+
+- [The Effect: An Introduction to Research Design and Causality](https://theeffectbook.net/index.html)  
+  [Nick Huntington-Klein]{.small}
+
+#### Attribution and Reuse Notice
+
+Except where otherwise noted, this site and its original materials are created by the authors and licensed under [Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+
+::: {.text-muted .small}
+You are free to:
+
+- Share — copy and redistribute the material in any medium or format
+- Adapt — remix, transform, and build upon the material
+The licensor cannot revoke these freedoms as long as you follow the license terms.
+
+Under the following terms:
+
+- Attribution — You must give appropriate credit , provide a link to the license, and indicate if changes were made . You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+- NonCommercial — You may not use the material for commercial purposes .
+- ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
+- No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+:::
