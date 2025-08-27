@@ -1,0 +1,19 @@
+---
+pagetitle: Error 404 - Not Found
+title: _"Oops! We made a sampling error."_
+---
+<div class="container-fluid px-2 py-5">
+<div class="col-md-8">
+<p class="fs-3 text-danger-emphasis">The page you were looking for could not be found.</p>
+<p>
+Guess we'd better check our assumptions.
+<ul>
+<li>Check that you typed the correct address and try again.</li>
+<li>It's possible that the page has moved. Try looking for it with the search bar!</li>
+</ul>
+Alternatively...
+</p>
+</div>
+<a href="index.qmd" class="btn btn-dark btn-sm ms-3">Let's pretend that didn't happen.</button>
+</a>
+</div>
