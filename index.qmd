@@ -1,5 +1,6 @@
 ---
 title: "Introduction to Experimental Design"
+subtitle: "A course on how to systematically create knowledge about the world."
 toc: false
 author: 
   - name: Arthur S. Lee
@@ -16,6 +17,9 @@ author:
       ref: bu
     roles: Teaching Fellow
     orcid: 0000-0002-4381-224X
+
+title-block-banner: true
+bread-crumbs: false
 date-modified: today
 ---
 

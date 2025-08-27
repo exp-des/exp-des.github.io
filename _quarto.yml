@@ -38,8 +38,8 @@ website:
     icon: info-circle
     dismissable: true
     content: "The course syllabus has been updated."
-    type: info
-    position: below-navbar
+    type: light
+    position: above-navbar
   page-footer: |
     Copyright &copy; 2025 The Authors.
     Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>

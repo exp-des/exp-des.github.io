@@ -4,3 +4,9 @@
     max-height:1em;
     margin-left: .2em;
 }
+
+.pdf-embed {
+    width: 100%;
+    aspect-ratio: 8.5 / 11;
+    min-height: 600px;
+}
