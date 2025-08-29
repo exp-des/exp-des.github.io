@@ -42,6 +42,9 @@ Students are likely to find useful the following _free_ online resources:
 - [Answering Questions with Data](https://www.crumplab.com/statistics/)  
   [Matthew J. C. Crump, Danielle J. Navarro, and Jeffrey Suzuki]{.small}
 
+- [Experimentology: An Open Science Approach to Experimental Psychology Methods](https://experimentology.io/)  
+  [Michael C. Frank, Mika Braginsky, Julie Cachia, Nicholas A. Coles, Tom E. Hardwicke, Robert D. Hawkins, Maya B. Mathur, Rondeline Williams]{.small}
+
 - [Introduction to Modern Statistics](https://openintro-ims.netlify.app/)  
   [Mine Çetinkaya-Rundel and Johanna Hardin]{.small}
 
