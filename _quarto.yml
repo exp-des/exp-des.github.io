@@ -13,6 +13,8 @@ website:
     contents:
       - section: Introduction
         contents: Introduction/*
+      - section: Labs
+        contents: Labs/*
       - text: "Syllabus for Fall 2025"
         href: syllabus.qmd
 
@@ -57,4 +59,8 @@ format:
     toc: true
     date-format: full
     published-title: Lecture Date
-
+    highlight-style:
+      light: gruvbox
+      dark: github
+    code-block-border-left: true
+    code-block-bg: true
