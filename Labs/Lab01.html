@@ -6,10 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Arthur S. Lee">
-<meta name="author" content="Michael P. Pascale">
+<meta name="author" content="Michael Pascale">
 
-<title>Introduction to Experimental Design</title>
+<title>Getting Ready to Code – Introduction to Experimental Design</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,31 +21,68 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e3031b2b07293ce5c0b259fcee51fff1.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-67839544912bc898267f15026188952a.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e3031b2b07293ce5c0b259fcee51fff1.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8a7208b8a383bc71586367b471e4bbcf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-6a1c58fe0e4cd0ab9ef84d4af843db5b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-8a7208b8a383bc71586367b471e4bbcf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../syllabus.html" rel="next">
+<link href="../Introduction/L02.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e3031b2b07293ce5c0b259fcee51fff1.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-67839544912bc898267f15026188952a.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e3031b2b07293ce5c0b259fcee51fff1.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-8a7208b8a383bc71586367b471e4bbcf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-6a1c58fe0e4cd0ab9ef84d4af843db5b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-8a7208b8a383bc71586367b471e4bbcf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": true,
@@ -76,10 +112,10 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-sidebar floating nav-fixed slimcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -244,16 +280,16 @@ ul.task-list li input[type="checkbox"] {
   </script>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <div id="quarto-announcement" data-announcement-id="ae62c6fcb899d422bc43f39cd77fe297" class="alert alert-light hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
 <p>The course syllabus has been updated.</p>
 </div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Introduction to Experimental Design</span>
     </a>
   </div>
@@ -264,11 +300,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./syllabus.html"> 
+    <a class="nav-link" href="../syllabus.html"> 
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
@@ -296,62 +332,18 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <h1 class="quarto-secondary-nav-title no-breadcrumbs">Introduction to Experimental Design</h1>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Labs/Lab01.html">Labs</a></li><li class="breadcrumb-item"><a href="../Labs/Lab01.html">Getting Ready to Code</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
   </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title d-none d-lg-block">Introduction to Experimental Design</h1>
-            <p class="subtitle lead">A course on how to systematically create knowledge about the world.</p>
-                      </div>
-  </div>
-    
-  <div class="quarto-title-meta-author">
-    <div class="quarto-title-meta-heading">Authors</div>
-    <div class="quarto-title-meta-heading">Affiliations</div>
-    
-      <div class="quarto-title-meta-contents">
-      <p class="author">Arthur S. Lee, Ph.D. <a href="https://orcid.org/0000-0002-4443-9926" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
-    </div>
-    <div class="quarto-title-meta-contents">
-          <p class="affiliation">
-              Boston University
-            </p>
-        </div>
-      <div class="quarto-title-meta-contents">
-      <p class="author">Michael P. Pascale, M.A. <a href="https://orcid.org/0000-0002-4381-224X" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
-    </div>
-    <div class="quarto-title-meta-contents">
-          <p class="affiliation">
-              
-            </p>
-        </div>
-    </div>
-
-  <div class="quarto-title-meta">
-
-        
-    
-      <div>
-      <div class="quarto-title-meta-heading">Modified</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date-modified">Saturday, September 6, 2025</p>
-      </div>
-    </div>
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
+      <a href="../index.html" class="sidebar-logo-link">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -378,7 +370,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Labs/Lab01.html" class="sidebar-item-text sidebar-link">
+  <a href="../Labs/Lab01.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Getting Ready to Code</span></a>
   </div>
 </li>
@@ -386,7 +378,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./syllabus.html" class="sidebar-item-text sidebar-link">
+  <a href="../syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus for Fall 2025</span></a>
   </div>
 </li>
@@ -395,56 +387,229 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#self-study" id="toc-self-study" class="nav-link active" data-scroll-target="#self-study">Self-Study</a></li>
+  <li><a href="#getting-ready-to-code" id="toc-getting-ready-to-code" class="nav-link" data-scroll-target="#getting-ready-to-code">Getting Ready to Code</a>
+  <ul class="collapse">
+  <li><a href="#installing-r" id="toc-installing-r" class="nav-link" data-scroll-target="#installing-r">Installing R</a></li>
+  <li><a href="#installing-rstudio" id="toc-installing-rstudio" class="nav-link" data-scroll-target="#installing-rstudio">Installing RStudio</a></li>
+  <li><a href="#orienting-to-rstudio" id="toc-orienting-to-rstudio" class="nav-link" data-scroll-target="#orienting-to-rstudio">Orienting to RStudio</a></li>
+  <li><a href="#installing-packages" id="toc-installing-packages" class="nav-link" data-scroll-target="#installing-packages">Installing Packages</a></li>
+  </ul></li>
+  <li><a href="#demonstrating-graphics-in-r" id="toc-demonstrating-graphics-in-r" class="nav-link" data-scroll-target="#demonstrating-graphics-in-r">Demonstrating Graphics in R</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 
-
-
-
-
-<section id="welcome" class="level3">
-<h3 class="anchored" data-anchor-id="welcome">Welcome!</h3>
-<p>This website contains materials for course CAS PS 211 at Boston University, which serves as a primer for undergraduate psychology majors in statistical and experimental methods for psychological research. The materials here are speific to <strong>Fall 2025, Section B1</strong>.</p>
-<p>Announcements and assignments will come through <a href="https://learn.bu.edu/ultra/courses/_261733_1/announcements">Blackboard</a>. See the links above.</p>
-<section id="additional-resources" class="level4">
-<h4 class="anchored" data-anchor-id="additional-resources">Additional Resources</h4>
-<p>Students are likely to find useful the following <em>free</em> online resources:</p>
-<ul>
-<li><p><a href="https://r4ds.hadley.nz/">R for Data Science</a><br>
-<span class="small">Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund</span></p>
-<p>If this is your first time programming in <strong>R</strong>, sections of this book may aid your understanding of the language.</p></li>
-<li><p><a href="https://www.crumplab.com/statistics/">Answering Questions with Data</a><br>
-<span class="small">Matthew J. C. Crump, Danielle J. Navarro, and Jeffrey Suzuki</span></p></li>
-<li><p><a href="https://experimentology.io/">Experimentology: An Open Science Approach to Experimental Psychology Methods</a><br>
-<span class="small">Michael C. Frank, Mika Braginsky, Julie Cachia, Nicholas A. Coles, Tom E. Hardwicke, Robert D. Hawkins, Maya B. Mathur, Rondeline Williams</span></p></li>
-<li><p><a href="https://openintro-ims.netlify.app/">Introduction to Modern Statistics</a><br>
-<span class="small">Mine Çetinkaya-Rundel and Johanna Hardin</span></p></li>
-<li><p><a href="https://theeffectbook.net/index.html">The Effect: An Introduction to Research Design and Causality</a><br>
-<span class="small">Nick Huntington-Klein</span></p></li>
-</ul>
-</section>
-<section id="attribution-and-reuse-notice" class="level4">
-<h4 class="anchored" data-anchor-id="attribution-and-reuse-notice">Attribution and Reuse Notice</h4>
-<p>Except where otherwise noted, this site and its original materials are created by the authors and licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>.</p>
-<div class="text-muted small">
-<p>You are free to:</p>
-<ul>
-<li>Share — copy and redistribute the material in any medium or format</li>
-<li>Adapt — remix, transform, and build upon the material The licensor cannot revoke these freedoms as long as you follow the license terms.</li>
-</ul>
-<p>Under the following terms:</p>
-<ul>
-<li>Attribution — You must give appropriate credit , provide a link to the license, and indicate if changes were made . You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.</li>
-<li>NonCommercial — You may not use the material for commercial purposes .</li>
-<li>ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.</li>
-<li>No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.</li>
-</ul>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Labs/Lab01.html">Labs</a></li><li class="breadcrumb-item"><a href="../Labs/Lab01.html">Getting Ready to Code</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Getting Ready to Code</h1>
+<p class="subtitle lead">Lab 1</p>
 </div>
 
 
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Michael Pascale </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Lecture Date</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">Friday, September 5, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>This lab will orient you to RStudio and the R statistical programming language. We will be installing the software necessary for all future assignments this semester.</p>
+<section id="self-study" class="level2">
+<h2 class="anchored" data-anchor-id="self-study">Self-Study</h2>
+<p>This first lab corresponds roughly to the following chapters in <strong>R for Data Science</strong>, which are recommended for further self-study.</p>
+<ul>
+<li><a href="https://r4ds.hadley.nz/data-visualize.html"><em>Data Visualization</em> 1.1-1.3 and 1.7</a></li>
+<li><a href="https://r4ds.hadley.nz/workflow-basics.html"><em>Coding Basics</em> 2.1-2.3</a></li>
+<li><a href="https://r4ds.hadley.nz/workflow-scripts.html"><em>Scripts</em> 6.1</a></li>
+</ul>
 </section>
+<section id="getting-ready-to-code" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="getting-ready-to-code">Getting Ready to Code</h2>
+<p>By the end of the first assignment, we will be able to run a simple R program. Before we are able to do that, we will need to install a few things.</p>
+<p>Everything we need is described on <a href="https://posit.co/download/rstudio-desktop">posit.co/download/rstudio-desktop</a>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you have doubts or start to feel like you’re not “tech savvy” enough as you complete these steps, please trust that these skills are learnable! You are highly encouraged to attend office hours for additional help.</p>
+</div>
+</div>
+<section id="installing-r" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="installing-r">Installing R</h3>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>R is a <strong>programming language</strong> and this first step will install an <strong>interpreter</strong>, the <strong>R Console</strong>, which will allow us to write to the computer specific instructions for describing, statistically analyzing, and producing graphics from our experimental data.</p>
+</div></div><p>The first step is to install the R programming language itself. After completing this step, we will be able to open the R interpreter (R Console).</p>
+<p>Select the appropriate download for your computer’s operating system.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/lab01-download-r.png" class="img-fluid figure-img"></p>
+<figcaption>R can be downloaded from the <a href="https://cran.rstudio.com/">Comprehensive R Archive Network (CRAN) website</a>.</figcaption>
+</figure>
+</div>
+<p>If your computer is an <strong>Apple Mac/MacBook</strong>, you will need to download the appropriate package for your processor.</p>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>For Boston University students, if you encounter difficulties or if your primary device is an tablet, you may alternatively access a full installation of R/RStudio through the <a href="https://www.bu.edu/tech/services/cccs/desktop/computer-labs/common/access/#webbrowser"><em>BU Common</em></a> Windows virtual desktop.</p>
+</div></div><ul>
+<li>If you know your Mac has an <em>M1</em> or <em>M2</em> processor (roughly since 2022) will require the first <code>-arm64.pkg</code>.</li>
+<li>If you know your Mac has an Intel processor, it will require the second <code>-x86_64.pkg</code>.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/lab01-download-r-macos.png" class="img-fluid figure-img"></p>
+<figcaption>Most new Macs run on “Apple Silicon” M-series processors. If you’re not sure, please ask your teaching fellow or assume your Mac has a recent processor.</figcaption>
+</figure>
+</div>
+<p>If your computer is a <strong>Windows PC</strong> download the <code>base</code> installer, following the instructions for installing R for the first time.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/lab01-download-r-windows.png" class="img-fluid figure-img"></p>
+<figcaption>Click “install R for the first time” for instructions. Ask your teaching fellow for assistance if you encounter any difficulties.</figcaption>
+</figure>
+</div>
+<p>Once you have downloaded the package/executable for your operating system, run the installer.</p>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>At the end of this step you should be able to find the <strong>R Console</strong> in your MacOS Launchpad/Applications or Windows Start menu.</p>
+</div></div></section>
+<section id="installing-rstudio" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="installing-rstudio">Installing RStudio</h3>
+<p>The next step is to install RStudio, which we will be using extensively in this course.</p>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>RStudio is an <strong>Integrated Development Environment (IDE)</strong> for the R language.</p>
+</div></div><p>On the Posit website, locate the appropriate package for your operating system.</p>
+<p><img src="../assets/lab01-download-rstudio.png" class="img-fluid"></p>
+<p>On an <strong>Apple Mac/MacBook</strong>, you should download and open the <code>.DMG</code> file. You will see the RStudio app and your Applications folder. <strong>Drag the RStudio app into your applications folder</strong>.</p>
+<p>On a <strong>Windows PC</strong>, you should download and run the Windows executable installer.</p>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>At the end of this step you should be able to find <strong>RStudio</strong> in your MacOS Launchpad/Applications or Windows Start menu.</p>
+</div></div></section>
+<section id="orienting-to-rstudio" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="orienting-to-rstudio">Orienting to RStudio</h3>
+<p>While R is the programming language, RStudio is a graphical interface that provides us with tools to edit R code, view plots and help pages, debug scripts, and more.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://r4ds.hadley.nz/diagrams/rstudio/script.png" class="img-fluid figure-img"></p>
+<figcaption>At a high level, RStudio’s graphical interface provides access to the R Console, a built in text-editor (for writing scripts), and functionality for viewing and exporting plots. <br><span class="small">Image credited to the authors of <a href="https://r4ds.hadley.nz/workflow-scripts.html">R4DS</a>, reproduced here under license <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/us/">CC BY-NC-ND 3.0</a>.</span></figcaption>
+</figure>
+</div>
+<p>The <strong>Console</strong> pane is where we can type code directly into the R interpreter. Type a line of R language code and press <code>Return</code> to run it. The console is interactive and will show you the result immediately.</p>
+<p>The <strong>Editor</strong> pane is where we can write R <strong>scripts</strong>. We can edit and rearrange text, copy-paste, and save our scripts for later. Try creating a new script and save it to a folder on your computer. With the cursor on a line of your script, press <code>Control</code> and <code>Return</code>; the line of code will automatically be copied and run in the Console pane. Note that the <em>Run</em> button runs the entire script, not just the current line.</p>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>An R <strong>script</strong> or program is a list of instructions to be run in order. We’ll usually conduct an entire analysis in a script.</p>
+</div></div><p>The <strong>Output</strong> pane is where we can see plots and graphics we have generated. In this area you’ll also find a Files tab for navigating to folders of scripts and results, and a Help tab for viewing documentation for R commands/functions and datasets.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Orienting yourself to new software is often a process of active exploration, and there’s <em>always</em> a lot more to learn. Spend some time exploring the menus of RStudio so that you are well-acquainted.</p>
+<p>The goal is to eventually be able to make an <em>educated guess</em> at where you might go to find a particular menu or feature in the future.</p>
+</div>
+</div>
+</section>
+<section id="installing-packages" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="installing-packages">Installing Packages</h3>
+<p>In this course we’ll be using not only RStudio, but also several R <strong>packages</strong>.</p>
+<p>Before we do anything else, we’ll install the R package <code>tidyverse</code>. Type the following in the <strong>Console</strong> and press <code>Return</code>.</p>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p><code>tidyverse</code> is actually a <em>metapackage</em> (a collection of packages) including <code>dplyr</code>, <code>tidyr</code>, <code>stringr</code>, <code>ggplot2</code> and more.</p>
+</div></div><div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>A lot of output will appear in the console as the package is installing. When it finishes, the package has been installed. We won’t need to run this again; so there’s no need to keep this line in your script.</p>
+</section>
+</section>
+<section id="demonstrating-graphics-in-r" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="demonstrating-graphics-in-r">Demonstrating Graphics in R</h2>
+<p>As a motivating example, let’s consider the following short but complete script which will plot for us. We’ll work through this code line-by-line in class to understand what it does.</p>
+<p>The script will make a plot from a dataset built-in to R called <code>ChickWeight</code>. The data comes from <strong>an experiment with four conditions</strong>: diets assigned to hatchling chicks. Their weight in grams is recorded every two days in the built in <strong>dataframe</strong> (table).</p>
+<p>Type the following R code into a new script in your RStudio <strong>Editor</strong> pane. Click Save and save the script on your computer (e.g.&nbsp;<code>Documents/PS211/lab1.R</code>). Then click <strong>Run</strong>.</p>
+<p>You should see that the code is automatically copied into the <strong>Console</strong> and run. A plot should appear in the <strong>Output</strong> pane, looking like the one below.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb2-2"><a href="#cb2-2"></a></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">ggplot</span>(ChickWeight) <span class="sc">+</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a>  <span class="fu">geom_point</span>(</span>
+<span id="cb2-5"><a href="#cb2-5"></a>    <span class="fu">aes</span>(<span class="at">x=</span>Time, <span class="at">y=</span>weight, <span class="at">color=</span>Diet),</span>
+<span id="cb2-6"><a href="#cb2-6"></a>    <span class="at">position=</span><span class="fu">position_jitter</span>()</span>
+<span id="cb2-7"><a href="#cb2-7"></a>  ) <span class="sc">+</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a>  <span class="fu">facet_grid</span>(<span class="sc">~</span>Diet, <span class="at">labeller=</span>label_both) <span class="sc">+</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a>  <span class="fu">labs</span>(</span>
+<span id="cb2-10"><a href="#cb2-10"></a>    <span class="at">title=</span><span class="st">"Experiment Comparing Weight Gain with Four Diets"</span>,</span>
+<span id="cb2-11"><a href="#cb2-11"></a>    <span class="at">x=</span><span class="st">"Time (days)"</span>,</span>
+<span id="cb2-12"><a href="#cb2-12"></a>    <span class="at">y=</span><span class="st">"Weight (g)"</span></span>
+<span id="cb2-13"><a href="#cb2-13"></a>  ) <span class="sc">+</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a>  <span class="fu">theme_classic</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Lab01_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>In this first example, we’re looking at exp</p>
+</div></div><div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you encounter any technical issues it’s important to resolve them this first week with your teaching fellow so that you may participate fully in the rest of the course.</p>
+</div>
+</div>
+
+
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
@@ -860,6 +1025,18 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../Introduction/L02.html" class="pagination-link" aria-label="Statistics and the Software to Find Them">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Statistics and the Software to Find Them</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../syllabus.html" class="pagination-link" aria-label="Syllabus for Fall 2025">
+        <span class="nav-page-text">Syllabus for Fall 2025</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

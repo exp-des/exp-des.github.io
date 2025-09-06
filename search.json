@@ -1,10 +1,51 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Introduction to Experimental Design",
+    "objectID": "Labs/Lab01.html",
+    "href": "Labs/Lab01.html",
+    "title": "Getting Ready to Code",
     "section": "",
-    "text": "Welcome!\nThis website contains materials for course CAS PS 211 at Boston University, which serves as a primer for undergraduate psychology majors in statistical and experimental methods for psychological research. The materials here are speific to Fall 2025, Section B1.\nAnnouncements and assignments will come through Blackboard. See the links above.\n\nAdditional Resources\nStudents are likely to find useful the following free online resources:\n\nR for Data Science\nHadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund\nIf this is your first time programming in R, sections of this book may aid your understanding of the language.\nAnswering Questions with Data\nMatthew J. C. Crump, Danielle J. Navarro, and Jeffrey Suzuki\nExperimentology: An Open Science Approach to Experimental Psychology Methods\nMichael C. Frank, Mika Braginsky, Julie Cachia, Nicholas A. Coles, Tom E. Hardwicke, Robert D. Hawkins, Maya B. Mathur, Rondeline Williams\nIntroduction to Modern Statistics\nMine Çetinkaya-Rundel and Johanna Hardin\nThe Effect: An Introduction to Research Design and Causality\nNick Huntington-Klein\n\n\n\nAttribution and Reuse Notice\nExcept where otherwise noted, this site and its original materials are created by the authors and licensed under Creative Commons BY-NC-SA 4.0.\n\nYou are free to:\n\nShare — copy and redistribute the material in any medium or format\nAdapt — remix, transform, and build upon the material The licensor cannot revoke these freedoms as long as you follow the license terms.\n\nUnder the following terms:\n\nAttribution — You must give appropriate credit , provide a link to the license, and indicate if changes were made . You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\nNonCommercial — You may not use the material for commercial purposes .\nShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.\nNo additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.\n\n\n\n\n\n\n\n Back to top"
+    "text": "This lab will orient you to RStudio and the R statistical programming language. We will be installing the software necessary for all future assignments this semester.",
+    "crumbs": [
+      "Home",
+      "Labs",
+      "Getting Ready to Code"
+    ]
+  },
+  {
+    "objectID": "Labs/Lab01.html#self-study",
+    "href": "Labs/Lab01.html#self-study",
+    "title": "Getting Ready to Code",
+    "section": "Self-Study",
+    "text": "Self-Study\nThis first lab corresponds roughly to the following chapters in R for Data Science, which are recommended for further self-study.\n\nData Visualization 1.1-1.3 and 1.7\nCoding Basics 2.1-2.3\nScripts 6.1",
+    "crumbs": [
+      "Home",
+      "Labs",
+      "Getting Ready to Code"
+    ]
+  },
+  {
+    "objectID": "Labs/Lab01.html#getting-ready-to-code",
+    "href": "Labs/Lab01.html#getting-ready-to-code",
+    "title": "Getting Ready to Code",
+    "section": "Getting Ready to Code",
+    "text": "Getting Ready to Code\nBy the end of the first assignment, we will be able to run a simple R program. Before we are able to do that, we will need to install a few things.\nEverything we need is described on posit.co/download/rstudio-desktop.\n\n\n\n\n\n\nTip\n\n\n\nIf you have doubts or start to feel like you’re not “tech savvy” enough as you complete these steps, please trust that these skills are learnable! You are highly encouraged to attend office hours for additional help.\n\n\n\nInstalling R\n\n\nR is a programming language and this first step will install an interpreter, the R Console, which will allow us to write to the computer specific instructions for describing, statistically analyzing, and producing graphics from our experimental data.\nThe first step is to install the R programming language itself. After completing this step, we will be able to open the R interpreter (R Console).\nSelect the appropriate download for your computer’s operating system.\n\n\n\nR can be downloaded from the Comprehensive R Archive Network (CRAN) website.\n\n\nIf your computer is an Apple Mac/MacBook, you will need to download the appropriate package for your processor.\n\n\nFor Boston University students, if you encounter difficulties or if your primary device is an tablet, you may alternatively access a full installation of R/RStudio through the BU Common Windows virtual desktop.\n\nIf you know your Mac has an M1 or M2 processor (roughly since 2022) will require the first -arm64.pkg.\nIf you know your Mac has an Intel processor, it will require the second -x86_64.pkg.\n\n\n\n\nMost new Macs run on “Apple Silicon” M-series processors. If you’re not sure, please ask your teaching fellow or assume your Mac has a recent processor.\n\n\nIf your computer is a Windows PC download the base installer, following the instructions for installing R for the first time.\n\n\n\nClick “install R for the first time” for instructions. Ask your teaching fellow for assistance if you encounter any difficulties.\n\n\nOnce you have downloaded the package/executable for your operating system, run the installer.\n\n\nAt the end of this step you should be able to find the R Console in your MacOS Launchpad/Applications or Windows Start menu.\n\n\nInstalling RStudio\nThe next step is to install RStudio, which we will be using extensively in this course.\n\n\nRStudio is an Integrated Development Environment (IDE) for the R language.\nOn the Posit website, locate the appropriate package for your operating system.\n\nOn an Apple Mac/MacBook, you should download and open the .DMG file. You will see the RStudio app and your Applications folder. Drag the RStudio app into your applications folder.\nOn a Windows PC, you should download and run the Windows executable installer.\n\n\nAt the end of this step you should be able to find RStudio in your MacOS Launchpad/Applications or Windows Start menu.\n\n\nOrienting to RStudio\nWhile R is the programming language, RStudio is a graphical interface that provides us with tools to edit R code, view plots and help pages, debug scripts, and more.\n\n\n\nAt a high level, RStudio’s graphical interface provides access to the R Console, a built in text-editor (for writing scripts), and functionality for viewing and exporting plots. Image credited to the authors of R4DS, reproduced here under license CC BY-NC-ND 3.0.\n\n\nThe Console pane is where we can type code directly into the R interpreter. Type a line of R language code and press Return to run it. The console is interactive and will show you the result immediately.\nThe Editor pane is where we can write R scripts. We can edit and rearrange text, copy-paste, and save our scripts for later. Try creating a new script and save it to a folder on your computer. With the cursor on a line of your script, press Control and Return; the line of code will automatically be copied and run in the Console pane. Note that the Run button runs the entire script, not just the current line.\n\n\nAn R script or program is a list of instructions to be run in order. We’ll usually conduct an entire analysis in a script.\nThe Output pane is where we can see plots and graphics we have generated. In this area you’ll also find a Files tab for navigating to folders of scripts and results, and a Help tab for viewing documentation for R commands/functions and datasets.\n\n\n\n\n\n\nTip\n\n\n\nOrienting yourself to new software is often a process of active exploration, and there’s always a lot more to learn. Spend some time exploring the menus of RStudio so that you are well-acquainted.\nThe goal is to eventually be able to make an educated guess at where you might go to find a particular menu or feature in the future.\n\n\n\n\nInstalling Packages\nIn this course we’ll be using not only RStudio, but also several R packages.\nBefore we do anything else, we’ll install the R package tidyverse. Type the following in the Console and press Return.\n\n\ntidyverse is actually a metapackage (a collection of packages) including dplyr, tidyr, stringr, ggplot2 and more.\n\ninstall.packages(\"tidyverse\")\n\nA lot of output will appear in the console as the package is installing. When it finishes, the package has been installed. We won’t need to run this again; so there’s no need to keep this line in your script.",
+    "crumbs": [
+      "Home",
+      "Labs",
+      "Getting Ready to Code"
+    ]
+  },
+  {
+    "objectID": "Labs/Lab01.html#demonstrating-graphics-in-r",
+    "href": "Labs/Lab01.html#demonstrating-graphics-in-r",
+    "title": "Getting Ready to Code",
+    "section": "Demonstrating Graphics in R",
+    "text": "Demonstrating Graphics in R\nAs a motivating example, let’s consider the following short but complete script which will plot for us. We’ll work through this code line-by-line in class to understand what it does.\nThe script will make a plot from a dataset built-in to R called ChickWeight. The data comes from an experiment with four conditions: diets assigned to hatchling chicks. Their weight in grams is recorded every two days in the built in dataframe (table).\nType the following R code into a new script in your RStudio Editor pane. Click Save and save the script on your computer (e.g. Documents/PS211/lab1.R). Then click Run.\nYou should see that the code is automatically copied into the Console and run. A plot should appear in the Output pane, looking like the one below.\n\nlibrary(tidyverse)\n\nggplot(ChickWeight) +\n  geom_point(\n    aes(x=Time, y=weight, color=Diet),\n    position=position_jitter()\n  ) +\n  facet_grid(~Diet, labeller=label_both) +\n  labs(\n    title=\"Experiment Comparing Weight Gain with Four Diets\",\n    x=\"Time (days)\",\n    y=\"Weight (g)\"\n  ) +\n  theme_classic()\n\n\n\n\n\n\n\n\n\n\nIn this first example, we’re looking at exp\n\n\n\n\n\n\nImportant\n\n\n\nIf you encounter any technical issues it’s important to resolve them this first week with your teaching fellow so that you may participate fully in the rest of the course.",
+    "crumbs": [
+      "Home",
+      "Labs",
+      "Getting Ready to Code"
+    ]
   },
   {
     "objectID": "syllabus.html",
@@ -16,5 +57,12 @@
       "Home",
       "Syllabus for Fall 2025"
     ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Introduction to Experimental Design",
+    "section": "",
+    "text": "Welcome!\nThis website contains materials for course CAS PS 211 at Boston University, which serves as a primer for undergraduate psychology majors in statistical and experimental methods for psychological research. The materials here are speific to Fall 2025, Section B1.\nAnnouncements and assignments will come through Blackboard. See the links above.\n\nAdditional Resources\nStudents are likely to find useful the following free online resources:\n\nR for Data Science\nHadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund\nIf this is your first time programming in R, sections of this book may aid your understanding of the language.\nAnswering Questions with Data\nMatthew J. C. Crump, Danielle J. Navarro, and Jeffrey Suzuki\nExperimentology: An Open Science Approach to Experimental Psychology Methods\nMichael C. Frank, Mika Braginsky, Julie Cachia, Nicholas A. Coles, Tom E. Hardwicke, Robert D. Hawkins, Maya B. Mathur, Rondeline Williams\nIntroduction to Modern Statistics\nMine Çetinkaya-Rundel and Johanna Hardin\nThe Effect: An Introduction to Research Design and Causality\nNick Huntington-Klein\n\n\n\nAttribution and Reuse Notice\nExcept where otherwise noted, this site and its original materials are created by the authors and licensed under Creative Commons BY-NC-SA 4.0.\n\nYou are free to:\n\nShare — copy and redistribute the material in any medium or format\nAdapt — remix, transform, and build upon the material The licensor cannot revoke these freedoms as long as you follow the license terms.\n\nUnder the following terms:\n\nAttribution — You must give appropriate credit , provide a link to the license, and indicate if changes were made . You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\nNonCommercial — You may not use the material for commercial purposes .\nShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.\nNo additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.\n\n\n\n\n\n\n\n Back to top"
   }
 ]
