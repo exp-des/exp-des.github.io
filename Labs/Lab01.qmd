@@ -3,6 +3,7 @@ title: Getting Ready to Code
 subtitle: Lab 1
 author: Michael Pascale
 date: 2025-09-05
+code-annotations: select
 ---
 
 This lab will orient you to RStudio and the R statistical programming language. We will be installing the software necessary for all future assignments this semester.
@@ -33,14 +34,14 @@ R is a **programming language** and this first step will install an **interprete
 
 The first step is to install the R programming language itself. After completing this step, we will be able to open the R interpreter (R Console).
 
-Select the appropriate download for your computer's operating system.
+On the Posit webpage, click the link for _Step 1: Install R_. Select the appropriate download for your computer's operating system (e.g. MacOS).
 
 ![R can be downloaded from the [Comprehensive R Archive Network (CRAN) website](https://cran.rstudio.com/).](/assets/lab01-download-r.png)
 
 If your computer is an **Apple Mac/MacBook**, you will need to download the appropriate package for your processor.
 
 :::{.aside}
-For Boston University students, if you encounter difficulties or if your primary device is an tablet, you may alternatively  access a full installation of R/RStudio through the [_BU Common_](https://www.bu.edu/tech/services/cccs/desktop/computer-labs/common/access/#webbrowser) Windows virtual desktop.
+For Boston University students, if you encounter difficulties or if your primary device is a tablet, alternative access to a full installation of R/RStudio is possible through the [_BU Common_](https://www.bu.edu/tech/services/cccs/desktop/computer-labs/common/access/#webbrowser) virtual desktop.
 ::: 
 
 - If you know your Mac has an _M1_ or _M2_ processor (roughly since 2022) will require the first `-arm64.pkg`.
@@ -54,7 +55,7 @@ If your computer is a **Windows PC** download the `base` installer, following th
 
 Once you have downloaded the package/executable for your operating system, run the installer.
 
-:::{.aside}
+:::{.callout-note}
 At the end of this step you should be able to find the **R Console** in your MacOS Launchpad/Applications or Windows Start menu.
 :::
 
@@ -66,23 +67,23 @@ The next step is to install RStudio, which we will be using extensively in this 
 RStudio is an **Integrated Development Environment (IDE)** for the R language.
 :::
 
-On the Posit website, locate the appropriate package for your operating system.
+On the Posit website, see _Step 2: Install RStudio_. Download the appropriate installer for your operating system.
 
 ![](/assets/lab01-download-rstudio.png)
 
-On an **Apple Mac/MacBook**, you should download and open the `.DMG` file. You will see the RStudio app and your Applications folder. **Drag the RStudio app into your applications folder**. 
+On an **Apple Mac/MacBook**, you should download and open the `.DMG` file. You will see the RStudio app and a shortcut to your Applications folder. **Drag the RStudio app into your Applications folder**. 
 
-On a **Windows PC**, you should download and run the Windows executable installer.
+On a **Windows PC**, you should download and run the Windows `.EXE` executable installer.
 
-:::{.aside}
+:::{.callout-note}
 At the end of this step you should be able to find **RStudio** in your MacOS Launchpad/Applications or Windows Start menu.
 :::
 
 ### Orienting to RStudio
 
-While R is the programming language, RStudio is a graphical interface that provides us with tools to edit R code, view plots and help pages, debug scripts, and more.
+While R is the programming _language_ we will be using, the RStudio application provides us with a comprehensive graphical interface that includes tools to edit R code, view plots and help pages, debug scripts, and more.
 
-![At a high level, RStudio's graphical interface provides access to the R Console, a built in text-editor (for writing scripts), and functionality for viewing and exporting plots. <br>[Image credited to the authors of [R4DS](https://r4ds.hadley.nz/workflow-scripts.html), reproduced here under license [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/us/).]{.small}](https://r4ds.hadley.nz/diagrams/rstudio/script.png)
+![At a high level, RStudio provides an interactive R Console, built in text-editor (for writing scripts), and functionality for viewing and exporting plots. <br>[Image credited to the authors of [R4DS](https://r4ds.hadley.nz/workflow-scripts.html), reproduced here under license [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/us/).]{.small}](https://r4ds.hadley.nz/diagrams/rstudio/script.png)
 
 The **Console** pane is where we can type code directly into the R interpreter. Type a line of R language code and press `Return` to run it. The console is interactive and will show you the result immediately.
 
@@ -115,15 +116,21 @@ Before we do anything else, we'll install the R package `tidyverse`. Type the fo
 install.packages("tidyverse")
 ```
 
-A lot of output will appear in the console as the package is installing. When it finishes, the package has been installed. We won't need to run this again; so there's no need to keep this line in your script.
+A lot of output will appear in the console as the package is installing. When it finishes, the package has been installed. We won't need to run this again; so there's no need to keep this line of code in your script.
 
 ## Demonstrating Graphics in R
 
-As a motivating example, let's consider the following short but complete script which will plot for us. We'll work through this code line-by-line in class to understand what it does.
+As a motivating example, let's consider the following short but complete script which will **plot some experimental data**. We'll work through this code line-by-line in class to understand what it does.
 
-The script will make a plot from a dataset built-in to R called `ChickWeight`. The data comes from **an experiment with four conditions**: diets assigned to hatchling chicks. Their weight in grams is recorded every two days in the built in **dataframe** (table).
+The script will make a plot from an example dataset built-in to R called `ChickWeight`. The data comes from **an experiment with four conditions**: diets assigned to hatchling chicks. Their weight in grams is recorded every two days in the built in **dataframe** (table).
 
-Type the following R code into a new script in your RStudio **Editor** pane. Click Save and save the script on your computer (e.g. `Documents/PS211/lab1.R`). Then click **Run**.
+:::{.aside}
+Most built-in R functions and example datasets come with a help page that can be accessed by prepending a question mark to the object's name.<br><br>
+
+To learn about this particular dataset, enter `?ChickWeight` at the console.
+:::
+
+Type the following R code snippet into a new script in your RStudio **Editor** pane. Click Save and save the script on your computer (e.g. `Documents/PS211/lab1.R`). Then click **Run**.
 
 You should see that the code is automatically copied into the **Console** and run. A plot should appear in the **Output** pane, looking like the one below.
 
@@ -136,26 +143,39 @@ library(tidyverse)
 
 ```{r}
 #| code-line-numbers: true
-library(tidyverse)
+library(tidyverse) #<1>
 
-ggplot(ChickWeight) +
-  geom_point(
-    aes(x=Time, y=weight, color=Diet),
-    position=position_jitter()
+ggplot(ChickWeight) + #<2>
+  geom_point( #<3>
+    aes(x=Time, y=weight, color=Diet), #<4>
+    position=position_jitter() #<5>
   ) +
-  facet_grid(~Diet, labeller=label_both) +
-  labs(
-    title="Experiment Comparing Weight Gain with Four Diets",
-    x="Time (days)",
-    y="Weight (g)"
+  facet_grid(~Diet, labeller=label_both) + #<6>
+  labs(#<7>
+    title="Experiment Comparing Weight Gain with Four Diets",#<7>
+    x="Time (days)",#<7>
+    y="Weight (g)"#<7>
   ) +
-  theme_classic()
-
+  theme_classic() #<8>
 ```
+1.   Load in the tidyverse package (also called a library).
+2. Create a plot of the ChickWeight dataset (using ggplot).  
+3. Add datapoints to the plot...  
+4. ..where each datapoint's (x,y) position is its Time and weight, colored by Diet.  
+5. Randomly "jitter" the points a little so they don't overlap.  
+6. Split up the plot by Diet. Label with both "Diet" and number.  
+7. Add labels to the plot...  
+8.  Apply a style theme to the plot (the "classic" theme).
 
 :::{.aside}
-In this first example, we're looking at exp
+Do try to manually copy the code snippet. This is good practice for getting used to the syntax and grammar of a new coding language. Click the number at the right of each line for an explanation.<br><br>
+
+If the console throws an error, it's likely a simple fix, even if it's hard to spot. Be careful to check the exact capitalization and spelling of your R code. In particular, make sure every opening parenthesis and quote has a close.
 :::
+
+Having completed these steps successfully, you have written your first R program! _Congratulations!_
+
+In upcoming lessons, we will learn more about the R language and how to use it for experiment design and simulation, statistical analysis, and reporting results.
 
 ::: {.callout-important}
 If you encounter any technical issues it's important to resolve them this first week with your teaching fellow so that you may participate fully in the rest of the course.

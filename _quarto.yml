@@ -64,3 +64,4 @@ format:
       dark: github
     code-block-border-left: true
     code-block-bg: true
+    code-copy: false
