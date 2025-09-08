@@ -80,9 +80,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-e3031b2b07293ce5c0b259fcee51fff1.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-8a7208b8a383bc71586367b471e4bbcf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-6a1c58fe0e4cd0ab9ef84d4af843db5b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-8a7208b8a383bc71586367b471e4bbcf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-f26681d59b11535378c4abd48758ce00.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-b5b44a74cec165b011ff7c71453a3ec2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-f26681d59b11535378c4abd48758ce00.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": true,
@@ -473,7 +473,7 @@ Tip
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
 <p>R is a <strong>programming language</strong> and this first step will install an <strong>interpreter</strong>, the <strong>R Console</strong>, which will allow us to write to the computer specific instructions for describing, statistically analyzing, and producing graphics from our experimental data.</p>
 </div></div><p>The first step is to install the R programming language itself. After completing this step, we will be able to open the R interpreter (R Console).</p>
-<p>Select the appropriate download for your computer’s operating system.</p>
+<p>On the Posit webpage, click the link for <em>Step 1: Install R</em>. Select the appropriate download for your computer’s operating system (e.g.&nbsp;MacOS).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../assets/lab01-download-r.png" class="img-fluid figure-img"></p>
@@ -483,7 +483,7 @@ Tip
 <p>If your computer is an <strong>Apple Mac/MacBook</strong>, you will need to download the appropriate package for your processor.</p>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
-<p>For Boston University students, if you encounter difficulties or if your primary device is an tablet, you may alternatively access a full installation of R/RStudio through the <a href="https://www.bu.edu/tech/services/cccs/desktop/computer-labs/common/access/#webbrowser"><em>BU Common</em></a> Windows virtual desktop.</p>
+<p>For Boston University students, if you encounter difficulties or if your primary device is a tablet, alternative access to a full installation of R/RStudio is possible through the <a href="https://www.bu.edu/tech/services/cccs/desktop/computer-labs/common/access/#webbrowser"><em>BU Common</em></a> virtual desktop.</p>
 </div></div><ul>
 <li>If you know your Mac has an <em>M1</em> or <em>M2</em> processor (roughly since 2022) will require the first <code>-arm64.pkg</code>.</li>
 <li>If you know your Mac has an Intel processor, it will require the second <code>-x86_64.pkg</code>.</li>
@@ -502,31 +502,51 @@ Tip
 </figure>
 </div>
 <p>Once you have downloaded the package/executable for your operating system, run the installer.</p>
-
-<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>At the end of this step you should be able to find the <strong>R Console</strong> in your MacOS Launchpad/Applications or Windows Start menu.</p>
-</div></div></section>
+</div>
+</div>
+</section>
 <section id="installing-rstudio" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="installing-rstudio">Installing RStudio</h3>
 <p>The next step is to install RStudio, which we will be using extensively in this course.</p>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
 <p>RStudio is an <strong>Integrated Development Environment (IDE)</strong> for the R language.</p>
-</div></div><p>On the Posit website, locate the appropriate package for your operating system.</p>
+</div></div><p>On the Posit website, see <em>Step 2: Install RStudio</em>. Download the appropriate installer for your operating system.</p>
 <p><img src="../assets/lab01-download-rstudio.png" class="img-fluid"></p>
-<p>On an <strong>Apple Mac/MacBook</strong>, you should download and open the <code>.DMG</code> file. You will see the RStudio app and your Applications folder. <strong>Drag the RStudio app into your applications folder</strong>.</p>
-<p>On a <strong>Windows PC</strong>, you should download and run the Windows executable installer.</p>
-
-<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>On an <strong>Apple Mac/MacBook</strong>, you should download and open the <code>.DMG</code> file. You will see the RStudio app and a shortcut to your Applications folder. <strong>Drag the RStudio app into your Applications folder</strong>.</p>
+<p>On a <strong>Windows PC</strong>, you should download and run the Windows <code>.EXE</code> executable installer.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>At the end of this step you should be able to find <strong>RStudio</strong> in your MacOS Launchpad/Applications or Windows Start menu.</p>
-</div></div></section>
+</div>
+</div>
+</section>
 <section id="orienting-to-rstudio" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="orienting-to-rstudio">Orienting to RStudio</h3>
-<p>While R is the programming language, RStudio is a graphical interface that provides us with tools to edit R code, view plots and help pages, debug scripts, and more.</p>
+<p>While R is the programming <em>language</em> we will be using, the RStudio application provides us with a comprehensive graphical interface that includes tools to edit R code, view plots and help pages, debug scripts, and more.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://r4ds.hadley.nz/diagrams/rstudio/script.png" class="img-fluid figure-img"></p>
-<figcaption>At a high level, RStudio’s graphical interface provides access to the R Console, a built in text-editor (for writing scripts), and functionality for viewing and exporting plots. <br><span class="small">Image credited to the authors of <a href="https://r4ds.hadley.nz/workflow-scripts.html">R4DS</a>, reproduced here under license <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/us/">CC BY-NC-ND 3.0</a>.</span></figcaption>
+<figcaption>At a high level, RStudio provides an interactive R Console, built in text-editor (for writing scripts), and functionality for viewing and exporting plots. <br><span class="small">Image credited to the authors of <a href="https://r4ds.hadley.nz/workflow-scripts.html">R4DS</a>, reproduced here under license <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/us/">CC BY-NC-ND 3.0</a>.</span></figcaption>
 </figure>
 </div>
 <p>The <strong>Console</strong> pane is where we can type code directly into the R interpreter. Type a line of R language code and press <code>Return</code> to run it. The console is interactive and will show you the result immediately.</p>
@@ -558,32 +578,78 @@ Tip
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
 <p><code>tidyverse</code> is actually a <em>metapackage</em> (a collection of packages) including <code>dplyr</code>, <code>tidyr</code>, <code>stringr</code>, <code>ggplot2</code> and more.</p>
 </div></div><div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code></pre></div>
 </div>
-<p>A lot of output will appear in the console as the package is installing. When it finishes, the package has been installed. We won’t need to run this again; so there’s no need to keep this line in your script.</p>
+<p>A lot of output will appear in the console as the package is installing. When it finishes, the package has been installed. We won’t need to run this again; so there’s no need to keep this line of code in your script.</p>
 </section>
 </section>
 <section id="demonstrating-graphics-in-r" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="demonstrating-graphics-in-r">Demonstrating Graphics in R</h2>
-<p>As a motivating example, let’s consider the following short but complete script which will plot for us. We’ll work through this code line-by-line in class to understand what it does.</p>
-<p>The script will make a plot from a dataset built-in to R called <code>ChickWeight</code>. The data comes from <strong>an experiment with four conditions</strong>: diets assigned to hatchling chicks. Their weight in grams is recorded every two days in the built in <strong>dataframe</strong> (table).</p>
-<p>Type the following R code into a new script in your RStudio <strong>Editor</strong> pane. Click Save and save the script on your computer (e.g.&nbsp;<code>Documents/PS211/lab1.R</code>). Then click <strong>Run</strong>.</p>
+<p>As a motivating example, let’s consider the following short but complete script which will <strong>plot some experimental data</strong>. We’ll work through this code line-by-line in class to understand what it does.</p>
+<p>The script will make a plot from an example dataset built-in to R called <code>ChickWeight</code>. The data comes from <strong>an experiment with four conditions</strong>: diets assigned to hatchling chicks. Their weight in grams is recorded every two days in the built in <strong>dataframe</strong> (table).</p>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>Most built-in R functions and example datasets come with a help page that can be accessed by prepending a question mark to the object’s name.<br><br></p>
+<p>To learn about this particular dataset, enter <code>?ChickWeight</code> at the console.</p>
+</div></div><p>Type the following R code snippet into a new script in your RStudio <strong>Editor</strong> pane. Click Save and save the script on your computer (e.g.&nbsp;<code>Documents/PS211/lab1.R</code>). Then click <strong>Run</strong>.</p>
 <p>You should see that the code is automatically copied into the <strong>Console</strong> and run. A plot should appear in the <strong>Output</strong> pane, looking like the one below.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb2-2"><a href="#cb2-2"></a></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">ggplot</span>(ChickWeight) <span class="sc">+</span></span>
-<span id="cb2-4"><a href="#cb2-4"></a>  <span class="fu">geom_point</span>(</span>
-<span id="cb2-5"><a href="#cb2-5"></a>    <span class="fu">aes</span>(<span class="at">x=</span>Time, <span class="at">y=</span>weight, <span class="at">color=</span>Diet),</span>
-<span id="cb2-6"><a href="#cb2-6"></a>    <span class="at">position=</span><span class="fu">position_jitter</span>()</span>
-<span id="cb2-7"><a href="#cb2-7"></a>  ) <span class="sc">+</span></span>
-<span id="cb2-8"><a href="#cb2-8"></a>  <span class="fu">facet_grid</span>(<span class="sc">~</span>Diet, <span class="at">labeller=</span>label_both) <span class="sc">+</span></span>
-<span id="cb2-9"><a href="#cb2-9"></a>  <span class="fu">labs</span>(</span>
-<span id="cb2-10"><a href="#cb2-10"></a>    <span class="at">title=</span><span class="st">"Experiment Comparing Weight Gain with Four Diets"</span>,</span>
-<span id="cb2-11"><a href="#cb2-11"></a>    <span class="at">x=</span><span class="st">"Time (days)"</span>,</span>
-<span id="cb2-12"><a href="#cb2-12"></a>    <span class="at">y=</span><span class="st">"Weight (g)"</span></span>
-<span id="cb2-13"><a href="#cb2-13"></a>  ) <span class="sc">+</span></span>
-<span id="cb2-14"><a href="#cb2-14"></a>  <span class="fu">theme_classic</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="annotated-cell-2"><pre class="sourceCode numberSource r code-annotation-code number-lines code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="1">1</button><span id="annotated-cell-2-1" class="code-annotation-target"><a href="#annotated-cell-2-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="annotated-cell-2-2"><a href="#annotated-cell-2-2"></a></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="2">2</button><span id="annotated-cell-2-3" class="code-annotation-target"><a href="#annotated-cell-2-3"></a><span class="fu">ggplot</span>(ChickWeight) <span class="sc">+</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="3">3</button><span id="annotated-cell-2-4" class="code-annotation-target"><a href="#annotated-cell-2-4"></a>  <span class="fu">geom_point</span>(</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="4">4</button><span id="annotated-cell-2-5" class="code-annotation-target"><a href="#annotated-cell-2-5"></a>    <span class="fu">aes</span>(<span class="at">x=</span>Time, <span class="at">y=</span>weight, <span class="at">color=</span>Diet),</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="5">5</button><span id="annotated-cell-2-6" class="code-annotation-target"><a href="#annotated-cell-2-6"></a>    <span class="at">position=</span><span class="fu">position_jitter</span>()</span>
+<span id="annotated-cell-2-7"><a href="#annotated-cell-2-7"></a>  ) <span class="sc">+</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="6">6</button><span id="annotated-cell-2-8" class="code-annotation-target"><a href="#annotated-cell-2-8"></a>  <span class="fu">facet_grid</span>(<span class="sc">~</span>Diet, <span class="at">labeller=</span>label_both) <span class="sc">+</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="7">7</button><span id="annotated-cell-2-9" class="code-annotation-target"><a href="#annotated-cell-2-9"></a>  <span class="fu">labs</span>(</span>
+<span id="annotated-cell-2-10"><a href="#annotated-cell-2-10"></a>    <span class="at">title=</span><span class="st">"Experiment Comparing Weight Gain with Four Diets"</span>,</span>
+<span id="annotated-cell-2-11"><a href="#annotated-cell-2-11"></a>    <span class="at">x=</span><span class="st">"Time (days)"</span>,</span>
+<span id="annotated-cell-2-12"><a href="#annotated-cell-2-12"></a>    <span class="at">y=</span><span class="st">"Weight (g)"</span></span>
+<span id="annotated-cell-2-13"><a href="#annotated-cell-2-13"></a>  ) <span class="sc">+</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="8">8</button><span id="annotated-cell-2-14" class="code-annotation-target"><a href="#annotated-cell-2-14"></a>  <span class="fu">theme_classic</span>()</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-2" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-2" data-code-lines="1" data-code-annotation="1">Load in the tidyverse package (also called a library).</span>
+</dd>
+<dt data-target-cell="annotated-cell-2" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-2" data-code-lines="3" data-code-annotation="2">Create a plot of the ChickWeight dataset (using ggplot).<br>
+</span>
+</dd>
+<dt data-target-cell="annotated-cell-2" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-cell="annotated-cell-2" data-code-lines="4" data-code-annotation="3">Add datapoints to the plot…<br>
+</span>
+</dd>
+<dt data-target-cell="annotated-cell-2" data-target-annotation="4">4</dt>
+<dd>
+<span data-code-cell="annotated-cell-2" data-code-lines="5" data-code-annotation="4">..where each datapoint’s (x,y) position is its Time and weight, colored by Diet.<br>
+</span>
+</dd>
+<dt data-target-cell="annotated-cell-2" data-target-annotation="5">5</dt>
+<dd>
+<span data-code-cell="annotated-cell-2" data-code-lines="6" data-code-annotation="5">Randomly “jitter” the points a little so they don’t overlap.<br>
+</span>
+</dd>
+<dt data-target-cell="annotated-cell-2" data-target-annotation="6">6</dt>
+<dd>
+<span data-code-cell="annotated-cell-2" data-code-lines="8" data-code-annotation="6">Split up the plot by Diet. Label with both “Diet” and number.<br>
+</span>
+</dd>
+<dt data-target-cell="annotated-cell-2" data-target-annotation="7">7</dt>
+<dd>
+<span data-code-cell="annotated-cell-2" data-code-lines="9,10,11,12" data-code-annotation="7">Add labels to the plot…<br>
+</span>
+</dd>
+<dt data-target-cell="annotated-cell-2" data-target-annotation="8">8</dt>
+<dd>
+<span data-code-cell="annotated-cell-2" data-code-lines="14" data-code-annotation="8">Apply a style theme to the plot (the “classic” theme).</span>
+</dd>
+</dl>
+</div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -594,8 +660,11 @@ Tip
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
-<p>In this first example, we’re looking at exp</p>
-</div></div><div class="callout callout-style-default callout-important callout-titled">
+<p>Do try to manually copy the code snippet. This is good practice for getting used to the syntax and grammar of a new coding language. Click the number at the right of each line for an explanation.<br><br></p>
+<p>If the console throws an error, it’s likely a simple fix, even if it’s hard to spot. Be careful to check the exact capitalization and spelling of your R code. In particular, make sure every opening parenthesis and quote has a close.</p>
+</div></div><p>Having completed these steps successfully, you have written your first R program! <em>Congratulations!</em></p>
+<p>In upcoming lessons, we will learn more about the R language and how to use it for experiment design and simulation, statistical analysis, and reporting results.</p>
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -635,67 +704,6 @@ Important
       icon: icon
     };
     anchorJS.add('.anchored');
-    const isCodeAnnotation = (el) => {
-      for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
-          return true;
-        }
-      }
-      return false;
-    }
-    const onCopySuccess = function(e) {
-      // button target
-      const button = e.trigger;
-      // don't keep focus
-      button.blur();
-      // flash "checked"
-      button.classList.add('code-copy-button-checked');
-      var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
-      let tooltip;
-      if (window.bootstrap) {
-        button.setAttribute("data-bs-toggle", "tooltip");
-        button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
-            customClass: "code-copy-button-tooltip",
-            offset: [0, -8]});
-        tooltip.show();    
-      }
-      setTimeout(function() {
-        if (tooltip) {
-          tooltip.hide();
-          button.removeAttribute("data-bs-title");
-          button.removeAttribute("data-bs-toggle");
-          button.removeAttribute("data-bs-placement");
-        }
-        button.setAttribute("title", currentTitle);
-        button.classList.remove('code-copy-button-checked');
-      }, 1000);
-      // clear code selection
-      e.clearSelection();
-    }
-    const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
-        }
-        return codeEl.innerText;
-    }
-    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-      text: getTextToCopy
-    });
-    clipboard.on('success', onCopySuccess);
-    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-        text: getTextToCopy,
-        container: window.document.getElementById('quarto-embedded-source-code-modal')
-      });
-      clipboardModal.on('success', onCopySuccess);
-    }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
         var filterRegex = new RegExp("https:\/\/exp-des\.github\.io\/");
@@ -966,25 +974,66 @@ Important
           }
         };
       }
-        // Attach click handler to the DT
-        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-        for (const annoteDlNode of annoteDls) {
-          annoteDlNode.addEventListener('click', (event) => {
-            const clickedEl = event.target;
-            if (clickedEl !== selectedAnnoteEl) {
-              unselectCodeLines();
-              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-              if (activeEl) {
-                activeEl.classList.remove('code-annotation-active');
-              }
-              selectCodeLines(clickedEl);
-              clickedEl.classList.add('code-annotation-active');
-            } else {
-              // Unselect the line
-              unselectCodeLines();
-              clickedEl.classList.remove('code-annotation-active');
+        const annoteTargets = window.document.querySelectorAll('.code-annotation-anchor');
+        for (let i=0; i<annoteTargets.length; i++) {
+          const annoteTarget = annoteTargets[i];
+          const targetCell = annoteTarget.getAttribute("data-target-cell");
+          const targetAnnotation = annoteTarget.getAttribute("data-target-annotation");
+          const contentFn = () => {
+            const content = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+            if (content) {
+              const tipContent = content.cloneNode(true);
+              tipContent.classList.add("code-annotation-tip-content");
+              return tipContent.outerHTML;
             }
-          });
+          }
+          const config = {
+            allowHTML: true,
+            content: contentFn,
+            onShow: (instance) => {
+              selectCodeLines(instance.reference);
+              instance.reference.classList.add('code-annotation-active');
+              window.tippy.hideAll();
+            },
+            onHide: (instance) => {
+              unselectCodeLines();
+              instance.reference.classList.remove('code-annotation-active');
+            },
+            maxWidth: 300,
+            delay: [50, 0],
+            duration: [200, 0],
+            offset: [5, 10],
+            arrow: true,
+            trigger: 'click',
+            appendTo: function(el) {
+              return el.parentElement.parentElement.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'quarto',
+            placement: 'right',
+            positionFixed: true,
+            popperOptions: {
+              modifiers: [
+              {
+                name: 'flip',
+                options: {
+                  flipVariations: false, // true by default
+                  allowedAutoPlacements: ['right'],
+                  fallbackPlacements: ['right', 'top', 'top-start', 'top-end', 'bottom', 'bottom-start', 'bottom-end', 'left'],
+                },
+              },
+              {
+                name: 'preventOverflow',
+                options: {
+                  mainAxis: false,
+                  altAxis: false
+                }
+              }
+              ]        
+            }      
+          };
+          window.tippy(annoteTarget, config); 
         }
     const findCites = (el) => {
       const parentEl = el.parentElement;
