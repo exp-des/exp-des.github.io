@@ -7,6 +7,7 @@ website:
   back-to-top-navigation: true
   reader-mode: true
   draft-mode: gone
+  favicon: assets/favicon.svg
   sidebar:
     style: floating
     border: true
@@ -15,6 +16,7 @@ website:
         contents: Introduction/*
       - section: Labs
         contents: Labs/*
+      - Slides.qmd
       - text: "Syllabus for Fall 2025"
         href: syllabus.qmd
 
