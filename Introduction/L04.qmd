@@ -1,0 +1,96 @@
+---
+title: Establishing Causality
+subtitle: Summary of Lecture 4
+date: 2025-09-10
+---
+
+We're very used to making statements regarding **causation**. Take the following statements as examples:
+
+- "I overslept, so I was late to class". 
+- "Smoking causes cancer."
+- "Buying a lottery ticket causes winning the lottery."
+
+:::{.aside}
+The third example might be strange, but do you agree that you cannot win the lottery without having bought a lottery ticket?
+:::
+
+In each of these statements, we've said that some antecedent event _causes_ an outcome.
+
+## Considering the Counterfactual
+
+What does it mean that event $A$ _causes_ event $B$?
+
+A philosophy that we could adopt is that the occurence of some antecedent event is sufficent for us to expect that the event in question will occur. In other words, $B$ might not have occured if $A$ did not happen first. Note how we implicitly consider _what didn't happen_ whenever we make a causal statement: we consider the **counterfactual**.
+
+:::{.aside}
+Consider that any event could have **multiple causes**. Even if you did not oversleep, you could be late to class because of traffic, a phone call, a rainstorm...
+<br><br>$A$ might be _sufficient_ to cause $B$ but not _necessary_ if another event $C$ could have caused it.
+:::
+
+- "I might not have been late to class if I did not oversleep."
+
+Even though the counterfactual is counter to what happened this time, we might know from experience that the story could have gone another way. The counterfactual is taken into account when we make causal statements regardless of whether it actually occured.
+
+## Probabilistic Effects
+
+The causal relationships we research are usually **probabilistic** in nature. This means that an antecedent event may influence the _probability_ of the event in question, but not guarantee it. 
+
+:::{.aside}
+Maybe $A$ does not guarantee $B$ but it does make $A$ more likely.
+:::
+
+- "I smoked, but I didn't get cancer."
+- "I bought a lottery ticket, but I didn't win."
+
+We can use probability to quantify causal effects using counterfactuals. The effect of some antecedent event on an outcome is the probability of the outcome given the event occured minus the probability given the counterfactual.
+
+To write this explicitly:
+
+$\text{Causal Effect of A} = P(Outcome | A) - P(Outcome | \neg A)$
+
+<details>
+<summary>Click to show an explanation of this notation.</summary>
+> Generally, we can denote the probability of some event $X$ as $P(X)$.
+>
+> When one event depends on, or is conditional on another, we denote that $P(A|B)$ or the "probability of $A$ given $B$".
+>
+> To consider the counterfactual, we write $\neg A$ or "not A", the event that $A$ _didn't_ happen.
+
+We'll learn more about probability later in the course.
+</details>
+
+## Creating Knowledge of Causal Effects
+
+Given that the counterfactual is not what happened this time, we tend to make causal statements taking into account knowledge and past experience. To produce _new knowledge_ so that we can quantify causal effects, we have two options: observation and experimentation.
+
+### Observational Research
+
+The first option is to **estimate** the difference between a fact and a counterfactual, finding the probabilities by very carefully analyzing historical data or real-world events. We can compare two existing groups, and _make an **assumption**_ that they are similar enough to be compared (perhaps adjusting for a few variables).
+
+:::{.aside}
+The exact assumptions we make are very important and can mean the difference between strong and weak research.
+:::
+
+As an example, we could _find_ and observe two large groups of people: one group of folks who have smoked for the last ten years and another who have never smoked. We could test or survey these groups to compare the effect of smoking on their health. 
+
+It might still be hard to say whether smoking was the only variable that was different. Perhaps the two groups are different ages, have different diets, were located in different states, etc. It can be difficult to account for all the potential **confounds** that could undermine our assumptions.
+
+### Experimental Research
+
+The second option, to **design an experiment**, allows us to _minimize our assumptions_ and _create_ groups which differ in only variables we **manipulate**.
+
+:::{.aside}
+Experiments rely the **control** that comes from setting variables to be constant _or_ from introducing known randomness or statistically accounting for random factors.
+:::
+
+For example, we _select_ students and **randomly assign** them to two groups which either spend thirty minutes reading a physical book or thirty minutes listening to an audiobook. We then administer a memory test and compare the performance of the groups.
+
+Experiments are not quite immune from confounding variables, but well-designed experiments can certainly offer _strong evidence_ of causal relationships since many potential confounders have been **controlled**.
+
+While controlled experiments offer stronger causal explanations, there are many situations where running an experiment is impossible There are situations where it may not be ethical to manipulate certain variables. For this reason we cannot design experiments to study topics like abuse or trauma. Some other topics may be impossible to study experimentally due to infeasability or high cost.
+
+::: {.callout-note title="An Important Note on Research Ethics"}
+History has shown us many examples of plainly _unethical_ research experiments. Infamous studies you may have heard of include the [Stanford Prison Experiment](https://en.wikipedia.org/wiki/Stanford_prison_experiment) and the egregiously abusive [Tuskegee Syphillis Study](https://en.wikipedia.org/wiki/Tuskegee_Syphilis_Study). We'll cover a history of major ethical breaches at points throughout the semester.
+
+In modern science, we carefully consider the ethics of any new research, experimental or observational. Medical research in particular is subject to strict legal and institutional regulation.
+:::
