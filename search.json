@@ -4,10 +4,58 @@
     "href": "Slides.html",
     "title": "Lecture Slides",
     "section": "",
-    "text": "The following links return directly to the lecture PDFs on Blackboard.\n\nLecture 3 (2025-09-08)\n\n\n\n\n Back to top",
+    "text": "The following links return directly to the lecture PDFs on Blackboard.\n\nLecture 3 (2025-09-08)\nLecture 4 (2025-09-10)\n\n\n\n\n Back to top",
     "crumbs": [
       "Home",
       "Lecture Slides"
+    ]
+  },
+  {
+    "objectID": "Introduction/L04.html",
+    "href": "Introduction/L04.html",
+    "title": "Establishing Causality",
+    "section": "",
+    "text": "We’re very used to making statements regarding causation. Take the following statements as examples:\nIn each of these statements, we’ve said that some antecedent event causes an outcome.",
+    "crumbs": [
+      "Home",
+      "Introduction",
+      "Establishing Causality"
+    ]
+  },
+  {
+    "objectID": "Introduction/L04.html#considering-the-counterfactual",
+    "href": "Introduction/L04.html#considering-the-counterfactual",
+    "title": "Establishing Causality",
+    "section": "Considering the Counterfactual",
+    "text": "Considering the Counterfactual\nWhat does it mean that event \\(A\\) causes event \\(B\\)?\nA philosophy that we could adopt is that the occurence of some antecedent event is sufficent for us to expect that the event in question will occur. In other words, \\(B\\) might not have occured if \\(A\\) did not happen first. Note how we implicitly consider what didn’t happen whenever we make a causal statement: we consider the counterfactual.\n\n\nConsider that any event could have multiple causes. Even if you did not oversleep, you could be late to class because of traffic, a phone call, a rainstorm… \\(A\\) might be sufficient to cause \\(B\\) but not necessary if another event \\(C\\) could have caused it.\n\n“I might not have been late to class if I did not oversleep.”\n\nEven though the counterfactual is counter to what happened this time, we might know from experience that the story could have gone another way. The counterfactual is taken into account when we make causal statements regardless of whether it actually occured.",
+    "crumbs": [
+      "Home",
+      "Introduction",
+      "Establishing Causality"
+    ]
+  },
+  {
+    "objectID": "Introduction/L04.html#probabilistic-effects",
+    "href": "Introduction/L04.html#probabilistic-effects",
+    "title": "Establishing Causality",
+    "section": "Probabilistic Effects",
+    "text": "Probabilistic Effects\nThe causal relationships we research are usually probabilistic in nature. This means that an antecedent event may influence the probability of the event in question, but not guarantee it.\n\n\nMaybe \\(A\\) does not guarantee \\(B\\) but it does make \\(A\\) more likely.\n\n“I smoked, but I didn’t get cancer.”\n“I bought a lottery ticket, but I didn’t win.”\n\nWe can use probability to quantify causal effects using counterfactuals. The effect of some antecedent event on an outcome is the probability of the outcome given the event occured minus the probability given the counterfactual.\nTo write this explicitly:\n\\(\\text{Causal Effect of A} = P(Outcome | A) - P(Outcome | \\neg A)\\)\n\n\nClick to show an explanation of this notation.\n\n\nGenerally, we can denote the probability of some event \\(X\\) as \\(P(X)\\).\nWhen one event depends on, or is conditional on another, we denote that \\(P(A|B)\\) or the “probability of \\(A\\) given \\(B\\)”.\nTo consider the counterfactual, we write \\(\\neg A\\) or “not A”, the event that \\(A\\) didn’t happen.\n\nWe’ll learn more about probability later in the course.",
+    "crumbs": [
+      "Home",
+      "Introduction",
+      "Establishing Causality"
+    ]
+  },
+  {
+    "objectID": "Introduction/L04.html#creating-knowledge-of-causal-effects",
+    "href": "Introduction/L04.html#creating-knowledge-of-causal-effects",
+    "title": "Establishing Causality",
+    "section": "Creating Knowledge of Causal Effects",
+    "text": "Creating Knowledge of Causal Effects\nGiven that the counterfactual is not what happened this time, we tend to make causal statements taking into account knowledge and past experience. To produce new knowledge so that we can quantify causal effects, we have two options: observation and experimentation.\n\nObservational Research\nThe first option is to estimate the difference between a fact and a counterfactual, finding the probabilities by very carefully analyzing historical data or real-world events. We can compare two existing groups, and make an assumption that they are similar enough to be compared (perhaps adjusting for a few variables).\n\n\nThe exact assumptions we make are very important and can mean the difference between strong and weak research.\nAs an example, we could find and observe two large groups of people: one group of folks who have smoked for the last ten years and another who have never smoked. We could test or survey these groups to compare the effect of smoking on their health.\nIt might still be hard to say whether smoking was the only variable that was different. Perhaps the two groups are different ages, have different diets, were located in different states, etc. It can be difficult to account for all the potential confounds that could undermine our assumptions.\n\n\nExperimental Research\nThe second option, to design an experiment, allows us to minimize our assumptions and create groups which differ in only variables we manipulate.\n\n\nExperiments rely the control that comes from setting variables to be constant or from introducing known randomness or statistically accounting for random factors.\nFor example, we select students and randomly assign them to two groups which either spend thirty minutes reading a physical book or thirty minutes listening to an audiobook. We then administer a memory test and compare the performance of the groups.\nExperiments are not quite immune from confounding variables, but well-designed experiments can certainly offer strong evidence of causal relationships since many potential confounders have been controlled.\nWhile controlled experiments offer stronger causal explanations, there are many situations where running an experiment is impossible There are situations where it may not be ethical to manipulate certain variables. For this reason we cannot design experiments to study topics like abuse or trauma. Some other topics may be impossible to study experimentally due to infeasability or high cost.\n\n\n\n\n\n\nNoteAn Important Note on Research Ethics\n\n\n\nHistory has shown us many examples of plainly unethical research experiments. Infamous studies you may have heard of include the Stanford Prison Experiment and the egregiously abusive Tuskegee Syphillis Study. We’ll cover a history of major ethical breaches at points throughout the semester.\nIn modern science, we carefully consider the ethics of any new research, experimental or observational. Medical research in particular is subject to strict legal and institutional regulation.",
+    "crumbs": [
+      "Home",
+      "Introduction",
+      "Establishing Causality"
     ]
   },
   {
