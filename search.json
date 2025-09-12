@@ -1,61 +1,98 @@
 [
   {
-    "objectID": "Slides.html",
-    "href": "Slides.html",
-    "title": "Lecture Slides",
-    "section": "",
-    "text": "The following links return directly to the lecture PDFs on Blackboard.\n\nLecture 3 (2025-09-08)\nLecture 4 (2025-09-10)\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Home",
-      "Lecture Slides"
-    ]
-  },
-  {
-    "objectID": "Introduction/L04.html",
-    "href": "Introduction/L04.html",
+    "objectID": "Design/L04.html",
+    "href": "Design/L04.html",
     "title": "Establishing Causality",
     "section": "",
     "text": "We’re very used to making statements regarding causation. Take the following statements as examples:\nIn each of these statements, we’ve said that some antecedent event causes an outcome.",
     "crumbs": [
       "Home",
-      "Introduction",
+      "2. Research Design",
       "Establishing Causality"
     ]
   },
   {
-    "objectID": "Introduction/L04.html#considering-the-counterfactual",
-    "href": "Introduction/L04.html#considering-the-counterfactual",
+    "objectID": "Design/L04.html#considering-the-counterfactual",
+    "href": "Design/L04.html#considering-the-counterfactual",
     "title": "Establishing Causality",
     "section": "Considering the Counterfactual",
     "text": "Considering the Counterfactual\nWhat does it mean that event \\(A\\) causes event \\(B\\)?\nA philosophy that we could adopt is that the occurence of some antecedent event is sufficent for us to expect that the event in question will occur. In other words, \\(B\\) might not have occured if \\(A\\) did not happen first. Note how we implicitly consider what didn’t happen whenever we make a causal statement: we consider the counterfactual.\n\n\nConsider that any event could have multiple causes. Even if you did not oversleep, you could be late to class because of traffic, a phone call, a rainstorm… \\(A\\) might be sufficient to cause \\(B\\) but not necessary if another event \\(C\\) could have caused it.\n\n“I might not have been late to class if I did not oversleep.”\n\nEven though the counterfactual is counter to what happened this time, we might know from experience that the story could have gone another way. The counterfactual is taken into account when we make causal statements regardless of whether it actually occured.",
     "crumbs": [
       "Home",
-      "Introduction",
+      "2. Research Design",
       "Establishing Causality"
     ]
   },
   {
-    "objectID": "Introduction/L04.html#probabilistic-effects",
-    "href": "Introduction/L04.html#probabilistic-effects",
+    "objectID": "Design/L04.html#probabilistic-effects",
+    "href": "Design/L04.html#probabilistic-effects",
     "title": "Establishing Causality",
     "section": "Probabilistic Effects",
     "text": "Probabilistic Effects\nThe causal relationships we research are usually probabilistic in nature. This means that an antecedent event may influence the probability of the event in question, but not guarantee it.\n\n\nMaybe \\(A\\) does not guarantee \\(B\\) but it does make \\(A\\) more likely.\n\n“I smoked, but I didn’t get cancer.”\n“I bought a lottery ticket, but I didn’t win.”\n\nWe can use probability to quantify causal effects using counterfactuals. The effect of some antecedent event on an outcome is the probability of the outcome given the event occured minus the probability given the counterfactual.\nTo write this explicitly:\n\\(\\text{Causal Effect of A} = P(Outcome | A) - P(Outcome | \\neg A)\\)\n\n\nClick to show an explanation of this notation.\n\n\nGenerally, we can denote the probability of some event \\(X\\) as \\(P(X)\\).\nWhen one event depends on, or is conditional on another, we denote that \\(P(A|B)\\) or the “probability of \\(A\\) given \\(B\\)”.\nTo consider the counterfactual, we write \\(\\neg A\\) or “not A”, the event that \\(A\\) didn’t happen.\n\nWe’ll learn more about probability later in the course.",
     "crumbs": [
       "Home",
-      "Introduction",
+      "2. Research Design",
       "Establishing Causality"
     ]
   },
   {
-    "objectID": "Introduction/L04.html#creating-knowledge-of-causal-effects",
-    "href": "Introduction/L04.html#creating-knowledge-of-causal-effects",
+    "objectID": "Design/L04.html#creating-knowledge-of-causal-effects",
+    "href": "Design/L04.html#creating-knowledge-of-causal-effects",
     "title": "Establishing Causality",
     "section": "Creating Knowledge of Causal Effects",
     "text": "Creating Knowledge of Causal Effects\nGiven that the counterfactual is not what happened this time, we tend to make causal statements taking into account knowledge and past experience. To produce new knowledge so that we can quantify causal effects, we have two options: observation and experimentation.\n\nObservational Research\nThe first option is to estimate the difference between a fact and a counterfactual, finding the probabilities by very carefully analyzing historical data or real-world events. We can compare two existing groups, and make an assumption that they are similar enough to be compared (perhaps adjusting for a few variables).\n\n\nThe exact assumptions we make are very important and can mean the difference between strong and weak research.\nAs an example, we could find and observe two large groups of people: one group of folks who have smoked for the last ten years and another who have never smoked. We could test or survey these groups to compare the effect of smoking on their health.\nIt might still be hard to say whether smoking was the only variable that was different. Perhaps the two groups are different ages, have different diets, were located in different states, etc. It can be difficult to account for all the potential confounds that could undermine our assumptions.\n\n\nExperimental Research\nThe second option, to design an experiment, allows us to minimize our assumptions and create groups which differ in only variables we manipulate.\n\n\nExperiments rely the control that comes from setting variables to be constant or from introducing known randomness or statistically accounting for random factors.\nFor example, we select students and randomly assign them to two groups which either spend thirty minutes reading a physical book or thirty minutes listening to an audiobook. We then administer a memory test and compare the performance of the groups.\nExperiments are not quite immune from confounding variables, but well-designed experiments can certainly offer strong evidence of causal relationships since many potential confounders have been controlled.\nWhile controlled experiments offer stronger causal explanations, there are many situations where running an experiment is impossible There are situations where it may not be ethical to manipulate certain variables. For this reason we cannot design experiments to study topics like abuse or trauma. Some other topics may be impossible to study experimentally due to infeasability or high cost.\n\n\n\n\n\n\nNoteAn Important Note on Research Ethics\n\n\n\nHistory has shown us many examples of plainly unethical research experiments. Infamous studies you may have heard of include the Stanford Prison Experiment and the egregiously abusive Tuskegee Syphillis Study. We’ll cover a history of major ethical breaches at points throughout the semester.\nIn modern science, we carefully consider the ethics of any new research, experimental or observational. Medical research in particular is subject to strict legal and institutional regulation.",
     "crumbs": [
       "Home",
-      "Introduction",
+      "2. Research Design",
       "Establishing Causality"
+    ]
+  },
+  {
+    "objectID": "Labs/Lab02.html",
+    "href": "Labs/Lab02.html",
+    "title": "Understanding Types of Data",
+    "section": "",
+    "text": "This lab will translate what we’ve learned about kinds of data into how real data of these types are processed for visualization and later statistical analysis.",
+    "crumbs": [
+      "Home",
+      "Labs",
+      "Understanding Types of Data"
+    ]
+  },
+  {
+    "objectID": "Labs/Lab02.html#self-study",
+    "href": "Labs/Lab02.html#self-study",
+    "title": "Understanding Types of Data",
+    "section": "Self-Study",
+    "text": "Self-Study\nThis lab corresponds roughly to the following chapters in R for Data Science, which are recommended for further self-study.\n\nWorkflow: Basics 2.1-2.6\nFactor Basics 16.2\nDataframe 1.2.1",
+    "crumbs": [
+      "Home",
+      "Labs",
+      "Understanding Types of Data"
+    ]
+  },
+  {
+    "objectID": "Labs/Lab02.html#from-values-to-vectors",
+    "href": "Labs/Lab02.html#from-values-to-vectors",
+    "title": "Understanding Types of Data",
+    "section": "From Values to Vectors",
+    "text": "From Values to Vectors\nBefore we can begin, we need to develop a sense for how R handles datasets.\nIn our first lab, we demonstrated how to store single values in variables, effectively giving them a name we can reference later.\n\nn &lt;- 42\nlucky_number &lt;- 7\nIDriveA &lt;- \"honda civic\"\n\n# Find the radius of a circle.\nx &lt;- 3.14159\nr &lt;- 7\n2*x*r\n\n[1] 43.98226\n\n\n\n\nHere we assign values to a few variables with arbitrary names: n, lucky_number, IDriveA, x, r.  We can use variables in mathematical expressions as demonstrated here by calculating the circumference of a circle with radius 7cm.\nOf course, when we collect data it’s actually many values we need to work with. In R, we can create vectors to hold long columns of values, as we might obtain from real data.\n\nsome_numbers &lt;- c(3, 6, 8, 12)\n\nsome_numbers\n\n[1]  3  6  8 12\n\n\n\n\nThe c() function combines several values into a vector.  As a shorthand, you can create sequences of numbers using the :, like: 1:10. Try this out in the console.\nAny mathematical calculations will work on the whole vector all at once. For example, we could do the circumference calculation again, this time for circles of a few different diameters.\n\nr &lt;- c(7, 36, 28, 1, 0)\n2*x*r\n\n[1]  43.98226 226.19448 175.92904   6.28318   0.00000\n\n\n\n\nCheck the last two elements and see that it has correctly listed \\(2 \\pi \\cdot 1 = 2\\pi\\) and \\(2\\pi \\cdot 0 = 0\\), for example.  This property of being able to perform calculations over whole vectors is what makes this computer software useful for statistics. Routine calculations on a whole dataset can be done quickly and precisely without a pen or calculator.\n\nQualitative Data Types\nWe can create vectors of qualitative variables too. R has one data type for both nominal and ordinal variables: the factor.\n\nhandedness &lt;- factor(c(\"Right-Handed\", \"Left-Handed\", \"Ambidextrous\"))\n\nhandedness\n\n[1] Right-Handed Left-Handed  Ambidextrous\nLevels: Ambidextrous Left-Handed Right-Handed\n\n\nR refers to the unique names a factor can take on as its levels.\n\n\nRandom Data\nIt’s often useful to be able to generate random data, whether to randomly assign participants to groups or to simulate what our results might look like. There are several functions to do with randomness, but we’ll start by demonstrating how to use the sample() function.\nA simple example is the roll of a die. This code will randomly take from the six possible face values, sampling the equivalent of 25 die rolls.\n\nsample(c(1,2,3,4,5,6), 25, replace=TRUE)\n\n [1] 4 3 2 6 5 1 2 1 4 3 1 3 5 3 1 4 3 4 1 6 1 4 6 6 3\n\n\n\n\nThe replace=TRUE means “sample with replacement”. In other words: take a random number from 1 to 6 and then put it back before taking a random number a second time, a third time, etc.\nCombining this with what we learned above about factor variables (nominal or ordinal data types), we can demonstrate one way to randomly assign ten participants to two groups.\n\n# Define a nominal variable (factor) with two levels: treatment and placebo.\nconditions &lt;- factor(c(\"treatment\", \"placebo\"))\n\n# Start with alternating (repeat), five in each group.\nassignment &lt;- c(rep(conditions, 5))\n\n# Randomize the variable so that 5 participants are assigned randomly to each (10 in total).\nassignment &lt;- sample(assignment, 10)\n\nassignment\n\n [1] treatment placebo   placebo   placebo   placebo   placebo   treatment\n [8] treatment treatment treatment\nLevels: placebo treatment\n\n\n\n\nAs you run each line, take a look at the conditions and assignment variables in your R environment.",
+    "crumbs": [
+      "Home",
+      "Labs",
+      "Understanding Types of Data"
+    ]
+  },
+  {
+    "objectID": "Labs/Lab02.html#oodles-of-observations",
+    "href": "Labs/Lab02.html#oodles-of-observations",
+    "title": "Understanding Types of Data",
+    "section": "Oodles of Observations",
+    "text": "Oodles of Observations\nMost data we deal with is tabular; we’ve collected many observations of more than just one variable. To keep track of it all, we stack columns side-by-side together into tables. In R, we equivalently put vectors together into dataframes.\nWe saw an example of a dataframe last week, the data table from the ChickWeight experiment.\n\n# Remember head() lets us see just the first few rows - not the whole dataframe.\nChickWeight |&gt; head()\n\n  weight Time Chick Diet\n1     42    0     1    1\n2     51    2     1    1\n3     59    4     1    1\n4     64    6     1    1\n5     76    8     1    1\n6     93   10     1    1\n\n\nWith what we’ve learned in the last week, which of the four variables was the independent variable and which was the dependent variable in this experiment?\n\n\nThink for a moment and then click here to reveal an explanation.\n\nRecall that there were several diets a chick could be assigned to, and its weight was measured over time as it grew up.\n\nThe experiment manipulated Diet as an independent variable.\nThe dependent variable was weight in grams, observed every two days.\n\n\nIf we want to create our own data frame, we can build one using data.frame().\n\ndata.frame(trial=c(1,2,3), dice_roll=c(12,3,7))\n\n  trial dice_roll\n1     1        12\n2     2         3\n3     3         7\n\n\nPutting it all together, let’s create a table containing 10000 datapoints of random age and biological sex and call it demographics.\n\nN &lt;- 10000\n\ndemographics &lt;- data.frame(\n  age = sample(18:90, N, replace=TRUE),\n  biosex = sample(factor(c(\"male\", \"female\")), N, replace=TRUE)\n)\n\nhead(demographics)\n\n  age biosex\n1  62   male\n2  59   male\n3  89   male\n4  32 female\n5  18   male\n6  80 female\n\n\nBecause this is uniformly random, we should expect even-looking plots.\n\nlibrary(ggplot2)\n\nggplot(demographics) +\n  geom_boxplot(aes(x=biosex, y=age))\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipDeliverables\n\n\n\nIf you can get this plot, that’s the final product for today! Turn in a screenshot of your full RStudio screen, including code and box-and-whisker plot on Blackboard with Classwork/Homework Assignment 2.\n\n\nIn future classes, we’ll discuss more sophisticated ways to look at, obtain, and simulate datasets.",
+    "crumbs": [
+      "Home",
+      "Labs",
+      "Understanding Types of Data"
     ]
   },
   {
@@ -63,7 +100,7 @@
     "href": "index.html",
     "title": "Introduction to Experimental Design",
     "section": "",
-    "text": "Welcome!\nThis website contains materials for course CAS PS 211 at Boston University, which serves as a primer for undergraduate psychology majors in statistical and experimental methods for psychological research. The materials here are speific to Fall 2025, Section B1.\nAnnouncements and assignments will come through Blackboard. See the links above.\n\nAdditional Resources\nStudents are likely to find useful the following free online resources:\n\nR for Data Science\nHadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund\nIf this is your first time programming in R, sections of this book may aid your understanding of the language.\nAnswering Questions with Data\nMatthew J. C. Crump, Danielle J. Navarro, and Jeffrey Suzuki\nExperimentology: An Open Science Approach to Experimental Psychology Methods\nMichael C. Frank, Mika Braginsky, Julie Cachia, Nicholas A. Coles, Tom E. Hardwicke, Robert D. Hawkins, Maya B. Mathur, Rondeline Williams\nIntroduction to Modern Statistics\nMine Çetinkaya-Rundel and Johanna Hardin\nThe Effect: An Introduction to Research Design and Causality\nNick Huntington-Klein\n\n\n\nAttribution and Reuse Notice\nExcept where otherwise noted, this site and its original materials are created by the authors and licensed under Creative Commons BY-NC-SA 4.0.\n\nYou are free to:\n\nShare — copy and redistribute the material in any medium or format\nAdapt — remix, transform, and build upon the material The licensor cannot revoke these freedoms as long as you follow the license terms.\n\nUnder the following terms:\n\nAttribution — You must give appropriate credit , provide a link to the license, and indicate if changes were made . You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\nNonCommercial — You may not use the material for commercial purposes .\nShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.\nNo additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.\n\n\n\n\n\n\n\n Back to top"
+    "text": "Welcome!\nThis website contains materials for course CAS PS 211 at Boston University, which serves as a primer for undergraduate psychology majors in statistical and experimental methods for psychological research. The materials here are speific to Fall 2025, Section B1.\nAnnouncements and assignments will come through Blackboard. See the links above.\n\nAdditional Resources\nStudents are likely to find useful the following free online resources:\n\nR for Data Science\nHadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund\nIf this is your first time programming in R, sections of this book may aid your understanding of the language.\nAnswering Questions with Data\nMatthew J. C. Crump, Danielle J. Navarro, and Jeffrey Suzuki\nExperimentology: An Open Science Approach to Experimental Psychology Methods\nMichael C. Frank, Mika Braginsky, Julie Cachia, Nicholas A. Coles, Tom E. Hardwicke, Robert D. Hawkins, Maya B. Mathur, Rondeline Williams\nIntroduction to Modern Statistics\nMine Çetinkaya-Rundel and Johanna Hardin\nThe Effect: An Introduction to Research Design and Causality\nNick Huntington-Klein\n\n\n\nAttribution and Reuse Notice\nExcept where otherwise noted, this site and its original materials are created by the authors and licensed under Creative Commons BY-NC-SA 4.0.\n\nYou are free to:\n\nShare — copy and redistribute the material in any medium or format\nAdapt — remix, transform, and build upon the material The licensor cannot revoke these freedoms as long as you follow the license terms.\n\nUnder the following terms:\n\nAttribution — You must give appropriate credit , provide a link to the license, and indicate if changes were made . You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\nNonCommercial — You may not use the material for commercial purposes .\nShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.\nNo additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.\n\n\n\n\nDisclaimer\n\nNote that this site is not a textbook, and that the materials here are primarily condensed lecture notes for didactic purposes. Content may change at any time and accuracy for purposes beyond the scope of this course is not guaranteed.\n\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "syllabus.html",
@@ -122,6 +159,53 @@
       "Home",
       "Labs",
       "Getting Ready to Code"
+    ]
+  },
+  {
+    "objectID": "Slides.html",
+    "href": "Slides.html",
+    "title": "Lecture Slides",
+    "section": "",
+    "text": "The following links return directly to the lecture PDFs on Blackboard.\n\nLecture 3 (2025-09-08)\nLecture 4 (2025-09-10)\nLecture 5 (2025-09-12)\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Home",
+      "Lecture Slides"
+    ]
+  },
+  {
+    "objectID": "Design/L05.html",
+    "href": "Design/L05.html",
+    "title": "Experimental Control",
+    "section": "",
+    "text": "The purpose of an experiment is to establish control over those extraneous variables that might affect an observation of causal effects. With experimental control, we have essentially taken measures to ensure that our assumptions are reasonably true and that alternative explanations for the observed effect are minimized.\nWe’ve established that experiments involve manipulating and observing variables to provide evidence for causal effects.\n\nThe independent variable is the possible cause.\nThe dependent variable is the effect or outcome we observe.\n\nIn an experiment, the independent variable is explicitly manipulated while controlling for all other variables, such as by ensuring they are constant. This is the simplest type of control.\n\n\nTo hold variables constant means to ensure they are the same in each experimental group. There are many other types of control, however.\nConsider an experimental study titled “The Relationship Between Mindfulness and Anxiety”. Just from the title, what might we presume are the dependent and independent variables?\n\n\nThink for a moment and then click here to reveal an explanation.\n\nWe might guess that the study manipulates mindfulness as an independent variable, and then observes whether there is an effect on anxiety as a dependent variable.\n\n\n\nThough we can take a guess at the dependent and independent variables from the title, we would have to read the paper to know if we guessed correctly!\nTake another example, “Listening to Music While Studying Increases Recall”. This title is phrased as a hypothesis: that listening to music has a causal effect on recall performance.",
+    "crumbs": [
+      "Home",
+      "2. Research Design",
+      "Experimental Control"
+    ]
+  },
+  {
+    "objectID": "Design/L05.html#talking-about-experiment-designs",
+    "href": "Design/L05.html#talking-about-experiment-designs",
+    "title": "Experimental Control",
+    "section": "",
+    "text": "The purpose of an experiment is to establish control over those extraneous variables that might affect an observation of causal effects. With experimental control, we have essentially taken measures to ensure that our assumptions are reasonably true and that alternative explanations for the observed effect are minimized.\nWe’ve established that experiments involve manipulating and observing variables to provide evidence for causal effects.\n\nThe independent variable is the possible cause.\nThe dependent variable is the effect or outcome we observe.\n\nIn an experiment, the independent variable is explicitly manipulated while controlling for all other variables, such as by ensuring they are constant. This is the simplest type of control.\n\n\nTo hold variables constant means to ensure they are the same in each experimental group. There are many other types of control, however.\nConsider an experimental study titled “The Relationship Between Mindfulness and Anxiety”. Just from the title, what might we presume are the dependent and independent variables?\n\n\nThink for a moment and then click here to reveal an explanation.\n\nWe might guess that the study manipulates mindfulness as an independent variable, and then observes whether there is an effect on anxiety as a dependent variable.\n\n\n\nThough we can take a guess at the dependent and independent variables from the title, we would have to read the paper to know if we guessed correctly!\nTake another example, “Listening to Music While Studying Increases Recall”. This title is phrased as a hypothesis: that listening to music has a causal effect on recall performance.",
+    "crumbs": [
+      "Home",
+      "2. Research Design",
+      "Experimental Control"
+    ]
+  },
+  {
+    "objectID": "Design/L05.html#randomness-as-control",
+    "href": "Design/L05.html#randomness-as-control",
+    "title": "Experimental Control",
+    "section": "Randomness as Control",
+    "text": "Randomness as Control\nWe can imbue our data with nice statistical properties by using randomness. This gives us a form of control we can use to bolster the strength of our assumptions even when there are some variables we can’t hold constant.\n\n\n\n\n\nThe internet security company Cloudflare uses a camera to watch a wall of lava lamps. The unpredictability provides a high quality source of random data for security purposes.Image credited to HaeB on Wikimedia Commons, reproduced here under license CC-BY-SA 4.0.\n\n\n\nWhat is “Random”?\nEvents are random when they occur with some probability but are individually unpredictable. In other words, random outcomes are determined by chance.\nConsider two number sequences: 1231234545, 1656321345. Both orderings could be random, if generated spontaneously by an unpredictable process such as a repeated die roll.\nNote that randomness is different from uniformity. For outcomes to be uniform implies specifically that all the outcomes have an equal probability.\n\n\nWe can learn from these examples that randomness is about the process that generates the data, that the process is unpredictable.\n\n\nRandom Assignment\nIn experiments, we randomly assign participants to groups. This reduces the potential for systematic differences across groups and allows us to more safely attribute any observed difference in outcomes to the treatment.\n\n\nThe number of variables that could be affecting an observation really is endless. We can’t control for all of them separately. By performing random group assignment, we break any systematic relationships of group to any variable. We can then safely assume that the two groups are similar in all variables on average.\n\n\n\n\nOne issue we run into is that we want the group assignments to be random but want also for the groups to be the same size. There are several ways ways to accomplish both. For instance, we could pair up participants such that, in a random order, one is assigned to Group A and the other to Group B.",
+    "crumbs": [
+      "Home",
+      "2. Research Design",
+      "Experimental Control"
     ]
   }
 ]

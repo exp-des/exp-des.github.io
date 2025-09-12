@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Michael Pascale">
 
-<title>Establishing Causality – Introduction to Experimental Design</title>
+<title>Understanding Types of Data – Introduction to Experimental Design</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +21,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +66,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../Introduction/L05.html" rel="next">
-<link href="../Introduction/L03.html" rel="prev">
+<link href="../Slides.html" rel="next">
+<link href="../Labs/Lab01.html" rel="prev">
 <link href="../assets/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -275,8 +311,8 @@ window.Quarto = {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <div id="quarto-announcement" data-announcement-id="ae62c6fcb899d422bc43f39cd77fe297" class="alert alert-light hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
-<p>The course syllabus has been updated.</p>
+    <div id="quarto-announcement" data-announcement-id="4a46581ba416db8cf6927e58887de9e6" class="alert alert-light hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p>Assignment 2 and Lecture 5 have been updated.</p>
 </div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
@@ -326,7 +362,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Introduction/L01.html">Introduction</a></li><li class="breadcrumb-item"><a href="../Introduction/L04.html">Establishing Causality</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Labs/Lab01.html">Labs</a></li><li class="breadcrumb-item"><a href="../Labs/Lab02.html">Understanding Types of Data</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -345,39 +381,32 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Introduction</span></a>
+ <span class="menu-text">1. Introduction</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">2. Research Design</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Introduction/L01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The Mindset of Experimental Psychology</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Introduction/L02.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Foundations in Philosophy and Mathematics</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Introduction/L03.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Observation and Measurement</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Introduction/L04.html" class="sidebar-item-text sidebar-link active">
+  <a href="../Design/L04.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Establishing Causality</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Introduction/L05.html" class="sidebar-item-text sidebar-link">
+  <a href="../Design/L05.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Experimental Control</span></a>
   </div>
 </li>
@@ -385,13 +414,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Labs</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Labs/Lab01.html" class="sidebar-item-text sidebar-link">
@@ -400,7 +429,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Labs/Lab02.html" class="sidebar-item-text sidebar-link">
+  <a href="../Labs/Lab02.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Understanding Types of Data</span></a>
   </div>
 </li>
@@ -428,13 +457,13 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#considering-the-counterfactual" id="toc-considering-the-counterfactual" class="nav-link active" data-scroll-target="#considering-the-counterfactual">Considering the Counterfactual</a></li>
-  <li><a href="#probabilistic-effects" id="toc-probabilistic-effects" class="nav-link" data-scroll-target="#probabilistic-effects">Probabilistic Effects</a></li>
-  <li><a href="#creating-knowledge-of-causal-effects" id="toc-creating-knowledge-of-causal-effects" class="nav-link" data-scroll-target="#creating-knowledge-of-causal-effects">Creating Knowledge of Causal Effects</a>
+  <li><a href="#self-study" id="toc-self-study" class="nav-link active" data-scroll-target="#self-study">Self-Study</a></li>
+  <li><a href="#from-values-to-vectors" id="toc-from-values-to-vectors" class="nav-link" data-scroll-target="#from-values-to-vectors">From Values to Vectors</a>
   <ul class="collapse">
-  <li><a href="#observational-research" id="toc-observational-research" class="nav-link" data-scroll-target="#observational-research">Observational Research</a></li>
-  <li><a href="#experimental-research" id="toc-experimental-research" class="nav-link" data-scroll-target="#experimental-research">Experimental Research</a></li>
+  <li><a href="#qualitative-data-types" id="toc-qualitative-data-types" class="nav-link" data-scroll-target="#qualitative-data-types">Qualitative Data Types</a></li>
+  <li><a href="#random-data" id="toc-random-data" class="nav-link" data-scroll-target="#random-data">Random Data</a></li>
   </ul></li>
+  <li><a href="#oodles-of-observations" id="toc-oodles-of-observations" class="nav-link" data-scroll-target="#oodles-of-observations">Oodles of Observations</a></li>
   </ul>
 </nav>
     </div>
@@ -442,21 +471,27 @@ window.Quarto = {
 <main class="content page-columns page-full" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Introduction/L01.html">Introduction</a></li><li class="breadcrumb-item"><a href="../Introduction/L04.html">Establishing Causality</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Labs/Lab01.html">Labs</a></li><li class="breadcrumb-item"><a href="../Labs/Lab02.html">Understanding Types of Data</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Establishing Causality</h1>
-<p class="subtitle lead">Summary of Lecture 4</p>
+<h1 class="title">Understanding Types of Data</h1>
+<p class="subtitle lead">Lab 2</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Michael Pascale </p>
+          </div>
+  </div>
     
     <div>
-    <div class="quarto-title-meta-heading">Lecture Date</div>
+    <div class="quarto-title-meta-heading">Discussion/Lab Date</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Wednesday, September 10, 2025</p>
+      <p class="date">Friday, September 5, 2025</p>
     </div>
   </div>
   
@@ -468,91 +503,220 @@ window.Quarto = {
 </header>
 
 
-<p>We’re very used to making statements regarding <strong>causation</strong>. Take the following statements as examples:</p>
+<p>This lab will translate what we’ve learned about kinds of data into how <em>real</em> data of these types are processed for visualization and later statistical analysis.</p>
+<section id="self-study" class="level2">
+<h2 class="anchored" data-anchor-id="self-study">Self-Study</h2>
+<p>This lab corresponds roughly to the following chapters in <strong>R for Data Science</strong>, which are recommended for further self-study.</p>
 <ul>
-<li>“I overslept, so I was late to class”.</li>
-<li>“Smoking causes cancer.”</li>
-<li>“Buying a lottery ticket causes winning the lottery.”</li>
+<li><a href="https://r4ds.hadley.nz/workflow-basics.html"><em>Workflow: Basics</em> 2.1-2.6</a></li>
+<li><a href="https://r4ds.hadley.nz/factors.html#factor-basics"><em>Factor Basics</em> 16.2</a></li>
+<li><a href="https://r4ds.hadley.nz/data-visualize.html#the-penguins-data-frame"><em>Dataframe</em> 1.2.1</a></li>
 </ul>
-
-<div class="no-row-height column-margin column-container"><div class="margin-aside">
-<p>The third example might be strange, but do you agree that you cannot win the lottery without having bought a lottery ticket?</p>
-</div></div><p>In each of these statements, we’ve said that some antecedent event <em>causes</em> an outcome.</p>
-<section id="considering-the-counterfactual" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="considering-the-counterfactual">Considering the Counterfactual</h2>
-<p>What does it mean that event <span class="math inline">\(A\)</span> <em>causes</em> event <span class="math inline">\(B\)</span>?</p>
-<p>A philosophy that we could adopt is that the occurence of some antecedent event is sufficent for us to expect that the event in question will occur. In other words, <span class="math inline">\(B\)</span> might not have occured if <span class="math inline">\(A\)</span> did not happen first. Note how we implicitly consider <em>what didn’t happen</em> whenever we make a causal statement: we consider the <strong>counterfactual</strong>.</p>
-
-<div class="no-row-height column-margin column-container"><div class="margin-aside">
-<p>Consider that any event could have <strong>multiple causes</strong>. Even if you did not oversleep, you could be late to class because of traffic, a phone call, a rainstorm… <br><br><span class="math inline">\(A\)</span> might be <em>sufficient</em> to cause <span class="math inline">\(B\)</span> but not <em>necessary</em> if another event <span class="math inline">\(C\)</span> could have caused it.</p>
-</div></div><ul>
-<li>“I might not have been late to class if I did not oversleep.”</li>
-</ul>
-<p>Even though the counterfactual is counter to what happened this time, we might know from experience that the story could have gone another way. The counterfactual is taken into account when we make causal statements regardless of whether it actually occured.</p>
 </section>
-<section id="probabilistic-effects" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="probabilistic-effects">Probabilistic Effects</h2>
-<p>The causal relationships we research are usually <strong>probabilistic</strong> in nature. This means that an antecedent event may influence the <em>probability</em> of the event in question, but not guarantee it.</p>
+<section id="from-values-to-vectors" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="from-values-to-vectors">From Values to Vectors</h2>
+<p>Before we can begin, we need to develop a sense for how R handles <strong>datasets</strong>.</p>
+<p>In our first lab, we demonstrated how to store single values in <strong>variables</strong>, effectively giving them a name we can reference later.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">42</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>lucky_number <span class="ot">&lt;-</span> <span class="dv">7</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>IDriveA <span class="ot">&lt;-</span> <span class="st">"honda civic"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Find the radius of a circle.</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fl">3.14159</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>r <span class="ot">&lt;-</span> <span class="dv">7</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span><span class="sc">*</span>x<span class="sc">*</span>r</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 43.98226</code></pre>
+</div>
+</div>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
-<p>Maybe <span class="math inline">\(A\)</span> does not guarantee <span class="math inline">\(B\)</span> but it does make <span class="math inline">\(A\)</span> more likely.</p>
-</div></div><ul>
-<li>“I smoked, but I didn’t get cancer.”</li>
-<li>“I bought a lottery ticket, but I didn’t win.”</li>
-</ul>
-<p>We can use probability to quantify causal effects using counterfactuals. The effect of some antecedent event on an outcome is the probability of the outcome given the event occured minus the probability given the counterfactual.</p>
-<p>To write this explicitly:</p>
-<p><span class="math inline">\(\text{Causal Effect of A} = P(Outcome | A) - P(Outcome | \neg A)\)</span></p>
+<p>Here we assign values to a few variables with arbitrary names: <code>n</code>, <code>lucky_number</code>, <code>IDriveA</code>, <code>x</code>, <code>r</code>. <br><br> We can use variables in mathematical expressions as demonstrated here by calculating the circumference of a circle with radius 7cm.</p>
+</div></div><p>Of course, when we collect data it’s actually <em>many values</em> we need to work with. In R, we can create <strong>vectors</strong> to hold long columns of values, as we might obtain from real data.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>some_numbers <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">12</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>some_numbers</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  3  6  8 12</code></pre>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>The <code>c()</code> function <u><strong>c</strong></u>ombines several values into a vector. <br><br> As a shorthand, you can create sequences of numbers using the <code>:</code>, like: <code>1:10</code>. Try this out in the console.</p>
+</div></div><p>Any mathematical calculations will work on the <em>whole vector</em> all at once. For example, we could do the circumference calculation again, this time for circles of a few different diameters.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>r <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">36</span>, <span class="dv">28</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span><span class="sc">*</span>x<span class="sc">*</span>r</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  43.98226 226.19448 175.92904   6.28318   0.00000</code></pre>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>Check the last two elements and see that it has correctly listed <span class="math inline">\(2 \pi \cdot 1 = 2\pi\)</span> and <span class="math inline">\(2\pi \cdot 0 = 0\)</span>, for example. <br><br> This property of being able to perform calculations over whole vectors is what makes this computer software useful for statistics. Routine calculations on a whole dataset can be done quickly and precisely without a pen or calculator.</p>
+</div></div><section id="qualitative-data-types" class="level3">
+<h3 class="anchored" data-anchor-id="qualitative-data-types">Qualitative Data Types</h3>
+<p>We can create vectors of <strong>qualitative</strong> variables too. R has one data type for both nominal and ordinal variables: the <strong>factor</strong>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>handedness <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"Right-Handed"</span>, <span class="st">"Left-Handed"</span>, <span class="st">"Ambidextrous"</span>))</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>handedness</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] Right-Handed Left-Handed  Ambidextrous
+Levels: Ambidextrous Left-Handed Right-Handed</code></pre>
+</div>
+</div>
+<p>R refers to the unique names a factor can take on as its <em>levels</em>.</p>
+</section>
+<section id="random-data" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="random-data">Random Data</h3>
+<p>It’s often useful to be able to generate random data, whether to randomly assign participants to groups or to <em>simulate</em> what our results might look like. There are several functions to do with randomness, but we’ll start by demonstrating how to use the <code>sample()</code> function.</p>
+<p>A simple example is the roll of a die. This code will randomly take from the six possible face values, sampling the equivalent of 25 die rolls.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>), <span class="dv">25</span>, <span class="at">replace=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 4 3 2 6 5 1 2 1 4 3 1 3 5 3 1 4 3 4 1 6 1 4 6 6 3</code></pre>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>The <code>replace=TRUE</code> means “sample with replacement”. In other words: take a random number from 1 to 6 and then put it back before taking a random number a second time, a third time, etc.</p>
+</div></div><p>Combining this with what we learned above about factor variables (nominal or ordinal data types), we can demonstrate one way to <strong>randomly assign</strong> ten participants to two groups.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a nominal variable (factor) with two levels: treatment and placebo.</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>conditions <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"treatment"</span>, <span class="st">"placebo"</span>))</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Start with alternating (repeat), five in each group.</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>assignment <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(conditions, <span class="dv">5</span>))</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Randomize the variable so that 5 participants are assigned randomly to each (10 in total).</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>assignment <span class="ot">&lt;-</span> <span class="fu">sample</span>(assignment, <span class="dv">10</span>)</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>assignment</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] treatment placebo   placebo   placebo   placebo   placebo   treatment
+ [8] treatment treatment treatment
+Levels: placebo treatment</code></pre>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>As you run each line, take a look at the <code>conditions</code> and <code>assignment</code> variables in your R environment.</p>
+</div></div></section>
+</section>
+<section id="oodles-of-observations" class="level2">
+<h2 class="anchored" data-anchor-id="oodles-of-observations">Oodles of Observations</h2>
+<p>Most data we deal with is <strong>tabular</strong>; we’ve collected many observations of more than just one variable. To keep track of it all, we stack columns side-by-side together into tables. In R, we equivalently put vectors together into <strong>dataframes</strong>.</p>
+<p>We saw an example of a dataframe last week, the data table from the <code>ChickWeight</code> experiment.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Remember head() lets us see just the first few rows - not the whole dataframe.</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>ChickWeight <span class="sc">|&gt;</span> <span class="fu">head</span>()</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  weight Time Chick Diet
+1     42    0     1    1
+2     51    2     1    1
+3     59    4     1    1
+4     64    6     1    1
+5     76    8     1    1
+6     93   10     1    1</code></pre>
+</div>
+</div>
+<p>With what we’ve learned in the last week, which of the four variables was the independent variable and which was the dependent variable in this experiment?</p>
 <details>
 <summary>
-Click to show an explanation of this notation.
+Think for a moment and then click here to reveal an explanation.
 </summary>
-<blockquote class="blockquote">
-<p>Generally, we can denote the probability of some event <span class="math inline">\(X\)</span> as <span class="math inline">\(P(X)\)</span>.</p>
-<p>When one event depends on, or is conditional on another, we denote that <span class="math inline">\(P(A|B)\)</span> or the “probability of <span class="math inline">\(A\)</span> given <span class="math inline">\(B\)</span>”.</p>
-<p>To consider the counterfactual, we write <span class="math inline">\(\neg A\)</span> or “not A”, the event that <span class="math inline">\(A\)</span> <em>didn’t</em> happen.</p>
-</blockquote>
-We’ll learn more about probability later in the course.
+<p>Recall that there were several diets a chick could be assigned to, and its weight was measured over time as it grew up.</p>
+<ul>
+<li>The experiment manipulated <code>Diet</code> as an independent variable.</li>
+<li>The dependent variable was <code>weight</code> in grams, observed every two days.</li>
+</ul>
 </details>
-</section>
-<section id="creating-knowledge-of-causal-effects" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="creating-knowledge-of-causal-effects">Creating Knowledge of Causal Effects</h2>
-<p>Given that the counterfactual is not what happened this time, we tend to make causal statements taking into account knowledge and past experience. To produce <em>new knowledge</em> so that we can quantify causal effects, we have two options: observation and experimentation.</p>
-<section id="observational-research" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="observational-research">Observational Research</h3>
-<p>The first option is to <strong>estimate</strong> the difference between a fact and a counterfactual, finding the probabilities by very carefully analyzing historical data or real-world events. We can compare two existing groups, and <em>make an <strong>assumption</strong></em> that they are similar enough to be compared (perhaps adjusting for a few variables).</p>
-
-<div class="no-row-height column-margin column-container"><div class="margin-aside">
-<p>The exact assumptions we make are very important and can mean the difference between strong and weak research.</p>
-</div></div><p>As an example, we could <em>find</em> and observe two large groups of people: one group of folks who have smoked for the last ten years and another who have never smoked. We could test or survey these groups to compare the effect of smoking on their health.</p>
-<p>It might still be hard to say whether smoking was the only variable that was different. Perhaps the two groups are different ages, have different diets, were located in different states, etc. It can be difficult to account for all the potential <strong>confounds</strong> that could undermine our assumptions.</p>
-</section>
-<section id="experimental-research" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="experimental-research">Experimental Research</h3>
-<p>The second option, to <strong>design an experiment</strong>, allows us to <em>minimize our assumptions</em> and <em>create</em> groups which differ in only variables we <strong>manipulate</strong>.</p>
-
-<div class="no-row-height column-margin column-container"><div class="margin-aside">
-<p>Experiments rely on the <strong>control</strong> that comes from setting variables to be constant <em>or</em> from introducing known randomness or statistically accounting for random factors.</p>
-</div></div><p>For example, we <em>select</em> students and <strong>randomly assign</strong> them to two groups which either spend thirty minutes reading a physical book or thirty minutes listening to an audiobook. We then administer a memory test and compare the performance of the groups.</p>
-<p>Experiments are not quite immune from confounding variables, but well-designed experiments can certainly offer <em>strong evidence</em> of causal relationships since many potential confounders have been <strong>controlled</strong>.</p>
-<p>While controlled experiments offer stronger causal explanations, there are many situations where running an experiment is impossible There are situations where it may not be ethical to manipulate certain variables. For this reason we cannot design experiments to study topics like abuse or trauma. Some other topics may be impossible to study experimentally due to infeasability or high cost.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="An Important Note on Research Ethics">
+<p>If we want to create our own data frame, we can build one using <code>data.frame()</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(<span class="at">trial=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>), <span class="at">dice_roll=</span><span class="fu">c</span>(<span class="dv">12</span>,<span class="dv">3</span>,<span class="dv">7</span>))</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  trial dice_roll
+1     1        12
+2     2         3
+3     3         7</code></pre>
+</div>
+</div>
+<p>Putting it all together, let’s create a table containing 10000 datapoints of random age and biological sex and call it <code>demographics</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="dv">10000</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>demographics <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">age =</span> <span class="fu">sample</span>(<span class="dv">18</span><span class="sc">:</span><span class="dv">90</span>, N, <span class="at">replace=</span><span class="cn">TRUE</span>),</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">biosex =</span> <span class="fu">sample</span>(<span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"male"</span>, <span class="st">"female"</span>)), N, <span class="at">replace=</span><span class="cn">TRUE</span>)</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(demographics)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  age biosex
+1  62   male
+2  59   male
+3  89   male
+4  32 female
+5  18   male
+6  80 female</code></pre>
+</div>
+</div>
+<p>Because this is uniformly random, we should expect even-looking plots.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(demographics) <span class="sc">+</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>biosex, <span class="at">y=</span>age))</span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Lab02_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Deliverables">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>An Important Note on Research Ethics
+<span class="screen-reader-only">Tip</span>Deliverables
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>History has shown us many examples of plainly <em>unethical</em> research experiments. Infamous studies you may have heard of include the <a href="https://en.wikipedia.org/wiki/Stanford_prison_experiment">Stanford Prison Experiment</a> and the egregiously abusive <a href="https://en.wikipedia.org/wiki/Tuskegee_Syphilis_Study">Tuskegee Syphillis Study</a>. We’ll cover a history of major ethical breaches at points throughout the semester.</p>
-<p>In modern science, we carefully consider the ethics of any new research, experimental or observational. Medical research in particular is subject to strict legal and institutional regulation.</p>
+<p>If you can get this plot, that’s the final product for today! Turn in a screenshot of your full RStudio screen, including code and box-and-whisker plot on Blackboard with Classwork/Homework Assignment 2.</p>
 </div>
 </div>
+<p>In future classes, we’ll discuss more sophisticated ways to look at, obtain, and simulate datasets.</p>
+<!-- _Taking a look_ or **visualizing** a dataset is often one of the very first steps we take in order to acquaint ourselves with data, develop expectations, and check basic assumptions. -->
+<!-- For example, perhaps we've **assumed** that two groups are about the same _age_ and _height_. We could probably gather this from looking at the raw dataframe. -->
+<!-- ## _Simulating_ Real Data -->
+<!-- There are many ways to simulate data. For the purposes of this class, we'll use a handy package called `truffle`. -->
+<!-- ```{r} -->
+<!-- #| message: false -->
+<!-- # You do NOT need to code this part on your own! -->
+<!-- library(truffle) -->
+<!-- example <-  -->
+<!--   truffle_likert( -->
+<!--     study_design = "factorial_between2", -->
+<!--     n_per_condition = 5, -->
+<!--     factors  = "X1_latent", -->
+<!--     prefixes = "X1_item", -->
+<!--     alpha = .70, -->
+<!--     n_items = 5, -->
+<!--     n_levels = 7, -->
+<!--     approx_d_between_groups = 0.50, -->
+<!--     seed = 42 -->
+<!--   ) |> -->
+<!--   truffle_demographics() -->
+<!-- example -->
+<!-- ``` -->
 
 
-</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
@@ -580,7 +744,7 @@ We’ll learn more about probability later in the course.
     anchorJS.add('.anchored');
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/exp-des\.github\.io\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -848,25 +1012,66 @@ We’ll learn more about probability later in the course.
           }
         };
       }
-        // Attach click handler to the DT
-        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-        for (const annoteDlNode of annoteDls) {
-          annoteDlNode.addEventListener('click', (event) => {
-            const clickedEl = event.target;
-            if (clickedEl !== selectedAnnoteEl) {
-              unselectCodeLines();
-              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-              if (activeEl) {
-                activeEl.classList.remove('code-annotation-active');
-              }
-              selectCodeLines(clickedEl);
-              clickedEl.classList.add('code-annotation-active');
-            } else {
-              // Unselect the line
-              unselectCodeLines();
-              clickedEl.classList.remove('code-annotation-active');
+        const annoteTargets = window.document.querySelectorAll('.code-annotation-anchor');
+        for (let i=0; i<annoteTargets.length; i++) {
+          const annoteTarget = annoteTargets[i];
+          const targetCell = annoteTarget.getAttribute("data-target-cell");
+          const targetAnnotation = annoteTarget.getAttribute("data-target-annotation");
+          const contentFn = () => {
+            const content = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+            if (content) {
+              const tipContent = content.cloneNode(true);
+              tipContent.classList.add("code-annotation-tip-content");
+              return tipContent.outerHTML;
             }
-          });
+          }
+          const config = {
+            allowHTML: true,
+            content: contentFn,
+            onShow: (instance) => {
+              selectCodeLines(instance.reference);
+              instance.reference.classList.add('code-annotation-active');
+              window.tippy.hideAll();
+            },
+            onHide: (instance) => {
+              unselectCodeLines();
+              instance.reference.classList.remove('code-annotation-active');
+            },
+            maxWidth: 300,
+            delay: [50, 0],
+            duration: [200, 0],
+            offset: [5, 10],
+            arrow: true,
+            trigger: 'click',
+            appendTo: function(el) {
+              return el.parentElement.parentElement.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'quarto',
+            placement: 'right',
+            positionFixed: true,
+            popperOptions: {
+              modifiers: [
+              {
+                name: 'flip',
+                options: {
+                  flipVariations: false, // true by default
+                  allowedAutoPlacements: ['right'],
+                  fallbackPlacements: ['right', 'top', 'top-start', 'top-end', 'bottom', 'bottom-start', 'bottom-end', 'left'],
+                },
+              },
+              {
+                name: 'preventOverflow',
+                options: {
+                  mainAxis: false,
+                  altAxis: false
+                }
+              }
+              ]        
+            }      
+          };
+          window.tippy(annoteTarget, config); 
         }
     const findCites = (el) => {
       const parentEl = el.parentElement;
@@ -909,13 +1114,13 @@ We’ll learn more about probability later in the course.
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../Introduction/L03.html" class="pagination-link" aria-label="Observation and Measurement">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Observation and Measurement</span>
+      <a href="../Labs/Lab01.html" class="pagination-link" aria-label="Getting Ready to Code">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Getting Ready to Code</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../Introduction/L05.html" class="pagination-link" aria-label="Experimental Control">
-        <span class="nav-page-text">Experimental Control</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../Slides.html" class="pagination-link" aria-label="Lecture Slides">
+        <span class="nav-page-text">Lecture Slides</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
