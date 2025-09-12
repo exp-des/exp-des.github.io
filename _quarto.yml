@@ -12,8 +12,10 @@ website:
     style: floating
     border: true
     contents:
-      - section: Introduction
+      - section: 1. Introduction
         contents: Introduction/*
+      - section: 2. Research Design
+        contents: Design/*
       - section: Labs
         contents: Labs/*
       - Slides.qmd

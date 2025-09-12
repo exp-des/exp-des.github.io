@@ -1,0 +1,77 @@
+---
+title: Experimental Control
+subtitle: Summary of Lecture 5
+date: 2025-09-12
+---
+
+## Talking About Experiment Designs
+
+The purpose of an experiment is to establish **control** over those extraneous variables that might affect an observation of causal effects. With experimental control, we have essentially taken measures to ensure that our assumptions are reasonably true and that **alternative explanations** for the observed effect are minimized.
+
+We've established that experiments involve manipulating and observing variables to provide evidence for causal effects.
+
+- The **independent variable** is the _possible cause_.
+- The **dependent variable** is the _effect_ or outcome we observe.
+
+In an experiment, the independent variable is explicitly manipulated while controlling for all other variables, such as by ensuring they are **constant**. This is the simplest type of control.
+
+:::{.aside}
+To hold variables constant means to ensure they are the _same_ in each experimental group. There are many other types of control, however.
+:::
+
+Consider an experimental study titled "The Relationship Between Mindfulness and Anxiety". Just from the title, what might we presume are the dependent and independent variables?
+
+<details>
+<summary>
+Think for a moment and then click here to reveal an explanation.
+</summary>
+We might guess that the study manipulates _mindfulness_ as an independent variable, and then observes whether there is an effect on _anxiety_ as a dependent variable.
+</details>
+
+:::{.aside}
+Though we can take a guess at the dependent and independent variables from the title, we would have to read the paper to know if we guessed correctly!
+:::
+
+Take another example, "Listening to Music While Studying Increases Recall". This title is phrased as a **hypothesis**: that listening to music has a causal effect on recall performance.
+
+## Randomness as Control
+ 
+We can imbue our data with nice statistical properties by using randomness. This gives us a form of control we can use to bolster the strength of our assumptions even when there are some variables we can't hold constant.
+
+:::{.aside}
+![The internet security company _Cloudflare_ uses a camera to watch a wall of lava lamps. The unpredictability provides a high quality source of random data for security purposes.<br>Image credited to [HaeB](https://commons.wikimedia.org/wiki/User:HaeB) on [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=116926170), reproduced here under license [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0).](https://upload.wikimedia.org/wikipedia/commons/b/bb/Lava_lamp_wall_at_Cloudflare_office_-2.jpg)
+:::
+
+
+### What is "Random"?
+
+Events are **random** when they occur with some probability but are individually unpredictable. In other words, random outcomes are determined by chance.
+
+Consider two number sequences: `1231234545`, `1656321345`. _Both_ orderings could be random, if generated spontaneously by an unpredictable process such as a repeated die roll.
+
+Note that _randomness is different from uniformity_. For outcomes to be **uniform** implies specifically that all the outcomes have an equal probability.
+
+<!-- Say we were to assign everyone in class a number, and then draw numbers from a hat for teams. -->
+
+<!-- Take a bent coin to decide which group a person joins. This is certainly random but the outcomes will not be _uniform_. -->
+
+
+We can learn from these examples that randomness is about the process that generates the data, that the process is unpredictable.
+
+
+### Random Assignment
+
+
+
+In experiments, we **randomly assign** participants to groups. This reduces the potential for systematic differences across groups and allows us to more safely attribute any observed difference in outcomes to the treatment.
+
+
+<!-- In our discussion of causality, we considered an observational study of cancer rate in two groups: smokers and non-smokers. One potential limitation of a study like this could be that the average age of the smokers was slightly higher. How can we solve this? -->
+
+<!-- - we could  -->
+
+The number of variables that _could_ be affecting an observation really is endless. We can't control for all of them separately. By performing _random_ group assignment, we _break_ any systematic relationships of group to any variable. We can then safely assume that the two groups are similar in all variables _on average_.
+
+:::{.aside}
+One issue we run into is that we want the group assignments to be random but want also for the groups to be the same size. There are several ways ways to accomplish _both_. For instance, we could pair up participants such that, in a random order, one is assigned to Group A and the other to Group B.
+:::
