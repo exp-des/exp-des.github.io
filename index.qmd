@@ -70,3 +70,9 @@ Under the following terms:
 - ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
 - No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
 :::
+
+#### Disclaimer
+
+::: {.text-muted .small}
+Note that this site is not a textbook, and that the materials here are primarily condensed lecture notes for didactic purposes. Content may change at any time and accuracy for purposes beyond the scope of this course is not guaranteed.
+:::

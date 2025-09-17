@@ -11,6 +11,7 @@ website:
   sidebar:
     style: floating
     border: true
+    collapse-level: 1
     contents:
       - section: 1. Introduction
         contents: Introduction/*
@@ -18,6 +19,8 @@ website:
         contents: Design/*
       - section: Labs
         contents: Labs/*
+      - section: Projects
+        contents: Projects/*
       - Slides.qmd
       - text: "Syllabus for Fall 2025"
         href: syllabus.qmd
@@ -40,10 +43,10 @@ website:
     type: textbox
     copy-button: true
     show-item-context: true
-  announcement: 
+  announcement:
     icon: info-circle
     dismissable: true
-    content: "The course syllabus has been updated."
+    content: "The [Assignment 2 lab component](/Labs/Lab02.qmd), [research proposal project](/Projects/Project01.qmd) and Lecture 6 slides have been posted."
     type: light
     position: above-navbar
   page-footer: |
