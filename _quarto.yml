@@ -46,7 +46,7 @@ website:
   announcement:
     icon: info-circle
     dismissable: true
-    content: "The [Assignment 2 lab component](/Labs/Lab02.qmd), [research proposal project](/Projects/Project01.qmd) and Lecture 6 slides have been posted."
+    content: "The [Assignment 2 lab component](/Labs/Lab02.qmd), [research proposal project](/Projects/Project01.qmd) and Lecture 7 slides have been posted."
     type: light
     position: above-navbar
   page-footer: |
