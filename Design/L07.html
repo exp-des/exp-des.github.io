@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Handling Confounds – Introduction to Experimental Design</title>
+<title>Quality of Measures – Introduction to Experimental Design</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../Design/L07.html" rel="next">
-<link href="../Design/L05.html" rel="prev">
+<link href="../Labs/Lab01.html" rel="next">
+<link href="../Design/L06.html" rel="prev">
 <link href="../assets/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -297,7 +297,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Design/L03.html">2. Research Design</a></li><li class="breadcrumb-item"><a href="../Design/L06.html">Handling Confounds</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Design/L03.html">2. Research Design</a></li><li class="breadcrumb-item"><a href="../Design/L07.html">Quality of Measures</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -347,13 +347,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Design/L06.html" class="sidebar-item-text sidebar-link active">
+  <a href="../Design/L06.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Handling Confounds</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Design/L07.html" class="sidebar-item-text sidebar-link">
+  <a href="../Design/L07.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Quality of Measures</span></a>
   </div>
 </li>
@@ -421,10 +421,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#confounding-variables" id="toc-confounding-variables" class="nav-link active" data-scroll-target="#confounding-variables">Confounding Variables</a></li>
-  <li><a href="#extraneous-variables" id="toc-extraneous-variables" class="nav-link" data-scroll-target="#extraneous-variables">Extraneous Variables</a></li>
-  <li><a href="#confounds-in-non-experimental-research" id="toc-confounds-in-non-experimental-research" class="nav-link" data-scroll-target="#confounds-in-non-experimental-research">Confounds in Non-Experimental Research</a></li>
-  <li><a href="#experimental-confounds" id="toc-experimental-confounds" class="nav-link" data-scroll-target="#experimental-confounds">Experimental Confounds</a></li>
+  <li><a href="#is-the-measure-valid" id="toc-is-the-measure-valid" class="nav-link active" data-scroll-target="#is-the-measure-valid">Is the measure <em>valid</em>?</a></li>
+  <li><a href="#is-the-measure-reliable" id="toc-is-the-measure-reliable" class="nav-link" data-scroll-target="#is-the-measure-reliable">Is the measure <em>reliable</em>?</a></li>
   </ul>
 </nav>
     </div>
@@ -432,10 +430,10 @@ ul.task-list li input[type="checkbox"] {
 <main class="content page-columns page-full" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Design/L03.html">2. Research Design</a></li><li class="breadcrumb-item"><a href="../Design/L06.html">Handling Confounds</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Design/L03.html">2. Research Design</a></li><li class="breadcrumb-item"><a href="../Design/L07.html">Quality of Measures</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Handling Confounds</h1>
-<p class="subtitle lead">Summary of Lecture 6</p>
+<h1 class="title">Quality of Measures</h1>
+<p class="subtitle lead">Summary of Lecture 7</p>
 </div>
 
 
@@ -446,7 +444,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Lecture Date</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Monday, September 15, 2025</p>
+      <p class="date">Wednesday, September 17, 2025</p>
     </div>
   </div>
   
@@ -458,429 +456,52 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The <a href="../Projects/Project01.html">research proposal</a> project is upcoming. Review the associated lecture slides for details.</p>
-</div>
-</div>
-<!-- :::{.text-muted .small}
-[Click here](https://learn.bu.edu/ultra/courses/_261733_1/outline/file/_16576997_1) to download the corresponding lecture slides.
-:::
-
---- -->
-<section id="confounding-variables" class="level2">
-<h2 class="anchored" data-anchor-id="confounding-variables">Confounding Variables</h2>
-<p>When we are analyzing causal relationships, a <strong>confound</strong> is a variable that influences <em>both</em> the independent and dependent variable, creating a misleading <em>association</em>.</p>
-<p>Say, hypothetically, that a positive association is found between coffee and lung cancer. That there is a positive association means that those who drink coffee are likely to have had lung cancer, and those who have had lung cancer are likely to drink coffee. To speculate, it might seem like the causal direction is from coffee to lung cancer. It could turn out, however, that those who drink coffee are <em>also</em> likely to smoke.</p>
-<p>In this example, <em>smoking</em> is a confound: a spurious relationship, which can lead us to make a false inference. Confounds can sometimes mask real causal realtionships.</p>
-<p>Here’s another example: Based on observations, hormone-replacement therapy seemed to prevent heart disease in women.</p>
-<div class="cell" data-fig-height="1.5" data-fig-width="4" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<svg width="384" height="144" viewbox="0.00 0.00 240.77 44.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 40)">
-<title>Confounder</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-40 236.77,-40 236.77,4 -4,4"></polygon>
-<!-- HRT -->
-<g id="node1" class="node">
-<title>HRT</title>
-<ellipse fill="white" stroke="black" cx="30.35" cy="-18" rx="30.2" ry="18"></ellipse>
-<text text-anchor="middle" x="30.35" y="-13.8" font-family="Times,serif" font-size="14.00">HRT</text>
-</g>
-<!-- Heart Disease -->
-<g id="node2" class="node">
-<title>Heart Disease</title>
-<ellipse fill="white" stroke="black" cx="167.84" cy="-18" rx="64.86" ry="18"></ellipse>
-<text text-anchor="middle" x="167.84" y="-13.8" font-family="Times,serif" font-size="14.00">Heart Disease</text>
-</g>
-<!-- HRT&#45;&gt;Heart Disease -->
-<g id="edge1" class="edge">
-<title>HRT-&gt;Heart Disease</title>
-<path fill="none" stroke="black" d="M60.75,-18C70.22,-18 81.19,-18 92.41,-18"></path>
-<polygon fill="black" stroke="black" points="92.74,-21.5 102.74,-18 92.74,-14.5 92.74,-21.5"></polygon>
-<text text-anchor="middle" x="81.81" y="-22.2" font-family="Times,serif" font-size="14.00">?</text>
-</g>
-</g>
-</svg>
-</div>
-<p></p><figcaption> A <em>causal graph</em> shows the hypothesized causal relationships. Here it’s a <em>negative</em> relationship that was theorized: H.R.T. prevents heart disease.</figcaption> </figure><p></p>
-</div>
-</div>
-</div>
-<p>Later randomized controlled trials revealed that this effect disappeared after controlling for confounds of socioeconomic status and education.</p>
-<div class="cell" data-fig-height="2" data-fig-width="4" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<svg width="384" height="192" viewbox="0.00 0.00 332.19 98.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 94)">
-<title>Confounder</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-94 328.19,-94 328.19,4 -4,4"></polygon>
-<!-- SES &amp; Education -->
-<g id="node1" class="node">
-<title>SES &amp; Education</title>
-<ellipse fill="white" stroke="black" cx="79.17" cy="-45" rx="79.34" ry="18"></ellipse>
-<text text-anchor="middle" x="79.17" y="-40.8" font-family="Times,serif" font-size="14.00">SES &amp; Education</text>
-</g>
-<!-- H.R.T -->
-<g id="node2" class="node">
-<title>H.R.T</title>
-<ellipse fill="white" stroke="black" cx="259.26" cy="-72" rx="35.36" ry="18"></ellipse>
-<text text-anchor="middle" x="259.26" y="-67.8" font-family="Times,serif" font-size="14.00">H.R.T</text>
-</g>
-<!-- SES &amp; Education&#45;&gt;H.R.T -->
-<g id="edge1" class="edge">
-<title>SES &amp; Education-&gt;H.R.T</title>
-<path fill="none" stroke="black" d="M145.47,-54.9C168.74,-58.43 194.35,-62.31 215.27,-65.48"></path>
-<polygon fill="black" stroke="black" points="215.03,-68.99 225.44,-67.02 216.08,-62.06 215.03,-68.99"></polygon>
-</g>
-<!-- Heart Disease -->
-<g id="node3" class="node">
-<title>Heart Disease</title>
-<ellipse fill="white" stroke="black" cx="259.26" cy="-18" rx="64.86" ry="18"></ellipse>
-<text text-anchor="middle" x="259.26" y="-13.8" font-family="Times,serif" font-size="14.00">Heart Disease</text>
-</g>
-<!-- SES &amp; Education&#45;&gt;Heart Disease -->
-<g id="edge2" class="edge">
-<title>SES &amp; Education-&gt;Heart Disease</title>
-<path fill="none" stroke="black" d="M145.47,-35.1C160.56,-32.81 176.62,-30.38 191.75,-28.08"></path>
-<polygon fill="black" stroke="black" points="192.7,-31.48 202.06,-26.52 191.65,-24.56 192.7,-31.48"></polygon>
-</g>
-</g>
-</svg>
-</div>
-<p></p><figcaption> Being of higher SES and education meant that, separately, women were more likely to seek out and afford H.R.T. and they were also less liklely to get heart disease.</figcaption> </figure><p></p>
-</div>
-</div>
-</div>
-<p>Consider this one: A childs birth-order is related to down syndrome, with risk increasing for each child.</p>
-<div class="cell" data-fig-height="2" data-fig-width="4" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<svg width="384" height="192" viewbox="0.00 0.00 315.37 44.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 40)">
-<title>Confounder</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-40 311.37,-40 311.37,4 -4,4"></polygon>
-<!-- Birth Order -->
-<g id="node1" class="node">
-<title>Birth Order</title>
-<ellipse fill="white" stroke="black" cx="55.82" cy="-18" rx="55.65" ry="18"></ellipse>
-<text text-anchor="middle" x="55.82" y="-13.8" font-family="Times,serif" font-size="14.00">Birth Order</text>
-</g>
-<!-- Down Syndrome -->
-<g id="node2" class="node">
-<title>Down Syndrome</title>
-<ellipse fill="white" stroke="black" cx="230.61" cy="-18" rx="76.51" ry="18"></ellipse>
-<text text-anchor="middle" x="230.61" y="-13.8" font-family="Times,serif" font-size="14.00">Down Syndrome</text>
-</g>
-<!-- Birth Order&#45;&gt;Down Syndrome -->
-<g id="edge1" class="edge">
-<title>Birth Order-&gt;Down Syndrome</title>
-<path fill="none" stroke="black" d="M111.97,-18C122,-18 132.68,-18 143.35,-18"></path>
-<polygon fill="black" stroke="black" points="143.57,-21.5 153.57,-18 143.57,-14.5 143.57,-21.5"></polygon>
-<text text-anchor="middle" x="132.75" y="-22.2" font-family="Times,serif" font-size="14.00">?</text>
-</g>
-</g>
-</svg>
-</div>
-<p></p><figcaption> Down syndrome seems to be causally related to birth order.</figcaption> </figure><p></p>
-</div>
-</div>
-</div>
-<details>
-<summary>
-Think for a moment and then click here to reveal an explanation. Is there any other variable which could be at play here?
-</summary>
-<p>As it turns out, <em>age of the mother</em>, which can only increase with number of children, was the common denominator.</p>
-<div class="cell" data-fig-height="2" data-fig-width="4" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<svg width="384" height="192" viewbox="0.00 0.00 324.44 98.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 94)">
-<title>Confounder</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-94 320.44,-94 320.44,4 -4,4"></polygon>
-<!-- Mother&#39;s Age -->
-<g id="node1" class="node">
-<title>Mother's Age</title>
-<ellipse fill="white" stroke="black" cx="63.47" cy="-45" rx="63.43" ry="18"></ellipse>
-<text text-anchor="middle" x="63.47" y="-40.8" font-family="Times,serif" font-size="14.00">Mother's Age</text>
-</g>
-<!-- Down Syndrome -->
-<g id="node2" class="node">
-<title>Down Syndrome</title>
-<ellipse fill="white" stroke="black" cx="239.69" cy="-72" rx="76.51" ry="18"></ellipse>
-<text text-anchor="middle" x="239.69" y="-67.8" font-family="Times,serif" font-size="14.00">Down Syndrome</text>
-</g>
-<!-- Mother&#39;s Age&#45;&gt;Down Syndrome -->
-<g id="edge1" class="edge">
-<title>Mother's Age-&gt;Down Syndrome</title>
-<path fill="none" stroke="black" d="M119.59,-53.54C134.06,-55.79 149.91,-58.24 165.18,-60.61"></path>
-<polygon fill="black" stroke="black" points="164.69,-64.07 175.11,-62.15 165.76,-57.16 164.69,-64.07"></polygon>
-</g>
-<!-- Birth Order -->
-<g id="node3" class="node">
-<title>Birth Order</title>
-<ellipse fill="white" stroke="black" cx="239.69" cy="-18" rx="55.65" ry="18"></ellipse>
-<text text-anchor="middle" x="239.69" y="-13.8" font-family="Times,serif" font-size="14.00">Birth Order</text>
-</g>
-<!-- Mother&#39;s Age&#45;&gt;Birth Order -->
-<g id="edge2" class="edge">
-<title>Mother's Age-&gt;Birth Order</title>
-<path fill="none" stroke="black" d="M119.59,-36.46C138.43,-33.54 159.6,-30.26 178.8,-27.28"></path>
-<polygon fill="black" stroke="black" points="179.59,-30.7 188.94,-25.71 178.52,-23.78 179.59,-30.7"></polygon>
-</g>
-</g>
-</svg>
-</div>
-<p></p><figcaption> Down syndrome seems to be causally related to birth order.</figcaption> </figure><p></p>
-</div>
-</div>
-</div>
-</details>
-</section>
-<section id="extraneous-variables" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="extraneous-variables">Extraneous Variables</h2>
-<p>Those variables that affect the <em>dependent variable</em> are <strong>extraneous</strong>. While confounding variables are extraneous, not all extraneous variables are confounders.</p>
+<p>Recall that we use operational definitions to make abstract concepts concrete and measurable. Though concreteness is a desirable property, there are other additional criteria a measure needs to meet to be <em>sufficiently good quality for inference</em>.</p>
+<section id="is-the-measure-valid" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="is-the-measure-valid">Is the measure <em>valid</em>?</h2>
+<p>Consider three operational definitions of “anxiety”:</p>
 <ul>
-<li>A genetic predisposition to lung cancer is an extraneous variable, because it does affect lung cancer but does not affect smoking.</li>
+<li>A clinical assessment by a trained psychologist</li>
+<li>A new three-item questionnaire</li>
+<li>A count of fidgeting behaviors during an exam</li>
 </ul>
+<p>Which of these definitions would you <em>trust</em> as a good measure of anxiety? It’s clear that some measures better capture what they are meant to than others. This aspect of measure quality is called <strong>validity</strong>.</p>
+<p>Given a <em>happiness</em> questionnaire, would you be surprised if it asks you nothing to do with happiness? When a measure immediately and at face value does not seem to measure what it is supposed to, the measure has poor <strong>face validity</strong>. This is fairly rare given that scientists are usually considering their measures very carefully.</p>
+<p>What about a very abstract construct like <em>intelligence</em>? We could define intelligence according to problem-solving ability, reasoning skills, mathematical skills, etc. In fact, intelligence is a construct that is so broad, it is hard to avoid accidentally excluding an important component. What about street smarts and common sense, emotional intelligence, and other forms of intelligence? When we fail to capture all the <em>components</em> of a complex construct, then our measure of that construct has poor <strong>content validity</strong>. This is a clear problem with many operational definitions.</p>
+<p>A <em>driving test</em> is very important for determining whether or not someone is ready to drive safely, and performance is (hopefully) tightly correlated with driving ability. This is an example of <strong>criterion validity</strong>, where the measure has good sensitivity with regard to the scale of the construct in question. A measure has good criterion validity when it correlates closely with other measures and predicts outcomes.</p>
+<p>Lastly, consider that some <strong>construct validity</strong> measures whether. Poor construct validity entails a category error. For example, a questionnaire which seeks to measure <em>life satisfaction</em> has questions that overlap with life satisfaction but primarily have to do with <em>health and well-being</em>. The constructs are certainly related, but which construct is actually being measured?</p>
+<!-- A newly developed survey for assessing depression has a total score which correlates highly with likelihood of future self-harm.
+
+Criterion validity is high
+Questions were about sadness but not anhedonia
+Content validity is low
+The survey does not correlate well with other depression measures. It does correlate with aspects of personality, however.
+Construct validity is low -->
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
-<p>With a genetic predisposition, might person might know that their parent or grandparent developed lung cancer? The individual predisposed to lung cancer might therefore purposely avoid smoking. Thus, it’s <em>possible</em> that there <em>is</em> a relationship between genetic predisposition and smoking, though not considered here.</p>
-</div></div><div class="cell" data-fig-height="1" data-fig-width="3" data-layout-align="center">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<svg width="288" height="96" viewbox="0.00 0.00 384.84 98.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 94)">
-<title>Extraneous</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-94 380.84,-94 380.84,4 -4,4"></polygon>
-<!-- Genetic Predisposition -->
-<g id="node1" class="node">
-<title>Genetic Predisposition</title>
-<ellipse fill="white" stroke="black" cx="98.74" cy="-72" rx="98.98" ry="18"></ellipse>
-<text text-anchor="middle" x="98.74" y="-67.8" font-family="Times,serif" font-size="14.00">Genetic Predisposition</text>
-</g>
-<!-- Lung Cancer -->
-<g id="node2" class="node">
-<title>Lung Cancer</title>
-<ellipse fill="white" stroke="black" cx="315.66" cy="-45" rx="61.36" ry="18"></ellipse>
-<text text-anchor="middle" x="315.66" y="-40.8" font-family="Times,serif" font-size="14.00">Lung Cancer</text>
-</g>
-<!-- Genetic Predisposition&#45;&gt;Lung Cancer -->
-<g id="edge1" class="edge">
-<title>Genetic Predisposition-&gt;Lung Cancer</title>
-<path fill="none" stroke="black" d="M180.38,-61.87C203,-59.03 227.32,-55.97 248.96,-53.25"></path>
-<polygon fill="black" stroke="black" points="249.54,-56.71 259.02,-51.99 248.66,-49.76 249.54,-56.71"></polygon>
-<text text-anchor="middle" x="225.98" y="-61.2" font-family="Times,serif" font-size="14.00">risk</text>
-</g>
-<!-- Smoking -->
-<g id="node3" class="node">
-<title>Smoking</title>
-<ellipse fill="white" stroke="black" cx="98.74" cy="-18" rx="45.83" ry="18"></ellipse>
-<text text-anchor="middle" x="98.74" y="-13.8" font-family="Times,serif" font-size="14.00">Smoking</text>
-</g>
-<!-- Smoking&#45;&gt;Lung Cancer -->
-<g id="edge2" class="edge">
-<title>Smoking-&gt;Lung Cancer</title>
-<path fill="none" stroke="black" d="M142.72,-23.4C173.15,-27.22 214.54,-32.42 249.09,-36.76"></path>
-<polygon fill="black" stroke="black" points="248.74,-40.25 259.1,-38.02 249.62,-33.3 248.74,-40.25"></polygon>
-<text text-anchor="middle" x="225.98" y="-39.2" font-family="Times,serif" font-size="14.00">risk</text>
-</g>
-</g>
-</svg>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Precisione_e_Accuratezza.jpg/960px-Precisione_e_Accuratezza.jpg" class="img-fluid figure-img"></p>
+<figcaption>A measure with low-reliability produces inconsistent results (perhaps as in A, high variance). Even a highly reliable measure may suffer from issues of validity (perhaps as in B, precise but not quite capturing the target construct). When a measure is reliable and valid, it is both consistent and on-target (C).<br>Image credited to <a href="https://commons.wikimedia.org/wiki/User:L'Occhio_del_Cigno">L’Occhio del Cigno</a> on <a href="https://commons.wikimedia.org/wiki/File:Precisione_e_Accuratezza.jpg">Wikimedia Commons</a>, reproduced here under license <a href="https://creativecommons.org/licenses/by-sa/4.0">CC-BY-SA 4.0</a>.</figcaption>
+</figure>
 </div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-<ul>
-<li>Age is a confound for both smoking and lung cancer (consider that in the U.S. you cannot purchase tobacco under the age of 21).</li>
-</ul>
-<div class="cell" data-fig-height="1" data-fig-width="3" data-layout-align="center">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<svg width="288" height="96" viewbox="0.00 0.00 435.92 81.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 77)">
-<title>Confound</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-77 431.92,-77 431.92,4 -4,4"></polygon>
-<!-- Age -->
-<g id="node1" class="node">
-<title>Age</title>
-<ellipse fill="white" stroke="black" cx="27.13" cy="-18" rx="27.25" ry="18"></ellipse>
-<text text-anchor="middle" x="27.13" y="-13.8" font-family="Times,serif" font-size="14.00">Age</text>
-</g>
-<!-- Smoking -->
-<g id="node2" class="node">
-<title>Smoking</title>
-<ellipse fill="white" stroke="black" cx="202.65" cy="-55" rx="45.83" ry="18"></ellipse>
-<text text-anchor="middle" x="202.65" y="-50.8" font-family="Times,serif" font-size="14.00">Smoking</text>
-</g>
-<!-- Age&#45;&gt;Smoking -->
-<g id="edge1" class="edge">
-<title>Age-&gt;Smoking</title>
-<path fill="none" stroke="black" d="M53.36,-23.38C79.06,-28.86 119.59,-37.5 151.79,-44.37"></path>
-<polygon fill="black" stroke="black" points="151.42,-47.87 161.93,-46.53 152.88,-41.02 151.42,-47.87"></polygon>
-<text text-anchor="middle" x="105.49" y="-44.2" font-family="Times,serif" font-size="14.00">legal ability</text>
-</g>
-<!-- Lung Cancer -->
-<g id="node3" class="node">
-<title>Lung Cancer</title>
-<ellipse fill="white" stroke="black" cx="366.74" cy="-18" rx="61.36" ry="18"></ellipse>
-<text text-anchor="middle" x="366.74" y="-13.8" font-family="Times,serif" font-size="14.00">Lung Cancer</text>
-</g>
-<!-- Age&#45;&gt;Lung Cancer -->
-<g id="edge2" class="edge">
-<title>Age-&gt;Lung Cancer</title>
-<path fill="none" stroke="black" d="M54.22,-16.22C80.19,-14.53 121.19,-12.14 156.73,-11.2 197.53,-10.12 207.76,-10.02 248.56,-11.2 264.18,-11.65 280.96,-12.44 296.81,-13.33"></path>
-<polygon fill="black" stroke="black" points="296.87,-16.84 307.06,-13.93 297.28,-9.85 296.87,-16.84"></polygon>
-<text text-anchor="middle" x="202.65" y="-16.2" font-family="Times,serif" font-size="14.00">risk</text>
-</g>
-<!-- Smoking&#45;&gt;Lung Cancer -->
-<g id="edge3" class="edge">
-<title>Smoking-&gt;Lung Cancer</title>
-<path fill="none" stroke="black" d="M242.88,-46.04C262.38,-41.59 286.31,-36.13 307.87,-31.21"></path>
-<polygon fill="black" stroke="black" points="308.93,-34.56 317.9,-28.92 307.37,-27.73 308.93,-34.56"></polygon>
-<text text-anchor="middle" x="277.06" y="-43.2" font-family="Times,serif" font-size="14.00">risk</text>
-</g>
-</g>
-</svg>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-</section>
-<section id="confounds-in-non-experimental-research" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="confounds-in-non-experimental-research">Confounds in Non-Experimental Research</h2>
-<p>In non-experimental research, the independent variable is not being randomly assigned and is therefore likely to be related to confounds. There are ways to control these confounds, however, even without random assignment.</p>
-
-<div class="no-row-height column-margin column-container"><div class="margin-aside">
-<p>There are limits to what we can control - notably, we can only control for known and measured confounders.</p>
-</div></div><p>Were we comparing smokers and non-smokers, we could control the effect of <em>age</em> by <strong>matching</strong> every individual in the smoker group to an individual in the non-smoker group. By comparing <em>pairs</em> we avoid the confounding effect of age.</p>
-<p>Alternatively, we could restrict our anlaysis to a <strong>subgroup</strong>, such as by only looking at smoking rates in the 40-45 age range. Because age is effectively held constant, it is controlled. We can <strong>stratify</strong> our sample by intentionally selecting subgroups of particular composition for analysis.</p>
-<p>Lastly, we can use <strong>statistical control</strong> to subtract the estimated effect of a confound from the total effect observed. We will see more on this later in the semester.</p>
-</section>
-<section id="experimental-confounds" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="experimental-confounds">Experimental Confounds</h2>
-<p>We learned previously that <em>random assignment</em> protects against both known and unknown confounds because, effectively, confounders are distributed equally across conditions. This is true, however, only in <strong>expectation</strong> (i.e.&nbsp;samples approaching infinity). Due to chance, confounds <em>can</em> be a concern in any given sample, especially if the sample is small.</p>
-
-<div class="no-row-height column-margin column-container"><div class="margin-aside">
-<p>Consider flipping a coin ten times, the <em>expectation</em> is five heads and five tails. That is, with a fair coin on average it will come out to 50-50. In any given sample, however, even with 1000 flips there is still the unlikely possibility that 1000 heads could come up.</p>
-</div></div><p>Consider an experiment investigating a causal relationship of coffee consumption on exam scores. If we randomly assign participants to drink a specific number of cups of coffee per day, then <em>number of cups</em> is <strong>decoupled</strong> from extraneous variables, right? Can’t we then attribute any difference in <em>test-score</em> to how many cups of coffee they drink?</p>
-<div class="cell" data-fig-height="1" data-fig-width="3" data-layout-align="center">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<svg width="288" height="96" viewbox="0.00 0.00 337.51 44.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 40)">
-<title>Confound</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-40 333.51,-40 333.51,4 -4,4"></polygon>
-<!-- Daily Caffeine Intake -->
-<g id="node1" class="node">
-<title>Daily Caffeine Intake</title>
-<ellipse fill="white" stroke="black" cx="94.69" cy="-18" rx="94.88" ry="18"></ellipse>
-<text text-anchor="middle" x="94.69" y="-13.8" font-family="Times,serif" font-size="14.00">Daily Caffeine Intake</text>
-</g>
-<!-- Test Score -->
-<g id="node2" class="node">
-<title>Test Score</title>
-<ellipse fill="white" stroke="black" cx="277.45" cy="-18" rx="52.13" ry="18"></ellipse>
-<text text-anchor="middle" x="277.45" y="-13.8" font-family="Times,serif" font-size="14.00">Test Score</text>
-</g>
-<!-- Daily Caffeine Intake&#45;&gt;Test Score -->
-<g id="edge1" class="edge">
-<title>Daily Caffeine Intake-&gt;Test Score</title>
-<path fill="none" stroke="black" d="M189.51,-18C198.09,-18 206.63,-18 214.82,-18"></path>
-<polygon fill="black" stroke="black" points="214.99,-21.5 224.99,-18 214.99,-14.5 214.99,-21.5"></polygon>
-</g>
-</g>
-</svg>
-</div>
-<p></p><figcaption> At first pass, it seems this causal relationship has been effectively isolated by the experiment design.</figcaption> </figure><p></p>
-</div>
-</div>
-</div>
-<p>A potential confound like <em>sleep duration</em> could still throw a wrench in the design. With little sleep, people may consume more caffeine. We controlled for this by assigning <em>number of cups</em>. We did not account for, however, that sleep duration can also be decreased by caffeine consumption or caffeine withdrawal.</p>
-<div class="cell" data-fig-height="1" data-fig-width="3" data-layout-align="center">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<svg width="288" height="96" viewbox="0.00 0.00 464.24 67.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 63)">
-<title>Confound</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-63 460.24,-63 460.24,4 -4,4"></polygon>
-<!-- Sleep Duration -->
-<g id="node1" class="node">
-<title>Sleep Duration</title>
-<ellipse fill="white" stroke="black" cx="69.23" cy="-41" rx="69.47" ry="18"></ellipse>
-<text text-anchor="middle" x="69.23" y="-36.8" font-family="Times,serif" font-size="14.00">Sleep Duration</text>
-</g>
-<!-- Caffeine Intake -->
-<g id="node2" class="node">
-<title>Caffeine Intake</title>
-<ellipse fill="white" stroke="black" cx="245.29" cy="-41" rx="70.64" ry="18"></ellipse>
-<text text-anchor="middle" x="245.29" y="-36.8" font-family="Times,serif" font-size="14.00">Caffeine Intake</text>
-</g>
-<!-- Sleep Duration&#45;&gt;Caffeine Intake -->
-<g id="edge1" class="edge">
-<title>Sleep Duration-&gt;Caffeine Intake</title>
-<path fill="none" stroke="black" d="M134.06,-34.47C145.46,-34.25 157.44,-34.19 169.13,-34.31"></path>
-<polygon fill="black" stroke="black" points="169.26,-37.81 179.31,-34.45 169.35,-30.81 169.26,-37.81"></polygon>
-</g>
-<!-- Test Score -->
-<g id="node3" class="node">
-<title>Test Score</title>
-<ellipse fill="white" stroke="black" cx="404.17" cy="-18" rx="52.13" ry="18"></ellipse>
-<text text-anchor="middle" x="404.17" y="-13.8" font-family="Times,serif" font-size="14.00">Test Score</text>
-</g>
-<!-- Sleep Duration&#45;&gt;Test Score -->
-<g id="edge3" class="edge">
-<title>Sleep Duration-&gt;Test Score</title>
-<path fill="none" stroke="black" d="M113.62,-27.14C132.16,-21.9 154.16,-16.59 174.47,-14 236.91,-6.04 253.17,-12.56 316.11,-14 324.59,-14.19 333.53,-14.5 342.33,-14.85"></path>
-<polygon fill="black" stroke="black" points="342.41,-18.35 352.55,-15.28 342.7,-11.36 342.41,-18.35"></polygon>
-</g>
-<!-- Caffeine Intake&#45;&gt;Sleep Duration -->
-<g id="edge2" class="edge">
-<title>Caffeine Intake-&gt;Sleep Duration</title>
-<path fill="none" stroke="black" d="M179.31,-47.55C167.86,-47.76 155.87,-47.8 144.21,-47.68"></path>
-<polygon fill="black" stroke="black" points="144.11,-44.18 134.06,-47.53 144,-51.18 144.11,-44.18"></polygon>
-</g>
-<!-- Caffeine Intake&#45;&gt;Test Score -->
-<g id="edge4" class="edge">
-<title>Caffeine Intake-&gt;Test Score</title>
-<path fill="none" stroke="black" d="M306.94,-32.11C319.73,-30.23 333.19,-28.26 345.86,-26.4"></path>
-<polygon fill="black" stroke="black" points="346.43,-29.86 355.81,-24.94 345.41,-22.93 346.43,-29.86"></polygon>
-</g>
-</g>
-</svg>
-</div>
-<p></p><figcaption> Even in randomized experiments, it is possible for confounds to be lurking.</figcaption> </figure><p></p>
-</div>
-</div>
-</div>
-<p>Of course, because random assignment is only truly decoupling in expectation, we still might consider the rare event that those assigned to one group happen to be those who already sleep more.</p>
-<p>The techniques listed above for non-experimental research still apply. Therefore, we could use matching or stratification to ensure sleep duration is controlled for (e.g.&nbsp;include only participants who sleep seven hours). Alternatively, we could use a <strong>within-subjects</strong> design such that we observe the effects of all conditions in every participant over time.</p>
+</div></div></section>
+<section id="is-the-measure-reliable" class="level2">
+<h2 class="anchored" data-anchor-id="is-the-measure-reliable">Is the measure <em>reliable</em>?</h2>
+<p>Even if a measure is carefully defined, and demonstrates high validitiy, it might not be consistent enough for us to make inferences. A <strong>reliable</strong> measure produces consistent results, whether over time or over who takes the measurement.</p>
+<p>When two people are measuring the same thing, then <strong>inter-rater reliability</strong> is important to consider. The question here is whether the two raters produce the same answers when using the same operational definition.</p>
+<p>Think about a survey which asks many questions on the same topic. Do the items all correlate well? If they don’t, then the survey might not have good <strong>internal consistency</strong>.</p>
+<hr>
+<p>There are validity and reliability issues with all three of the following examples. Can you spot them?</p>
+<blockquote class="blockquote">
+<p>A survey of sleep quality measure asks “How do you feel about your sleep quality?”</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>An objective measure of sleep quality.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>A physiological measure of sleep quality uses EEG to measure brain waves during REM sleep.</p>
+</blockquote>
 
 
 </section>
@@ -1239,13 +860,13 @@ Think for a moment and then click here to reveal an explanation. Is there any ot
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../Design/L05.html" class="pagination-link" aria-label="Experimental Control">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Experimental Control</span>
+      <a href="../Design/L06.html" class="pagination-link" aria-label="Handling Confounds">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Handling Confounds</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../Design/L07.html" class="pagination-link" aria-label="Quality of Measures">
-        <span class="nav-page-text">Quality of Measures</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../Labs/Lab01.html" class="pagination-link" aria-label="Getting Ready to Code">
+        <span class="nav-page-text">Getting Ready to Code</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
