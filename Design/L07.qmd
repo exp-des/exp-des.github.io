@@ -1,0 +1,57 @@
+---
+title: Quality of Measures
+subtitle: Summary of Lecture 7
+date: 2025-09-17
+---
+
+Recall that we use operational definitions to make abstract concepts concrete and measurable. Though concreteness is a desirable property, there are other additional criteria a measure needs to meet to be  _sufficiently good quality for inference_.
+
+## Is the measure _valid_?
+
+Consider three operational definitions of "anxiety":
+
+- A clinical assessment by a trained psychologist
+- A new three-item questionnaire
+- A count of fidgeting behaviors during an exam
+
+Which of these definitions would you _trust_ as a good measure of anxiety? It's clear that some measures better capture what they are meant to than others. This aspect of measure quality is called **validity**.
+
+Given a _happiness_ questionnaire, would you be surprised if it asks you nothing to do with happiness? When a measure immediately and at face value does not seem to measure what it is supposed to, the measure has poor **face validity**. This is fairly rare given that scientists are usually considering their measures very carefully.
+
+What about a very abstract construct like _intelligence_? We could define intelligence according to problem-solving ability, reasoning skills, mathematical skills, etc. In fact, intelligence is a construct that is so broad, it is hard to avoid accidentally excluding an important component. What about street smarts and common sense, emotional intelligence, and other forms of intelligence? When we fail to capture all the _components_ of a complex construct, then our measure of that construct has poor **content validity**. This is a clear problem with many operational definitions.
+
+A _driving test_ is very important for determining whether or not someone is ready to drive safely, and performance is (hopefully) tightly correlated with driving ability. This is an example of **criterion validity**, where the measure has good sensitivity with regard to the scale of the construct in question. A measure has good criterion validity when it correlates closely with other measures and predicts outcomes.
+
+Lastly, consider that some **construct validity** measures whether. Poor construct validity entails a category error. For example, a questionnaire which seeks to measure _life satisfaction_ has questions that overlap with life satisfaction but primarily have to do with _health and well-being_. The constructs are certainly related, but which construct is actually being measured?
+
+
+<!-- A newly developed survey for assessing depression has a total score which correlates highly with likelihood of future self-harm.
+
+Criterion validity is high
+Questions were about sadness but not anhedonia
+Content validity is low
+The survey does not correlate well with other depression measures. It does correlate with aspects of personality, however.
+Construct validity is low -->
+
+:::{.aside}
+![A measure with low-reliability produces inconsistent results (perhaps as in A, high variance). Even a highly reliable measure may suffer from issues of validity (perhaps as in B, precise but not quite capturing the target construct). When a measure is reliable and valid, it is both consistent and on-target (C).<br>Image credited to [L'Occhio del Cigno](https://commons.wikimedia.org/wiki/User:L'Occhio_del_Cigno) on [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Precisione_e_Accuratezza.jpg), reproduced here under license [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0).](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Precisione_e_Accuratezza.jpg/960px-Precisione_e_Accuratezza.jpg)
+:::
+
+## Is the measure _reliable_?
+
+Even if a measure is carefully defined, and demonstrates high validitiy, it might not be consistent enough for us to make inferences. A **reliable** measure produces consistent results, whether over time or over who takes the measurement.
+
+When two people are measuring the same thing, then **inter-rater reliability** is important to consider. The question here is whether the two raters produce the same answers when using the same operational definition.
+
+Think about a survey which asks many questions on the same topic. Do the items all correlate well? If they don't, then the survey might not have good **internal consistency**.
+
+---
+
+There are validity and reliability issues with all three of the following examples. Can you spot them?
+
+> A survey of sleep quality measure asks "How do you feel about your sleep quality?"
+
+> An objective measure of sleep quality. 
+
+> A physiological measure of sleep quality uses EEG to measure brain waves during REM sleep.
+
