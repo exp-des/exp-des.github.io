@@ -17,10 +17,10 @@ website:
         contents: Introduction/*
       - section: 2. Research Design
         contents: Design/*
-      - section: Labs
-        contents: Labs/*
       - section: Projects
         contents: Projects/*
+      - section: Lab Components
+        contents: Labs/*
       - Slides.qmd
       - text: "Syllabus for Fall 2025"
         href: syllabus.qmd

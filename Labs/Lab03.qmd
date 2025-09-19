@@ -1,0 +1,318 @@
+---
+title: Thinking About Distributions 
+subtitle: Lab 3
+author: Michael Pascale
+date: 2025-09-19
+code-annotations: select
+---
+
+This lab will introduce aspects of statistical thinking, including how to approach a new dataset and how to think visually about distributions.
+
+```{r}
+#| echo: false
+#| message: false
+library(tidyverse)
+theme_set(theme_classic())
+set.seed(230)
+```
+
+<!-- ## Self-Study
+
+This lab corresponds roughly to the following chapters in **R for Data Science**, which are recommended for further self-study.
+
+- [_Workflow: Basics_ 2.1-2.6](https://r4ds.hadley.nz/workflow-basics.html)
+- [_Factor Basics_ 16.2](https://r4ds.hadley.nz/factors.html#factor-basics)
+- [_Dataframe_ 1.2.1](https://r4ds.hadley.nz/data-visualize.html#the-penguins-data-frame) -->
+
+<!-- ## Importing Datasets
+
+In the previous two labs, we've used a built-in example dataset (`ChickWeight`) and we've demonstrated how to combine elements into vectors and vectors into dataframes, perhaps with randomly sampled data (`demographics`).
+
+Most of the time, however, we'll need to get a _real_ dataset _into_ R. -->
+
+## Probability Distributions 🎲
+
+We learned in [Lecture 5](/Design/L05.qmd) that random events are determined by chance, and that **uniformly random** means that the chances of each outcome are equal.
+
+A die roll is a great example of a data generating process that is uniformly random. If we rolled a die a huge number of times (e.g. 100000) we would expect that it would land on each face about an equal number of times.
+
+```{r}
+#| echo: false
+#| fig-height: 2
+uniform <- sample(1:6, 100000, replace=TRUE)
+
+ggplot() +
+  geom_bar(aes(x=uniform), fill='#772953') + 
+  scale_y_continuous('# of Die Rolls') +
+  scale_x_continuous('Roll Outcome', breaks=1:6) 
+```
+
+:::{.aside}
+In the previous lab, we saw how to use `sample()` to assign groups randomly and uniformly. A coin flip is one such way to generate uniformly random data for two alternatives. 
+:::
+
+Another way to say this is that the rolls are **distributed** evenly over all six outcomes.
+
+Even though the random process produces outcomes with a uniform distribution, on any small number of rolls (e.g. 10) we might get back a somewhat uneven count as a result of chance.
+
+```{r}
+#| echo: false
+#| warning: false
+#| fig-height: 2
+fewsamples <- sample(1:6, 10, replace=TRUE)
+
+ggplot() +
+  geom_bar(aes(x=fewsamples), fill='#772953') + 
+  scale_y_continuous('# of Die Rolls') +
+  scale_x_continuous('Roll Outcome', breaks=1:6)
+```
+
+We can also consider that many random variables will actually follow some **nonuniform distribution**; that is, the chances will not be equal. For example, what if an unfair die is used? Over many trials, we might observe that a particular unfair die is biased to roll one or six.
+
+```{r}
+#| echo: false
+#| fig-height: 2
+unfair <- sample(1:6, 10000, replace=TRUE, prob=c(2,1,1,1,1,3))
+
+ggplot() +
+  geom_bar(aes(x=unfair), fill='#772953') + 
+  scale_y_continuous('# of Die Rolls') + 
+  scale_x_continuous('Roll Outcome', breaks=1:6)
+```
+
+In reality, there are a variety of common distribution **shapes**. We introduced the _flat_ uniform distribution, and we have come across the idea that some random variables follow a sort of _bell shaped_ curve. 
+
+## Forming a Mental Model 🧠
+
+For today's work, we'll be looking at a built-in dataset having to do with penguins in Antarctica.
+```{r}
+head(penguins)
+```
+
+It can be worthwhile to spend some time orient ourselves when we bring up a new dataset. Take a moment to think about what each column might _mean_. Can we start to build a **mental model** of the research study?
+
+Looking only at the `head()`, we saw a species column. What other species are in the rest of the table? We can use `unique()` to find the unique values of a vector. In this case, we find three species of penguin are reported.
+```{r}
+unique(penguins$species)
+```
+
+Even without knowing anything in advance about the dataset, and with only a vague prototype in mind of a penguin, we can make educated guesses for many of the variables.
+
+:::{.aside}
+Maybe your thought process was like this:
+
+> _"flipper_len"... penguins each have two flippers._ 
+> 
+> _the order of magnitude is in the 100s..._
+> _is that inches? no. centimeters? probably millimeters._
+:::
+
+At your R Console, enter `?penguins` to learn more about this built-in object. Note that measurements for bill length, bill depth, and flipper length are reported in millimeters. Body mass is in grams. The study is observational.
+
+## Building and Testing Assumptions 🔎
+
+Drilling down into just one variable, let's look at `bill_len`: the length of a penguin's bill in millimeters. 
+
+Consider first what order of magnitude we should expect, imagining an ordinary penguin. A small multiple of ~1mm? ~10mm? ~100mm?
+
+With a reasonable guess in mind, we can look at the data.
+
+```{r}
+penguins$bill_len
+```
+
+:::{.aside}
+Sometimes, data is _missing_ ("NA"). This is usually because we were unable to collect a particular measurement from a participant, but it could be for a variety of reasons.
+:::
+
+Considering on a number line the **range** of possible data, it looks like we have lengths of around 40mm, some in the 30s and some in the 50s. We might consider that a penguin is _unlikely_ to have a very small bill (e.g. 20mm) or a very large bill (e.g. 60mm).
+
+This starts to give us an idea of the distribution of `bill_len`, with very high and very low values tapering off as they happen only very rarely.
+
+We could also pick some measure of **central tendancy** to represent the center of the data. A good first choice is the **mean**.
+
+```{r}
+mean(penguins$bill_len, na.rm=TRUE)
+```
+
+:::{.aside}
+Missing data has consequences that affect inference and so it is something we will need to handle in the future. For now, however, `na.rm=TRUE` will ignore the `NA`s for the purposes of calculating the mean.
+:::
+
+It seems we can describe our data as centered around 44mm.
+
+Picking a random penguin, do we expect it to be close to this center? In other words, will any one random penguin have a bill length near to 44mm or could it be spread equally between 30mm and 50mm? This notion of _spread_ or _variability_ is quantified in the **standard deviation**: the _average difference_ from the group average.
+
+Before calculating it, take a guess. What do we think is the _average distance from 44mm_?
+
+```{r}
+#| eval: false
+sd(penguins$bill_len, na.rm=TRUE)
+```
+
+<details>
+<summary>Think for a moment and then click here to reveal the result.</summary>
+```{r}
+#| echo: false
+sd(penguins$bill_len, na.rm=TRUE)
+```
+
+The average penguins is about 5mm from the mean of 44mm.
+</details>
+
+These **descriptive statistics**, the range, mean, and standard deviation, are some of the tools we will continue to use to describe datasets throughout the course.
+
+
+## Revising Our Mental Model 📝
+
+A sense for the shape of the distribution of `bill_len` is starting to take form. We have a numeric random variable that is centered at 44mm, that reaches values of 20mm or 70mm only very rarely, and in which the typical distance from the center is 5mm. It seems reasonable to consider `bill_len` to be a bell-shaped curve, perhaps something like this...
+
+```{r}
+#| echo: false
+ggplot()  +
+
+  geom_vline(xintercept=c(39,49), color='grey75', linetype='dashed') +
+  geom_vline(xintercept=c(34,54), color='grey85', linetype='dashed') +
+  geom_vline(xintercept=c(29,59), color='grey90', linetype='dashed') +
+  geom_vline(xintercept=c(24,64), color='grey95', linetype='dashed') +
+
+  stat_function(fun=dnorm, args= c(mean=44, sd=5)) +
+
+  geom_vline(xintercept=44, color='#772953', linetype='dashed') +
+
+  scale_y_continuous('Probability', breaks=0) +
+  scale_x_continuous('Bill Length (mm)', limits=c(20,70), breaks =c(20, 39, 44, 49, 70))
+```
+
+:::{.aside}
+Implicitly, it seems like our data _might_ be sampled from a population in which bill length is normally distributed.
+:::
+
+To gain an understanding of what the data _actually_ looks like, we can plot a **histogram**. The histogram will collect _bins_ of data (e.g. 35-40mm, 40-45mm) and show a bar counting the number of datapoints that fell in each bin.
+
+:::{.aside}
+One reason to use a histogram instead of a plain old bar plot is that the histogram bins capture _continuous_ data. How many times does 37.84755 occur in the dataset? Probably only once, if at all. With a histogram, we can instead get a sense for how many times any decimal number between 36 and 38 occurs.
+:::
+
+```{r}
+#| warning: false
+# A 'bin width' of two seems reasonable (40-42, 42-44, 44-46).
+ggplot(penguins) +
+  geom_histogram(aes(x=bill_len))
+```
+
+_**Wait a minute! Something's off...**_ Why does our data have more than one peak? The plot tapers off correctly on either side, but there could be two or three curves instead of the one we expected.
+
+<details>
+<summary>Think for a moment and then click here for an explanation.</summary>
+Several variables in the dataset might vary with bill length:
+
+1. Species: There are three different species of penguin in this dataset.
+2. Sex: The dataset includes male and female penguins. Without knowing more about penguins, is it possible a sex difference is something that causes this to vary with bill length?
+3. Island: Is it possible that penguins on different islands have different food sources, for instance. Is it possible that nutrition causes this to be something that varies with bill length?
+
+Note these possibilities are ordered by how few assumptions we'd have to make for them to be true. Let's look at just one species before thinking about these other possible confounds, as it is likely to explain the problem.
+</details>
+
+
+Now let's try looking at just the adélie penguins. To extract a **subgroup** from our dataset, we can use `filter()`.
+
+:::{.aside}
+![_Pygoscelis adeliae_<br>Image credited to Andrew Shiva on [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Hope_Bay-2016-Trinity_Peninsula%E2%80%93Ad%C3%A9lie_penguin_(Pygoscelis_adeliae)_04.jpg), reproduced here under license [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0).](https://upload.wikimedia.org/wikipedia/commons/e/e3/Hope_Bay-2016-Trinity_Peninsula%E2%80%93Ad%C3%A9lie_penguin_%28Pygoscelis_adeliae%29_04.jpg)
+:::
+
+```{r}
+adelies <- filter(penguins, species == "Adelie")
+
+# Note that now the dataframe 'adelies' contains only adélie penguins.
+unique(adelies$species)
+```
+
+
+```{r}
+# The mean and standard deviation of the subgroup is different.
+mean(adelies$bill_len, na.rm=TRUE)
+sd(adelies$bill_len, na.rm=TRUE)
+```
+
+Now, we can plot a histogram of bill lengths for just the adélie penguins.
+
+```{r}
+#| warning: false
+#| fig-cap: Notice that, in addition to the change in shape, the distribution of adélie bill lengths is shifted to the left. The mean will be lower in this subgroup.
+ggplot(adelies) +
+  geom_histogram(aes(x=bill_len))
+```
+
+This seems a little more reasonable. Still, it is hard to tell whether that dip in the middle is due to the amount of data we have, the histogram bin width, or a factor we have not considered. 
+
+:::{.aside}
+```{r}
+#| warning: false
+#| echo: false
+#| fig-cap: The same data but with `binwidth=2`. The histogram bin width (40-42, 40-45, or 40-50...) can hide some of the variation. Visual inspection is not perfect.
+ggplot(adelies) +
+  geom_histogram(aes(x=bill_len), binwidth=2)
+```
+:::
+
+By **visual inspection** alone, however, and some careful thinking, we have developed preliminary mental model of the distribution of bill lengths. In future classes, we will learn to define a particular distribution and check even more rigorously whether our assumptions hold up.
+
+## Visualizing Model Distributions 📊
+
+Keeping in mind that our sample of `r nrow(adelies)` adélies might not reflect the greater population, we could speculate that, in the adélie penguin population, bill length random variable has a distribution that is shaped like a bell-curve.
+
+Were we to statistically model beak length, we might select a **normal distribution** centered at the mean, and with standard deviation representing the average difference from the mean of any one penguin.
+
+:::{.aside}
+We do not yet know how to _infer_ the population mean and standard deviation. Here we'll use the sample values as a guess.
+:::
+
+Last discussion, we sampled nominal categories uniformly with the `sample()` function. It is also possible for us to sample random numbers directly from the normal distribution using `rnorm()`.
+
+```{r}
+# We'll need to draw a large number of random datapoints.
+n <- 10000
+
+# Sample 10,000 random numbers from the normal distribution with mean of 39 and standard deviation of 3. Call the variable bill_len.
+model_penguins <- data.frame(
+  bill_len = rnorm(n, mean=39, sd=3)
+)
+
+# View just the top of the dataframe
+head(model_penguins)
+```
+
+The random numbers we have pulled look a lot like the numbers in the actual data.
+
+Let's visually inspect the distribution shape with a histogram of the 10000 random data points.
+
+```{r}
+#| warning: false
+# Not setting the binwidth because we have so much data, the automatic value is fine.
+ggplot(model_penguins) + 
+  geom_histogram(aes(x=bill_len))
+```
+
+Like with the uniformly random die roll, the normally distributed random data will look different if we have few samples.
+
+With a smaller N=`r nrow(adelies)`, the number of penguins we had, we can see that we don't quite get a perfect bell-curve.
+
+```{r}
+#| warning: false
+small_sample <- rnorm(152, mean=39, sd=3)
+
+ggplot() + 
+  geom_histogram(aes(x=small_sample))
+```
+:::{.aside}
+Remember that because this data is being randomly generated, we will get a different result every time.
+:::
+
+:::{.callout-tip title="Deliverables"}
+Today's assignment produced many plots. Please submit screenshots of your entire RStudio screen for each of the following plots.
+
+1. The `penguins` histogram
+2. The adélies-only histogram
+3. The random normal histogram with 10000 datapoints
+:::
