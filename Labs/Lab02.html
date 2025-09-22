@@ -612,7 +612,7 @@ Levels: Ambidextrous Left-Handed Right-Handed</code></pre>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>), <span class="dv">25</span>, <span class="at">replace=</span><span class="cn">TRUE</span>)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 2 3 3 3 3 6 3 4 1 6 1 2 1 2 3 2 2 6 5 6 5 1 1 1 4</code></pre>
+<pre><code> [1] 5 3 1 5 4 6 1 6 4 6 2 1 1 6 2 5 2 6 2 1 4 4 5 2 6</code></pre>
 </div>
 </div>
 
@@ -631,8 +631,8 @@ Levels: Ambidextrous Left-Handed Right-Handed</code></pre>
 <span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>assignment</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] treatment placebo   treatment placebo   treatment placebo   treatment
- [8] placebo   placebo   treatment
+<pre><code> [1] treatment treatment treatment placebo   placebo   treatment placebo  
+ [8] placebo   treatment placebo  
 Levels: placebo treatment</code></pre>
 </div>
 </div>
@@ -691,12 +691,12 @@ Think for a moment and then click here to reveal an explanation.
 <span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(demographics)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  age biosex
-1  75   male
-2  53   male
-3  81   male
-4  38   male
-5  29 female
-6  36   male</code></pre>
+1  82   male
+2  46   male
+3  35 female
+4  21   male
+5  36 female
+6  58 female</code></pre>
 </div>
 </div>
 <p>Because this is uniformly random, we should expect even-looking plots.</p>

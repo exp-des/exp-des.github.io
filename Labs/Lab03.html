@@ -642,7 +642,7 @@ Levels: Adelie Chinstrap Gentoo</code></pre>
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
 <p>Missing data has consequences that affect inference and so it is something we will need to handle in the future. For now, however, <code>na.rm=TRUE</code> will ignore the <code>NA</code>s for the purposes of calculating the mean.</p>
 </div></div><p>It seems we can describe our data as centered around 44mm.</p>
-<p>Picking a random penguin, do we expect it to be close to this center? In other words, will any one random penguin have a bill length near to 44mm or could it be spread equally between 30mm and 50mm? This notion of <em>spread</em> or <em>variability</em> is quantified in the <strong>standard deviation</strong>: the <em>average difference</em> from the group average.</p>
+<p>Picking a random penguin, do we expect it to be close to this center? In other words, will any one random penguin have a bill length near to 44mm or could it be spread equally between 30mm and 50mm? This notion of <em>spread</em> or <em>variability</em> is quantified in the <strong>deviations</strong>. The average deviation is the <em>average difference</em> from the group average. Usually we’ll use the <em>standard</em> deviation, specifically.</p>
 <p>Before calculating it, take a guess. What do we think is the <em>average distance from 44mm</em>?</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(penguins<span class="sc">$</span>bill_len, <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span></code></pre></div>
