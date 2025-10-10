@@ -1,0 +1,28 @@
+---
+title: Descriptive Statistics
+subtitle: Lab 4
+author: Michael Pascale
+date: 2025-09-26
+code-annotations: select
+---
+
+This lab will build students' skills _orienting to_ unkown data and _summarizing_ variables using the descriptive methods learned in class. Students will independently recapitulate the descriptive analysis exercise they performed in Lab 3 on three new datasets.
+
+## Loading Datasets into R
+
+We will need to download the following datasets for today's activity:
+
+- [Dataset A](/assets/data/Lab04_DatasetA.csv)
+- [Dataset B](/assets/data/Lab04_DatasetB.csv)
+- [Dataset C](/assets/data/Lab04_DatasetC.csv)
+
+Download each file to your computer. You can load CSV datasets into R using the [`read_csv()`](https://readr.tidyverse.org/reference/read_delim.html) tidyverse function. For example:
+
+```r
+# Load Lab04_DatasetA.csv into R and keep it in a variable named dataA.
+dataA <- read_csv("/Users/Michael/Downloads/Lab04_DatasetA.csv")
+```
+
+Note that the file _path_ will be different on your computer than shown here.
+
+If you are on MacOS and you are unsure of the path to the dataset you have downloaded, hold the **Option** key and **Right Click** on the file. Select "Copy Full Path" from the context menu.

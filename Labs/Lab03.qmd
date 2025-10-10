@@ -141,7 +141,7 @@ Missing data has consequences that affect inference and so it is something we wi
 
 It seems we can describe our data as centered around 44mm.
 
-Picking a random penguin, do we expect it to be close to this center? In other words, will any one random penguin have a bill length near to 44mm or could it be spread equally between 30mm and 50mm? This notion of _spread_ or _variability_ is quantified in the **standard deviation**: the _average difference_ from the group average.
+Picking a random penguin, do we expect it to be close to this center? In other words, will any one random penguin have a bill length near to 44mm or could it be spread equally between 30mm and 50mm? This notion of _spread_ or _variability_ is quantified in the **deviations**. The average deviation is the _average difference_ from the group average. Usually we'll use the _standard_ deviation, specifically.
 
 Before calculating it, take a guess. What do we think is the _average distance from 44mm_?
 
