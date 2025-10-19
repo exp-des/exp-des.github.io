@@ -21,6 +21,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -31,7 +66,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../Slides.html" rel="next">
+<link href="../Labs/Lab05.html" rel="next">
 <link href="../Labs/Lab03.html" rel="prev">
 <link href="../assets/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
@@ -247,8 +282,8 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <div id="quarto-announcement" data-announcement-id="51e4ce1701b09ddd23461346ca300551" class="alert alert-light hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
-<p>The <a href="../Labs/Lab03.html">Assignment 3 lab component</a> has been posted.</p>
+    <div id="quarto-announcement" data-announcement-id="ac694b16a510da885c3e647cae2f31e7" class="alert alert-light hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p>The <a href="../Labs/Lab04.html">Assignment 4 lab component</a> has been posted.</p>
 </div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
@@ -421,6 +456,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Descriptive Statistics</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Labs/Lab06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Sampling Distribution</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item">
@@ -456,7 +497,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Labs/Lab01.html">Lab Components</a></li><li class="breadcrumb-item"><a href="../Labs/Lab04.html">Descriptive Statistics</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Descriptive Statistics</h1>
-<p class="subtitle lead">Lab 3</p>
+<p class="subtitle lead">Lab 4</p>
 </div>
 
 
@@ -485,7 +526,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This lab will build students’ skills <em>orienting to</em> and <em>summarizing</em> datasets.</p>
+<p>This lab will build students’ skills <em>orienting to</em> unkown data and <em>summarizing</em> variables using the descriptive methods learned in class. Students will independently recapitulate the descriptive analysis exercise they performed in Lab 3 on three new datasets.</p>
 <section id="loading-datasets-into-r" class="level2">
 <h2 class="anchored" data-anchor-id="loading-datasets-into-r">Loading Datasets into R</h2>
 <p>We will need to download the following datasets for today’s activity:</p>
@@ -494,6 +535,11 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="../assets/data/Lab04_DatasetB.csv">Dataset B</a></li>
 <li><a href="../assets/data/Lab04_DatasetC.csv">Dataset C</a></li>
 </ul>
+<p>Download each file to your computer. You can load CSV datasets into R using the <a href="https://readr.tidyverse.org/reference/read_delim.html"><code>read_csv()</code></a> tidyverse function. For example:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load Lab04_DatasetA.csv into R and keep it in a variable named dataA.</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>dataA <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"/Users/Michael/Downloads/Lab04_DatasetA.csv"</span>)</span></code></pre></div>
+<p>Note that the file <em>path</em> will be different on your computer than shown here.</p>
+<p>If you are on MacOS and you are unsure of the path to the dataset you have downloaded, hold the <strong>Option</strong> key and <strong>Right Click</strong> on the file. Select “Copy Full Path” from the context menu.</p>
 
 
 </section>
@@ -898,8 +944,8 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../Slides.html" class="pagination-link" aria-label="Lecture Slides">
-        <span class="nav-page-text">Lecture Slides</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../Labs/Lab05.html" class="pagination-link" aria-label="Descriptive Statistics">
+        <span class="nav-page-text">Descriptive Statistics</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
