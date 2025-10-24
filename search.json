@@ -1,121 +1,260 @@
 [
   {
-    "objectID": "Projects/Project01.html",
-    "href": "Projects/Project01.html",
-    "title": "Research Proposal",
+    "objectID": "Design/L07.html",
+    "href": "Design/L07.html",
+    "title": "Quality of Measures",
     "section": "",
-    "text": "Due October 1 on Blackboard\n\nLength: 300-400 words\nFormat: 12pt Times New Roman, Double-Spaced\n\nImagine you have all the necessary resources to conduct an empirical research study of some hypothetical causal relationship. Propose one specific research question and the methods you believe would be necessary to to study it.\nYour proposal will need to include paragraphs describing at least the following:\n\nThe motivation for your project. Why is it important to study this topic? Has this particular study been done before? (do a search for literature on this topic)\nThe design of the empirical study you would undertake. How would you conduct it? What choices would you make, given what you know of research design? What aspects of the phenomenon in question limit your design?\nThe possible outcomes, and what we could do with this new empirical knowledge. What do you expect and why? What evidence might come up that would be counter to your expectations? For each possible outcome, what would it mean to obtain this result?\n\nYou are encouraged to seek preliminary feedback before submission. Email your teaching fellow or attend office hours before September 28.\n\n\n\n Back to top",
+    "text": "Recall that we use operational definitions to make abstract concepts concrete and measurable. Though concreteness is a desirable property, there are other additional criteria a measure needs to meet to be sufficiently good quality for inference.",
     "crumbs": [
       "Home",
-      "Projects",
-      "Research Proposal"
+      "2. Research Design",
+      "Quality of Measures"
     ]
   },
   {
-    "objectID": "Design/L06.html",
-    "href": "Design/L06.html",
-    "title": "Handling Confounds",
+    "objectID": "Design/L07.html#is-the-measure-valid",
+    "href": "Design/L07.html#is-the-measure-valid",
+    "title": "Quality of Measures",
+    "section": "Is the measure valid?",
+    "text": "Is the measure valid?\nConsider three operational definitions of “anxiety”:\n\nA clinical assessment by a trained psychologist\nA new three-item questionnaire\nA count of fidgeting behaviors during an exam\n\nWhich of these definitions would you trust as a good measure of anxiety? It’s clear that some measures better capture what they are meant to than others. This aspect of measure quality is called validity.\nGiven a happiness questionnaire, would you be surprised if it asks you nothing to do with happiness? When a measure immediately and at face value does not seem to measure what it is supposed to, the measure has poor face validity. This is fairly rare given that scientists are usually considering their measures very carefully.\nWhat about a very abstract construct like intelligence? We could define intelligence according to problem-solving ability, reasoning skills, mathematical skills, etc. In fact, intelligence is a construct that is so broad, it is hard to avoid accidentally excluding an important component. What about street smarts and common sense, emotional intelligence, and other forms of intelligence? When we fail to capture all the components of a complex construct, then our measure of that construct has poor content validity. This is a clear problem with many operational definitions.\nA driving test is very important for determining whether or not someone is ready to drive safely, and performance is (hopefully) tightly correlated with driving ability. This is an example of criterion validity, where the measure has good sensitivity with regard to the scale of the construct in question. A measure has good criterion validity when it correlates closely with other measures and predicts outcomes.\nLastly, consider that some construct validity measures whether. Poor construct validity entails a category error. For example, a questionnaire which seeks to measure life satisfaction has questions that overlap with life satisfaction but primarily have to do with health and well-being. The constructs are certainly related, but which construct is actually being measured?\n\n\n\n\n\n\nA measure with low-reliability produces inconsistent results (perhaps as in A, high variance). Even a highly reliable measure may suffer from issues of validity (perhaps as in B, precise but not quite capturing the target construct). When a measure is reliable and valid, it is both consistent and on-target (C).Image credited to L’Occhio del Cigno on Wikimedia Commons, reproduced here under license CC-BY-SA 4.0.",
+    "crumbs": [
+      "Home",
+      "2. Research Design",
+      "Quality of Measures"
+    ]
+  },
+  {
+    "objectID": "Design/L07.html#is-the-measure-reliable",
+    "href": "Design/L07.html#is-the-measure-reliable",
+    "title": "Quality of Measures",
+    "section": "Is the measure reliable?",
+    "text": "Is the measure reliable?\nEven if a measure is carefully defined, and demonstrates high validitiy, it might not be consistent enough for us to make inferences. A reliable measure produces consistent results, whether over time or over who takes the measurement.\nWhen two people are measuring the same thing, then inter-rater reliability is important to consider. The question here is whether the two raters produce the same answers when using the same operational definition.\nThink about a survey which asks many questions on the same topic. Do the items all correlate well? If they don’t, then the survey might not have good internal consistency.\n\nThere are validity and reliability issues with all three of the following examples. Can you spot them?\n\nA survey of sleep quality measure asks “How do you feel about your sleep quality?”\nAn objective measure of sleep quality.\nA physiological measure of sleep quality uses EEG to measure brain waves during REM sleep.",
+    "crumbs": [
+      "Home",
+      "2. Research Design",
+      "Quality of Measures"
+    ]
+  },
+  {
+    "objectID": "Design/L04.html",
+    "href": "Design/L04.html",
+    "title": "Establishing Causality",
     "section": "",
-    "text": "Note\n\n\n\nThe research proposal project is upcoming. Review the associated lecture slides for details.",
+    "text": "We’re very used to making statements regarding causation. Take the following statements as examples:\nIn each of these statements, we’ve said that some antecedent event causes an outcome.",
     "crumbs": [
       "Home",
       "2. Research Design",
-      "Handling Confounds"
+      "Establishing Causality"
     ]
   },
   {
-    "objectID": "Design/L06.html#confounding-variables",
-    "href": "Design/L06.html#confounding-variables",
-    "title": "Handling Confounds",
-    "section": "Confounding Variables",
-    "text": "Confounding Variables\nWhen we are analyzing causal relationships, a confound is a variable that influences both the independent and dependent variable, creating a misleading association.\nSay, hypothetically, that a positive association is found between coffee and lung cancer. That there is a positive association means that those who drink coffee are likely to have had lung cancer, and those who have had lung cancer are likely to drink coffee. To speculate, it might seem like the causal direction is from coffee to lung cancer. It could turn out, however, that those who drink coffee are also likely to smoke.\nIn this example, smoking is a confound: a spurious relationship, which can lead us to make a false inference. Confounds can sometimes mask real causal realtionships.\nHere’s another example: Based on observations, hormone-replacement therapy seemed to prevent heart disease in women.\n\n\n\n\n\n\n\nConfounder\n\n\n\nHRT\n\nHRT\n\n\n\nHeart Disease\n\nHeart Disease\n\n\n\nHRT-&gt;Heart Disease\n\n\n?\n\n\n\n\n A causal graph shows the hypothesized causal relationships. Here it’s a negative relationship that was theorized: H.R.T. prevents heart disease. \n\n\n\nLater randomized controlled trials revealed that this effect disappeared after controlling for confounds of socioeconomic status and education.\n\n\n\n\n\n\n\nConfounder\n\n\n\nSES & Education\n\nSES & Education\n\n\n\nH.R.T\n\nH.R.T\n\n\n\nSES & Education-&gt;H.R.T\n\n\n\n\n\nHeart Disease\n\nHeart Disease\n\n\n\nSES & Education-&gt;Heart Disease\n\n\n\n\n\n\n Being of higher SES and education meant that, separately, women were more likely to seek out and afford H.R.T. and they were also less liklely to get heart disease. \n\n\n\nConsider this one: A childs birth-order is related to down syndrome, with risk increasing for each child.\n\n\n\n\n\n\n\nConfounder\n\n\n\nBirth Order\n\nBirth Order\n\n\n\nDown Syndrome\n\nDown Syndrome\n\n\n\nBirth Order-&gt;Down Syndrome\n\n\n?\n\n\n\n\n Down syndrome seems to be causally related to birth order. \n\n\n\n\n\nThink for a moment and then click here to reveal an explanation. Is there any other variable which could be at play here?\n\nAs it turns out, age of the mother, which can only increase with number of children, was the common denominator.\n\n\n\n\n\n\n\nConfounder\n\n\n\nMother's Age\n\nMother's Age\n\n\n\nDown Syndrome\n\nDown Syndrome\n\n\n\nMother's Age-&gt;Down Syndrome\n\n\n\n\n\nBirth Order\n\nBirth Order\n\n\n\nMother's Age-&gt;Birth Order\n\n\n\n\n\n\n Down syndrome seems to be causally related to birth order.",
+    "objectID": "Design/L04.html#considering-the-counterfactual",
+    "href": "Design/L04.html#considering-the-counterfactual",
+    "title": "Establishing Causality",
+    "section": "Considering the Counterfactual",
+    "text": "Considering the Counterfactual\nWhat does it mean that event \\(A\\) causes event \\(B\\)?\nA philosophy that we could adopt is that the occurence of some antecedent event is sufficent for us to expect that the event in question will occur. In other words, \\(B\\) might not have occured if \\(A\\) did not happen first. Note how we implicitly consider what didn’t happen whenever we make a causal statement: we consider the counterfactual.\n\n\nConsider that any event could have multiple causes. Even if you did not oversleep, you could be late to class because of traffic, a phone call, a rainstorm… \\(A\\) might be sufficient to cause \\(B\\) but not necessary if another event \\(C\\) could have caused it.\n\n“I might not have been late to class if I did not oversleep.”\n\nEven though the counterfactual is counter to what happened this time, we might know from experience that the story could have gone another way. The counterfactual is taken into account when we make causal statements regardless of whether it actually occured.",
     "crumbs": [
       "Home",
       "2. Research Design",
-      "Handling Confounds"
+      "Establishing Causality"
     ]
   },
   {
-    "objectID": "Design/L06.html#extraneous-variables",
-    "href": "Design/L06.html#extraneous-variables",
-    "title": "Handling Confounds",
-    "section": "Extraneous Variables",
-    "text": "Extraneous Variables\nThose variables that affect the dependent variable are extraneous. While confounding variables are extraneous, not all extraneous variables are confounders.\n\nA genetic predisposition to lung cancer is an extraneous variable, because it does affect lung cancer but does not affect smoking.\n\n\n\nWith a genetic predisposition, might person might know that their parent or grandparent developed lung cancer? The individual predisposed to lung cancer might therefore purposely avoid smoking. Thus, it’s possible that there is a relationship between genetic predisposition and smoking, though not considered here.\n\n\n\n\n\n\n\nExtraneous\n\n\n\nGenetic Predisposition\n\nGenetic Predisposition\n\n\n\nLung Cancer\n\nLung Cancer\n\n\n\nGenetic Predisposition-&gt;Lung Cancer\n\n\nrisk\n\n\n\nSmoking\n\nSmoking\n\n\n\nSmoking-&gt;Lung Cancer\n\n\nrisk\n\n\n\n\n\n\n\n\n\nAge is a confound for both smoking and lung cancer (consider that in the U.S. you cannot purchase tobacco under the age of 21).\n\n\n\n\n\n\n\n\nConfound\n\n\n\nAge\n\nAge\n\n\n\nSmoking\n\nSmoking\n\n\n\nAge-&gt;Smoking\n\n\nlegal ability\n\n\n\nLung Cancer\n\nLung Cancer\n\n\n\nAge-&gt;Lung Cancer\n\n\nrisk\n\n\n\nSmoking-&gt;Lung Cancer\n\n\nrisk",
+    "objectID": "Design/L04.html#probabilistic-effects",
+    "href": "Design/L04.html#probabilistic-effects",
+    "title": "Establishing Causality",
+    "section": "Probabilistic Effects",
+    "text": "Probabilistic Effects\nThe causal relationships we research are usually probabilistic in nature. This means that an antecedent event may influence the probability of the event in question, but not guarantee it.\n\n\nMaybe \\(A\\) does not guarantee \\(B\\) but it does make \\(A\\) more likely.\n\n“I smoked, but I didn’t get cancer.”\n“I bought a lottery ticket, but I didn’t win.”\n\nWe can use probability to quantify causal effects using counterfactuals. The effect of some antecedent event on an outcome is the probability of the outcome given the event occured minus the probability given the counterfactual.\nTo write this explicitly:\n\\(\\text{Causal Effect of A} = P(Outcome | A) - P(Outcome | \\neg A)\\)\n\n\nClick to show an explanation of this notation.\n\n\nGenerally, we can denote the probability of some event \\(X\\) as \\(P(X)\\).\nWhen one event depends on, or is conditional on another, we denote that \\(P(A|B)\\) or the “probability of \\(A\\) given \\(B\\)”.\nTo consider the counterfactual, we write \\(\\neg A\\) or “not A”, the event that \\(A\\) didn’t happen.\n\nWe’ll learn more about probability later in the course.",
     "crumbs": [
       "Home",
       "2. Research Design",
-      "Handling Confounds"
+      "Establishing Causality"
     ]
   },
   {
-    "objectID": "Design/L06.html#confounds-in-non-experimental-research",
-    "href": "Design/L06.html#confounds-in-non-experimental-research",
-    "title": "Handling Confounds",
-    "section": "Confounds in Non-Experimental Research",
-    "text": "Confounds in Non-Experimental Research\nIn non-experimental research, the independent variable is not being randomly assigned and is therefore likely to be related to confounds. There are ways to control these confounds, however, even without random assignment.\n\n\nThere are limits to what we can control - notably, we can only control for known and measured confounders.\nWere we comparing smokers and non-smokers, we could control the effect of age by matching every individual in the smoker group to an individual in the non-smoker group. By comparing pairs we avoid the confounding effect of age.\nAlternatively, we could restrict our anlaysis to a subgroup, such as by only looking at smoking rates in the 40-45 age range. Because age is effectively held constant, it is controlled. We can stratify our sample by intentionally selecting subgroups of particular composition for analysis.\nLastly, we can use statistical control to subtract the estimated effect of a confound from the total effect observed. We will see more on this later in the semester.",
+    "objectID": "Design/L04.html#creating-knowledge-of-causal-effects",
+    "href": "Design/L04.html#creating-knowledge-of-causal-effects",
+    "title": "Establishing Causality",
+    "section": "Creating Knowledge of Causal Effects",
+    "text": "Creating Knowledge of Causal Effects\nGiven that the counterfactual is not what happened this time, we tend to make causal statements taking into account knowledge and past experience. To produce new knowledge so that we can quantify causal effects, we have two options: observation and experimentation.\n\nObservational Research\nThe first option is to estimate the difference between a fact and a counterfactual, finding the probabilities by very carefully analyzing historical data or real-world events. We can compare two existing groups, and make an assumption that they are similar enough to be compared (perhaps adjusting for a few variables).\n\n\nThe exact assumptions we make are very important and can mean the difference between strong and weak research.\nAs an example, we could find and observe two large groups of people: one group of folks who have smoked for the last ten years and another who have never smoked. We could test or survey these groups to compare the effect of smoking on their health.\nIt might still be hard to say whether smoking was the only variable that was different. Perhaps the two groups are different ages, have different diets, were located in different states, etc. It can be difficult to account for all the potential confounds that could undermine our assumptions.\n\n\nExperimental Research\nThe second option, to design an experiment, allows us to minimize our assumptions and create groups which differ in only variables we manipulate.\n\n\nExperiments rely the control that comes from setting variables to be constant or from introducing known randomness or statistically accounting for random factors.\nFor example, we select students and randomly assign them to two groups which either spend thirty minutes reading a physical book or thirty minutes listening to an audiobook. We then administer a memory test and compare the performance of the groups.\nExperiments are not quite immune from confounding variables, but well-designed experiments can certainly offer strong evidence of causal relationships since many potential confounders have been controlled.\nWhile controlled experiments offer stronger causal explanations, there are many situations where running an experiment is impossible There are situations where it may not be ethical to manipulate certain variables. For this reason we cannot design experiments to study topics like abuse or trauma. Some other topics may be impossible to study experimentally due to infeasability or high cost.\n\n\n\n\n\n\nNoteAn Important Note on Research Ethics\n\n\n\nHistory has shown us many examples of plainly unethical research experiments. Infamous studies you may have heard of include the Stanford Prison Experiment and the egregiously abusive Tuskegee Syphillis Study. We’ll cover a history of major ethical breaches at points throughout the semester.\nIn modern science, we carefully consider the ethics of any new research, experimental or observational. Medical research in particular is subject to strict legal and institutional regulation.",
     "crumbs": [
       "Home",
       "2. Research Design",
-      "Handling Confounds"
+      "Establishing Causality"
     ]
   },
   {
-    "objectID": "Design/L06.html#experimental-confounds",
-    "href": "Design/L06.html#experimental-confounds",
-    "title": "Handling Confounds",
-    "section": "Experimental Confounds",
-    "text": "Experimental Confounds\nWe learned previously that random assignment protects against both known and unknown confounds because, effectively, confounders are distributed equally across conditions. This is true, however, only in expectation (i.e. samples approaching infinity). Due to chance, confounds can be a concern in any given sample, especially if the sample is small.\n\n\nConsider flipping a coin ten times, the expectation is five heads and five tails. That is, with a fair coin on average it will come out to 50-50. In any given sample, however, even with 1000 flips there is still the unlikely possibility that 1000 heads could come up.\nConsider an experiment investigating a causal relationship of coffee consumption on exam scores. If we randomly assign participants to drink a specific number of cups of coffee per day, then number of cups is decoupled from extraneous variables, right? Can’t we then attribute any difference in test-score to how many cups of coffee they drink?\n\n\n\n\n\n\n\nConfound\n\n\n\nDaily Caffeine Intake\n\nDaily Caffeine Intake\n\n\n\nTest Score\n\nTest Score\n\n\n\nDaily Caffeine Intake-&gt;Test Score\n\n\n\n\n\n\n At first pass, it seems this causal relationship has been effectively isolated by the experiment design. \n\n\n\nA potential confound like sleep duration could still throw a wrench in the design. With little sleep, people may consume more caffeine. We controlled for this by assigning number of cups. We did not account for, however, that sleep duration can also be decreased by caffeine consumption or caffeine withdrawal.\n\n\n\n\n\n\n\nConfound\n\n\n\nSleep Duration\n\nSleep Duration\n\n\n\nCaffeine Intake\n\nCaffeine Intake\n\n\n\nSleep Duration-&gt;Caffeine Intake\n\n\n\n\n\nTest Score\n\nTest Score\n\n\n\nSleep Duration-&gt;Test Score\n\n\n\n\n\nCaffeine Intake-&gt;Sleep Duration\n\n\n\n\n\nCaffeine Intake-&gt;Test Score\n\n\n\n\n\n\n Even in randomized experiments, it is possible for confounds to be lurking. \n\n\n\nOf course, because random assignment is only truly decoupling in expectation, we still might consider the rare event that those assigned to one group happen to be those who already sleep more.\nThe techniques listed above for non-experimental research still apply. Therefore, we could use matching or stratification to ensure sleep duration is controlled for (e.g. include only participants who sleep seven hours). Alternatively, we could use a within-subjects design such that we observe the effects of all conditions in every participant over time.",
-    "crumbs": [
-      "Home",
-      "2. Research Design",
-      "Handling Confounds"
-    ]
-  },
-  {
-    "objectID": "Design/L05.html",
-    "href": "Design/L05.html",
-    "title": "Experimental Control",
+    "objectID": "Labs/Lab07.html",
+    "href": "Labs/Lab07.html",
+    "title": "Z-Score, Z-Statistic, Z-Test",
     "section": "",
-    "text": "The purpose of an experiment is to establish control over those extraneous variables that might affect an observation of causal effects. With experimental control, we have essentially taken measures to ensure that our assumptions are reasonably true and that alternative explanations for the observed effect are minimized.\nWe’ve established that experiments involve manipulating and observing variables to provide evidence for causal effects.\n\nThe independent variable is the possible cause.\nThe dependent variable is the effect or outcome we observe.\n\nIn an experiment, the independent variable is explicitly manipulated while controlling for all other variables, such as by ensuring they are constant. This is the simplest type of control.\n\n\nTo hold variables constant means to ensure they are the same in each experimental group. There are many other types of control, however.\nConsider an experimental study titled “The Relationship Between Mindfulness and Anxiety”. Just from the title, what might we presume are the dependent and independent variables?\n\n\nThink for a moment and then click here to reveal an explanation.\n\nWe might guess that the study manipulates mindfulness as an independent variable, and then observes whether there is an effect on anxiety as a dependent variable.\n\n\n\nThough we can take a guess at the dependent and independent variables from the title, we would have to read the paper to know if we guessed correctly!\nTake another example, “Listening to Music While Studying Increases Recall”. This title is phrased as a hypothesis: that listening to music has a causal effect on recall performance.",
+    "text": "Consider a population with known parameters. For example, the IQ score distribution.\n# Population parameters\nmu  &lt;- 100\nsigma &lt;- 10\nWith any random sample from that distribution (e.g. data we collected on some group), we learned previously how to calculate the standard error (SEM).\n# A random sample of 25 datapoints.\nn &lt;- 25\nx &lt;- rnorm(n, mu, sigma)\nxbar &lt;- mean(x)\nxbar\n\n[1] 102.1556\n\n# Standard Error of the Mean with Samples of n=25\nsem &lt;- sigma / sqrt(n)\nsem\n\n[1] 2\nWe can use this to calculate the 95% confidence interval around the estimate.\n# Using just our sample, the estimate of the true mean (95% CI)\nci &lt;- c(xbar - sem * 1.96, xbar + sem * 1.96)\nci\n\n[1]  98.23565 106.07565\nBecause \\(mu\\) is within the confidence interval, we conclude that the sample mean \\(\\bar x\\) is not significantly different from \\(mu\\).",
     "crumbs": [
       "Home",
-      "2. Research Design",
-      "Experimental Control"
+      "Lab Components",
+      "Z-Score, Z-Statistic, Z-Test"
     ]
   },
   {
-    "objectID": "Design/L05.html#talking-about-experiment-designs",
-    "href": "Design/L05.html#talking-about-experiment-designs",
-    "title": "Experimental Control",
+    "objectID": "Labs/Lab07.html#the-z-test",
+    "href": "Labs/Lab07.html#the-z-test",
+    "title": "Z-Score, Z-Statistic, Z-Test",
+    "section": "The Z-Test",
+    "text": "The Z-Test\nWe can alternatively discuss our data in terms of the standard normal curve.\nTo do this, we need the Z-statistic (NOT the same as the Z-score). The Z-statistic tells us how far the sample mean is from the center of the sampling distribution (for n=25 here).\n\n\nThe Z-statistic is not the same as a z-score.\nWhere the z-score tells us the average difference between datapoints (\\(x_i\\)) and the sample mean (\\(\\bar x\\)) in units of the sample standard deviation (\\(s\\)), the Z-statistic tells us the difference between a given sample mean (\\(\\bar x\\)) and the center of the sampling distribution \\(\\mu\\) in units of the standard error (\\(\\sigma \\over \\sqrt n\\)).\nIn other words, the z-score is calculated on the datapoints of a sample, while the Z-statistic is calculated on a sample mean from the sampling distribution.\n\n# Z-Statistic: How far away is the sample mean from the population mean?\nZ &lt;- (mean(x) - mu) / sem\nZ\n\n[1] 1.077823\n\n\nAs the Z-statistic is less than \\(1.96\\), again we can see that we could not reject the null.",
+    "crumbs": [
+      "Home",
+      "Lab Components",
+      "Z-Score, Z-Statistic, Z-Test"
+    ]
+  },
+  {
+    "objectID": "Labs/Lab07.html#the-p-value",
+    "href": "Labs/Lab07.html#the-p-value",
+    "title": "Z-Score, Z-Statistic, Z-Test",
+    "section": "The p-Value",
+    "text": "The p-Value\nRecall that the p-value is the probability of obtaining a sample mean at least as extreme as what was observed, under the null hypothesis.\nBy default, the pnorm() function represents the area (probability) underneath a standard normal distribution curve (mean of \\(0\\), standard deviation of \\(1\\)). We can use this to calculate the p-value.\nWhere the null hypothesis \\(H_0\\) is that the sample is not different from the population,\n\np &lt;- 2 * (1 - pnorm(abs(Z))) # Technically, a two-tailed p-value.\np  \n\n[1] 0.281113\n\n\nHere, our p-value was \\(&gt;0.05\\). Where our decision threshold \\(\\alpha = 0.05\\), we would not reject the null hypothesis, and we would again conclude that the sample is not significantly different from the population.\nAn alternate method is to calculate the p-value directly.\n\np &lt;- 2 * (1 - pnorm(abs(xbar), mean = mu, sd = sem))\np\n\n[1] 0.281113\n\n\nQUESTION: What Z-statistic, p-value, and confidence interval did you obtain? Report for each one why you would reject or fail to reject the null hypothesis.\n\n\nCritical Values\nConsider that this is where the 68.3-95.4-99.7 rule comes from:\n\npnorm(1) - pnorm(-1) # One standard deviation\n\n[1] 0.6826895\n\npnorm(2) - pnorm(-2) # Two standard deviations\n\n[1] 0.9544997\n\npnorm(3) - pnorm(-3) # Three standard deviations\n\n[1] 0.9973002\n\n\nWe use \\(1.96\\) as a critical value for the 95% confidence interval because it comes out at nearly \\(0.95\\) exactly.\n\npnorm(1.96) - pnorm(-1.96)\n\n[1] 0.9500042\n\n\nQUESTION: What percent of the data is captured within 0.5 standard deviations?\n\n\nz-Scores\nSee the note above on why z-scored data is NOT the same as the Z-statistic of a sample. In R, we can calcualte the z-score in the way you might expect.\n\n# The z-score allows us to compare datapoints within a sample in standard deviation units.\nz &lt;- (x - mean(x)) / sd(x)\nz\n\n [1]  0.751067947  0.360610116 -0.715518966 -0.634075229  0.180021094\n [6]  0.717037337  0.205401203  1.128853827 -1.127175668 -0.413406038\n[11]  0.677888478  0.882502426 -2.138742912 -0.012367409  1.812048233\n[16] -0.914902898  0.263018488 -1.171546783  1.524180618  1.127777458\n[21] -0.986189416 -1.501922572  0.002028404  0.658370501 -0.674958238\n\n\nAn equivalent is to use the scale() function.\n\nscale(x)\n\n              [,1]\n [1,]  0.751067947\n [2,]  0.360610116\n [3,] -0.715518966\n [4,] -0.634075229\n [5,]  0.180021094\n [6,]  0.717037337\n [7,]  0.205401203\n [8,]  1.128853827\n [9,] -1.127175668\n[10,] -0.413406038\n[11,]  0.677888478\n[12,]  0.882502426\n[13,] -2.138742912\n[14,] -0.012367409\n[15,]  1.812048233\n[16,] -0.914902898\n[17,]  0.263018488\n[18,] -1.171546783\n[19,]  1.524180618\n[20,]  1.127777458\n[21,] -0.986189416\n[22,] -1.501922572\n[23,]  0.002028404\n[24,]  0.658370501\n[25,] -0.674958238\nattr(,\"scaled:center\")\n[1] 102.1556\nattr(,\"scaled:scale\")\n[1] 10.2604\n\n\nQUESTION: Can you z-score the population data, if it is known?\n\n\n\n\n\n\nTipDeliverables\n\n\n\nAnswer the questions above and upload your code and screenshot to Blackboard for lab credit today.",
+    "crumbs": [
+      "Home",
+      "Lab Components",
+      "Z-Score, Z-Statistic, Z-Test"
+    ]
+  },
+  {
+    "objectID": "Labs/Lab04.html",
+    "href": "Labs/Lab04.html",
+    "title": "Descriptive Statistics",
     "section": "",
-    "text": "The purpose of an experiment is to establish control over those extraneous variables that might affect an observation of causal effects. With experimental control, we have essentially taken measures to ensure that our assumptions are reasonably true and that alternative explanations for the observed effect are minimized.\nWe’ve established that experiments involve manipulating and observing variables to provide evidence for causal effects.\n\nThe independent variable is the possible cause.\nThe dependent variable is the effect or outcome we observe.\n\nIn an experiment, the independent variable is explicitly manipulated while controlling for all other variables, such as by ensuring they are constant. This is the simplest type of control.\n\n\nTo hold variables constant means to ensure they are the same in each experimental group. There are many other types of control, however.\nConsider an experimental study titled “The Relationship Between Mindfulness and Anxiety”. Just from the title, what might we presume are the dependent and independent variables?\n\n\nThink for a moment and then click here to reveal an explanation.\n\nWe might guess that the study manipulates mindfulness as an independent variable, and then observes whether there is an effect on anxiety as a dependent variable.\n\n\n\nThough we can take a guess at the dependent and independent variables from the title, we would have to read the paper to know if we guessed correctly!\nTake another example, “Listening to Music While Studying Increases Recall”. This title is phrased as a hypothesis: that listening to music has a causal effect on recall performance.",
+    "text": "This lab will build students’ skills orienting to unkown data and summarizing variables using the descriptive methods learned in class. Students will independently recapitulate the descriptive analysis exercise they performed in Lab 3 on three new datasets.",
     "crumbs": [
       "Home",
-      "2. Research Design",
-      "Experimental Control"
+      "Lab Components",
+      "Descriptive Statistics"
     ]
   },
   {
-    "objectID": "Design/L05.html#randomness-as-control",
-    "href": "Design/L05.html#randomness-as-control",
-    "title": "Experimental Control",
-    "section": "Randomness as Control",
-    "text": "Randomness as Control\nWe can imbue our data with nice statistical properties by using randomness. This gives us a form of control we can use to bolster the strength of our assumptions even when there are some variables we can’t hold constant.\n\n\n\n\n\nThe internet security company Cloudflare uses a camera to watch a wall of lava lamps. The unpredictability provides a high quality source of random data for security purposes.Image credited to HaeB on Wikimedia Commons, reproduced here under license CC-BY-SA 4.0.\n\n\n\nWhat is “Random”?\nEvents are random when they occur with some probability but are individually unpredictable. In other words, random outcomes are determined by chance.\nConsider two number sequences: 1231234545, 1656321345. Both orderings could be random, if generated spontaneously by an unpredictable process such as a repeated die roll.\nNote that randomness is different from uniformity. For outcomes to be uniform implies specifically that all the outcomes have an equal probability.\n\n\nWe can learn from these examples that randomness is about the process that generates the data, that the process is unpredictable.\n\n\nRandom Assignment\nIn experiments, we randomly assign participants to groups. This reduces the potential for systematic differences across groups and allows us to more safely attribute any observed difference in outcomes to the treatment.\n\n\nThe number of variables that could be affecting an observation really is endless. We can’t control for all of them separately. By performing random group assignment, we break any systematic relationships of group to any variable. We can then safely assume that the two groups are similar in all variables on average.\n\n\n\n\nOne issue we run into is that we want the group assignments to be random but want also for the groups to be the same size. There are several ways ways to accomplish both. For instance, we could pair up participants such that, in a random order, one is assigned to Group A and the other to Group B.",
+    "objectID": "Labs/Lab04.html#loading-datasets-into-r",
+    "href": "Labs/Lab04.html#loading-datasets-into-r",
+    "title": "Descriptive Statistics",
+    "section": "Loading Datasets into R",
+    "text": "Loading Datasets into R\nWe will need to download the following datasets for today’s activity:\n\nDataset A\nDataset B\nDataset C\n\nDownload each file to your computer. You can load CSV datasets into R using the read_csv() tidyverse function. For example:\n# Load Lab04_DatasetA.csv into R and keep it in a variable named dataA.\ndataA &lt;- read_csv(\"/Users/Michael/Downloads/Lab04_DatasetA.csv\")\nNote that the file path will be different on your computer than shown here.\nIf you are on MacOS and you are unsure of the path to the dataset you have downloaded, hold the Option key and Right Click on the file. Select “Copy Full Path” from the context menu.",
     "crumbs": [
       "Home",
-      "2. Research Design",
-      "Experimental Control"
+      "Lab Components",
+      "Descriptive Statistics"
     ]
   },
   {
-    "objectID": "Slides.html",
-    "href": "Slides.html",
-    "title": "Lecture Slides",
+    "objectID": "Labs/Lab02.html",
+    "href": "Labs/Lab02.html",
+    "title": "Understanding Types of Data",
     "section": "",
-    "text": "The following links return directly to the lecture PDFs on Blackboard.\n\nLecture 3 (2025-09-08)\nLecture 4 (2025-09-10)\nLecture 5 (2025-09-12)\nLecture 6 (2025-09-15)\nLecture 7 (2025-09-17)\nLecture 8 (2025-09-19)\nLecture 9 (2025-09-22)\nLecture 10 (2025-09-24)\nLecture 11 (2025-09-26)\nLecture 12 (2025-09-29)\nLecture 13 (2025-10-01)\nLecture 14 (2025-10-03) In-class practice.\nLecture 15 (2025-10-08)\nLecture 16 (2025-10-10)\nLecture 17 (2025-10-13)\nLecture 18 (2025-10-15)\n\n\n\n\n Back to top",
+    "text": "This lab will translate what we’ve learned about kinds of data into how real data of these types are processed for visualization and later statistical analysis.",
     "crumbs": [
       "Home",
-      "Lecture Slides"
+      "Lab Components",
+      "Understanding Types of Data"
+    ]
+  },
+  {
+    "objectID": "Labs/Lab02.html#self-study",
+    "href": "Labs/Lab02.html#self-study",
+    "title": "Understanding Types of Data",
+    "section": "Self-Study",
+    "text": "Self-Study\nThis lab corresponds roughly to the following chapters in R for Data Science, which are recommended for further self-study.\n\nWorkflow: Basics 2.1-2.6\nFactor Basics 16.2\nDataframe 1.2.1",
+    "crumbs": [
+      "Home",
+      "Lab Components",
+      "Understanding Types of Data"
+    ]
+  },
+  {
+    "objectID": "Labs/Lab02.html#from-values-to-vectors",
+    "href": "Labs/Lab02.html#from-values-to-vectors",
+    "title": "Understanding Types of Data",
+    "section": "From Values to Vectors",
+    "text": "From Values to Vectors\nBefore we can begin, we need to develop a sense for how R handles datasets.\nIn our first lab, we demonstrated how to store single values in variables, effectively giving them a name we can reference later.\n\nn &lt;- 42\nlucky_number &lt;- 7\nIDriveA &lt;- \"honda civic\"\n\n# Find the radius of a circle.\nx &lt;- 3.14159\nr &lt;- 7\n2*x*r\n\n[1] 43.98226\n\n\n\n\nHere we assign values to a few variables with arbitrary names: n, lucky_number, IDriveA, x, r.  We can use variables in mathematical expressions as demonstrated here by calculating the circumference of a circle with radius 7cm.\nOf course, when we collect data it’s actually many values we need to work with. In R, we can create vectors to hold long columns of values, as we might obtain from real data.\n\nsome_numbers &lt;- c(3, 6, 8, 12)\n\nsome_numbers\n\n[1]  3  6  8 12\n\n\n\n\nThe c() function combines several values into a vector.  As a shorthand, you can create sequences of numbers using the :, like: 1:10. Try this out in the console.\nAny mathematical calculations will work on the whole vector all at once. For example, we could do the circumference calculation again, this time for circles of a few different diameters.\n\nr &lt;- c(7, 36, 28, 1, 0)\n2*x*r\n\n[1]  43.98226 226.19448 175.92904   6.28318   0.00000\n\n\n\n\nCheck the last two elements and see that it has correctly listed \\(2 \\pi \\cdot 1 = 2\\pi\\) and \\(2\\pi \\cdot 0 = 0\\), for example.  This property of being able to perform calculations over whole vectors is what makes this computer software useful for statistics. Routine calculations on a whole dataset can be done quickly and precisely without a pen or calculator.\n\nQualitative Data Types\nWe can create vectors of qualitative variables too. R has one data type for both nominal and ordinal variables: the factor.\n\nhandedness &lt;- factor(c(\"Right-Handed\", \"Left-Handed\", \"Ambidextrous\"))\n\nhandedness\n\n[1] Right-Handed Left-Handed  Ambidextrous\nLevels: Ambidextrous Left-Handed Right-Handed\n\n\nR refers to the unique names a factor can take on as its levels.\n\n\nRandom Data\nIt’s often useful to be able to generate random data, whether to randomly assign participants to groups or to simulate what our results might look like. There are several functions to do with randomness, but we’ll start by demonstrating how to use the sample() function.\nA simple example is the roll of a die. This code will randomly take from the six possible face values, sampling the equivalent of 25 die rolls.\n\nsample(c(1,2,3,4,5,6), 25, replace=TRUE)\n\n [1] 2 4 1 5 4 2 5 2 4 2 1 4 1 5 6 1 3 3 6 4 5 6 6 3 6\n\n\n\n\nThe replace=TRUE means “sample with replacement”. In other words: take a random number from 1 to 6 and then put it back before taking a random number a second time, a third time, etc.\nCombining this with what we learned above about factor variables (nominal or ordinal data types), we can demonstrate one way to randomly assign ten participants to two groups.\n\n# Define a nominal variable (factor) with two levels: treatment and placebo.\nconditions &lt;- factor(c(\"treatment\", \"placebo\"))\n\n# Start with alternating (repeat), five in each group.\nassignment &lt;- c(rep(conditions, 5))\n\n# Randomize the variable so that 5 participants are assigned randomly to each (10 in total).\nassignment &lt;- sample(assignment, 10)\n\nassignment\n\n [1] placebo   treatment treatment treatment placebo   placebo   treatment\n [8] placebo   placebo   treatment\nLevels: placebo treatment\n\n\n\n\nAs you run each line, take a look at the conditions and assignment variables in your R environment.",
+    "crumbs": [
+      "Home",
+      "Lab Components",
+      "Understanding Types of Data"
+    ]
+  },
+  {
+    "objectID": "Labs/Lab02.html#oodles-of-observations",
+    "href": "Labs/Lab02.html#oodles-of-observations",
+    "title": "Understanding Types of Data",
+    "section": "Oodles of Observations",
+    "text": "Oodles of Observations\nMost data we deal with is tabular; we’ve collected many observations of more than just one variable. To keep track of it all, we stack columns side-by-side together into tables. In R, we equivalently put vectors together into dataframes.\nWe saw an example of a dataframe last week, the data table from the ChickWeight experiment.\n\n# Remember head() lets us see just the first few rows - not the whole dataframe.\nChickWeight |&gt; head()\n\n  weight Time Chick Diet\n1     42    0     1    1\n2     51    2     1    1\n3     59    4     1    1\n4     64    6     1    1\n5     76    8     1    1\n6     93   10     1    1\n\n\nWith what we’ve learned in the last week, which of the four variables was the independent variable and which was the dependent variable in this experiment?\n\n\nThink for a moment and then click here to reveal an explanation.\n\nRecall that there were several diets a chick could be assigned to, and its weight was measured over time as it grew up.\n\nThe experiment manipulated Diet as an independent variable.\nThe dependent variable was weight in grams, observed every two days.\n\n\nIf we want to create our own data frame, we can build one using data.frame().\n\ndata.frame(trial=c(1,2,3), dice_roll=c(12,3,7))\n\n  trial dice_roll\n1     1        12\n2     2         3\n3     3         7\n\n\nPutting it all together, let’s create a table containing 10000 datapoints of random age and biological sex and call it demographics.\n\nN &lt;- 10000\n\ndemographics &lt;- data.frame(\n  age = sample(18:90, N, replace=TRUE),\n  biosex = sample(factor(c(\"male\", \"female\")), N, replace=TRUE)\n)\n\nhead(demographics)\n\n  age biosex\n1  38   male\n2  31 female\n3  24   male\n4  74   male\n5  52 female\n6  78   male\n\n\nBecause this is uniformly random, we should expect even-looking plots.\n\nlibrary(ggplot2)\n\nggplot(demographics) +\n  geom_boxplot(aes(x=biosex, y=age))\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipDeliverables\n\n\n\nIf you can get this plot, that’s the final product for today! Turn in a screenshot of your full RStudio screen, including code and box-and-whisker plot on Blackboard with Classwork/Homework Assignment 2.\n\n\nIn future classes, we’ll discuss more sophisticated ways to look at, obtain, and simulate datasets.",
+    "crumbs": [
+      "Home",
+      "Lab Components",
+      "Understanding Types of Data"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Introduction to Experimental Design",
+    "section": "",
+    "text": "Welcome!\nThis website contains materials for course CAS PS 211 at Boston University, which serves as a primer for undergraduate psychology majors in statistical and experimental methods for psychological research. The materials here are speific to Fall 2025, Section B1.\nAnnouncements and assignments will come through Blackboard. See the links above.\n\nAdditional Resources\nStudents are likely to find useful the following free online resources:\n\nR for Data Science\nHadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund\nIf this is your first time programming in R, sections of this book may aid your understanding of the language.\nAnswering Questions with Data\nMatthew J. C. Crump, Danielle J. Navarro, and Jeffrey Suzuki\nExperimentology: An Open Science Approach to Experimental Psychology Methods\nMichael C. Frank, Mika Braginsky, Julie Cachia, Nicholas A. Coles, Tom E. Hardwicke, Robert D. Hawkins, Maya B. Mathur, Rondeline Williams\nIntroduction to Modern Statistics\nMine Çetinkaya-Rundel and Johanna Hardin\nThe Effect: An Introduction to Research Design and Causality\nNick Huntington-Klein\n\n\n\nAttribution and Reuse Notice\nExcept where otherwise noted, this site and its original materials are created by the authors and licensed under Creative Commons BY-NC-SA 4.0.\n\nYou are free to:\n\nShare — copy and redistribute the material in any medium or format\nAdapt — remix, transform, and build upon the material The licensor cannot revoke these freedoms as long as you follow the license terms.\n\nUnder the following terms:\n\nAttribution — You must give appropriate credit , provide a link to the license, and indicate if changes were made . You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\nNonCommercial — You may not use the material for commercial purposes .\nShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.\nNo additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.\n\n\n\n\nDisclaimer\n\nNote that this site is not a textbook, and that the materials here are primarily condensed lecture notes for didactic purposes. Content may change at any time and accuracy for purposes beyond the scope of this course is not guaranteed.\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Syllabus for Fall 2025",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "Home",
+      "Syllabus for Fall 2025"
+    ]
+  },
+  {
+    "objectID": "Labs/Lab01.html",
+    "href": "Labs/Lab01.html",
+    "title": "Getting Ready to Code",
+    "section": "",
+    "text": "This lab will orient you to RStudio and the R statistical programming language. We will be installing the software necessary for all future assignments this semester.",
+    "crumbs": [
+      "Home",
+      "Lab Components",
+      "Getting Ready to Code"
+    ]
+  },
+  {
+    "objectID": "Labs/Lab01.html#self-study",
+    "href": "Labs/Lab01.html#self-study",
+    "title": "Getting Ready to Code",
+    "section": "Self-Study",
+    "text": "Self-Study\nThis first lab corresponds roughly to the following chapters in R for Data Science, which are recommended for further self-study.\n\nData Visualization 1.1-1.3 and 1.7\nCoding Basics 2.1-2.3\nScripts 6.1",
+    "crumbs": [
+      "Home",
+      "Lab Components",
+      "Getting Ready to Code"
+    ]
+  },
+  {
+    "objectID": "Labs/Lab01.html#getting-ready-to-code",
+    "href": "Labs/Lab01.html#getting-ready-to-code",
+    "title": "Getting Ready to Code",
+    "section": "Getting Ready to Code",
+    "text": "Getting Ready to Code\nBy the end of the first assignment, we will be able to run a simple R program. Before we are able to do that, we will need to install a few things.\nEverything we need is described on posit.co/download/rstudio-desktop.\n\n\n\n\n\n\nTip\n\n\n\nIf you have doubts or start to feel like you’re not “tech savvy” enough as you complete these steps, please trust that these skills are learnable! You are highly encouraged to attend office hours for additional help.\n\n\n\nInstalling R\n\n\nR is a programming language and this first step will install an interpreter, the R Console, which will allow us to write to the computer specific instructions for describing, statistically analyzing, and producing graphics from our experimental data.\nThe first step is to install the R programming language itself. After completing this step, we will be able to open the R interpreter (R Console).\nOn the Posit webpage, click the link for Step 1: Install R. Select the appropriate download for your computer’s operating system (e.g. MacOS).\n\n\n\nR can be downloaded from the Comprehensive R Archive Network (CRAN) website.\n\n\nIf your computer is an Apple Mac/MacBook, you will need to download the appropriate package for your processor.\n\n\nFor Boston University students, if you encounter difficulties or if your primary device is a tablet, alternative access to a full installation of R/RStudio is possible through the BU Common virtual desktop.\n\nIf you know your Mac has an M1 or M2 processor (roughly since 2022) will require the first -arm64.pkg.\nIf you know your Mac has an Intel processor, it will require the second -x86_64.pkg.\n\n\n\n\nMost new Macs run on “Apple Silicon” M-series processors. If you’re not sure, please ask your teaching fellow or assume your Mac has a recent processor.\n\n\nIf your computer is a Windows PC download the base installer, following the instructions for installing R for the first time.\n\n\n\nClick “install R for the first time” for instructions. Ask your teaching fellow for assistance if you encounter any difficulties.\n\n\nOnce you have downloaded the package/executable for your operating system, run the installer.\n\n\n\n\n\n\nNote\n\n\n\nAt the end of this step you should be able to find the R Console in your MacOS Launchpad/Applications or Windows Start menu.\n\n\n\n\nInstalling RStudio\nThe next step is to install RStudio, which we will be using extensively in this course.\n\n\nRStudio is an Integrated Development Environment (IDE) for the R language.\nOn the Posit website, see Step 2: Install RStudio. Download the appropriate installer for your operating system.\n\nOn an Apple Mac/MacBook, you should download and open the .DMG file. You will see the RStudio app and a shortcut to your Applications folder. Drag the RStudio app into your Applications folder.\nOn a Windows PC, you should download and run the Windows .EXE executable installer.\n\n\n\n\n\n\nNote\n\n\n\nAt the end of this step you should be able to find RStudio in your MacOS Launchpad/Applications or Windows Start menu.\n\n\n\n\nOrienting to RStudio\nWhile R is the programming language we will be using, the RStudio application provides us with a comprehensive graphical interface that includes tools to edit R code, view plots and help pages, debug scripts, and more.\n\n\n\nAt a high level, RStudio provides an interactive R Console, built in text-editor (for writing scripts), and functionality for viewing and exporting plots. Image credited to the authors of R4DS, reproduced here under license CC BY-NC-ND 3.0.\n\n\nThe Console pane is where we can type code directly into the R interpreter. Type a line of R language code and press Return to run it. The console is interactive and will show you the result immediately.\nThe Editor pane is where we can write R scripts. We can edit and rearrange text, copy-paste, and save our scripts for later. Try creating a new script and save it to a folder on your computer. With the cursor on a line of your script, press Control and Return; the line of code will automatically be copied and run in the Console pane. Note that the Run button runs the entire script, not just the current line.\n\n\nAn R script or program is a list of instructions to be run in order. We’ll usually conduct an entire analysis in a script.\nThe Output pane is where we can see plots and graphics we have generated. In this area you’ll also find a Files tab for navigating to folders of scripts and results, and a Help tab for viewing documentation for R commands/functions and datasets.\n\n\n\n\n\n\nTip\n\n\n\nOrienting yourself to new software is often a process of active exploration, and there’s always a lot more to learn. Spend some time exploring the menus of RStudio so that you are well-acquainted.\nThe goal is to eventually be able to make an educated guess at where you might go to find a particular menu or feature in the future.\n\n\n\n\nInstalling Packages\nIn this course we’ll be using not only RStudio, but also several R packages.\nBefore we do anything else, we’ll install the R package tidyverse. Type the following in the Console and press Return.\n\n\ntidyverse is actually a metapackage (a collection of packages) including dplyr, tidyr, stringr, ggplot2 and more.\n\ninstall.packages(\"tidyverse\")\n\nA lot of output will appear in the console as the package is installing. When it finishes, the package has been installed. We won’t need to run this again; so there’s no need to keep this line of code in your script.",
+    "crumbs": [
+      "Home",
+      "Lab Components",
+      "Getting Ready to Code"
+    ]
+  },
+  {
+    "objectID": "Labs/Lab01.html#demonstrating-graphics-in-r",
+    "href": "Labs/Lab01.html#demonstrating-graphics-in-r",
+    "title": "Getting Ready to Code",
+    "section": "Demonstrating Graphics in R",
+    "text": "Demonstrating Graphics in R\nAs a motivating example, let’s consider the following short but complete script which will plot some experimental data. We’ll work through this code line-by-line in class to understand what it does.\nThe script will make a plot from an example dataset built-in to R called ChickWeight. The data comes from an experiment with four conditions: diets assigned to hatchling chicks. Their weight in grams is recorded every two days in the built in dataframe (table).\n\n\nMost built-in R functions and example datasets come with a help page that can be accessed by prepending a question mark to the object’s name.\nTo learn about this particular dataset, enter ?ChickWeight at the console.\nType the following R code snippet into a new script in your RStudio Editor pane. Click Save and save the script on your computer (e.g. Documents/PS211/lab1.R). Then click Run.\nYou should see that the code is automatically copied into the Console and run. A plot should appear in the Output pane, looking like the one below.\n\n1library(tidyverse)\n\n2ggplot(ChickWeight) +\n3  geom_point(\n4    aes(x=Time, y=weight, color=Diet),\n5    position=position_jitter()\n  ) +\n6  facet_grid(~Diet, labeller=label_both) +\n7  labs(\n    title=\"Experiment Comparing Weight Gain with Four Diets\",\n    x=\"Time (days)\",\n    y=\"Weight (g)\"\n  ) +\n8  theme_classic()\n\n\n1\n\nLoad in the tidyverse package (also called a library).\n\n2\n\nCreate a plot of the ChickWeight dataset (using ggplot).\n\n\n3\n\nAdd datapoints to the plot…\n\n\n4\n\n..where each datapoint’s (x,y) position is its Time and weight, colored by Diet.\n\n\n5\n\nRandomly “jitter” the points a little so they don’t overlap.\n\n\n6\n\nSplit up the plot by Diet. Label with both “Diet” and number.\n\n\n7\n\nAdd labels to the plot…\n\n\n8\n\nApply a style theme to the plot (the “classic” theme).\n\n\n\n\n\n\n\n\n\n\n\n\n\nDo try to manually copy the code snippet. This is good practice for getting used to the syntax and grammar of a new coding language. Click the number at the right of each line for an explanation.\nIf the console throws an error, it’s likely a simple fix, even if it’s hard to spot. Be careful to check the exact capitalization and spelling of your R code. In particular, make sure every opening parenthesis and quote has a close.\nHaving completed these steps successfully, you have written your first R program! Congratulations!\nIn upcoming lessons, we will learn more about the R language and how to use it for experiment design and simulation, statistical analysis, and reporting results.\n\n\n\n\n\n\nImportant\n\n\n\nIf you encounter any technical issues it’s important to resolve them this first week with your teaching fellow so that you may participate fully in the rest of the course.",
+    "crumbs": [
+      "Home",
+      "Lab Components",
+      "Getting Ready to Code"
     ]
   },
   {
@@ -191,144 +330,6 @@
     ]
   },
   {
-    "objectID": "Labs/Lab01.html",
-    "href": "Labs/Lab01.html",
-    "title": "Getting Ready to Code",
-    "section": "",
-    "text": "This lab will orient you to RStudio and the R statistical programming language. We will be installing the software necessary for all future assignments this semester.",
-    "crumbs": [
-      "Home",
-      "Lab Components",
-      "Getting Ready to Code"
-    ]
-  },
-  {
-    "objectID": "Labs/Lab01.html#self-study",
-    "href": "Labs/Lab01.html#self-study",
-    "title": "Getting Ready to Code",
-    "section": "Self-Study",
-    "text": "Self-Study\nThis first lab corresponds roughly to the following chapters in R for Data Science, which are recommended for further self-study.\n\nData Visualization 1.1-1.3 and 1.7\nCoding Basics 2.1-2.3\nScripts 6.1",
-    "crumbs": [
-      "Home",
-      "Lab Components",
-      "Getting Ready to Code"
-    ]
-  },
-  {
-    "objectID": "Labs/Lab01.html#getting-ready-to-code",
-    "href": "Labs/Lab01.html#getting-ready-to-code",
-    "title": "Getting Ready to Code",
-    "section": "Getting Ready to Code",
-    "text": "Getting Ready to Code\nBy the end of the first assignment, we will be able to run a simple R program. Before we are able to do that, we will need to install a few things.\nEverything we need is described on posit.co/download/rstudio-desktop.\n\n\n\n\n\n\nTip\n\n\n\nIf you have doubts or start to feel like you’re not “tech savvy” enough as you complete these steps, please trust that these skills are learnable! You are highly encouraged to attend office hours for additional help.\n\n\n\nInstalling R\n\n\nR is a programming language and this first step will install an interpreter, the R Console, which will allow us to write to the computer specific instructions for describing, statistically analyzing, and producing graphics from our experimental data.\nThe first step is to install the R programming language itself. After completing this step, we will be able to open the R interpreter (R Console).\nOn the Posit webpage, click the link for Step 1: Install R. Select the appropriate download for your computer’s operating system (e.g. MacOS).\n\n\n\nR can be downloaded from the Comprehensive R Archive Network (CRAN) website.\n\n\nIf your computer is an Apple Mac/MacBook, you will need to download the appropriate package for your processor.\n\n\nFor Boston University students, if you encounter difficulties or if your primary device is a tablet, alternative access to a full installation of R/RStudio is possible through the BU Common virtual desktop.\n\nIf you know your Mac has an M1 or M2 processor (roughly since 2022) will require the first -arm64.pkg.\nIf you know your Mac has an Intel processor, it will require the second -x86_64.pkg.\n\n\n\n\nMost new Macs run on “Apple Silicon” M-series processors. If you’re not sure, please ask your teaching fellow or assume your Mac has a recent processor.\n\n\nIf your computer is a Windows PC download the base installer, following the instructions for installing R for the first time.\n\n\n\nClick “install R for the first time” for instructions. Ask your teaching fellow for assistance if you encounter any difficulties.\n\n\nOnce you have downloaded the package/executable for your operating system, run the installer.\n\n\n\n\n\n\nNote\n\n\n\nAt the end of this step you should be able to find the R Console in your MacOS Launchpad/Applications or Windows Start menu.\n\n\n\n\nInstalling RStudio\nThe next step is to install RStudio, which we will be using extensively in this course.\n\n\nRStudio is an Integrated Development Environment (IDE) for the R language.\nOn the Posit website, see Step 2: Install RStudio. Download the appropriate installer for your operating system.\n\nOn an Apple Mac/MacBook, you should download and open the .DMG file. You will see the RStudio app and a shortcut to your Applications folder. Drag the RStudio app into your Applications folder.\nOn a Windows PC, you should download and run the Windows .EXE executable installer.\n\n\n\n\n\n\nNote\n\n\n\nAt the end of this step you should be able to find RStudio in your MacOS Launchpad/Applications or Windows Start menu.\n\n\n\n\nOrienting to RStudio\nWhile R is the programming language we will be using, the RStudio application provides us with a comprehensive graphical interface that includes tools to edit R code, view plots and help pages, debug scripts, and more.\n\n\n\nAt a high level, RStudio provides an interactive R Console, built in text-editor (for writing scripts), and functionality for viewing and exporting plots. Image credited to the authors of R4DS, reproduced here under license CC BY-NC-ND 3.0.\n\n\nThe Console pane is where we can type code directly into the R interpreter. Type a line of R language code and press Return to run it. The console is interactive and will show you the result immediately.\nThe Editor pane is where we can write R scripts. We can edit and rearrange text, copy-paste, and save our scripts for later. Try creating a new script and save it to a folder on your computer. With the cursor on a line of your script, press Control and Return; the line of code will automatically be copied and run in the Console pane. Note that the Run button runs the entire script, not just the current line.\n\n\nAn R script or program is a list of instructions to be run in order. We’ll usually conduct an entire analysis in a script.\nThe Output pane is where we can see plots and graphics we have generated. In this area you’ll also find a Files tab for navigating to folders of scripts and results, and a Help tab for viewing documentation for R commands/functions and datasets.\n\n\n\n\n\n\nTip\n\n\n\nOrienting yourself to new software is often a process of active exploration, and there’s always a lot more to learn. Spend some time exploring the menus of RStudio so that you are well-acquainted.\nThe goal is to eventually be able to make an educated guess at where you might go to find a particular menu or feature in the future.\n\n\n\n\nInstalling Packages\nIn this course we’ll be using not only RStudio, but also several R packages.\nBefore we do anything else, we’ll install the R package tidyverse. Type the following in the Console and press Return.\n\n\ntidyverse is actually a metapackage (a collection of packages) including dplyr, tidyr, stringr, ggplot2 and more.\n\ninstall.packages(\"tidyverse\")\n\nA lot of output will appear in the console as the package is installing. When it finishes, the package has been installed. We won’t need to run this again; so there’s no need to keep this line of code in your script.",
-    "crumbs": [
-      "Home",
-      "Lab Components",
-      "Getting Ready to Code"
-    ]
-  },
-  {
-    "objectID": "Labs/Lab01.html#demonstrating-graphics-in-r",
-    "href": "Labs/Lab01.html#demonstrating-graphics-in-r",
-    "title": "Getting Ready to Code",
-    "section": "Demonstrating Graphics in R",
-    "text": "Demonstrating Graphics in R\nAs a motivating example, let’s consider the following short but complete script which will plot some experimental data. We’ll work through this code line-by-line in class to understand what it does.\nThe script will make a plot from an example dataset built-in to R called ChickWeight. The data comes from an experiment with four conditions: diets assigned to hatchling chicks. Their weight in grams is recorded every two days in the built in dataframe (table).\n\n\nMost built-in R functions and example datasets come with a help page that can be accessed by prepending a question mark to the object’s name.\nTo learn about this particular dataset, enter ?ChickWeight at the console.\nType the following R code snippet into a new script in your RStudio Editor pane. Click Save and save the script on your computer (e.g. Documents/PS211/lab1.R). Then click Run.\nYou should see that the code is automatically copied into the Console and run. A plot should appear in the Output pane, looking like the one below.\n\n1library(tidyverse)\n\n2ggplot(ChickWeight) +\n3  geom_point(\n4    aes(x=Time, y=weight, color=Diet),\n5    position=position_jitter()\n  ) +\n6  facet_grid(~Diet, labeller=label_both) +\n7  labs(\n    title=\"Experiment Comparing Weight Gain with Four Diets\",\n    x=\"Time (days)\",\n    y=\"Weight (g)\"\n  ) +\n8  theme_classic()\n\n\n1\n\nLoad in the tidyverse package (also called a library).\n\n2\n\nCreate a plot of the ChickWeight dataset (using ggplot).\n\n\n3\n\nAdd datapoints to the plot…\n\n\n4\n\n..where each datapoint’s (x,y) position is its Time and weight, colored by Diet.\n\n\n5\n\nRandomly “jitter” the points a little so they don’t overlap.\n\n\n6\n\nSplit up the plot by Diet. Label with both “Diet” and number.\n\n\n7\n\nAdd labels to the plot…\n\n\n8\n\nApply a style theme to the plot (the “classic” theme).\n\n\n\n\n\n\n\n\n\n\n\n\n\nDo try to manually copy the code snippet. This is good practice for getting used to the syntax and grammar of a new coding language. Click the number at the right of each line for an explanation.\nIf the console throws an error, it’s likely a simple fix, even if it’s hard to spot. Be careful to check the exact capitalization and spelling of your R code. In particular, make sure every opening parenthesis and quote has a close.\nHaving completed these steps successfully, you have written your first R program! Congratulations!\nIn upcoming lessons, we will learn more about the R language and how to use it for experiment design and simulation, statistical analysis, and reporting results.\n\n\n\n\n\n\nImportant\n\n\n\nIf you encounter any technical issues it’s important to resolve them this first week with your teaching fellow so that you may participate fully in the rest of the course.",
-    "crumbs": [
-      "Home",
-      "Lab Components",
-      "Getting Ready to Code"
-    ]
-  },
-  {
-    "objectID": "syllabus.html",
-    "href": "syllabus.html",
-    "title": "Syllabus for Fall 2025",
-    "section": "",
-    "text": "Back to top",
-    "crumbs": [
-      "Home",
-      "Syllabus for Fall 2025"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Introduction to Experimental Design",
-    "section": "",
-    "text": "Welcome!\nThis website contains materials for course CAS PS 211 at Boston University, which serves as a primer for undergraduate psychology majors in statistical and experimental methods for psychological research. The materials here are speific to Fall 2025, Section B1.\nAnnouncements and assignments will come through Blackboard. See the links above.\n\nAdditional Resources\nStudents are likely to find useful the following free online resources:\n\nR for Data Science\nHadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund\nIf this is your first time programming in R, sections of this book may aid your understanding of the language.\nAnswering Questions with Data\nMatthew J. C. Crump, Danielle J. Navarro, and Jeffrey Suzuki\nExperimentology: An Open Science Approach to Experimental Psychology Methods\nMichael C. Frank, Mika Braginsky, Julie Cachia, Nicholas A. Coles, Tom E. Hardwicke, Robert D. Hawkins, Maya B. Mathur, Rondeline Williams\nIntroduction to Modern Statistics\nMine Çetinkaya-Rundel and Johanna Hardin\nThe Effect: An Introduction to Research Design and Causality\nNick Huntington-Klein\n\n\n\nAttribution and Reuse Notice\nExcept where otherwise noted, this site and its original materials are created by the authors and licensed under Creative Commons BY-NC-SA 4.0.\n\nYou are free to:\n\nShare — copy and redistribute the material in any medium or format\nAdapt — remix, transform, and build upon the material The licensor cannot revoke these freedoms as long as you follow the license terms.\n\nUnder the following terms:\n\nAttribution — You must give appropriate credit , provide a link to the license, and indicate if changes were made . You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\nNonCommercial — You may not use the material for commercial purposes .\nShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.\nNo additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.\n\n\n\n\nDisclaimer\n\nNote that this site is not a textbook, and that the materials here are primarily condensed lecture notes for didactic purposes. Content may change at any time and accuracy for purposes beyond the scope of this course is not guaranteed.\n\n\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Labs/Lab02.html",
-    "href": "Labs/Lab02.html",
-    "title": "Understanding Types of Data",
-    "section": "",
-    "text": "This lab will translate what we’ve learned about kinds of data into how real data of these types are processed for visualization and later statistical analysis.",
-    "crumbs": [
-      "Home",
-      "Lab Components",
-      "Understanding Types of Data"
-    ]
-  },
-  {
-    "objectID": "Labs/Lab02.html#self-study",
-    "href": "Labs/Lab02.html#self-study",
-    "title": "Understanding Types of Data",
-    "section": "Self-Study",
-    "text": "Self-Study\nThis lab corresponds roughly to the following chapters in R for Data Science, which are recommended for further self-study.\n\nWorkflow: Basics 2.1-2.6\nFactor Basics 16.2\nDataframe 1.2.1",
-    "crumbs": [
-      "Home",
-      "Lab Components",
-      "Understanding Types of Data"
-    ]
-  },
-  {
-    "objectID": "Labs/Lab02.html#from-values-to-vectors",
-    "href": "Labs/Lab02.html#from-values-to-vectors",
-    "title": "Understanding Types of Data",
-    "section": "From Values to Vectors",
-    "text": "From Values to Vectors\nBefore we can begin, we need to develop a sense for how R handles datasets.\nIn our first lab, we demonstrated how to store single values in variables, effectively giving them a name we can reference later.\n\nn &lt;- 42\nlucky_number &lt;- 7\nIDriveA &lt;- \"honda civic\"\n\n# Find the radius of a circle.\nx &lt;- 3.14159\nr &lt;- 7\n2*x*r\n\n[1] 43.98226\n\n\n\n\nHere we assign values to a few variables with arbitrary names: n, lucky_number, IDriveA, x, r.  We can use variables in mathematical expressions as demonstrated here by calculating the circumference of a circle with radius 7cm.\nOf course, when we collect data it’s actually many values we need to work with. In R, we can create vectors to hold long columns of values, as we might obtain from real data.\n\nsome_numbers &lt;- c(3, 6, 8, 12)\n\nsome_numbers\n\n[1]  3  6  8 12\n\n\n\n\nThe c() function combines several values into a vector.  As a shorthand, you can create sequences of numbers using the :, like: 1:10. Try this out in the console.\nAny mathematical calculations will work on the whole vector all at once. For example, we could do the circumference calculation again, this time for circles of a few different diameters.\n\nr &lt;- c(7, 36, 28, 1, 0)\n2*x*r\n\n[1]  43.98226 226.19448 175.92904   6.28318   0.00000\n\n\n\n\nCheck the last two elements and see that it has correctly listed \\(2 \\pi \\cdot 1 = 2\\pi\\) and \\(2\\pi \\cdot 0 = 0\\), for example.  This property of being able to perform calculations over whole vectors is what makes this computer software useful for statistics. Routine calculations on a whole dataset can be done quickly and precisely without a pen or calculator.\n\nQualitative Data Types\nWe can create vectors of qualitative variables too. R has one data type for both nominal and ordinal variables: the factor.\n\nhandedness &lt;- factor(c(\"Right-Handed\", \"Left-Handed\", \"Ambidextrous\"))\n\nhandedness\n\n[1] Right-Handed Left-Handed  Ambidextrous\nLevels: Ambidextrous Left-Handed Right-Handed\n\n\nR refers to the unique names a factor can take on as its levels.\n\n\nRandom Data\nIt’s often useful to be able to generate random data, whether to randomly assign participants to groups or to simulate what our results might look like. There are several functions to do with randomness, but we’ll start by demonstrating how to use the sample() function.\nA simple example is the roll of a die. This code will randomly take from the six possible face values, sampling the equivalent of 25 die rolls.\n\nsample(c(1,2,3,4,5,6), 25, replace=TRUE)\n\n [1] 6 3 2 4 2 4 1 2 6 1 1 5 2 2 5 5 1 5 6 6 2 6 5 4 5\n\n\n\n\nThe replace=TRUE means “sample with replacement”. In other words: take a random number from 1 to 6 and then put it back before taking a random number a second time, a third time, etc.\nCombining this with what we learned above about factor variables (nominal or ordinal data types), we can demonstrate one way to randomly assign ten participants to two groups.\n\n# Define a nominal variable (factor) with two levels: treatment and placebo.\nconditions &lt;- factor(c(\"treatment\", \"placebo\"))\n\n# Start with alternating (repeat), five in each group.\nassignment &lt;- c(rep(conditions, 5))\n\n# Randomize the variable so that 5 participants are assigned randomly to each (10 in total).\nassignment &lt;- sample(assignment, 10)\n\nassignment\n\n [1] placebo   treatment treatment placebo   treatment treatment treatment\n [8] placebo   placebo   placebo  \nLevels: placebo treatment\n\n\n\n\nAs you run each line, take a look at the conditions and assignment variables in your R environment.",
-    "crumbs": [
-      "Home",
-      "Lab Components",
-      "Understanding Types of Data"
-    ]
-  },
-  {
-    "objectID": "Labs/Lab02.html#oodles-of-observations",
-    "href": "Labs/Lab02.html#oodles-of-observations",
-    "title": "Understanding Types of Data",
-    "section": "Oodles of Observations",
-    "text": "Oodles of Observations\nMost data we deal with is tabular; we’ve collected many observations of more than just one variable. To keep track of it all, we stack columns side-by-side together into tables. In R, we equivalently put vectors together into dataframes.\nWe saw an example of a dataframe last week, the data table from the ChickWeight experiment.\n\n# Remember head() lets us see just the first few rows - not the whole dataframe.\nChickWeight |&gt; head()\n\n  weight Time Chick Diet\n1     42    0     1    1\n2     51    2     1    1\n3     59    4     1    1\n4     64    6     1    1\n5     76    8     1    1\n6     93   10     1    1\n\n\nWith what we’ve learned in the last week, which of the four variables was the independent variable and which was the dependent variable in this experiment?\n\n\nThink for a moment and then click here to reveal an explanation.\n\nRecall that there were several diets a chick could be assigned to, and its weight was measured over time as it grew up.\n\nThe experiment manipulated Diet as an independent variable.\nThe dependent variable was weight in grams, observed every two days.\n\n\nIf we want to create our own data frame, we can build one using data.frame().\n\ndata.frame(trial=c(1,2,3), dice_roll=c(12,3,7))\n\n  trial dice_roll\n1     1        12\n2     2         3\n3     3         7\n\n\nPutting it all together, let’s create a table containing 10000 datapoints of random age and biological sex and call it demographics.\n\nN &lt;- 10000\n\ndemographics &lt;- data.frame(\n  age = sample(18:90, N, replace=TRUE),\n  biosex = sample(factor(c(\"male\", \"female\")), N, replace=TRUE)\n)\n\nhead(demographics)\n\n  age biosex\n1  52 female\n2  25 female\n3  56   male\n4  48 female\n5  70   male\n6  28 female\n\n\nBecause this is uniformly random, we should expect even-looking plots.\n\nlibrary(ggplot2)\n\nggplot(demographics) +\n  geom_boxplot(aes(x=biosex, y=age))\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipDeliverables\n\n\n\nIf you can get this plot, that’s the final product for today! Turn in a screenshot of your full RStudio screen, including code and box-and-whisker plot on Blackboard with Classwork/Homework Assignment 2.\n\n\nIn future classes, we’ll discuss more sophisticated ways to look at, obtain, and simulate datasets.",
-    "crumbs": [
-      "Home",
-      "Lab Components",
-      "Understanding Types of Data"
-    ]
-  },
-  {
-    "objectID": "Labs/Lab04.html",
-    "href": "Labs/Lab04.html",
-    "title": "Descriptive Statistics",
-    "section": "",
-    "text": "This lab will build students’ skills orienting to unkown data and summarizing variables using the descriptive methods learned in class. Students will independently recapitulate the descriptive analysis exercise they performed in Lab 3 on three new datasets.",
-    "crumbs": [
-      "Home",
-      "Lab Components",
-      "Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "Labs/Lab04.html#loading-datasets-into-r",
-    "href": "Labs/Lab04.html#loading-datasets-into-r",
-    "title": "Descriptive Statistics",
-    "section": "Loading Datasets into R",
-    "text": "Loading Datasets into R\nWe will need to download the following datasets for today’s activity:\n\nDataset A\nDataset B\nDataset C\n\nDownload each file to your computer. You can load CSV datasets into R using the read_csv() tidyverse function. For example:\n# Load Lab04_DatasetA.csv into R and keep it in a variable named dataA.\ndataA &lt;- read_csv(\"/Users/Michael/Downloads/Lab04_DatasetA.csv\")\nNote that the file path will be different on your computer than shown here.\nIf you are on MacOS and you are unsure of the path to the dataset you have downloaded, hold the Option key and Right Click on the file. Select “Copy Full Path” from the context menu.",
-    "crumbs": [
-      "Home",
-      "Lab Components",
-      "Descriptive Statistics"
-    ]
-  },
-  {
     "objectID": "Labs/Lab06.html",
     "href": "Labs/Lab06.html",
     "title": "The Sampling Distribution",
@@ -341,87 +342,122 @@
     ]
   },
   {
-    "objectID": "Design/L04.html",
-    "href": "Design/L04.html",
-    "title": "Establishing Causality",
+    "objectID": "Slides.html",
+    "href": "Slides.html",
+    "title": "Lecture Slides",
     "section": "",
-    "text": "We’re very used to making statements regarding causation. Take the following statements as examples:\nIn each of these statements, we’ve said that some antecedent event causes an outcome.",
+    "text": "The following links return directly to the lecture PDFs on Blackboard.\n\nLecture 3 (2025-09-08)\nLecture 4 (2025-09-10)\nLecture 5 (2025-09-12)\nLecture 6 (2025-09-15)\nLecture 7 (2025-09-17)\nLecture 8 (2025-09-19)\nLecture 9 (2025-09-22)\nLecture 10 (2025-09-24)\nLecture 11 (2025-09-26)\nLecture 12 (2025-09-29)\nLecture 13 (2025-10-01)\nLecture 14 (2025-10-03) In-class practice.\nLecture 15 (2025-10-08)\nLecture 16 (2025-10-10)\nLecture 17 (2025-10-13)\nLecture 18 (2025-10-15)\n\n\n\n\n Back to top",
     "crumbs": [
       "Home",
-      "2. Research Design",
-      "Establishing Causality"
+      "Lecture Slides"
     ]
   },
   {
-    "objectID": "Design/L04.html#considering-the-counterfactual",
-    "href": "Design/L04.html#considering-the-counterfactual",
-    "title": "Establishing Causality",
-    "section": "Considering the Counterfactual",
-    "text": "Considering the Counterfactual\nWhat does it mean that event \\(A\\) causes event \\(B\\)?\nA philosophy that we could adopt is that the occurence of some antecedent event is sufficent for us to expect that the event in question will occur. In other words, \\(B\\) might not have occured if \\(A\\) did not happen first. Note how we implicitly consider what didn’t happen whenever we make a causal statement: we consider the counterfactual.\n\n\nConsider that any event could have multiple causes. Even if you did not oversleep, you could be late to class because of traffic, a phone call, a rainstorm… \\(A\\) might be sufficient to cause \\(B\\) but not necessary if another event \\(C\\) could have caused it.\n\n“I might not have been late to class if I did not oversleep.”\n\nEven though the counterfactual is counter to what happened this time, we might know from experience that the story could have gone another way. The counterfactual is taken into account when we make causal statements regardless of whether it actually occured.",
-    "crumbs": [
-      "Home",
-      "2. Research Design",
-      "Establishing Causality"
-    ]
-  },
-  {
-    "objectID": "Design/L04.html#probabilistic-effects",
-    "href": "Design/L04.html#probabilistic-effects",
-    "title": "Establishing Causality",
-    "section": "Probabilistic Effects",
-    "text": "Probabilistic Effects\nThe causal relationships we research are usually probabilistic in nature. This means that an antecedent event may influence the probability of the event in question, but not guarantee it.\n\n\nMaybe \\(A\\) does not guarantee \\(B\\) but it does make \\(A\\) more likely.\n\n“I smoked, but I didn’t get cancer.”\n“I bought a lottery ticket, but I didn’t win.”\n\nWe can use probability to quantify causal effects using counterfactuals. The effect of some antecedent event on an outcome is the probability of the outcome given the event occured minus the probability given the counterfactual.\nTo write this explicitly:\n\\(\\text{Causal Effect of A} = P(Outcome | A) - P(Outcome | \\neg A)\\)\n\n\nClick to show an explanation of this notation.\n\n\nGenerally, we can denote the probability of some event \\(X\\) as \\(P(X)\\).\nWhen one event depends on, or is conditional on another, we denote that \\(P(A|B)\\) or the “probability of \\(A\\) given \\(B\\)”.\nTo consider the counterfactual, we write \\(\\neg A\\) or “not A”, the event that \\(A\\) didn’t happen.\n\nWe’ll learn more about probability later in the course.",
-    "crumbs": [
-      "Home",
-      "2. Research Design",
-      "Establishing Causality"
-    ]
-  },
-  {
-    "objectID": "Design/L04.html#creating-knowledge-of-causal-effects",
-    "href": "Design/L04.html#creating-knowledge-of-causal-effects",
-    "title": "Establishing Causality",
-    "section": "Creating Knowledge of Causal Effects",
-    "text": "Creating Knowledge of Causal Effects\nGiven that the counterfactual is not what happened this time, we tend to make causal statements taking into account knowledge and past experience. To produce new knowledge so that we can quantify causal effects, we have two options: observation and experimentation.\n\nObservational Research\nThe first option is to estimate the difference between a fact and a counterfactual, finding the probabilities by very carefully analyzing historical data or real-world events. We can compare two existing groups, and make an assumption that they are similar enough to be compared (perhaps adjusting for a few variables).\n\n\nThe exact assumptions we make are very important and can mean the difference between strong and weak research.\nAs an example, we could find and observe two large groups of people: one group of folks who have smoked for the last ten years and another who have never smoked. We could test or survey these groups to compare the effect of smoking on their health.\nIt might still be hard to say whether smoking was the only variable that was different. Perhaps the two groups are different ages, have different diets, were located in different states, etc. It can be difficult to account for all the potential confounds that could undermine our assumptions.\n\n\nExperimental Research\nThe second option, to design an experiment, allows us to minimize our assumptions and create groups which differ in only variables we manipulate.\n\n\nExperiments rely the control that comes from setting variables to be constant or from introducing known randomness or statistically accounting for random factors.\nFor example, we select students and randomly assign them to two groups which either spend thirty minutes reading a physical book or thirty minutes listening to an audiobook. We then administer a memory test and compare the performance of the groups.\nExperiments are not quite immune from confounding variables, but well-designed experiments can certainly offer strong evidence of causal relationships since many potential confounders have been controlled.\nWhile controlled experiments offer stronger causal explanations, there are many situations where running an experiment is impossible There are situations where it may not be ethical to manipulate certain variables. For this reason we cannot design experiments to study topics like abuse or trauma. Some other topics may be impossible to study experimentally due to infeasability or high cost.\n\n\n\n\n\n\nNoteAn Important Note on Research Ethics\n\n\n\nHistory has shown us many examples of plainly unethical research experiments. Infamous studies you may have heard of include the Stanford Prison Experiment and the egregiously abusive Tuskegee Syphillis Study. We’ll cover a history of major ethical breaches at points throughout the semester.\nIn modern science, we carefully consider the ethics of any new research, experimental or observational. Medical research in particular is subject to strict legal and institutional regulation.",
-    "crumbs": [
-      "Home",
-      "2. Research Design",
-      "Establishing Causality"
-    ]
-  },
-  {
-    "objectID": "Design/L07.html",
-    "href": "Design/L07.html",
-    "title": "Quality of Measures",
+    "objectID": "Design/L05.html",
+    "href": "Design/L05.html",
+    "title": "Experimental Control",
     "section": "",
-    "text": "Recall that we use operational definitions to make abstract concepts concrete and measurable. Though concreteness is a desirable property, there are other additional criteria a measure needs to meet to be sufficiently good quality for inference.",
+    "text": "The purpose of an experiment is to establish control over those extraneous variables that might affect an observation of causal effects. With experimental control, we have essentially taken measures to ensure that our assumptions are reasonably true and that alternative explanations for the observed effect are minimized.\nWe’ve established that experiments involve manipulating and observing variables to provide evidence for causal effects.\n\nThe independent variable is the possible cause.\nThe dependent variable is the effect or outcome we observe.\n\nIn an experiment, the independent variable is explicitly manipulated while controlling for all other variables, such as by ensuring they are constant. This is the simplest type of control.\n\n\nTo hold variables constant means to ensure they are the same in each experimental group. There are many other types of control, however.\nConsider an experimental study titled “The Relationship Between Mindfulness and Anxiety”. Just from the title, what might we presume are the dependent and independent variables?\n\n\nThink for a moment and then click here to reveal an explanation.\n\nWe might guess that the study manipulates mindfulness as an independent variable, and then observes whether there is an effect on anxiety as a dependent variable.\n\n\n\nThough we can take a guess at the dependent and independent variables from the title, we would have to read the paper to know if we guessed correctly!\nTake another example, “Listening to Music While Studying Increases Recall”. This title is phrased as a hypothesis: that listening to music has a causal effect on recall performance.",
     "crumbs": [
       "Home",
       "2. Research Design",
-      "Quality of Measures"
+      "Experimental Control"
     ]
   },
   {
-    "objectID": "Design/L07.html#is-the-measure-valid",
-    "href": "Design/L07.html#is-the-measure-valid",
-    "title": "Quality of Measures",
-    "section": "Is the measure valid?",
-    "text": "Is the measure valid?\nConsider three operational definitions of “anxiety”:\n\nA clinical assessment by a trained psychologist\nA new three-item questionnaire\nA count of fidgeting behaviors during an exam\n\nWhich of these definitions would you trust as a good measure of anxiety? It’s clear that some measures better capture what they are meant to than others. This aspect of measure quality is called validity.\nGiven a happiness questionnaire, would you be surprised if it asks you nothing to do with happiness? When a measure immediately and at face value does not seem to measure what it is supposed to, the measure has poor face validity. This is fairly rare given that scientists are usually considering their measures very carefully.\nWhat about a very abstract construct like intelligence? We could define intelligence according to problem-solving ability, reasoning skills, mathematical skills, etc. In fact, intelligence is a construct that is so broad, it is hard to avoid accidentally excluding an important component. What about street smarts and common sense, emotional intelligence, and other forms of intelligence? When we fail to capture all the components of a complex construct, then our measure of that construct has poor content validity. This is a clear problem with many operational definitions.\nA driving test is very important for determining whether or not someone is ready to drive safely, and performance is (hopefully) tightly correlated with driving ability. This is an example of criterion validity, where the measure has good sensitivity with regard to the scale of the construct in question. A measure has good criterion validity when it correlates closely with other measures and predicts outcomes.\nLastly, consider that some construct validity measures whether. Poor construct validity entails a category error. For example, a questionnaire which seeks to measure life satisfaction has questions that overlap with life satisfaction but primarily have to do with health and well-being. The constructs are certainly related, but which construct is actually being measured?\n\n\n\n\n\n\nA measure with low-reliability produces inconsistent results (perhaps as in A, high variance). Even a highly reliable measure may suffer from issues of validity (perhaps as in B, precise but not quite capturing the target construct). When a measure is reliable and valid, it is both consistent and on-target (C).Image credited to L’Occhio del Cigno on Wikimedia Commons, reproduced here under license CC-BY-SA 4.0.",
+    "objectID": "Design/L05.html#talking-about-experiment-designs",
+    "href": "Design/L05.html#talking-about-experiment-designs",
+    "title": "Experimental Control",
+    "section": "",
+    "text": "The purpose of an experiment is to establish control over those extraneous variables that might affect an observation of causal effects. With experimental control, we have essentially taken measures to ensure that our assumptions are reasonably true and that alternative explanations for the observed effect are minimized.\nWe’ve established that experiments involve manipulating and observing variables to provide evidence for causal effects.\n\nThe independent variable is the possible cause.\nThe dependent variable is the effect or outcome we observe.\n\nIn an experiment, the independent variable is explicitly manipulated while controlling for all other variables, such as by ensuring they are constant. This is the simplest type of control.\n\n\nTo hold variables constant means to ensure they are the same in each experimental group. There are many other types of control, however.\nConsider an experimental study titled “The Relationship Between Mindfulness and Anxiety”. Just from the title, what might we presume are the dependent and independent variables?\n\n\nThink for a moment and then click here to reveal an explanation.\n\nWe might guess that the study manipulates mindfulness as an independent variable, and then observes whether there is an effect on anxiety as a dependent variable.\n\n\n\nThough we can take a guess at the dependent and independent variables from the title, we would have to read the paper to know if we guessed correctly!\nTake another example, “Listening to Music While Studying Increases Recall”. This title is phrased as a hypothesis: that listening to music has a causal effect on recall performance.",
     "crumbs": [
       "Home",
       "2. Research Design",
-      "Quality of Measures"
+      "Experimental Control"
     ]
   },
   {
-    "objectID": "Design/L07.html#is-the-measure-reliable",
-    "href": "Design/L07.html#is-the-measure-reliable",
-    "title": "Quality of Measures",
-    "section": "Is the measure reliable?",
-    "text": "Is the measure reliable?\nEven if a measure is carefully defined, and demonstrates high validitiy, it might not be consistent enough for us to make inferences. A reliable measure produces consistent results, whether over time or over who takes the measurement.\nWhen two people are measuring the same thing, then inter-rater reliability is important to consider. The question here is whether the two raters produce the same answers when using the same operational definition.\nThink about a survey which asks many questions on the same topic. Do the items all correlate well? If they don’t, then the survey might not have good internal consistency.\n\nThere are validity and reliability issues with all three of the following examples. Can you spot them?\n\nA survey of sleep quality measure asks “How do you feel about your sleep quality?”\nAn objective measure of sleep quality.\nA physiological measure of sleep quality uses EEG to measure brain waves during REM sleep.",
+    "objectID": "Design/L05.html#randomness-as-control",
+    "href": "Design/L05.html#randomness-as-control",
+    "title": "Experimental Control",
+    "section": "Randomness as Control",
+    "text": "Randomness as Control\nWe can imbue our data with nice statistical properties by using randomness. This gives us a form of control we can use to bolster the strength of our assumptions even when there are some variables we can’t hold constant.\n\n\n\n\n\nThe internet security company Cloudflare uses a camera to watch a wall of lava lamps. The unpredictability provides a high quality source of random data for security purposes.Image credited to HaeB on Wikimedia Commons, reproduced here under license CC-BY-SA 4.0.\n\n\n\nWhat is “Random”?\nEvents are random when they occur with some probability but are individually unpredictable. In other words, random outcomes are determined by chance.\nConsider two number sequences: 1231234545, 1656321345. Both orderings could be random, if generated spontaneously by an unpredictable process such as a repeated die roll.\nNote that randomness is different from uniformity. For outcomes to be uniform implies specifically that all the outcomes have an equal probability.\n\n\nWe can learn from these examples that randomness is about the process that generates the data, that the process is unpredictable.\n\n\nRandom Assignment\nIn experiments, we randomly assign participants to groups. This reduces the potential for systematic differences across groups and allows us to more safely attribute any observed difference in outcomes to the treatment.\n\n\nThe number of variables that could be affecting an observation really is endless. We can’t control for all of them separately. By performing random group assignment, we break any systematic relationships of group to any variable. We can then safely assume that the two groups are similar in all variables on average.\n\n\n\n\nOne issue we run into is that we want the group assignments to be random but want also for the groups to be the same size. There are several ways ways to accomplish both. For instance, we could pair up participants such that, in a random order, one is assigned to Group A and the other to Group B.",
     "crumbs": [
       "Home",
       "2. Research Design",
-      "Quality of Measures"
+      "Experimental Control"
+    ]
+  },
+  {
+    "objectID": "Design/L06.html",
+    "href": "Design/L06.html",
+    "title": "Handling Confounds",
+    "section": "",
+    "text": "Note\n\n\n\nThe research proposal project is upcoming. Review the associated lecture slides for details.",
+    "crumbs": [
+      "Home",
+      "2. Research Design",
+      "Handling Confounds"
+    ]
+  },
+  {
+    "objectID": "Design/L06.html#confounding-variables",
+    "href": "Design/L06.html#confounding-variables",
+    "title": "Handling Confounds",
+    "section": "Confounding Variables",
+    "text": "Confounding Variables\nWhen we are analyzing causal relationships, a confound is a variable that influences both the independent and dependent variable, creating a misleading association.\nSay, hypothetically, that a positive association is found between coffee and lung cancer. That there is a positive association means that those who drink coffee are likely to have had lung cancer, and those who have had lung cancer are likely to drink coffee. To speculate, it might seem like the causal direction is from coffee to lung cancer. It could turn out, however, that those who drink coffee are also likely to smoke.\nIn this example, smoking is a confound: a spurious relationship, which can lead us to make a false inference. Confounds can sometimes mask real causal realtionships.\nHere’s another example: Based on observations, hormone-replacement therapy seemed to prevent heart disease in women.\n\n\n\n\n\n\n\nConfounder\n\n\n\nHRT\n\nHRT\n\n\n\nHeart Disease\n\nHeart Disease\n\n\n\nHRT-&gt;Heart Disease\n\n\n?\n\n\n\n\n A causal graph shows the hypothesized causal relationships. Here it’s a negative relationship that was theorized: H.R.T. prevents heart disease. \n\n\n\nLater randomized controlled trials revealed that this effect disappeared after controlling for confounds of socioeconomic status and education.\n\n\n\n\n\n\n\nConfounder\n\n\n\nSES & Education\n\nSES & Education\n\n\n\nH.R.T\n\nH.R.T\n\n\n\nSES & Education-&gt;H.R.T\n\n\n\n\n\nHeart Disease\n\nHeart Disease\n\n\n\nSES & Education-&gt;Heart Disease\n\n\n\n\n\n\n Being of higher SES and education meant that, separately, women were more likely to seek out and afford H.R.T. and they were also less liklely to get heart disease. \n\n\n\nConsider this one: A childs birth-order is related to down syndrome, with risk increasing for each child.\n\n\n\n\n\n\n\nConfounder\n\n\n\nBirth Order\n\nBirth Order\n\n\n\nDown Syndrome\n\nDown Syndrome\n\n\n\nBirth Order-&gt;Down Syndrome\n\n\n?\n\n\n\n\n Down syndrome seems to be causally related to birth order. \n\n\n\n\n\nThink for a moment and then click here to reveal an explanation. Is there any other variable which could be at play here?\n\nAs it turns out, age of the mother, which can only increase with number of children, was the common denominator.\n\n\n\n\n\n\n\nConfounder\n\n\n\nMother's Age\n\nMother's Age\n\n\n\nDown Syndrome\n\nDown Syndrome\n\n\n\nMother's Age-&gt;Down Syndrome\n\n\n\n\n\nBirth Order\n\nBirth Order\n\n\n\nMother's Age-&gt;Birth Order\n\n\n\n\n\n\n Down syndrome seems to be causally related to birth order.",
+    "crumbs": [
+      "Home",
+      "2. Research Design",
+      "Handling Confounds"
+    ]
+  },
+  {
+    "objectID": "Design/L06.html#extraneous-variables",
+    "href": "Design/L06.html#extraneous-variables",
+    "title": "Handling Confounds",
+    "section": "Extraneous Variables",
+    "text": "Extraneous Variables\nThose variables that affect the dependent variable are extraneous. While confounding variables are extraneous, not all extraneous variables are confounders.\n\nA genetic predisposition to lung cancer is an extraneous variable, because it does affect lung cancer but does not affect smoking.\n\n\n\nWith a genetic predisposition, might person might know that their parent or grandparent developed lung cancer? The individual predisposed to lung cancer might therefore purposely avoid smoking. Thus, it’s possible that there is a relationship between genetic predisposition and smoking, though not considered here.\n\n\n\n\n\n\n\nExtraneous\n\n\n\nGenetic Predisposition\n\nGenetic Predisposition\n\n\n\nLung Cancer\n\nLung Cancer\n\n\n\nGenetic Predisposition-&gt;Lung Cancer\n\n\nrisk\n\n\n\nSmoking\n\nSmoking\n\n\n\nSmoking-&gt;Lung Cancer\n\n\nrisk\n\n\n\n\n\n\n\n\n\nAge is a confound for both smoking and lung cancer (consider that in the U.S. you cannot purchase tobacco under the age of 21).\n\n\n\n\n\n\n\n\nConfound\n\n\n\nAge\n\nAge\n\n\n\nSmoking\n\nSmoking\n\n\n\nAge-&gt;Smoking\n\n\nlegal ability\n\n\n\nLung Cancer\n\nLung Cancer\n\n\n\nAge-&gt;Lung Cancer\n\n\nrisk\n\n\n\nSmoking-&gt;Lung Cancer\n\n\nrisk",
+    "crumbs": [
+      "Home",
+      "2. Research Design",
+      "Handling Confounds"
+    ]
+  },
+  {
+    "objectID": "Design/L06.html#confounds-in-non-experimental-research",
+    "href": "Design/L06.html#confounds-in-non-experimental-research",
+    "title": "Handling Confounds",
+    "section": "Confounds in Non-Experimental Research",
+    "text": "Confounds in Non-Experimental Research\nIn non-experimental research, the independent variable is not being randomly assigned and is therefore likely to be related to confounds. There are ways to control these confounds, however, even without random assignment.\n\n\nThere are limits to what we can control - notably, we can only control for known and measured confounders.\nWere we comparing smokers and non-smokers, we could control the effect of age by matching every individual in the smoker group to an individual in the non-smoker group. By comparing pairs we avoid the confounding effect of age.\nAlternatively, we could restrict our anlaysis to a subgroup, such as by only looking at smoking rates in the 40-45 age range. Because age is effectively held constant, it is controlled. We can stratify our sample by intentionally selecting subgroups of particular composition for analysis.\nLastly, we can use statistical control to subtract the estimated effect of a confound from the total effect observed. We will see more on this later in the semester.",
+    "crumbs": [
+      "Home",
+      "2. Research Design",
+      "Handling Confounds"
+    ]
+  },
+  {
+    "objectID": "Design/L06.html#experimental-confounds",
+    "href": "Design/L06.html#experimental-confounds",
+    "title": "Handling Confounds",
+    "section": "Experimental Confounds",
+    "text": "Experimental Confounds\nWe learned previously that random assignment protects against both known and unknown confounds because, effectively, confounders are distributed equally across conditions. This is true, however, only in expectation (i.e. samples approaching infinity). Due to chance, confounds can be a concern in any given sample, especially if the sample is small.\n\n\nConsider flipping a coin ten times, the expectation is five heads and five tails. That is, with a fair coin on average it will come out to 50-50. In any given sample, however, even with 1000 flips there is still the unlikely possibility that 1000 heads could come up.\nConsider an experiment investigating a causal relationship of coffee consumption on exam scores. If we randomly assign participants to drink a specific number of cups of coffee per day, then number of cups is decoupled from extraneous variables, right? Can’t we then attribute any difference in test-score to how many cups of coffee they drink?\n\n\n\n\n\n\n\nConfound\n\n\n\nDaily Caffeine Intake\n\nDaily Caffeine Intake\n\n\n\nTest Score\n\nTest Score\n\n\n\nDaily Caffeine Intake-&gt;Test Score\n\n\n\n\n\n\n At first pass, it seems this causal relationship has been effectively isolated by the experiment design. \n\n\n\nA potential confound like sleep duration could still throw a wrench in the design. With little sleep, people may consume more caffeine. We controlled for this by assigning number of cups. We did not account for, however, that sleep duration can also be decreased by caffeine consumption or caffeine withdrawal.\n\n\n\n\n\n\n\nConfound\n\n\n\nSleep Duration\n\nSleep Duration\n\n\n\nCaffeine Intake\n\nCaffeine Intake\n\n\n\nSleep Duration-&gt;Caffeine Intake\n\n\n\n\n\nTest Score\n\nTest Score\n\n\n\nSleep Duration-&gt;Test Score\n\n\n\n\n\nCaffeine Intake-&gt;Sleep Duration\n\n\n\n\n\nCaffeine Intake-&gt;Test Score\n\n\n\n\n\n\n Even in randomized experiments, it is possible for confounds to be lurking. \n\n\n\nOf course, because random assignment is only truly decoupling in expectation, we still might consider the rare event that those assigned to one group happen to be those who already sleep more.\nThe techniques listed above for non-experimental research still apply. Therefore, we could use matching or stratification to ensure sleep duration is controlled for (e.g. include only participants who sleep seven hours). Alternatively, we could use a within-subjects design such that we observe the effects of all conditions in every participant over time.",
+    "crumbs": [
+      "Home",
+      "2. Research Design",
+      "Handling Confounds"
+    ]
+  },
+  {
+    "objectID": "Projects/Project01.html",
+    "href": "Projects/Project01.html",
+    "title": "Research Proposal",
+    "section": "",
+    "text": "Due October 1 on Blackboard\n\nLength: 300-400 words\nFormat: 12pt Times New Roman, Double-Spaced\n\nImagine you have all the necessary resources to conduct an empirical research study of some hypothetical causal relationship. Propose one specific research question and the methods you believe would be necessary to to study it.\nYour proposal will need to include paragraphs describing at least the following:\n\nThe motivation for your project. Why is it important to study this topic? Has this particular study been done before? (do a search for literature on this topic)\nThe design of the empirical study you would undertake. How would you conduct it? What choices would you make, given what you know of research design? What aspects of the phenomenon in question limit your design?\nThe possible outcomes, and what we could do with this new empirical knowledge. What do you expect and why? What evidence might come up that would be counter to your expectations? For each possible outcome, what would it mean to obtain this result?\n\nYou are encouraged to seek preliminary feedback before submission. Email your teaching fellow or attend office hours before September 28.\n\n\n\n Back to top",
+    "crumbs": [
+      "Home",
+      "Projects",
+      "Research Proposal"
     ]
   }
 ]

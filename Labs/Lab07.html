@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Michael Pascale">
 
-<title>Quality of Measures – Introduction to Experimental Design</title>
+<title>Z-Score, Z-Statistic, Z-Test – Introduction to Experimental Design</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +21,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +66,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../Design/L08.html" rel="next">
-<link href="../Design/L06.html" rel="prev">
+<link href="../Slides.html" rel="next">
+<link href="../Labs/Lab06.html" rel="prev">
 <link href="../assets/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -76,6 +112,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -297,7 +362,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Design/L03.html">2. Research Design</a></li><li class="breadcrumb-item"><a href="../Design/L07.html">Quality of Measures</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Labs/Lab01.html">Lab Components</a></li><li class="breadcrumb-item"><a href="../Labs/Lab07.html">Z-Score, Z-Statistic, Z-Test</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -326,13 +391,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">2. Research Design</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Design/L04.html" class="sidebar-item-text sidebar-link">
@@ -353,7 +418,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Design/L07.html" class="sidebar-item-text sidebar-link active">
+  <a href="../Design/L07.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Quality of Measures</span></a>
   </div>
 </li>
@@ -400,13 +465,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
  <span class="menu-text">Lab Components</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Labs/Lab01.html" class="sidebar-item-text sidebar-link">
@@ -439,7 +504,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Labs/Lab07.html" class="sidebar-item-text sidebar-link">
+  <a href="../Labs/Lab07.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Z-Score, Z-Statistic, Z-Test</span></a>
   </div>
 </li>
@@ -467,8 +532,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#is-the-measure-valid" id="toc-is-the-measure-valid" class="nav-link active" data-scroll-target="#is-the-measure-valid">Is the measure <em>valid</em>?</a></li>
-  <li><a href="#is-the-measure-reliable" id="toc-is-the-measure-reliable" class="nav-link" data-scroll-target="#is-the-measure-reliable">Is the measure <em>reliable</em>?</a></li>
+  <li><a href="#the-z-test" id="toc-the-z-test" class="nav-link active" data-scroll-target="#the-z-test">The Z-Test</a></li>
+  <li><a href="#the-p-value" id="toc-the-p-value" class="nav-link" data-scroll-target="#the-p-value">The p-Value</a>
+  <ul class="collapse">
+  <li><a href="#critical-values" id="toc-critical-values" class="nav-link" data-scroll-target="#critical-values">Critical Values</a></li>
+  <li><a href="#z-scores" id="toc-z-scores" class="nav-link" data-scroll-target="#z-scores">z-Scores</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -476,21 +545,27 @@ ul.task-list li input[type="checkbox"] {
 <main class="content page-columns page-full" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Design/L03.html">2. Research Design</a></li><li class="breadcrumb-item"><a href="../Design/L07.html">Quality of Measures</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Labs/Lab01.html">Lab Components</a></li><li class="breadcrumb-item"><a href="../Labs/Lab07.html">Z-Score, Z-Statistic, Z-Test</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Quality of Measures</h1>
-<p class="subtitle lead">Summary of Lecture 7</p>
+<h1 class="title">Z-Score, Z-Statistic, Z-Test</h1>
+<p class="subtitle lead">Lab 7</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Michael Pascale </p>
+          </div>
+  </div>
     
     <div>
-    <div class="quarto-title-meta-heading">Lecture Date</div>
+    <div class="quarto-title-meta-heading">Discussion/Lab Date</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Wednesday, September 17, 2025</p>
+      <p class="date">Thursday, October 23, 2025</p>
     </div>
   </div>
   
@@ -502,50 +577,196 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Recall that we use operational definitions to make abstract concepts concrete and measurable. Though concreteness is a desirable property, there are other additional criteria a measure needs to meet to be <em>sufficiently good quality for inference</em>.</p>
-<section id="is-the-measure-valid" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="is-the-measure-valid">Is the measure <em>valid</em>?</h2>
-<p>Consider three operational definitions of “anxiety”:</p>
-<ul>
-<li>A clinical assessment by a trained psychologist</li>
-<li>A new three-item questionnaire</li>
-<li>A count of fidgeting behaviors during an exam</li>
-</ul>
-<p>Which of these definitions would you <em>trust</em> as a good measure of anxiety? It’s clear that some measures better capture what they are meant to than others. This aspect of measure quality is called <strong>validity</strong>.</p>
-<p>Given a <em>happiness</em> questionnaire, would you be surprised if it asks you nothing to do with happiness? When a measure immediately and at face value does not seem to measure what it is supposed to, the measure has poor <strong>face validity</strong>. This is fairly rare given that scientists are usually considering their measures very carefully.</p>
-<p>What about a very abstract construct like <em>intelligence</em>? We could define intelligence according to problem-solving ability, reasoning skills, mathematical skills, etc. In fact, intelligence is a construct that is so broad, it is hard to avoid accidentally excluding an important component. What about street smarts and common sense, emotional intelligence, and other forms of intelligence? When we fail to capture all the <em>components</em> of a complex construct, then our measure of that construct has poor <strong>content validity</strong>. This is a clear problem with many operational definitions.</p>
-<p>A <em>driving test</em> is very important for determining whether or not someone is ready to drive safely, and performance is (hopefully) tightly correlated with driving ability. This is an example of <strong>criterion validity</strong>, where the measure has good sensitivity with regard to the scale of the construct in question. A measure has good criterion validity when it correlates closely with other measures and predicts outcomes.</p>
-<p>Lastly, consider that some <strong>construct validity</strong> measures whether. Poor construct validity entails a category error. For example, a questionnaire which seeks to measure <em>life satisfaction</em> has questions that overlap with life satisfaction but primarily have to do with <em>health and well-being</em>. The constructs are certainly related, but which construct is actually being measured?</p>
-<!-- A newly developed survey for assessing depression has a total score which correlates highly with likelihood of future self-harm.
+<!-- At the top of the R script, set the random seed. This ensures all students should arrive at the same numbers even when we've randomly generated the data.
 
-Criterion validity is high
-Questions were about sadness but not anhedonia
-Content validity is low
-The survey does not correlate well with other depression measures. It does correlate with aspects of personality, however.
-Construct validity is low -->
+
+::: {.cell}
+
+```{.r .cell-code}
+# All students should have the same data
+set.seed(2043)
+```
+:::
+
+
+:::{.aside}
+The random seed determines where R's random number generator starts from. Setting the seed is a step included here only for grading purposes; it is not a step you necessarily need to follow in general.
+::: -->
+<p>Consider a population with known parameters. For example, the IQ score distribution.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Population parameters</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>mu  <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>sigma <span class="ot">&lt;-</span> <span class="dv">10</span></span></code></pre></div>
+</div>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Precisione_e_Accuratezza.jpg/960px-Precisione_e_Accuratezza.jpg" class="img-fluid figure-img"></p>
-<figcaption>A measure with low-reliability produces inconsistent results (perhaps as in A, high variance). Even a highly reliable measure may suffer from issues of validity (perhaps as in B, precise but not quite capturing the target construct). When a measure is reliable and valid, it is both consistent and on-target (C).<br>Image credited to <a href="https://commons.wikimedia.org/wiki/User:L'Occhio_del_Cigno">L’Occhio del Cigno</a> on <a href="https://commons.wikimedia.org/wiki/File:Precisione_e_Accuratezza.jpg">Wikimedia Commons</a>, reproduced here under license <a href="https://creativecommons.org/licenses/by-sa/4.0">CC-BY-SA 4.0</a>.</figcaption>
-</figure>
+<p>The population parameters are often <em>unknown</em>. Today we are performing a Z-test, in which a sample is compared to a <em>known</em> population.</p>
+</div></div><p>With any random sample from that distribution (e.g.&nbsp;data we collected on some group), we learned previously how to calculate the standard error (SEM).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># A random sample of 25 datapoints.</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">25</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(n, mu, sigma)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>xbar <span class="ot">&lt;-</span> <span class="fu">mean</span>(x)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>xbar</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 102.1556</code></pre>
 </div>
-</div></div></section>
-<section id="is-the-measure-reliable" class="level2">
-<h2 class="anchored" data-anchor-id="is-the-measure-reliable">Is the measure <em>reliable</em>?</h2>
-<p>Even if a measure is carefully defined, and demonstrates high validitiy, it might not be consistent enough for us to make inferences. A <strong>reliable</strong> measure produces consistent results, whether over time or over who takes the measurement.</p>
-<p>When two people are measuring the same thing, then <strong>inter-rater reliability</strong> is important to consider. The question here is whether the two raters produce the same answers when using the same operational definition.</p>
-<p>Think about a survey which asks many questions on the same topic. Do the items all correlate well? If they don’t, then the survey might not have good <strong>internal consistency</strong>.</p>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Standard Error of the Mean with Samples of n=25</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>sem <span class="ot">&lt;-</span> sigma <span class="sc">/</span> <span class="fu">sqrt</span>(n)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>sem</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>This is for illustration only. In reality we do not know whether the sample is drawn from the same population.</p>
+</div></div><p>We can use this to calculate the 95% confidence interval around the estimate.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Using just our sample, the estimate of the true mean (95% CI)</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>ci <span class="ot">&lt;-</span> <span class="fu">c</span>(xbar <span class="sc">-</span> sem <span class="sc">*</span> <span class="fl">1.96</span>, xbar <span class="sc">+</span> sem <span class="sc">*</span> <span class="fl">1.96</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>ci</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  98.23565 106.07565</code></pre>
+</div>
+</div>
+<p>Because <span class="math inline">\(mu\)</span> is within the confidence interval, we conclude that the sample mean <span class="math inline">\(\bar x\)</span> is not significantly different from <span class="math inline">\(mu\)</span>.</p>
+<section id="the-z-test" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="the-z-test">The Z-Test</h2>
+<p>We can alternatively discuss our data in terms of the standard normal curve.</p>
+<p>To do this, we need the Z-statistic (NOT the same as the Z-score). The Z-statistic tells us how far the <em>sample mean</em> is from the center of the sampling distribution (for n=25 here).</p>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>The Z-statistic is <u><strong>not</strong></u> the same as a z-score.</p>
+<p>Where the z-score tells us the average difference between <em>datapoints</em> (<span class="math inline">\(x_i\)</span>) and the <em>sample mean</em> (<span class="math inline">\(\bar x\)</span>) in units of the <em>sample standard deviation</em> (<span class="math inline">\(s\)</span>), the Z-statistic tells us the difference between a given <em>sample mean</em> (<span class="math inline">\(\bar x\)</span>) and the center of the sampling distribution <span class="math inline">\(\mu\)</span> in units of the <em>standard error</em> (<span class="math inline">\(\sigma \over \sqrt n\)</span>).</p>
+<p>In other words, the z-score is calculated on the datapoints of a sample, while the Z-statistic is calculated on a sample mean from the sampling distribution.</p>
+</div></div><div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Z-Statistic: How far away is the sample mean from the population mean?</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>Z <span class="ot">&lt;-</span> (<span class="fu">mean</span>(x) <span class="sc">-</span> mu) <span class="sc">/</span> sem</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>Z</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.077823</code></pre>
+</div>
+</div>
+<p>As the Z-statistic is less than <span class="math inline">\(1.96\)</span>, again we can see that we could not reject the null.</p>
+</section>
+<section id="the-p-value" class="level2">
+<h2 class="anchored" data-anchor-id="the-p-value">The p-Value</h2>
+<p>Recall that the p-value is the probability of obtaining a sample mean <em>at least</em> as extreme as what was observed, under the null hypothesis.</p>
+<p>By default, the <code>pnorm()</code> function represents the area (probability) underneath a standard normal distribution curve (mean of <span class="math inline">\(0\)</span>, standard deviation of <span class="math inline">\(1\)</span>). We can use this to calculate the p-value.</p>
+<p>Where the null hypothesis <span class="math inline">\(H_0\)</span> is that the sample is not different from the population,</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> <span class="fu">pnorm</span>(<span class="fu">abs</span>(Z))) <span class="co"># Technically, a two-tailed p-value.</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>p  </span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.281113</code></pre>
+</div>
+</div>
+<p>Here, our p-value was <span class="math inline">\(&gt;0.05\)</span>. Where our decision threshold <span class="math inline">\(\alpha = 0.05\)</span>, we would <em>not</em> reject the null hypothesis, and we would again conclude that the sample is not significantly different from the population.</p>
+<p>An alternate method is to calculate the p-value directly.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> <span class="fu">pnorm</span>(<span class="fu">abs</span>(xbar), <span class="at">mean =</span> mu, <span class="at">sd =</span> sem))</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>p</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.281113</code></pre>
+</div>
+</div>
+<p><strong>QUESTION</strong>: <em>What Z-statistic, p-value, and confidence interval did you obtain? Report for each one why you would reject or fail to reject the null hypothesis.</em></p>
 <hr>
-<p>There are validity and reliability issues with all three of the following examples. Can you spot them?</p>
-<ul>
-<li>A survey of sleep quality measure asks “How do you feel about your sleep quality?”</li>
-<li>An objective measure of sleep quality.</li>
-<li>A physiological measure of sleep quality uses EEG to measure brain waves during REM sleep.</li>
-</ul>
+<section id="critical-values" class="level3">
+<h3 class="anchored" data-anchor-id="critical-values">Critical Values</h3>
+<p>Consider that this is where the <a href="https://en.wikipedia.org/w/index.php?title=68-95-99.7_rule">68.3-95.4-99.7 rule</a> comes from:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="dv">1</span>) <span class="sc">-</span> <span class="fu">pnorm</span>(<span class="sc">-</span><span class="dv">1</span>) <span class="co"># One standard deviation</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.6826895</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="dv">2</span>) <span class="sc">-</span> <span class="fu">pnorm</span>(<span class="sc">-</span><span class="dv">2</span>) <span class="co"># Two standard deviations</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.9544997</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="dv">3</span>) <span class="sc">-</span> <span class="fu">pnorm</span>(<span class="sc">-</span><span class="dv">3</span>) <span class="co"># Three standard deviations</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.9973002</code></pre>
+</div>
+</div>
+<p>We use <span class="math inline">\(1.96\)</span> as a <strong>critical value</strong> for the 95% confidence interval because it comes out at nearly <span class="math inline">\(0.95\)</span> exactly.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="fl">1.96</span>) <span class="sc">-</span> <span class="fu">pnorm</span>(<span class="sc">-</span><span class="fl">1.96</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.9500042</code></pre>
+</div>
+</div>
+<p><strong>QUESTION</strong>: <em>What percent of the data is captured within 0.5 standard deviations?</em></p>
+</section>
+<section id="z-scores" class="level3">
+<h3 class="anchored" data-anchor-id="z-scores">z-Scores</h3>
+<p>See the note above on why z-scored data is NOT the same as the Z-statistic of a sample. In R, we can calcualte the z-score in the way you might expect.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The z-score allows us to compare datapoints within a sample in standard deviation units.</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> (x <span class="sc">-</span> <span class="fu">mean</span>(x)) <span class="sc">/</span> <span class="fu">sd</span>(x)</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>z</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  0.751067947  0.360610116 -0.715518966 -0.634075229  0.180021094
+ [6]  0.717037337  0.205401203  1.128853827 -1.127175668 -0.413406038
+[11]  0.677888478  0.882502426 -2.138742912 -0.012367409  1.812048233
+[16] -0.914902898  0.263018488 -1.171546783  1.524180618  1.127777458
+[21] -0.986189416 -1.501922572  0.002028404  0.658370501 -0.674958238</code></pre>
+</div>
+</div>
+<p>An equivalent is to use the <code>scale()</code> function.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">scale</span>(x)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>              [,1]
+ [1,]  0.751067947
+ [2,]  0.360610116
+ [3,] -0.715518966
+ [4,] -0.634075229
+ [5,]  0.180021094
+ [6,]  0.717037337
+ [7,]  0.205401203
+ [8,]  1.128853827
+ [9,] -1.127175668
+[10,] -0.413406038
+[11,]  0.677888478
+[12,]  0.882502426
+[13,] -2.138742912
+[14,] -0.012367409
+[15,]  1.812048233
+[16,] -0.914902898
+[17,]  0.263018488
+[18,] -1.171546783
+[19,]  1.524180618
+[20,]  1.127777458
+[21,] -0.986189416
+[22,] -1.501922572
+[23,]  0.002028404
+[24,]  0.658370501
+[25,] -0.674958238
+attr(,"scaled:center")
+[1] 102.1556
+attr(,"scaled:scale")
+[1] 10.2604</code></pre>
+</div>
+</div>
+<p><strong>QUESTION</strong>: <em>Can you z-score the population data, if it is known?</em></p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Deliverables">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Deliverables
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Answer the questions above and upload your code and screenshot to Blackboard for lab credit today.</p>
+</div>
+</div>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
@@ -902,13 +1123,13 @@ Construct validity is low -->
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../Design/L06.html" class="pagination-link" aria-label="Handling Confounds">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Handling Confounds</span>
+      <a href="../Labs/Lab06.html" class="pagination-link" aria-label="The Sampling Distribution">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">The Sampling Distribution</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../Design/L08.html" class="pagination-link" aria-label="Within Subjects">
-        <span class="nav-page-text">Within Subjects</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../Slides.html" class="pagination-link" aria-label="Lecture Slides">
+        <span class="nav-page-text">Lecture Slides</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
