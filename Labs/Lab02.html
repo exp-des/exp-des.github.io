@@ -514,6 +514,12 @@ window.Quarto = {
  <span class="menu-text">Z-Score, Z-Statistic, Z-Test</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Labs/Lab08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">One-, Paired-, Two-Sample t-Test</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item">
@@ -658,7 +664,7 @@ Levels: Ambidextrous Left-Handed Right-Handed</code></pre>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>), <span class="dv">25</span>, <span class="at">replace=</span><span class="cn">TRUE</span>)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 4 3 3 6 2 2 2 1 4 1 2 6 6 3 2 3 2 6 2 1 6 6 4 5 1</code></pre>
+<pre><code> [1] 6 3 1 2 3 3 4 2 3 5 6 4 1 4 6 3 5 3 6 4 5 6 1 4 1</code></pre>
 </div>
 </div>
 
@@ -677,7 +683,7 @@ Levels: Ambidextrous Left-Handed Right-Handed</code></pre>
 <span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>assignment</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] treatment placebo   treatment placebo   treatment placebo   placebo  
+<pre><code> [1] treatment placebo   treatment treatment placebo   placebo   placebo  
  [8] placebo   treatment treatment
 Levels: placebo treatment</code></pre>
 </div>
@@ -737,12 +743,12 @@ Think for a moment and then click here to reveal an explanation.
 <span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(demographics)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  age biosex
-1  83   male
-2  55 female
-3  63   male
-4  18   male
-5  37   male
-6  27   male</code></pre>
+1  36 female
+2  54 female
+3  34 female
+4  28   male
+5  22 female
+6  87 female</code></pre>
 </div>
 </div>
 <p>Because this is uniformly random, we should expect even-looking plots.</p>
