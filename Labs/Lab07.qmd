@@ -1,0 +1,145 @@
+---
+title: Z-Score, Z-Statistic, Z-Test
+subtitle: Lab 7
+author: Michael Pascale
+date: 2025-10-23
+---
+
+<!-- At the top of the R script, set the random seed. This ensures all students should arrive at the same numbers even when we've randomly generated the data.
+
+```{r}
+# All students should have the same data
+set.seed(2043)
+```
+
+:::{.aside}
+The random seed determines where R's random number generator starts from. Setting the seed is a step included here only for grading purposes; it is not a step you necessarily need to follow in general.
+::: -->
+
+Consider a population with known parameters. For example, the IQ score distribution.
+
+```{r}
+# Population parameters
+mu  <- 100
+sigma <- 10
+```
+
+:::{.aside}
+The population parameters are often _unknown_. Today we are performing a Z-test, in which a sample is compared to a _known_ population.
+:::
+
+With any random sample from that distribution (e.g. data we collected on some group), we learned previously how to calculate the standard error (SEM).
+
+```{r}
+# A random sample of 25 datapoints.
+n <- 25
+x <- rnorm(n, mu, sigma)
+xbar <- mean(x)
+xbar
+
+# Standard Error of the Mean with Samples of n=25
+sem <- sigma / sqrt(n)
+sem
+```
+
+:::{.aside}
+This is for illustration only. In reality we do not know whether the sample is drawn from the same population.
+:::
+
+We can use this to calculate the 95% confidence interval around the estimate.
+
+```{r}
+# Using just our sample, the estimate of the true mean (95% CI)
+ci <- c(xbar - sem * 1.96, xbar + sem * 1.96)
+ci
+```
+
+Because $\mu$ is within the confidence interval, we conclude that the sample mean $\bar x$ is not significantly different from $\mu$.
+
+## The Z-Test 
+
+We can alternatively discuss our data in terms of the standard normal curve.
+
+To do this, we need the Z-statistic (NOT the same as the Z-score). The Z-statistic tells us how far the _sample mean_ is from the center of the sampling distribution (for n=25 here).
+
+:::{.aside}
+The Z-statistic is <u>**not**</u> the same as a z-score.
+
+Where the z-score tells us the average difference between _datapoints_ ($x_i$) and the _sample mean_ ($\bar x$) in units of the _sample standard deviation_ ($s$), the Z-statistic tells us the difference between a given _sample mean_ ($\bar x$) and the center of the sampling distribution $\mu$ in units of the _standard error_ ($\sigma \over \sqrt n$).
+
+In other words, the z-score is calculated on the datapoints of a sample, while the Z-statistic is calculated on a sample mean from the sampling distribution.
+:::
+
+```{r}
+# Z-Statistic: How far away is the sample mean from the population mean?
+Z <- (mean(x) - mu) / sem
+Z
+```
+
+As the Z-statistic is less than $1.96$, again we can see that we could not reject the null.
+
+## The p-Value
+
+Recall that the p-value is the probability of obtaining a sample mean _at least_ as extreme as what was observed, under the null hypothesis.
+
+By default, the `pnorm()` function represents the area (probability) underneath a standard normal distribution curve (mean of $0$, standard deviation of $1$). We can use this to calculate the p-value.
+
+Where the null hypothesis $H_0$ is that the sample is not different from the population, 
+
+```{r}
+p <- 2 * (1 - pnorm(abs(Z))) # Technically, a two-tailed p-value.
+p  
+```
+
+Here, our p-value was $>0.05$. Where our decision threshold $\alpha = 0.05$, we would _not_ reject the null hypothesis, and we would again conclude that the sample is not significantly different from the population.
+
+An alternate method is to calculate the p-value directly.
+```{r}
+p <- 2 * (1 - pnorm(abs(xbar), mean = mu, sd = sem))
+p
+```
+
+**QUESTION**: _What Z-statistic, p-value, and confidence interval did you obtain? Report for each one why you would reject or fail to reject the null hypothesis._
+
+---
+
+### Critical Values
+
+Consider that this is where the [68.3-95.4-99.7 rule](https://en.wikipedia.org/w/index.php?title=68-95-99.7_rule) comes from:
+```{r}
+pnorm(1) - pnorm(-1) # One standard deviation
+
+pnorm(2) - pnorm(-2) # Two standard deviations
+
+pnorm(3) - pnorm(-3) # Three standard deviations
+```
+
+We use $1.96$ as a **critical value** for the 95% confidence interval because it comes out at nearly $0.95$ exactly.
+```{r}
+pnorm(1.96) - pnorm(-1.96)
+```
+
+**QUESTION**: _What percent of the data is captured within 0.5 standard deviations?_
+
+### z-Scores
+
+See the note above on why z-scored data is NOT the same as the Z-statistic of a sample. In R, we can calcualte the z-score in the way you might expect.
+
+```{r}
+# The z-score allows us to compare datapoints within a sample in standard deviation units.
+z <- (x - mean(x)) / sd(x)
+z
+```
+
+An equivalent is to use the `scale()` function.
+
+```{r}
+scale(x)
+```
+
+**QUESTION**: _Can you z-score the population data, if it is known?_
+
+
+:::{.callout-tip title="Deliverables"}
+Answer the questions above and upload your code and screenshot to  Blackboard for lab credit today.
+:::
