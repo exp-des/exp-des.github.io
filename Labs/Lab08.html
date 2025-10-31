@@ -21,6 +21,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -327,7 +362,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Labs/Lab01.html">Lab Components</a></li><li class="breadcrumb-item"><a href="../Labs/Lab08.html">Visualizing Z, t, p</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Labs/Lab01.html">Lab Components</a></li><li class="breadcrumb-item"><a href="../Labs/Lab08.html">Making Decisions via the Sampling Distribution</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -482,7 +517,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Labs/Lab08.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Visualizing Z, t, p</span></a>
+ <span class="menu-text">Making Decisions via the Sampling Distribution</span></a>
   </div>
 </li>
       </ul>
@@ -519,7 +554,7 @@ window.Quarto = {
 <main class="content page-columns page-full" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Labs/Lab01.html">Lab Components</a></li><li class="breadcrumb-item"><a href="../Labs/Lab08.html">Visualizing Z, t, p</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Labs/Lab01.html">Lab Components</a></li><li class="breadcrumb-item"><a href="../Labs/Lab08.html">Making Decisions via the Sampling Distribution</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Making Decisions via the Sampling Distribution</h1>
 <p class="subtitle lead">Lab 8</p>
@@ -592,7 +627,7 @@ window.Quarto = {
 </div>
 <p>The two-tailed p-value is therefore <span class="math inline">\(0.1936\)</span>, the sum of the left and right areas.</p>
 <p><strong>QUESTION</strong>: <em>Do we reject the null hypothesis? (<span class="math inline">\(\alpha=0.05\)</span>)</em></p>
-<p>Note our calculation should account for the possibility that the sample has a negative <span class="math inline">\(Z\)</span>-statistic. Therefore, we can generally calculate the two-tailed p-value in R using the absolute value: <code>2 * (1 - pnorm(abs(Z)))</code>.</p>
+<p>Note our calculation should account for the possibility that the sample has a negative <span class="math inline">\(Z\)</span>-statistic. Therefore, we can generally calculate the two-tailed p-value in R using the absolute value: <code>2 * (1 - pnorm(abs(Z)))</code></p>
 <p><strong>QUESTION</strong>: <em>What is the two-tailed p-value associated with a <span class="math inline">\(Z\)</span>-statistic of -2.11? What would you conclude?</em></p>
 <p><strong>QUESTION</strong>: <em>Say that a positive effect was expected (<span class="math inline">\(H_A \bar x &gt; \mu\)</span>). What is the one-tailed p-value associated with a <span class="math inline">\(Z\)</span>-statistic of 0.71? What would you conclude?</em></p>
 </section>
@@ -614,10 +649,28 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="visualizing-the-t-distribution">Visualizing the <span class="math inline">\(t\)</span>-Distribution</h2>
 <p>First, let’s see how the <span class="math inline">\(t\)</span>-distribution differs from the standard normal.</p>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The statistic on the x-axis (t or Z whatever)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>stat <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="at">length.out=</span><span class="dv">1000</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Plot the normal distribution</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x=</span>stat, <span class="at">y=</span><span class="fu">dnorm</span>(stat), <span class="at">color=</span><span class="st">'red'</span>)) <span class="sc">+</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Plot the t(df=5) distribution</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x=</span>stat, <span class="at">y=</span><span class="fu">dt</span>(stat, <span class="dv">5</span>))) <span class="sc">+</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Plot the t(df=30) distribution</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x=</span>stat, <span class="at">y=</span><span class="fu">dt</span>(stat, <span class="dv">30</span>)))</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Try a few different values to see how the t distribution</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="co"># changes with the degrees of freedom parameter.</span></span></code></pre></div>
+</div>
+<div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="Lab08_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="Lab08_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
 <figcaption>Notice how at different degrees of freedom (5 to 30 shown here) the shape of the t distribution is shifts such that there is more weight in the tails.</figcaption>
 </figure>
 </div>
@@ -628,14 +681,14 @@ window.Quarto = {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="Lab08_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="Lab08_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Consider the one-tailed (left) p-value for <span class="math inline">\(t=-1.21\)</span> will be <span class="math inline">\(0.1225\)</span>.</p>
+<p>Consider the one-tailed (left) p-value for <span class="math inline">\(t=-1.21\)</span> will be <span class="math inline">\(0.1225\)</span>. In other words, under the null hypothesis we would have seen this <span class="math inline">\(t\)</span> statistic or one more extreme in the negative direction 12.25% of the time (<em>fairly often</em>). Where our threshold is <span class="math inline">\(\alpha = 0.05\)</span>, we would not consider rejecting the null.</p>
 <p><strong>QUESTION</strong>: <em>What is the <strong>two-tailed</strong> p-value for <span class="math inline">\(t=-1.6\)</span>?</em></p>
-<p><strong>QUESTION</strong>: <em>Would you have concluded something different if you had set out to do a left-sided test? A right-sided test?</em></p>
+<p><strong>QUESTION</strong>: <em>For the <span class="math inline">\(t=-1.6\)</span>, would you have concluded something different if you had set out to do a left-sided test? A right-sided test?</em></p>
 
 
 </section>
