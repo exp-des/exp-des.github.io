@@ -1,0 +1,274 @@
+---
+title: Making Decisions via the Sampling Distribution
+subtitle: Lab 8
+author: Michael Pascale
+date: 2025-10-31
+---
+```{r}
+#| echo: false
+source("../ggunited.r")
+library(latex2exp)
+```
+
+## Visualizing P-Values
+
+Recall that with the **$Z$-statistic** we compare a sample to **normally distributed samples** from the same population. Let's try to understand this visually.
+
+Say we obtain a sample mean $\bar x$ with a $Z$-statistic of $1.3$. This tells us that the sample lies $1.3$ times the S.E.M. above $\mu$ on the sampling distribution.
+
+To calculate the **p-value**, we need to consider a particular **hypothesis**. In the case that $H_0: \mu = \mu_0$ and $H_A: \mu \neq \mu_0$, then the p-value represents the probability under the _null hypothesis_ of a value at least as extreme, in either the positive or negative direction. In other words, the **two-tailed** area under the curve.
+
+:::{.aside}
+Note that we could have used a one-tailed test (left or right) for a different hypothesis test. The p-value calculation will depend on both the distribution of the statistic and the hypothesis test being performed.
+:::
+
+Finding this area will require that we work through some arithemtic. We saw last week that the `pnorm()` function yields the area to the left of a given $Z$. In other words, asking for `pnorm(1.3)` is the same as asking $P(Z\leq 1.3)=0.9032$.
+
+```{r}
+#| echo: false
+#| fig-height: 3
+#| fig-cap: In R, the `pnorm()` function provides the area under the curve to the left.
+
+z_stat <- 1.3
+
+# Create data for the normal distribution
+x <- seq(-4, 4, length.out = 1000)
+y <- dnorm(x)
+df <- data.frame(x = x, y = y)
+
+# Create data for the shaded area (left tail)
+x_left <- seq(-4, z_stat, length.out = 800)
+y_left <- dnorm(x_left)
+df_left <- data.frame(x = x_left, y = y_left)
+
+ggplot(df, aes(x = x, y = y)) +
+  geom_line(linewidth = 1, color = "black") +
+  geom_area(data = df_left, aes(x = x, y = y), 
+            fill = united_colors['primary']) +
+  geom_vline(xintercept = z_stat, linetype = "dashed", 
+             color = united_colors['danger'], linewidth = 0.8) +
+  annotate("text", x = z_stat, y = max(y) * 0.9, 
+           label = paste0("Z = ", z_stat), 
+           color = "red", hjust = -0.2, size = 5) +
+  annotate("text", x = -.5, y = 0.025, 
+           label = paste0("pnorm(", z_stat, ") = ", 
+                          round(pnorm(z_stat)*100, 2), "%"),
+           size = 4, color = united_colors['light'], fontface = "bold") +
+  labs(
+    subtitle = "Area under the curve from -∞ to Z",
+    x = expression(italic(Z))
+  ) +
+  scale_y_continuous("Probability Density", limits=c(0,0.5), expand=c(0,0))
+```
+
+To calculate the two-tailed p-value, we actually want the area in the tails. To get the area in the right tail, we apply the knowledge that probability must sum to $100%$. Therefore, we subtract `1 - pnorm(1.3)`.
+
+```{r}
+#| echo: false
+#| fig-height: 3
+
+# Create data for the shaded area (right tail)
+x_right <- seq(z_stat, 4, length.out = 200)
+y_right <- dnorm(x_right)
+df_right <- data.frame(x = x_right, y = y_right)
+
+ggplot(df, aes(x = x, y = y)) +
+  geom_line(linewidth = 1, color = "black") +
+  geom_area(data = df_right, aes(x = x, y = y), 
+            fill = united_colors['primary']) +
+  geom_vline(xintercept = z_stat, linetype = "dashed", 
+             color = united_colors['danger'], linewidth = 0.8) +
+  annotate("text", x = z_stat, y = max(y) * 0.9, 
+           label = paste0("Z = ", z_stat), 
+           color = "red", hjust = -0.2, size = 5) +
+  annotate("text", x = 3, y = 0.1, 
+           label = paste0("1 - pnorm(", z_stat, ") = ", 
+                          round((1-pnorm(z_stat))*100, 2), "%"),
+           size = 4, color = united_colors['gray_800'], fontface = "bold") +
+  labs(
+    subtitle = "Area under the curve from Z to ∞",
+    x = expression(italic(Z))
+  ) +
+  scale_y_continuous("Probability Density", limits=c(0,0.5), expand=c(0,0))
+```
+
+Then we have to multiply by two to get the area under the two tails: `2*(1-pnorm(1.3))`.
+
+```{r}
+#| echo: false
+#| fig-height: 3
+
+x_left2 <- seq(-4, -z_stat, length.out = 200)
+y_left2 <- dnorm(x_left2)
+df_left2 <- data.frame(x = x_left2, y = y_left2)
+
+ggplot(df, aes(x = x, y = y)) +
+  geom_line(linewidth = 1, color = "black") +
+  geom_area(data = df_right, aes(x = x, y = y), 
+            fill = united_colors['primary']) +
+  geom_area(data = df_left2, aes(x = x, y = y), 
+            fill = united_colors['primary']) +
+  geom_vline(xintercept = z_stat, linetype = "dashed", 
+             color = united_colors['danger'], linewidth = 0.8) +
+  geom_vline(xintercept = -z_stat, linetype = "dashed", 
+             color = united_colors['gray_600'], linewidth = 0.8) +
+  annotate("text", x = z_stat, y = max(y) * 0.9, 
+           label = paste0("Z = ", z_stat), 
+           color = "red", hjust = -0.2, size = 5) +
+  annotate("text", x = 3, y = 0.1, 
+           label = paste0("1 - pnorm(", z_stat, ") = ", 
+                          round((1-pnorm(z_stat))*100, 2), "%"),
+           size = 4, color = united_colors['gray_800'], fontface = "bold") +
+  annotate("text", x = -3, y = 0.1, 
+           label = paste0("1 - pnorm(", z_stat, ") = ", 
+                          round((1-pnorm(z_stat))*100, 2), "%"),
+           size = 4, color = united_colors['gray_800'], fontface = "bold") +
+  labs(
+    subtitle = "Total area under the curve from -∞ to -Z and Z to ∞",
+    x = expression(italic(Z))
+  ) +
+  scale_y_continuous("Probability Density", limits=c(0,0.5), expand=c(0,0))
+```
+
+The two-tailed p-value is therefore $0.1936$, the sum of the left and right areas.
+
+**QUESTION**: _Do we reject the null hypothesis? ($\alpha=0.05$)_
+
+Note our calculation should account for the possibility that the sample has a negative $Z$-statistic. Therefore, we can generally calculate the two-tailed p-value in R using the absolute value: `2 * (1 - pnorm(abs(Z)))`
+
+**QUESTION**: _What is the two-tailed p-value associated with a $Z$-statistic of -2.11? What would you conclude?_
+
+**QUESTION**: _Say that a positive effect was expected ($H_A \bar x > \mu$). What is the one-tailed p-value associated with a $Z$-statistic of 0.71? What would you conclude?_
+
+## Visualizing the Confidence Interval
+
+By the same logic, we can observe the 95% confidence interval.
+
+```{r}
+#| echo: false
+#| fig-height: 3
+#| fig-cap: By subtracting the area in the left tail up to $Z=-1.96$ from the area up to $Z=1.96$, we get the area in between. This represents 95% of the area under the curve.
+z_lower <- -1.96
+z_upper <- 1.96 
+
+# Create data for the shaded area (center)
+x_center <- seq(z_lower, z_upper, length.out = 1000)
+y_center <- dnorm(x_center)
+df_center <- data.frame(x = x_center, y = y_center)
+
+ggplot(df, aes(x = x, y = y)) +
+  geom_line(linewidth = 1, color = "black") +
+  geom_area(data = df_center, aes(x = x, y = y), 
+            fill = united_colors['primary']) +
+  geom_vline(xintercept = c(z_lower, z_upper), 
+             linetype = "dashed", color = "red", linewidth = 0.8) +
+  annotate("text", x = z_lower, y = max(y) * 0.9, 
+           label = paste0("Z = ", z_lower), 
+           color = "red", hjust = 1.2, size = 5) +
+  annotate("text", x = z_upper, y = max(y) * 0.9, 
+           label = paste0("Z = ", z_upper), 
+           color = "red", hjust = -0.2, size = 5) +
+  annotate("text", x = 0, y = 0.025, 
+           label = paste0("pnorm(1.96) - pnorm(-1.96) = ",
+                          round((pnorm(z_upper) - pnorm(z_lower))*100, 2), "%"),
+           size = 4, color = united_colors['light'], fontface = "bold") +
+  labs(subtitle = "pnorm(upper) - pnorm(lower)",
+       x =  expression(italic(Z))) +
+  scale_y_continuous("Probability Density", limits=c(0,0.5), expand=c(0,0))
+```
+
+## Visualizing the $t$-Distribution
+
+First, let's see how the $t$-distribution differs from the standard normal.
+
+```{r}
+#| eval: false
+# The statistic on the x-axis (t or Z whatever)
+stat <- seq(-4, 4, length.out=1000)
+
+ggplot() +
+  
+  # Plot the normal distribution
+  geom_line(aes(x=stat, y=dnorm(stat), color='red')) +
+  
+  # Plot the t(df=5) distribution
+  geom_line(aes(x=stat, y=dt(stat, 5))) +
+  
+  # Plot the t(df=30) distribution
+  geom_line(aes(x=stat, y=dt(stat, 30)))
+
+  # Try a few different values to see how the t distribution
+  # changes with the degrees of freedom parameter.
+```
+
+```{r}
+#| echo: false
+#| fig-height: 3
+#| fig-cap: Notice how at different degrees of freedom (5 to 30 shown here) the shape of the t distribution is shifts such that there is more weight in the tails.
+
+ggplot(df, aes(x = x, y = y)) +
+  geom_line(linewidth = 1, color = united_colors['primary']) +
+  geom_line(aes(y=dt(x, 5)), linewidth = .5, color = 'grey60') +
+  geom_line(aes(y=dt(x, 10)), linewidth = .5, color = 'grey65') +
+  geom_line(aes(y=dt(x, 15)), linewidth = .5, color = 'grey70') +
+  geom_line(aes(y=dt(x, 20)), linewidth = .5, color = 'grey75') +
+  geom_line(aes(y=dt(x, 25)), linewidth = .5, color = 'grey80') +
+  geom_line(aes(y=dt(x, 30)), linewidth = .5, color = 'grey95') +
+
+  annotate("text", x = .9, y = .4, 
+           label = "normal", color = united_colors['primary'], size = 3) +
+  annotate("text", x = .3, y = .3, 
+           label = "t(df=5)", color = 'grey70', size = 3) +
+  annotate("text", x = .95, y = .35, 
+           label = "t(df=30)", color = 'grey95', size = 3) +
+  labs(
+    subtitle = "Comparing t with different degrees of freedom",
+    x = "Statistic"
+  ) +
+  scale_y_continuous("Probability Density", limits=c(0,0.42), expand=c(0,0))
+```
+
+Considering a $t$ statistic of $-1.21$ with a sample size of $n=16$, the degrees of freedom is $15$. As with the normal distribution, R provides a function for the area under the left tail of the t-distribution: `pt()`. Note that it requires both the statistic and the degrees of freedom.
+
+```{r}
+#| echo: false
+#| fig-height: 3
+
+t_stat <- -1.21
+n <- 16
+
+# Create data for the t distribution
+x <- seq(-4, 4, length.out = 1000)
+y <- dt(x, n)
+df_tdist <- data.frame(x = x, y = y)
+
+# Create data for the shaded area (left tail)
+x_left_t <- seq(-4, t_stat, length.out = 800)
+y_left_t <- dt(x_left_t, n-1)
+df_left_t <- data.frame(x = x_left_t, y = y_left_t)
+
+ggplot(df_tdist, aes(x = x, y = y)) +
+  geom_line(linewidth = 1, color = "black") +
+  geom_area(data = df_left_t, aes(x = x, y = y), 
+            fill = united_colors['primary']) +
+  geom_vline(xintercept = t_stat, linetype = "dashed", 
+             color = united_colors['danger'], linewidth = 0.8) +
+  annotate("text", x = t_stat-1, y = max(y) * 0.9, 
+           label = paste0("t = ", t_stat), 
+           color = "red", size = 5) +
+  annotate("text", x = -3, y = 0.1, 
+           label = paste0("pt(", t_stat, ", 15) = ", 
+                          round(pt(t_stat, n-1)*100, 2), "%"),
+           size = 4, color = united_colors['gray_800'], fontface = "bold") +
+  labs(
+    subtitle = "Area under the curve from -∞ to t",
+    x = "t"
+  ) +
+  scale_y_continuous("Probability Density", limits=c(0,0.5), expand=c(0,0))
+```
+
+Consider the one-tailed (left) p-value for $t=-1.21$ will be $0.1225$. In other words, under the null hypothesis we would have seen this $t$ statistic or one more extreme in the negative direction 12.25% of the time (_fairly often_). Where our threshold is $\alpha = 0.05$, we would not consider rejecting the null. 
+
+**QUESTION**: _What is the **two-tailed** p-value for $t=-1.6$?_
+
+**QUESTION**: _For the $t=-1.6$, would you have concluded something different if you had set out to do a left-sided test? A right-sided test?_
