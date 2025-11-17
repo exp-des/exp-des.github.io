@@ -8,7 +8,7 @@
 
 <meta name="author" content="Michael Pascale">
 
-<title>The Sampling Distribution – Introduction to Experimental Design</title>
+<title>Final Project Practice, ANOVA – Introduction to Experimental Design</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -66,8 +66,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../Labs/Lab07.html" rel="next">
-<link href="../Labs/Lab04.html" rel="prev">
+<link href="../Slides.html" rel="next">
+<link href="../Labs/Lab08.html" rel="prev">
 <link href="../assets/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -362,7 +362,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Labs/Lab01.html">Lab Components</a></li><li class="breadcrumb-item"><a href="../Labs/Lab06.html">The Sampling Distribution</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Labs/Lab01.html">Lab Components</a></li><li class="breadcrumb-item"><a href="../Labs/Lab10.html">Final Project Practice, ANOVA</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -510,7 +510,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Labs/Lab06.html" class="sidebar-item-text sidebar-link active">
+  <a href="../Labs/Lab06.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The Sampling Distribution</span></a>
   </div>
 </li>
@@ -528,7 +528,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Labs/Lab10.html" class="sidebar-item-text sidebar-link">
+  <a href="../Labs/Lab10.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Final Project Practice, ANOVA</span></a>
   </div>
 </li>
@@ -558,10 +558,10 @@ window.Quarto = {
 <main class="content page-columns page-full" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Labs/Lab01.html">Lab Components</a></li><li class="breadcrumb-item"><a href="../Labs/Lab06.html">The Sampling Distribution</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Labs/Lab01.html">Lab Components</a></li><li class="breadcrumb-item"><a href="../Labs/Lab10.html">Final Project Practice, ANOVA</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">The Sampling Distribution</h1>
-<p class="subtitle lead">Lab 6</p>
+<h1 class="title">Final Project Practice, ANOVA</h1>
+<p class="subtitle lead">Lab 10</p>
 </div>
 
 
@@ -578,7 +578,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Discussion/Lab Date</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Friday, October 17, 2025</p>
+      <p class="date">Friday, November 14, 2025</p>
     </div>
   </div>
   
@@ -590,139 +590,137 @@ window.Quarto = {
 </header>
 
 
-<p>In this lab, students will simulate sampling from a population to demonstrate the properties of the theoretical sampling distribution.</p>
-<p>Choosing some random variable that we could measure, we will <em>simulate</em> the population as an exercise.</p>
+<p>We’ll start today’s lab with the two small samples (<span class="math inline">\(n=12\)</span>) of simulated reaction times.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="dv">1000000</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>population <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(N, <span class="dv">100</span>, <span class="dv">10</span>)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ lubridate 1.9.4     ✔ tibble    3.2.1
+✔ purrr     1.0.1     ✔ tidyr     1.3.0
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">3493</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>s1 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">12</span>, <span class="dv">624</span>, <span class="dv">53</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>s2 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">12</span>, <span class="dv">697</span>, <span class="dv">53</span>)</span></code></pre></div>
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
-<p>In class, we simulated a population of 19,000,000 college students. If this many datapoints causes your R code to run slowly (or crashes your computer), then please try a smaller number.</p>
-</div></div><div class="cell">
+<p>The <code>set.seed()</code> command sets R’s random number generator such that every student finds the same results using simulated data when the data are generated in the same order.</p>
+</div></div><p>First, demonstrate how to create a histogram of the sample. With a sample this small, even by changing the bin size would not help us see the underlying distribution.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x=</span>s1))</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value `binwidth`.</code></pre>
+</div>
 <div class="cell-output-display">
-<div>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="Lab06_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="Lab10_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption>The histogram of variable s1 is not very informative as only one value falls into each bin. Because we simulated these data, we know they are normally distributed, but we would need good rationale for this assumption in any real sample.</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>The random sample we draw (e.g.&nbsp;in a study of 100 participants) will have its own sample mean.</p>
+<p>Still, we can present barplots including our calculation of the standard error. This sort of summary plot may benefit your final project writeup. We will first arrange the statistics into a table for plotting with ggplot.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">100</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>single <span class="ot">&lt;-</span> <span class="fu">sample</span>(population, n)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># The sample mean of a single random sample.</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(single)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>sem_s1 <span class="ot">&lt;-</span> <span class="fu">sd</span>(s1) <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="dv">12</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>sem_s2 <span class="ot">&lt;-</span> <span class="fu">sd</span>(s2) <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="dv">12</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>data_summary <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">group =</span> <span class="fu">c</span>(<span class="st">"Sample 1"</span>, <span class="st">"Sample 2"</span>),</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">mean_rt =</span> <span class="fu">c</span>(<span class="fu">mean</span>(s1), <span class="fu">mean</span>(s2)),</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">sem     =</span> <span class="fu">c</span>(sem_s1, sem_s2)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>data_summary</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 99.52079</code></pre>
+<pre><code>     group  mean_rt      sem
+1 Sample 1 615.1042 12.54050
+2 Sample 2 711.4750 13.77661</code></pre>
 </div>
-</div>
-<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data_summary) <span class="sc">+</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="fu">aes</span>(<span class="at">x=</span>group, <span class="at">y=</span>mean_rt)) <span class="sc">+</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">x=</span>group, <span class="at">ymax=</span>mean_rt <span class="sc">+</span> sem, <span class="at">ymin=</span>mean_rt <span class="sc">-</span> sem))</span></code></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="Lab06_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="Lab10_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>With many random sample <em>means</em> we can see the sampling distribution. Note how the variance in the sampling distribution is smaller than in the underlying samples and population. Here we have samples of size <span class="math inline">\(n=10\)</span>.</p>
+<p>Now let’s consider an experiment with three independent groups, varying by cups of coffee administered to participants.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">10</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span> N <span class="sc">/</span> n</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create many samples of n=10</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>many10 <span class="ot">&lt;-</span> <span class="fu">sample</span>(population, N, <span class="at">replace=</span><span class="cn">TRUE</span>)</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>many10 <span class="ot">&lt;-</span> <span class="fu">matrix</span>(many10, n)</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># The distribution of sample means for 100,000 random *samples* each of 10 observations.</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>smeans10 <span class="ot">&lt;-</span> <span class="fu">colMeans</span>(many10)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">3493</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">50</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>g_2cups <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(n, <span class="dv">624</span>, <span class="dv">53</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>g_1cups <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(n, <span class="dv">697</span>, <span class="dv">53</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>g_0cups <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(n, <span class="dv">705</span>, <span class="dv">53</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>coffeedata <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">groups =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"No Coffee"</span>, <span class="st">"One Cup"</span>, <span class="st">"Two Cups"</span>), <span class="at">each=</span>n),</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">rt     =</span> <span class="fu">c</span>(g_0cups, g_1cups, g_2cups)</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(coffeedata)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     groups       rt
+1 No Coffee 730.8818
+2 No Coffee 704.1046
+3 No Coffee 775.7930
+4 No Coffee 631.5704
+5 No Coffee 701.6245
+6 No Coffee 739.3005</code></pre>
 </div>
+</div>
+<p>A shorthand of what we did above is to use <code>summarize()</code> to produce a shortened statistical table.</p>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>tab <span class="ot">&lt;-</span> <span class="fu">summarise</span>(coffeedata, <span class="at">.by=</span>groups, <span class="at">mean_rt=</span><span class="fu">mean</span>(rt), <span class="at">n=</span><span class="fu">n</span>())</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>tab</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     groups  mean_rt  n
+1 No Coffee 709.3300 50
+2   One Cup 706.4325 50
+3  Two Cups 627.5218 50</code></pre>
+</div>
+</div>
+<p>We’ll produce a beeswarm plot in preparation to understand the ANOVA.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(coffeedata) <span class="sc">+</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span>groups, <span class="at">y=</span>rt), <span class="at">position=</span><span class="fu">position_jitter</span>(.<span class="dv">1</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span>groups, <span class="at">y=</span>mean_rt, <span class="at">color=</span>groups), <span class="at">data=</span>tab)</span></code></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="Lab06_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="Lab10_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>With bigger samples of <span class="math inline">\(n=100\)</span> the variance of the sampling distribution is reduced further.</p>
+<p>Finally, we can run the ANOVA with R’s <code>aov()</code>. Running <code>summary()</code> on this produces the ANOVA table.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">100</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span> N <span class="sc">/</span> n</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create many samples of n=100</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>many100 <span class="ot">&lt;-</span> <span class="fu">sample</span>(population, N, <span class="at">replace=</span><span class="cn">TRUE</span>)</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>many100 <span class="ot">&lt;-</span> <span class="fu">matrix</span>(many100, n)</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># The distribution of sample means for 10,000 samples, of n=100 units each.</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>smeans100 <span class="ot">&lt;-</span> <span class="fu">colMeans</span>(many100)</span></code></pre></div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="Lab06_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>This reduced variance turns out to be proportional to the square root of the sample size. It is from this property that we calculate the standard error of the mean: the standard deviation of the sampling distribution.</p>
-<p><span class="math display">\[
-SEM = {s \over \sqrt n} = {{ \sqrt{\sum(x_i - \bar x)^2 \over n -1}} \over \sqrt n}
-\]</span></p>
-<p>We’ll calculate the SEM by the formula using the mean of our individual sample.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Using the sample standard deviation</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>sem <span class="ot">&lt;-</span> <span class="fu">sd</span>(single) <span class="sc">/</span> <span class="fu">sqrt</span>(n)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>sem</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> <span class="fu">aov</span>(rt <span class="sc">~</span> groups, <span class="at">data=</span>coffeedata)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(results)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.137944</code></pre>
-</div>
-</div>
-<p>This should approximate the standard deviation of the sampling distribution.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Of the sampling distribution (in practice we can't see this)</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Remember that SEM is the "Standard Error of the Means"</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(smeans100)</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.9917314</code></pre>
-</div>
-</div>
-<p>We can use the SEM formula to calculate a 95% confidence interval around our sample mean.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>ci <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">mean</span>(single) <span class="sc">-</span> <span class="fl">1.96</span> <span class="sc">*</span> sem, <span class="fu">mean</span>(single) <span class="sc">+</span> <span class="fl">1.96</span> <span class="sc">*</span> sem)</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>ci</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1]  97.29042 101.75116</code></pre>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Deliverables">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Deliverables
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Today’s assignment produced many plots. Answer the following questions and upload your figures to Blackboard for lab credit today.</p>
-<ol type="1">
-<li>A screenshot of your entire RStudio screen for <em>each</em> plot we created.</li>
-<li>Did the true population mean (100) fall within the confidence interval calculated from your sample (<code>single</code>)?</li>
-</ol>
-<p><em>Note that the code for the plots has not been provided; you should be able to create the histograms on your own.</em></p>
-<p><em>Note that with simulated random data, each student will have slightly different results.</em></p>
+<pre><code>             Df Sum Sq Mean Sq F value   Pr(&gt;F)    
+groups        2 215464  107732   41.24 6.06e-15 ***
+Residuals   147 384000    2612                     
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
 
 
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>Note that the leftover variance we’ve been referring to as the “error” is also called the <em>residual variance</em>, or the <em>residuals</em> of the model.</p>
+</div></div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1076,13 +1074,13 @@ SEM = {s \over \sqrt n} = {{ \sqrt{\sum(x_i - \bar x)^2 \over n -1}} \over \sqrt
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../Labs/Lab04.html" class="pagination-link" aria-label="Descriptive Statistics">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Descriptive Statistics</span>
+      <a href="../Labs/Lab08.html" class="pagination-link" aria-label="Making Decisions via the Sampling Distribution">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Making Decisions via the Sampling Distribution</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../Labs/Lab07.html" class="pagination-link" aria-label="Z-Score, Z-Statistic, Z-Test">
-        <span class="nav-page-text">Z-Score, Z-Statistic, Z-Test</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../Slides.html" class="pagination-link" aria-label="Lecture Slides">
+        <span class="nav-page-text">Lecture Slides</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

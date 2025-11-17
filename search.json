@@ -1,5 +1,17 @@
 [
   {
+    "objectID": "Testing/L30.html",
+    "href": "Testing/L30.html",
+    "title": "Repeated Measures ANOVA",
+    "section": "",
+    "text": "With a one-way ANOVA, three or more independent groups means are tested with \\(F = {MS_{between} \\over MS{within}}\\). When the groups are not independent, for example when a single individual is present in each of the three or more conditions.\nIn these within-subjects designs, each person serves as their own control and we can achieve greater statistical power. While we can use repeated-measures to track changes over time, we also need to worry about order and carryover effects, confounds of time, and missing data across sessions (e.g. a participant completes only two of three sessions).\nIn the repeated measures ANOVA, the variance decomposition changes such that we can account for some of the unexplained variance \\(SS_{error}\\) as individual variability.\n\\[\nSS_{total} = SS_{conditions} + SS_{subjects} + SS_{error}\n\\]\nThis also changes the \\(F\\) statistic, which does not need to account for the individual variability \\(SS_{subjects}\\) which is constant in each condition.\n\\[\nF = { MS_{conditions} \\over MS_{error} }\n\\]\nIt is by this logic that we have greater statistical power. There is literally less unexplained variance between conditions.\nFor this test to be valid, we must be able to assume both normality and sphericity, that the variance of the differences are equal across all pairs of groups.\n\nThe ANOVA Table for Repeated Measures\n\n\n\n\n\n\n\n\n\n\nSource\nSS\ndf\nMS\nF\n\n\n\n\nCondtions\n\\(SS_{conditions}\\)\n\\(k-1\\)\n\\(SS_{conditions}\\over k-1\\)\n\\(MS_{conditions} \\over MS_{error}\\)\n\n\nSubjects\n\\(SS_{subjects}\\)\n\\(n-1\\)\n\\(SS_{subjects}\\over n-1\\)\n\n\n\nError\n\\(SS_{error}\\)\n\\((k-1)(n-1)\\)\n\\(SS_{error}\\over (k-1)(n-1)\\)\n\n\n\nTotal\nSST\n\\(N-1\\)\n\n\n\n\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Home",
+      "4. Hypothesis Testing",
+      "Repeated Measures ANOVA"
+    ]
+  },
+  {
     "objectID": "Projects/Project01.html",
     "href": "Projects/Project01.html",
     "title": "Research Proposal",
@@ -119,177 +131,63 @@
     ]
   },
   {
-    "objectID": "Labs/Lab07.html",
-    "href": "Labs/Lab07.html",
-    "title": "Z-Score, Z-Statistic, Z-Test",
+    "objectID": "Labs/Lab08.html",
+    "href": "Labs/Lab08.html",
+    "title": "Making Decisions via the Sampling Distribution",
     "section": "",
-    "text": "Consider a population with known parameters. For example, the IQ score distribution.\n# Population parameters\nmu  &lt;- 100\nsigma &lt;- 10\nWith any random sample from that distribution (e.g. data we collected on some group), we learned previously how to calculate the standard error (SEM).\n# A random sample of 25 datapoints.\nn &lt;- 25\nx &lt;- rnorm(n, mu, sigma)\nxbar &lt;- mean(x)\nxbar\n\n[1] 102.1556\n\n# Standard Error of the Mean with Samples of n=25\nsem &lt;- sigma / sqrt(n)\nsem\n\n[1] 2\nWe can use this to calculate the 95% confidence interval around the estimate.\n# Using just our sample, the estimate of the true mean (95% CI)\nci &lt;- c(xbar - sem * 1.96, xbar + sem * 1.96)\nci\n\n[1]  98.23565 106.07565\nBecause \\(\\mu\\) is within the confidence interval, we conclude that the sample mean \\(\\bar x\\) is not significantly different from \\(\\mu\\).",
+    "text": "Recall that with the \\(Z\\)-statistic we compare a sample to normally distributed samples from the same population. Let’s try to understand this visually.\nSay we obtain a sample mean \\(\\bar x\\) with a \\(Z\\)-statistic of \\(1.3\\). This tells us that the sample lies \\(1.3\\) times the S.E.M. above \\(\\mu\\) on the sampling distribution.\nTo calculate the p-value, we need to consider a particular hypothesis. In the case that \\(H_0: \\mu = \\mu_0\\) and \\(H_A: \\mu \\neq \\mu_0\\), then the p-value represents the probability under the null hypothesis of a value at least as extreme, in either the positive or negative direction. In other words, the two-tailed area under the curve.\n\n\nNote that we could have used a one-tailed test (left or right) for a different hypothesis test. The p-value calculation will depend on both the distribution of the statistic and the hypothesis test being performed.\nFinding this area will require that we work through some arithemtic. We saw last week that the pnorm() function yields the area to the left of a given \\(Z\\). In other words, asking for pnorm(1.3) is the same as asking \\(P(Z\\leq 1.3)=0.9032\\).\n\n\n\n\n\nIn R, the pnorm() function provides the area under the curve to the left.\n\n\n\n\nTo calculate the two-tailed p-value, we actually want the area in the tails. To get the area in the right tail, we apply the knowledge that probability must sum to \\(100%\\). Therefore, we subtract 1 - pnorm(1.3).\n\n\n\n\n\n\n\n\n\nThen we have to multiply by two to get the area under the two tails: 2*(1-pnorm(1.3)).\n\n\n\n\n\n\n\n\n\nThe two-tailed p-value is therefore \\(0.1936\\), the sum of the left and right areas.\nQUESTION: Do we reject the null hypothesis? (\\(\\alpha=0.05\\))\nNote our calculation should account for the possibility that the sample has a negative \\(Z\\)-statistic. Therefore, we can generally calculate the two-tailed p-value in R using the absolute value: 2 * (1 - pnorm(abs(Z)))\nQUESTION: What is the two-tailed p-value associated with a \\(Z\\)-statistic of -2.11? What would you conclude?\nQUESTION: Say that a positive effect was expected (\\(H_A \\bar x &gt; \\mu\\)). What is the one-tailed p-value associated with a \\(Z\\)-statistic of 0.71? What would you conclude?",
     "crumbs": [
       "Home",
       "Lab Components",
-      "Z-Score, Z-Statistic, Z-Test"
+      "Making Decisions via the Sampling Distribution"
     ]
   },
   {
-    "objectID": "Labs/Lab07.html#the-z-test",
-    "href": "Labs/Lab07.html#the-z-test",
-    "title": "Z-Score, Z-Statistic, Z-Test",
-    "section": "The Z-Test",
-    "text": "The Z-Test\nWe can alternatively discuss our data in terms of the standard normal curve.\nTo do this, we need the Z-statistic (NOT the same as the Z-score). The Z-statistic tells us how far the sample mean is from the center of the sampling distribution (for n=25 here).\n\n\nThe Z-statistic is not the same as a z-score.\nWhere the z-score tells us the average difference between datapoints (\\(x_i\\)) and the sample mean (\\(\\bar x\\)) in units of the sample standard deviation (\\(s\\)), the Z-statistic tells us the difference between a given sample mean (\\(\\bar x\\)) and the center of the sampling distribution \\(\\mu\\) in units of the standard error (\\(\\sigma \\over \\sqrt n\\)).\nIn other words, the z-score is calculated on the datapoints of a sample, while the Z-statistic is calculated on a sample mean from the sampling distribution.\n\n# Z-Statistic: How far away is the sample mean from the population mean?\nZ &lt;- (mean(x) - mu) / sem\nZ\n\n[1] 1.077823\n\n\nAs the Z-statistic is less than \\(1.96\\), again we can see that we could not reject the null.",
-    "crumbs": [
-      "Home",
-      "Lab Components",
-      "Z-Score, Z-Statistic, Z-Test"
-    ]
-  },
-  {
-    "objectID": "Labs/Lab07.html#the-p-value",
-    "href": "Labs/Lab07.html#the-p-value",
-    "title": "Z-Score, Z-Statistic, Z-Test",
-    "section": "The p-Value",
-    "text": "The p-Value\nRecall that the p-value is the probability of obtaining a sample mean at least as extreme as what was observed, under the null hypothesis.\nBy default, the pnorm() function represents the area (probability) underneath a standard normal distribution curve (mean of \\(0\\), standard deviation of \\(1\\)). We can use this to calculate the p-value.\nWhere the null hypothesis \\(H_0\\) is that the sample is not different from the population,\n\np &lt;- 2 * (1 - pnorm(abs(Z))) # Technically, a two-tailed p-value.\np  \n\n[1] 0.281113\n\n\nHere, our p-value was \\(&gt;0.05\\). Where our decision threshold \\(\\alpha = 0.05\\), we would not reject the null hypothesis, and we would again conclude that the sample is not significantly different from the population.\nAn alternate method is to calculate the p-value directly.\n\np &lt;- 2 * (1 - pnorm(abs(xbar), mean = mu, sd = sem))\np\n\n[1] 0.281113\n\n\nQUESTION: What Z-statistic, p-value, and confidence interval did you obtain? Report for each one why you would reject or fail to reject the null hypothesis.\n\n\nCritical Values\nConsider that this is where the 68.3-95.4-99.7 rule comes from:\n\npnorm(1) - pnorm(-1) # One standard deviation\n\n[1] 0.6826895\n\npnorm(2) - pnorm(-2) # Two standard deviations\n\n[1] 0.9544997\n\npnorm(3) - pnorm(-3) # Three standard deviations\n\n[1] 0.9973002\n\n\nWe use \\(1.96\\) as a critical value for the 95% confidence interval because it comes out at nearly \\(0.95\\) exactly.\n\npnorm(1.96) - pnorm(-1.96)\n\n[1] 0.9500042\n\n\nQUESTION: What percent of the data is captured within 0.5 standard deviations?\n\n\nz-Scores\nSee the note above on why z-scored data is NOT the same as the Z-statistic of a sample. In R, we can calcualte the z-score in the way you might expect.\n\n# The z-score allows us to compare datapoints within a sample in standard deviation units.\nz &lt;- (x - mean(x)) / sd(x)\nz\n\n [1]  0.751067947  0.360610116 -0.715518966 -0.634075229  0.180021094\n [6]  0.717037337  0.205401203  1.128853827 -1.127175668 -0.413406038\n[11]  0.677888478  0.882502426 -2.138742912 -0.012367409  1.812048233\n[16] -0.914902898  0.263018488 -1.171546783  1.524180618  1.127777458\n[21] -0.986189416 -1.501922572  0.002028404  0.658370501 -0.674958238\n\n\nAn equivalent is to use the scale() function.\n\nscale(x)\n\n              [,1]\n [1,]  0.751067947\n [2,]  0.360610116\n [3,] -0.715518966\n [4,] -0.634075229\n [5,]  0.180021094\n [6,]  0.717037337\n [7,]  0.205401203\n [8,]  1.128853827\n [9,] -1.127175668\n[10,] -0.413406038\n[11,]  0.677888478\n[12,]  0.882502426\n[13,] -2.138742912\n[14,] -0.012367409\n[15,]  1.812048233\n[16,] -0.914902898\n[17,]  0.263018488\n[18,] -1.171546783\n[19,]  1.524180618\n[20,]  1.127777458\n[21,] -0.986189416\n[22,] -1.501922572\n[23,]  0.002028404\n[24,]  0.658370501\n[25,] -0.674958238\nattr(,\"scaled:center\")\n[1] 102.1556\nattr(,\"scaled:scale\")\n[1] 10.2604\n\n\nQUESTION: Can you z-score the population data, if it is known?\n\n\n\n\n\n\nTipDeliverables\n\n\n\nAnswer the questions above and upload your code and screenshot to Blackboard for lab credit today.",
-    "crumbs": [
-      "Home",
-      "Lab Components",
-      "Z-Score, Z-Statistic, Z-Test"
-    ]
-  },
-  {
-    "objectID": "Labs/Lab04.html",
-    "href": "Labs/Lab04.html",
-    "title": "Descriptive Statistics",
+    "objectID": "Labs/Lab08.html#visualizing-p-values",
+    "href": "Labs/Lab08.html#visualizing-p-values",
+    "title": "Making Decisions via the Sampling Distribution",
     "section": "",
-    "text": "This lab will build students’ skills orienting to unkown data and summarizing variables using the descriptive methods learned in class. Students will independently recapitulate the descriptive analysis exercise they performed in Lab 3 on three new datasets.",
+    "text": "Recall that with the \\(Z\\)-statistic we compare a sample to normally distributed samples from the same population. Let’s try to understand this visually.\nSay we obtain a sample mean \\(\\bar x\\) with a \\(Z\\)-statistic of \\(1.3\\). This tells us that the sample lies \\(1.3\\) times the S.E.M. above \\(\\mu\\) on the sampling distribution.\nTo calculate the p-value, we need to consider a particular hypothesis. In the case that \\(H_0: \\mu = \\mu_0\\) and \\(H_A: \\mu \\neq \\mu_0\\), then the p-value represents the probability under the null hypothesis of a value at least as extreme, in either the positive or negative direction. In other words, the two-tailed area under the curve.\n\n\nNote that we could have used a one-tailed test (left or right) for a different hypothesis test. The p-value calculation will depend on both the distribution of the statistic and the hypothesis test being performed.\nFinding this area will require that we work through some arithemtic. We saw last week that the pnorm() function yields the area to the left of a given \\(Z\\). In other words, asking for pnorm(1.3) is the same as asking \\(P(Z\\leq 1.3)=0.9032\\).\n\n\n\n\n\nIn R, the pnorm() function provides the area under the curve to the left.\n\n\n\n\nTo calculate the two-tailed p-value, we actually want the area in the tails. To get the area in the right tail, we apply the knowledge that probability must sum to \\(100%\\). Therefore, we subtract 1 - pnorm(1.3).\n\n\n\n\n\n\n\n\n\nThen we have to multiply by two to get the area under the two tails: 2*(1-pnorm(1.3)).\n\n\n\n\n\n\n\n\n\nThe two-tailed p-value is therefore \\(0.1936\\), the sum of the left and right areas.\nQUESTION: Do we reject the null hypothesis? (\\(\\alpha=0.05\\))\nNote our calculation should account for the possibility that the sample has a negative \\(Z\\)-statistic. Therefore, we can generally calculate the two-tailed p-value in R using the absolute value: 2 * (1 - pnorm(abs(Z)))\nQUESTION: What is the two-tailed p-value associated with a \\(Z\\)-statistic of -2.11? What would you conclude?\nQUESTION: Say that a positive effect was expected (\\(H_A \\bar x &gt; \\mu\\)). What is the one-tailed p-value associated with a \\(Z\\)-statistic of 0.71? What would you conclude?",
     "crumbs": [
       "Home",
       "Lab Components",
-      "Descriptive Statistics"
+      "Making Decisions via the Sampling Distribution"
     ]
   },
   {
-    "objectID": "Labs/Lab04.html#loading-datasets-into-r",
-    "href": "Labs/Lab04.html#loading-datasets-into-r",
-    "title": "Descriptive Statistics",
-    "section": "Loading Datasets into R",
-    "text": "Loading Datasets into R\nWe will need to download the following datasets for today’s activity:\n\nDataset A\nDataset B\nDataset C\n\nDownload each file to your computer. You can load CSV datasets into R using the read_csv() tidyverse function. For example:\n# Load Lab04_DatasetA.csv into R and keep it in a variable named dataA.\ndataA &lt;- read_csv(\"/Users/Michael/Downloads/Lab04_DatasetA.csv\")\nNote that the file path will be different on your computer than shown here.\nIf you are on MacOS and you are unsure of the path to the dataset you have downloaded, hold the Option key and Right Click on the file. Select “Copy Full Path” from the context menu.",
+    "objectID": "Labs/Lab08.html#visualizing-the-confidence-interval",
+    "href": "Labs/Lab08.html#visualizing-the-confidence-interval",
+    "title": "Making Decisions via the Sampling Distribution",
+    "section": "Visualizing the Confidence Interval",
+    "text": "Visualizing the Confidence Interval\nBy the same logic, we can observe the 95% confidence interval.\n\n\n\n\n\nBy subtracting the area in the left tail up to \\(Z=-1.96\\) from the area up to \\(Z=1.96\\), we get the area in between. This represents 95% of the area under the curve.",
     "crumbs": [
       "Home",
       "Lab Components",
-      "Descriptive Statistics"
+      "Making Decisions via the Sampling Distribution"
     ]
   },
   {
-    "objectID": "Labs/Lab02.html",
-    "href": "Labs/Lab02.html",
-    "title": "Understanding Types of Data",
+    "objectID": "Labs/Lab08.html#visualizing-the-t-distribution",
+    "href": "Labs/Lab08.html#visualizing-the-t-distribution",
+    "title": "Making Decisions via the Sampling Distribution",
+    "section": "Visualizing the \\(t\\)-Distribution",
+    "text": "Visualizing the \\(t\\)-Distribution\nFirst, let’s see how the \\(t\\)-distribution differs from the standard normal.\n\n# The statistic on the x-axis (t or Z whatever)\nstat &lt;- seq(-4, 4, length.out=1000)\n\nggplot() +\n  \n  # Plot the normal distribution\n  geom_line(aes(x=stat, y=dnorm(stat), color='red')) +\n  \n  # Plot the t(df=5) distribution\n  geom_line(aes(x=stat, y=dt(stat, 5))) +\n  \n  # Plot the t(df=30) distribution\n  geom_line(aes(x=stat, y=dt(stat, 30)))\n\n  # Try a few different values to see how the t distribution\n  # changes with the degrees of freedom parameter.\n\n\n\n\n\n\nNotice how at different degrees of freedom (5 to 30 shown here) the shape of the t distribution is shifts such that there is more weight in the tails.\n\n\n\n\nConsidering a \\(t\\) statistic of \\(-1.21\\) with a sample size of \\(n=16\\), the degrees of freedom is \\(15\\). As with the normal distribution, R provides a function for the area under the left tail of the t-distribution: pt(). Note that it requires both the statistic and the degrees of freedom.\n\n\n\n\n\n\n\n\n\nConsider the one-tailed (left) p-value for \\(t=-1.21\\) will be \\(0.1225\\). In other words, under the null hypothesis we would have seen this \\(t\\) statistic or one more extreme in the negative direction 12.25% of the time (fairly often). Where our threshold is \\(\\alpha = 0.05\\), we would not consider rejecting the null.\nQUESTION: What is the two-tailed p-value for \\(t=-1.6\\)?\nQUESTION: For the \\(t=-1.6\\), would you have concluded something different if you had set out to do a left-sided test? A right-sided test?",
+    "crumbs": [
+      "Home",
+      "Lab Components",
+      "Making Decisions via the Sampling Distribution"
+    ]
+  },
+  {
+    "objectID": "Labs/Lab06.html",
+    "href": "Labs/Lab06.html",
+    "title": "The Sampling Distribution",
     "section": "",
-    "text": "This lab will translate what we’ve learned about kinds of data into how real data of these types are processed for visualization and later statistical analysis.",
+    "text": "In this lab, students will simulate sampling from a population to demonstrate the properties of the theoretical sampling distribution.\nChoosing some random variable that we could measure, we will simulate the population as an exercise.\n\nN &lt;- 1000000\npopulation &lt;- rnorm(N, 100, 10)\n\n\n\nIn class, we simulated a population of 19,000,000 college students. If this many datapoints causes your R code to run slowly (or crashes your computer), then please try a smaller number.\n\n\n\n\n\n\n\n\n\nThe random sample we draw (e.g. in a study of 100 participants) will have its own sample mean.\n\nn &lt;- 100\nsingle &lt;- sample(population, n)\n\n# The sample mean of a single random sample.\nmean(single)\n\n[1] 99.52079\n\n\n\n\n\n\n\n\n\n\n\nWith many random sample means we can see the sampling distribution. Note how the variance in the sampling distribution is smaller than in the underlying samples and population. Here we have samples of size \\(n=10\\).\n\nn &lt;- 10\nk &lt;- N / n\n\n# Create many samples of n=10\nmany10 &lt;- sample(population, N, replace=TRUE)\nmany10 &lt;- matrix(many10, n)\n\n# The distribution of sample means for 100,000 random *samples* each of 10 observations.\nsmeans10 &lt;- colMeans(many10)\n\n\n\n\n\n\n\n\n\n\nWith bigger samples of \\(n=100\\) the variance of the sampling distribution is reduced further.\n\nn &lt;- 100\nk &lt;- N / n\n\n# Create many samples of n=100\nmany100 &lt;- sample(population, N, replace=TRUE)\nmany100 &lt;- matrix(many100, n)\n\n# The distribution of sample means for 10,000 samples, of n=100 units each.\nsmeans100 &lt;- colMeans(many100)\n\n\n\n\n\n\n\n\n\n\nThis reduced variance turns out to be proportional to the square root of the sample size. It is from this property that we calculate the standard error of the mean: the standard deviation of the sampling distribution.\n\\[\nSEM = {s \\over \\sqrt n} = {{ \\sqrt{\\sum(x_i - \\bar x)^2 \\over n -1}} \\over \\sqrt n}\n\\]\nWe’ll calculate the SEM by the formula using the mean of our individual sample.\n\n# Using the sample standard deviation\nsem &lt;- sd(single) / sqrt(n)\nsem\n\n[1] 1.137944\n\n\nThis should approximate the standard deviation of the sampling distribution.\n\n# Of the sampling distribution (in practice we can't see this)\n# Remember that SEM is the \"Standard Error of the Means\"\nsd(smeans100)\n\n[1] 0.9917314\n\n\nWe can use the SEM formula to calculate a 95% confidence interval around our sample mean.\n\nci &lt;- c(mean(single) - 1.96 * sem, mean(single) + 1.96 * sem)\nci\n\n[1]  97.29042 101.75116\n\n\n\n\n\n\n\n\nTipDeliverables\n\n\n\nToday’s assignment produced many plots. Answer the following questions and upload your figures to Blackboard for lab credit today.\n\nA screenshot of your entire RStudio screen for each plot we created.\nDid the true population mean (100) fall within the confidence interval calculated from your sample (single)?\n\nNote that the code for the plots has not been provided; you should be able to create the histograms on your own.\nNote that with simulated random data, each student will have slightly different results.\n\n\n\n\n\n Back to top",
     "crumbs": [
       "Home",
       "Lab Components",
-      "Understanding Types of Data"
-    ]
-  },
-  {
-    "objectID": "Labs/Lab02.html#self-study",
-    "href": "Labs/Lab02.html#self-study",
-    "title": "Understanding Types of Data",
-    "section": "Self-Study",
-    "text": "Self-Study\nThis lab corresponds roughly to the following chapters in R for Data Science, which are recommended for further self-study.\n\nWorkflow: Basics 2.1-2.6\nFactor Basics 16.2\nDataframe 1.2.1",
-    "crumbs": [
-      "Home",
-      "Lab Components",
-      "Understanding Types of Data"
-    ]
-  },
-  {
-    "objectID": "Labs/Lab02.html#from-values-to-vectors",
-    "href": "Labs/Lab02.html#from-values-to-vectors",
-    "title": "Understanding Types of Data",
-    "section": "From Values to Vectors",
-    "text": "From Values to Vectors\nBefore we can begin, we need to develop a sense for how R handles datasets.\nIn our first lab, we demonstrated how to store single values in variables, effectively giving them a name we can reference later.\n\nn &lt;- 42\nlucky_number &lt;- 7\nIDriveA &lt;- \"honda civic\"\n\n# Find the radius of a circle.\nx &lt;- 3.14159\nr &lt;- 7\n2*x*r\n\n[1] 43.98226\n\n\n\n\nHere we assign values to a few variables with arbitrary names: n, lucky_number, IDriveA, x, r.  We can use variables in mathematical expressions as demonstrated here by calculating the circumference of a circle with radius 7cm.\nOf course, when we collect data it’s actually many values we need to work with. In R, we can create vectors to hold long columns of values, as we might obtain from real data.\n\nsome_numbers &lt;- c(3, 6, 8, 12)\n\nsome_numbers\n\n[1]  3  6  8 12\n\n\n\n\nThe c() function combines several values into a vector.  As a shorthand, you can create sequences of numbers using the :, like: 1:10. Try this out in the console.\nAny mathematical calculations will work on the whole vector all at once. For example, we could do the circumference calculation again, this time for circles of a few different diameters.\n\nr &lt;- c(7, 36, 28, 1, 0)\n2*x*r\n\n[1]  43.98226 226.19448 175.92904   6.28318   0.00000\n\n\n\n\nCheck the last two elements and see that it has correctly listed \\(2 \\pi \\cdot 1 = 2\\pi\\) and \\(2\\pi \\cdot 0 = 0\\), for example.  This property of being able to perform calculations over whole vectors is what makes this computer software useful for statistics. Routine calculations on a whole dataset can be done quickly and precisely without a pen or calculator.\n\nQualitative Data Types\nWe can create vectors of qualitative variables too. R has one data type for both nominal and ordinal variables: the factor.\n\nhandedness &lt;- factor(c(\"Right-Handed\", \"Left-Handed\", \"Ambidextrous\"))\n\nhandedness\n\n[1] Right-Handed Left-Handed  Ambidextrous\nLevels: Ambidextrous Left-Handed Right-Handed\n\n\nR refers to the unique names a factor can take on as its levels.\n\n\nRandom Data\nIt’s often useful to be able to generate random data, whether to randomly assign participants to groups or to simulate what our results might look like. There are several functions to do with randomness, but we’ll start by demonstrating how to use the sample() function.\nA simple example is the roll of a die. This code will randomly take from the six possible face values, sampling the equivalent of 25 die rolls.\n\nsample(c(1,2,3,4,5,6), 25, replace=TRUE)\n\n [1] 1 5 2 5 4 4 6 3 3 2 6 2 3 1 4 5 5 6 5 3 2 6 4 6 6\n\n\n\n\nThe replace=TRUE means “sample with replacement”. In other words: take a random number from 1 to 6 and then put it back before taking a random number a second time, a third time, etc.\nCombining this with what we learned above about factor variables (nominal or ordinal data types), we can demonstrate one way to randomly assign ten participants to two groups.\n\n# Define a nominal variable (factor) with two levels: treatment and placebo.\nconditions &lt;- factor(c(\"treatment\", \"placebo\"))\n\n# Start with alternating (repeat), five in each group.\nassignment &lt;- c(rep(conditions, 5))\n\n# Randomize the variable so that 5 participants are assigned randomly to each (10 in total).\nassignment &lt;- sample(assignment, 10)\n\nassignment\n\n [1] placebo   treatment treatment treatment treatment placebo   placebo  \n [8] placebo   placebo   treatment\nLevels: placebo treatment\n\n\n\n\nAs you run each line, take a look at the conditions and assignment variables in your R environment.",
-    "crumbs": [
-      "Home",
-      "Lab Components",
-      "Understanding Types of Data"
-    ]
-  },
-  {
-    "objectID": "Labs/Lab02.html#oodles-of-observations",
-    "href": "Labs/Lab02.html#oodles-of-observations",
-    "title": "Understanding Types of Data",
-    "section": "Oodles of Observations",
-    "text": "Oodles of Observations\nMost data we deal with is tabular; we’ve collected many observations of more than just one variable. To keep track of it all, we stack columns side-by-side together into tables. In R, we equivalently put vectors together into dataframes.\nWe saw an example of a dataframe last week, the data table from the ChickWeight experiment.\n\n# Remember head() lets us see just the first few rows - not the whole dataframe.\nChickWeight |&gt; head()\n\n  weight Time Chick Diet\n1     42    0     1    1\n2     51    2     1    1\n3     59    4     1    1\n4     64    6     1    1\n5     76    8     1    1\n6     93   10     1    1\n\n\nWith what we’ve learned in the last week, which of the four variables was the independent variable and which was the dependent variable in this experiment?\n\n\nThink for a moment and then click here to reveal an explanation.\n\nRecall that there were several diets a chick could be assigned to, and its weight was measured over time as it grew up.\n\nThe experiment manipulated Diet as an independent variable.\nThe dependent variable was weight in grams, observed every two days.\n\n\nIf we want to create our own data frame, we can build one using data.frame().\n\ndata.frame(trial=c(1,2,3), dice_roll=c(12,3,7))\n\n  trial dice_roll\n1     1        12\n2     2         3\n3     3         7\n\n\nPutting it all together, let’s create a table containing 10000 datapoints of random age and biological sex and call it demographics.\n\nN &lt;- 10000\n\ndemographics &lt;- data.frame(\n  age = sample(18:90, N, replace=TRUE),\n  biosex = sample(factor(c(\"male\", \"female\")), N, replace=TRUE)\n)\n\nhead(demographics)\n\n  age biosex\n1  19 female\n2  37   male\n3  86   male\n4  48 female\n5  36   male\n6  39 female\n\n\nBecause this is uniformly random, we should expect even-looking plots.\n\nlibrary(ggplot2)\n\nggplot(demographics) +\n  geom_boxplot(aes(x=biosex, y=age))\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipDeliverables\n\n\n\nIf you can get this plot, that’s the final product for today! Turn in a screenshot of your full RStudio screen, including code and box-and-whisker plot on Blackboard with Classwork/Homework Assignment 2.\n\n\nIn future classes, we’ll discuss more sophisticated ways to look at, obtain, and simulate datasets.",
-    "crumbs": [
-      "Home",
-      "Lab Components",
-      "Understanding Types of Data"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Introduction to Experimental Design",
-    "section": "",
-    "text": "Welcome!\nThis website contains materials for course CAS PS 211 at Boston University, which serves as a primer for undergraduate psychology majors in statistical and experimental methods for psychological research. The materials here are speific to Fall 2025, Section B1.\nAnnouncements and assignments will come through Blackboard. See the links above.\n\nAdditional Resources\nStudents are likely to find useful the following free online resources:\n\nR for Data Science\nHadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund\nIf this is your first time programming in R, sections of this book may aid your understanding of the language.\nAnswering Questions with Data\nMatthew J. C. Crump, Danielle J. Navarro, and Jeffrey Suzuki\nExperimentology: An Open Science Approach to Experimental Psychology Methods\nMichael C. Frank, Mika Braginsky, Julie Cachia, Nicholas A. Coles, Tom E. Hardwicke, Robert D. Hawkins, Maya B. Mathur, Rondeline Williams\nIntroduction to Modern Statistics\nMine Çetinkaya-Rundel and Johanna Hardin\nThe Effect: An Introduction to Research Design and Causality\nNick Huntington-Klein\n\n\n\nAttribution and Reuse Notice\nExcept where otherwise noted, this site and its original materials are created by the authors and licensed under Creative Commons BY-NC-SA 4.0.\n\nYou are free to:\n\nShare — copy and redistribute the material in any medium or format\nAdapt — remix, transform, and build upon the material The licensor cannot revoke these freedoms as long as you follow the license terms.\n\nUnder the following terms:\n\nAttribution — You must give appropriate credit , provide a link to the license, and indicate if changes were made . You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\nNonCommercial — You may not use the material for commercial purposes .\nShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.\nNo additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.\n\n\n\n\nDisclaimer\n\nNote that this site is not a textbook, and that the materials here are primarily condensed lecture notes for didactic purposes. Content may change at any time and accuracy for purposes beyond the scope of this course is not guaranteed.\n\n\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "syllabus.html",
-    "href": "syllabus.html",
-    "title": "Syllabus for Fall 2025",
-    "section": "",
-    "text": "Back to top",
-    "crumbs": [
-      "Home",
-      "Syllabus for Fall 2025"
-    ]
-  },
-  {
-    "objectID": "Labs/Lab01.html",
-    "href": "Labs/Lab01.html",
-    "title": "Getting Ready to Code",
-    "section": "",
-    "text": "This lab will orient you to RStudio and the R statistical programming language. We will be installing the software necessary for all future assignments this semester.",
-    "crumbs": [
-      "Home",
-      "Lab Components",
-      "Getting Ready to Code"
-    ]
-  },
-  {
-    "objectID": "Labs/Lab01.html#self-study",
-    "href": "Labs/Lab01.html#self-study",
-    "title": "Getting Ready to Code",
-    "section": "Self-Study",
-    "text": "Self-Study\nThis first lab corresponds roughly to the following chapters in R for Data Science, which are recommended for further self-study.\n\nData Visualization 1.1-1.3 and 1.7\nCoding Basics 2.1-2.3\nScripts 6.1",
-    "crumbs": [
-      "Home",
-      "Lab Components",
-      "Getting Ready to Code"
-    ]
-  },
-  {
-    "objectID": "Labs/Lab01.html#getting-ready-to-code",
-    "href": "Labs/Lab01.html#getting-ready-to-code",
-    "title": "Getting Ready to Code",
-    "section": "Getting Ready to Code",
-    "text": "Getting Ready to Code\nBy the end of the first assignment, we will be able to run a simple R program. Before we are able to do that, we will need to install a few things.\nEverything we need is described on posit.co/download/rstudio-desktop.\n\n\n\n\n\n\nTip\n\n\n\nIf you have doubts or start to feel like you’re not “tech savvy” enough as you complete these steps, please trust that these skills are learnable! You are highly encouraged to attend office hours for additional help.\n\n\n\nInstalling R\n\n\nR is a programming language and this first step will install an interpreter, the R Console, which will allow us to write to the computer specific instructions for describing, statistically analyzing, and producing graphics from our experimental data.\nThe first step is to install the R programming language itself. After completing this step, we will be able to open the R interpreter (R Console).\nOn the Posit webpage, click the link for Step 1: Install R. Select the appropriate download for your computer’s operating system (e.g. MacOS).\n\n\n\nR can be downloaded from the Comprehensive R Archive Network (CRAN) website.\n\n\nIf your computer is an Apple Mac/MacBook, you will need to download the appropriate package for your processor.\n\n\nFor Boston University students, if you encounter difficulties or if your primary device is a tablet, alternative access to a full installation of R/RStudio is possible through the BU Common virtual desktop.\n\nIf you know your Mac has an M1 or M2 processor (roughly since 2022) will require the first -arm64.pkg.\nIf you know your Mac has an Intel processor, it will require the second -x86_64.pkg.\n\n\n\n\nMost new Macs run on “Apple Silicon” M-series processors. If you’re not sure, please ask your teaching fellow or assume your Mac has a recent processor.\n\n\nIf your computer is a Windows PC download the base installer, following the instructions for installing R for the first time.\n\n\n\nClick “install R for the first time” for instructions. Ask your teaching fellow for assistance if you encounter any difficulties.\n\n\nOnce you have downloaded the package/executable for your operating system, run the installer.\n\n\n\n\n\n\nNote\n\n\n\nAt the end of this step you should be able to find the R Console in your MacOS Launchpad/Applications or Windows Start menu.\n\n\n\n\nInstalling RStudio\nThe next step is to install RStudio, which we will be using extensively in this course.\n\n\nRStudio is an Integrated Development Environment (IDE) for the R language.\nOn the Posit website, see Step 2: Install RStudio. Download the appropriate installer for your operating system.\n\nOn an Apple Mac/MacBook, you should download and open the .DMG file. You will see the RStudio app and a shortcut to your Applications folder. Drag the RStudio app into your Applications folder.\nOn a Windows PC, you should download and run the Windows .EXE executable installer.\n\n\n\n\n\n\nNote\n\n\n\nAt the end of this step you should be able to find RStudio in your MacOS Launchpad/Applications or Windows Start menu.\n\n\n\n\nOrienting to RStudio\nWhile R is the programming language we will be using, the RStudio application provides us with a comprehensive graphical interface that includes tools to edit R code, view plots and help pages, debug scripts, and more.\n\n\n\nAt a high level, RStudio provides an interactive R Console, built in text-editor (for writing scripts), and functionality for viewing and exporting plots. Image credited to the authors of R4DS, reproduced here under license CC BY-NC-ND 3.0.\n\n\nThe Console pane is where we can type code directly into the R interpreter. Type a line of R language code and press Return to run it. The console is interactive and will show you the result immediately.\nThe Editor pane is where we can write R scripts. We can edit and rearrange text, copy-paste, and save our scripts for later. Try creating a new script and save it to a folder on your computer. With the cursor on a line of your script, press Control and Return; the line of code will automatically be copied and run in the Console pane. Note that the Run button runs the entire script, not just the current line.\n\n\nAn R script or program is a list of instructions to be run in order. We’ll usually conduct an entire analysis in a script.\nThe Output pane is where we can see plots and graphics we have generated. In this area you’ll also find a Files tab for navigating to folders of scripts and results, and a Help tab for viewing documentation for R commands/functions and datasets.\n\n\n\n\n\n\nTip\n\n\n\nOrienting yourself to new software is often a process of active exploration, and there’s always a lot more to learn. Spend some time exploring the menus of RStudio so that you are well-acquainted.\nThe goal is to eventually be able to make an educated guess at where you might go to find a particular menu or feature in the future.\n\n\n\n\nInstalling Packages\nIn this course we’ll be using not only RStudio, but also several R packages.\nBefore we do anything else, we’ll install the R package tidyverse. Type the following in the Console and press Return.\n\n\ntidyverse is actually a metapackage (a collection of packages) including dplyr, tidyr, stringr, ggplot2 and more.\n\ninstall.packages(\"tidyverse\")\n\nA lot of output will appear in the console as the package is installing. When it finishes, the package has been installed. We won’t need to run this again; so there’s no need to keep this line of code in your script.",
-    "crumbs": [
-      "Home",
-      "Lab Components",
-      "Getting Ready to Code"
-    ]
-  },
-  {
-    "objectID": "Labs/Lab01.html#demonstrating-graphics-in-r",
-    "href": "Labs/Lab01.html#demonstrating-graphics-in-r",
-    "title": "Getting Ready to Code",
-    "section": "Demonstrating Graphics in R",
-    "text": "Demonstrating Graphics in R\nAs a motivating example, let’s consider the following short but complete script which will plot some experimental data. We’ll work through this code line-by-line in class to understand what it does.\nThe script will make a plot from an example dataset built-in to R called ChickWeight. The data comes from an experiment with four conditions: diets assigned to hatchling chicks. Their weight in grams is recorded every two days in the built in dataframe (table).\n\n\nMost built-in R functions and example datasets come with a help page that can be accessed by prepending a question mark to the object’s name.\nTo learn about this particular dataset, enter ?ChickWeight at the console.\nType the following R code snippet into a new script in your RStudio Editor pane. Click Save and save the script on your computer (e.g. Documents/PS211/lab1.R). Then click Run.\nYou should see that the code is automatically copied into the Console and run. A plot should appear in the Output pane, looking like the one below.\n\n1library(tidyverse)\n\n2ggplot(ChickWeight) +\n3  geom_point(\n4    aes(x=Time, y=weight, color=Diet),\n5    position=position_jitter()\n  ) +\n6  facet_grid(~Diet, labeller=label_both) +\n7  labs(\n    title=\"Experiment Comparing Weight Gain with Four Diets\",\n    x=\"Time (days)\",\n    y=\"Weight (g)\"\n  ) +\n8  theme_classic()\n\n\n1\n\nLoad in the tidyverse package (also called a library).\n\n2\n\nCreate a plot of the ChickWeight dataset (using ggplot).\n\n\n3\n\nAdd datapoints to the plot…\n\n\n4\n\n..where each datapoint’s (x,y) position is its Time and weight, colored by Diet.\n\n\n5\n\nRandomly “jitter” the points a little so they don’t overlap.\n\n\n6\n\nSplit up the plot by Diet. Label with both “Diet” and number.\n\n\n7\n\nAdd labels to the plot…\n\n\n8\n\nApply a style theme to the plot (the “classic” theme).\n\n\n\n\n\n\n\n\n\n\n\n\n\nDo try to manually copy the code snippet. This is good practice for getting used to the syntax and grammar of a new coding language. Click the number at the right of each line for an explanation.\nIf the console throws an error, it’s likely a simple fix, even if it’s hard to spot. Be careful to check the exact capitalization and spelling of your R code. In particular, make sure every opening parenthesis and quote has a close.\nHaving completed these steps successfully, you have written your first R program! Congratulations!\nIn upcoming lessons, we will learn more about the R language and how to use it for experiment design and simulation, statistical analysis, and reporting results.\n\n\n\n\n\n\nImportant\n\n\n\nIf you encounter any technical issues it’s important to resolve them this first week with your teaching fellow so that you may participate fully in the rest of the course.",
-    "crumbs": [
-      "Home",
-      "Lab Components",
-      "Getting Ready to Code"
+      "The Sampling Distribution"
     ]
   },
   {
@@ -365,63 +263,189 @@
     ]
   },
   {
-    "objectID": "Labs/Lab06.html",
-    "href": "Labs/Lab06.html",
-    "title": "The Sampling Distribution",
+    "objectID": "Labs/Lab01.html",
+    "href": "Labs/Lab01.html",
+    "title": "Getting Ready to Code",
     "section": "",
-    "text": "In this lab, students will simulate sampling from a population to demonstrate the properties of the theoretical sampling distribution.\nChoosing some random variable that we could measure, we will simulate the population as an exercise.\n\nN &lt;- 1000000\npopulation &lt;- rnorm(N, 100, 10)\n\n\n\nIn class, we simulated a population of 19,000,000 college students. If this many datapoints causes your R code to run slowly (or crashes your computer), then please try a smaller number.\n\n\n\n\n\n\n\n\n\nThe random sample we draw (e.g. in a study of 100 participants) will have its own sample mean.\n\nn &lt;- 100\nsingle &lt;- sample(population, n)\n\n# The sample mean of a single random sample.\nmean(single)\n\n[1] 99.52079\n\n\n\n\n\n\n\n\n\n\n\nWith many random sample means we can see the sampling distribution. Note how the variance in the sampling distribution is smaller than in the underlying samples and population. Here we have samples of size \\(n=10\\).\n\nn &lt;- 10\nk &lt;- N / n\n\n# Create many samples of n=10\nmany10 &lt;- sample(population, N, replace=TRUE)\nmany10 &lt;- matrix(many10, n)\n\n# The distribution of sample means for 100,000 random *samples* each of 10 observations.\nsmeans10 &lt;- colMeans(many10)\n\n\n\n\n\n\n\n\n\n\nWith bigger samples of \\(n=100\\) the variance of the sampling distribution is reduced further.\n\nn &lt;- 100\nk &lt;- N / n\n\n# Create many samples of n=100\nmany100 &lt;- sample(population, N, replace=TRUE)\nmany100 &lt;- matrix(many100, n)\n\n# The distribution of sample means for 10,000 samples, of n=100 units each.\nsmeans100 &lt;- colMeans(many100)\n\n\n\n\n\n\n\n\n\n\nThis reduced variance turns out to be proportional to the square root of the sample size. It is from this property that we calculate the standard error of the mean: the standard deviation of the sampling distribution.\n\\[\nSEM = {s \\over \\sqrt n} = {{ \\sqrt{\\sum(x_i - \\bar x)^2 \\over n -1}} \\over \\sqrt n}\n\\]\nWe’ll calculate the SEM by the formula using the mean of our individual sample.\n\n# Using the sample standard deviation\nsem &lt;- sd(single) / sqrt(n)\nsem\n\n[1] 1.137944\n\n\nThis should approximate the standard deviation of the sampling distribution.\n\n# Of the sampling distribution (in practice we can't see this)\n# Remember that SEM is the \"Standard Error of the Means\"\nsd(smeans100)\n\n[1] 0.9917314\n\n\nWe can use the SEM formula to calculate a 95% confidence interval around our sample mean.\n\nci &lt;- c(mean(single) - 1.96 * sem, mean(single) + 1.96 * sem)\nci\n\n[1]  97.29042 101.75116\n\n\n\n\n\n\n\n\nTipDeliverables\n\n\n\nToday’s assignment produced many plots. Answer the following questions and upload your figures to Blackboard for lab credit today.\n\nA screenshot of your entire RStudio screen for each plot we created.\nDid the true population mean (100) fall within the confidence interval calculated from your sample (single)?\n\nNote that the code for the plots has not been provided; you should be able to create the histograms on your own.\nNote that with simulated random data, each student will have slightly different results.\n\n\n\n\n\n Back to top",
+    "text": "This lab will orient you to RStudio and the R statistical programming language. We will be installing the software necessary for all future assignments this semester.",
     "crumbs": [
       "Home",
       "Lab Components",
-      "The Sampling Distribution"
+      "Getting Ready to Code"
     ]
   },
   {
-    "objectID": "Labs/Lab08.html",
-    "href": "Labs/Lab08.html",
-    "title": "Making Decisions via the Sampling Distribution",
+    "objectID": "Labs/Lab01.html#self-study",
+    "href": "Labs/Lab01.html#self-study",
+    "title": "Getting Ready to Code",
+    "section": "Self-Study",
+    "text": "Self-Study\nThis first lab corresponds roughly to the following chapters in R for Data Science, which are recommended for further self-study.\n\nData Visualization 1.1-1.3 and 1.7\nCoding Basics 2.1-2.3\nScripts 6.1",
+    "crumbs": [
+      "Home",
+      "Lab Components",
+      "Getting Ready to Code"
+    ]
+  },
+  {
+    "objectID": "Labs/Lab01.html#getting-ready-to-code",
+    "href": "Labs/Lab01.html#getting-ready-to-code",
+    "title": "Getting Ready to Code",
+    "section": "Getting Ready to Code",
+    "text": "Getting Ready to Code\nBy the end of the first assignment, we will be able to run a simple R program. Before we are able to do that, we will need to install a few things.\nEverything we need is described on posit.co/download/rstudio-desktop.\n\n\n\n\n\n\nTip\n\n\n\nIf you have doubts or start to feel like you’re not “tech savvy” enough as you complete these steps, please trust that these skills are learnable! You are highly encouraged to attend office hours for additional help.\n\n\n\nInstalling R\n\n\nR is a programming language and this first step will install an interpreter, the R Console, which will allow us to write to the computer specific instructions for describing, statistically analyzing, and producing graphics from our experimental data.\nThe first step is to install the R programming language itself. After completing this step, we will be able to open the R interpreter (R Console).\nOn the Posit webpage, click the link for Step 1: Install R. Select the appropriate download for your computer’s operating system (e.g. MacOS).\n\n\n\nR can be downloaded from the Comprehensive R Archive Network (CRAN) website.\n\n\nIf your computer is an Apple Mac/MacBook, you will need to download the appropriate package for your processor.\n\n\nFor Boston University students, if you encounter difficulties or if your primary device is a tablet, alternative access to a full installation of R/RStudio is possible through the BU Common virtual desktop.\n\nIf you know your Mac has an M1 or M2 processor (roughly since 2022) will require the first -arm64.pkg.\nIf you know your Mac has an Intel processor, it will require the second -x86_64.pkg.\n\n\n\n\nMost new Macs run on “Apple Silicon” M-series processors. If you’re not sure, please ask your teaching fellow or assume your Mac has a recent processor.\n\n\nIf your computer is a Windows PC download the base installer, following the instructions for installing R for the first time.\n\n\n\nClick “install R for the first time” for instructions. Ask your teaching fellow for assistance if you encounter any difficulties.\n\n\nOnce you have downloaded the package/executable for your operating system, run the installer.\n\n\n\n\n\n\nNote\n\n\n\nAt the end of this step you should be able to find the R Console in your MacOS Launchpad/Applications or Windows Start menu.\n\n\n\n\nInstalling RStudio\nThe next step is to install RStudio, which we will be using extensively in this course.\n\n\nRStudio is an Integrated Development Environment (IDE) for the R language.\nOn the Posit website, see Step 2: Install RStudio. Download the appropriate installer for your operating system.\n\nOn an Apple Mac/MacBook, you should download and open the .DMG file. You will see the RStudio app and a shortcut to your Applications folder. Drag the RStudio app into your Applications folder.\nOn a Windows PC, you should download and run the Windows .EXE executable installer.\n\n\n\n\n\n\nNote\n\n\n\nAt the end of this step you should be able to find RStudio in your MacOS Launchpad/Applications or Windows Start menu.\n\n\n\n\nOrienting to RStudio\nWhile R is the programming language we will be using, the RStudio application provides us with a comprehensive graphical interface that includes tools to edit R code, view plots and help pages, debug scripts, and more.\n\n\n\nAt a high level, RStudio provides an interactive R Console, built in text-editor (for writing scripts), and functionality for viewing and exporting plots. Image credited to the authors of R4DS, reproduced here under license CC BY-NC-ND 3.0.\n\n\nThe Console pane is where we can type code directly into the R interpreter. Type a line of R language code and press Return to run it. The console is interactive and will show you the result immediately.\nThe Editor pane is where we can write R scripts. We can edit and rearrange text, copy-paste, and save our scripts for later. Try creating a new script and save it to a folder on your computer. With the cursor on a line of your script, press Control and Return; the line of code will automatically be copied and run in the Console pane. Note that the Run button runs the entire script, not just the current line.\n\n\nAn R script or program is a list of instructions to be run in order. We’ll usually conduct an entire analysis in a script.\nThe Output pane is where we can see plots and graphics we have generated. In this area you’ll also find a Files tab for navigating to folders of scripts and results, and a Help tab for viewing documentation for R commands/functions and datasets.\n\n\n\n\n\n\nTip\n\n\n\nOrienting yourself to new software is often a process of active exploration, and there’s always a lot more to learn. Spend some time exploring the menus of RStudio so that you are well-acquainted.\nThe goal is to eventually be able to make an educated guess at where you might go to find a particular menu or feature in the future.\n\n\n\n\nInstalling Packages\nIn this course we’ll be using not only RStudio, but also several R packages.\nBefore we do anything else, we’ll install the R package tidyverse. Type the following in the Console and press Return.\n\n\ntidyverse is actually a metapackage (a collection of packages) including dplyr, tidyr, stringr, ggplot2 and more.\n\ninstall.packages(\"tidyverse\")\n\nA lot of output will appear in the console as the package is installing. When it finishes, the package has been installed. We won’t need to run this again; so there’s no need to keep this line of code in your script.",
+    "crumbs": [
+      "Home",
+      "Lab Components",
+      "Getting Ready to Code"
+    ]
+  },
+  {
+    "objectID": "Labs/Lab01.html#demonstrating-graphics-in-r",
+    "href": "Labs/Lab01.html#demonstrating-graphics-in-r",
+    "title": "Getting Ready to Code",
+    "section": "Demonstrating Graphics in R",
+    "text": "Demonstrating Graphics in R\nAs a motivating example, let’s consider the following short but complete script which will plot some experimental data. We’ll work through this code line-by-line in class to understand what it does.\nThe script will make a plot from an example dataset built-in to R called ChickWeight. The data comes from an experiment with four conditions: diets assigned to hatchling chicks. Their weight in grams is recorded every two days in the built in dataframe (table).\n\n\nMost built-in R functions and example datasets come with a help page that can be accessed by prepending a question mark to the object’s name.\nTo learn about this particular dataset, enter ?ChickWeight at the console.\nType the following R code snippet into a new script in your RStudio Editor pane. Click Save and save the script on your computer (e.g. Documents/PS211/lab1.R). Then click Run.\nYou should see that the code is automatically copied into the Console and run. A plot should appear in the Output pane, looking like the one below.\n\n1library(tidyverse)\n\n2ggplot(ChickWeight) +\n3  geom_point(\n4    aes(x=Time, y=weight, color=Diet),\n5    position=position_jitter()\n  ) +\n6  facet_grid(~Diet, labeller=label_both) +\n7  labs(\n    title=\"Experiment Comparing Weight Gain with Four Diets\",\n    x=\"Time (days)\",\n    y=\"Weight (g)\"\n  ) +\n8  theme_classic()\n\n\n1\n\nLoad in the tidyverse package (also called a library).\n\n2\n\nCreate a plot of the ChickWeight dataset (using ggplot).\n\n\n3\n\nAdd datapoints to the plot…\n\n\n4\n\n..where each datapoint’s (x,y) position is its Time and weight, colored by Diet.\n\n\n5\n\nRandomly “jitter” the points a little so they don’t overlap.\n\n\n6\n\nSplit up the plot by Diet. Label with both “Diet” and number.\n\n\n7\n\nAdd labels to the plot…\n\n\n8\n\nApply a style theme to the plot (the “classic” theme).\n\n\n\n\n\n\n\n\n\n\n\n\n\nDo try to manually copy the code snippet. This is good practice for getting used to the syntax and grammar of a new coding language. Click the number at the right of each line for an explanation.\nIf the console throws an error, it’s likely a simple fix, even if it’s hard to spot. Be careful to check the exact capitalization and spelling of your R code. In particular, make sure every opening parenthesis and quote has a close.\nHaving completed these steps successfully, you have written your first R program! Congratulations!\nIn upcoming lessons, we will learn more about the R language and how to use it for experiment design and simulation, statistical analysis, and reporting results.\n\n\n\n\n\n\nImportant\n\n\n\nIf you encounter any technical issues it’s important to resolve them this first week with your teaching fellow so that you may participate fully in the rest of the course.",
+    "crumbs": [
+      "Home",
+      "Lab Components",
+      "Getting Ready to Code"
+    ]
+  },
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Syllabus for Fall 2025",
     "section": "",
-    "text": "Recall that with the \\(Z\\)-statistic we compare a sample to normally distributed samples from the same population. Let’s try to understand this visually.\nSay we obtain a sample mean \\(\\bar x\\) with a \\(Z\\)-statistic of \\(1.3\\). This tells us that the sample lies \\(1.3\\) times the S.E.M. above \\(\\mu\\) on the sampling distribution.\nTo calculate the p-value, we need to consider a particular hypothesis. In the case that \\(H_0: \\mu = \\mu_0\\) and \\(H_A: \\mu \\neq \\mu_0\\), then the p-value represents the probability under the null hypothesis of a value at least as extreme, in either the positive or negative direction. In other words, the two-tailed area under the curve.\n\n\nNote that we could have used a one-tailed test (left or right) for a different hypothesis test. The p-value calculation will depend on both the distribution of the statistic and the hypothesis test being performed.\nFinding this area will require that we work through some arithemtic. We saw last week that the pnorm() function yields the area to the left of a given \\(Z\\). In other words, asking for pnorm(1.3) is the same as asking \\(P(Z\\leq 1.3)=0.9032\\).\n\n\n\n\n\nIn R, the pnorm() function provides the area under the curve to the left.\n\n\n\n\nTo calculate the two-tailed p-value, we actually want the area in the tails. To get the area in the right tail, we apply the knowledge that probability must sum to \\(100%\\). Therefore, we subtract 1 - pnorm(1.3).\n\n\n\n\n\n\n\n\n\nThen we have to multiply by two to get the area under the two tails: 2*(1-pnorm(1.3)).\n\n\n\n\n\n\n\n\n\nThe two-tailed p-value is therefore \\(0.1936\\), the sum of the left and right areas.\nQUESTION: Do we reject the null hypothesis? (\\(\\alpha=0.05\\))\nNote our calculation should account for the possibility that the sample has a negative \\(Z\\)-statistic. Therefore, we can generally calculate the two-tailed p-value in R using the absolute value: 2 * (1 - pnorm(abs(Z)))\nQUESTION: What is the two-tailed p-value associated with a \\(Z\\)-statistic of -2.11? What would you conclude?\nQUESTION: Say that a positive effect was expected (\\(H_A \\bar x &gt; \\mu\\)). What is the one-tailed p-value associated with a \\(Z\\)-statistic of 0.71? What would you conclude?",
+    "text": "Back to top",
     "crumbs": [
       "Home",
-      "Lab Components",
-      "Making Decisions via the Sampling Distribution"
+      "Syllabus for Fall 2025"
     ]
   },
   {
-    "objectID": "Labs/Lab08.html#visualizing-p-values",
-    "href": "Labs/Lab08.html#visualizing-p-values",
-    "title": "Making Decisions via the Sampling Distribution",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Introduction to Experimental Design",
     "section": "",
-    "text": "Recall that with the \\(Z\\)-statistic we compare a sample to normally distributed samples from the same population. Let’s try to understand this visually.\nSay we obtain a sample mean \\(\\bar x\\) with a \\(Z\\)-statistic of \\(1.3\\). This tells us that the sample lies \\(1.3\\) times the S.E.M. above \\(\\mu\\) on the sampling distribution.\nTo calculate the p-value, we need to consider a particular hypothesis. In the case that \\(H_0: \\mu = \\mu_0\\) and \\(H_A: \\mu \\neq \\mu_0\\), then the p-value represents the probability under the null hypothesis of a value at least as extreme, in either the positive or negative direction. In other words, the two-tailed area under the curve.\n\n\nNote that we could have used a one-tailed test (left or right) for a different hypothesis test. The p-value calculation will depend on both the distribution of the statistic and the hypothesis test being performed.\nFinding this area will require that we work through some arithemtic. We saw last week that the pnorm() function yields the area to the left of a given \\(Z\\). In other words, asking for pnorm(1.3) is the same as asking \\(P(Z\\leq 1.3)=0.9032\\).\n\n\n\n\n\nIn R, the pnorm() function provides the area under the curve to the left.\n\n\n\n\nTo calculate the two-tailed p-value, we actually want the area in the tails. To get the area in the right tail, we apply the knowledge that probability must sum to \\(100%\\). Therefore, we subtract 1 - pnorm(1.3).\n\n\n\n\n\n\n\n\n\nThen we have to multiply by two to get the area under the two tails: 2*(1-pnorm(1.3)).\n\n\n\n\n\n\n\n\n\nThe two-tailed p-value is therefore \\(0.1936\\), the sum of the left and right areas.\nQUESTION: Do we reject the null hypothesis? (\\(\\alpha=0.05\\))\nNote our calculation should account for the possibility that the sample has a negative \\(Z\\)-statistic. Therefore, we can generally calculate the two-tailed p-value in R using the absolute value: 2 * (1 - pnorm(abs(Z)))\nQUESTION: What is the two-tailed p-value associated with a \\(Z\\)-statistic of -2.11? What would you conclude?\nQUESTION: Say that a positive effect was expected (\\(H_A \\bar x &gt; \\mu\\)). What is the one-tailed p-value associated with a \\(Z\\)-statistic of 0.71? What would you conclude?",
+    "text": "Welcome!\nThis website contains materials for course CAS PS 211 at Boston University, which serves as a primer for undergraduate psychology majors in statistical and experimental methods for psychological research. The materials here are speific to Fall 2025, Section B1.\nAnnouncements and assignments will come through Blackboard. See the links above.\n\nAdditional Resources\nStudents are likely to find useful the following free online resources:\n\nR for Data Science\nHadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund\nIf this is your first time programming in R, sections of this book may aid your understanding of the language.\nAnswering Questions with Data\nMatthew J. C. Crump, Danielle J. Navarro, and Jeffrey Suzuki\nExperimentology: An Open Science Approach to Experimental Psychology Methods\nMichael C. Frank, Mika Braginsky, Julie Cachia, Nicholas A. Coles, Tom E. Hardwicke, Robert D. Hawkins, Maya B. Mathur, Rondeline Williams\nIntroduction to Modern Statistics\nMine Çetinkaya-Rundel and Johanna Hardin\nThe Effect: An Introduction to Research Design and Causality\nNick Huntington-Klein\n\n\n\nAttribution and Reuse Notice\nExcept where otherwise noted, this site and its original materials are created by the authors and licensed under Creative Commons BY-NC-SA 4.0.\n\nYou are free to:\n\nShare — copy and redistribute the material in any medium or format\nAdapt — remix, transform, and build upon the material The licensor cannot revoke these freedoms as long as you follow the license terms.\n\nUnder the following terms:\n\nAttribution — You must give appropriate credit , provide a link to the license, and indicate if changes were made . You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\nNonCommercial — You may not use the material for commercial purposes .\nShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.\nNo additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.\n\n\n\n\nDisclaimer\n\nNote that this site is not a textbook, and that the materials here are primarily condensed lecture notes for didactic purposes. Content may change at any time and accuracy for purposes beyond the scope of this course is not guaranteed.\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Labs/Lab02.html",
+    "href": "Labs/Lab02.html",
+    "title": "Understanding Types of Data",
+    "section": "",
+    "text": "This lab will translate what we’ve learned about kinds of data into how real data of these types are processed for visualization and later statistical analysis.",
     "crumbs": [
       "Home",
       "Lab Components",
-      "Making Decisions via the Sampling Distribution"
+      "Understanding Types of Data"
     ]
   },
   {
-    "objectID": "Labs/Lab08.html#visualizing-the-confidence-interval",
-    "href": "Labs/Lab08.html#visualizing-the-confidence-interval",
-    "title": "Making Decisions via the Sampling Distribution",
-    "section": "Visualizing the Confidence Interval",
-    "text": "Visualizing the Confidence Interval\nBy the same logic, we can observe the 95% confidence interval.\n\n\n\n\n\nBy subtracting the area in the left tail up to \\(Z=-1.96\\) from the area up to \\(Z=1.96\\), we get the area in between. This represents 95% of the area under the curve.",
+    "objectID": "Labs/Lab02.html#self-study",
+    "href": "Labs/Lab02.html#self-study",
+    "title": "Understanding Types of Data",
+    "section": "Self-Study",
+    "text": "Self-Study\nThis lab corresponds roughly to the following chapters in R for Data Science, which are recommended for further self-study.\n\nWorkflow: Basics 2.1-2.6\nFactor Basics 16.2\nDataframe 1.2.1",
     "crumbs": [
       "Home",
       "Lab Components",
-      "Making Decisions via the Sampling Distribution"
+      "Understanding Types of Data"
     ]
   },
   {
-    "objectID": "Labs/Lab08.html#visualizing-the-t-distribution",
-    "href": "Labs/Lab08.html#visualizing-the-t-distribution",
-    "title": "Making Decisions via the Sampling Distribution",
-    "section": "Visualizing the \\(t\\)-Distribution",
-    "text": "Visualizing the \\(t\\)-Distribution\nFirst, let’s see how the \\(t\\)-distribution differs from the standard normal.\n\n# The statistic on the x-axis (t or Z whatever)\nstat &lt;- seq(-4, 4, length.out=1000)\n\nggplot() +\n  \n  # Plot the normal distribution\n  geom_line(aes(x=stat, y=dnorm(stat), color='red')) +\n  \n  # Plot the t(df=5) distribution\n  geom_line(aes(x=stat, y=dt(stat, 5))) +\n  \n  # Plot the t(df=30) distribution\n  geom_line(aes(x=stat, y=dt(stat, 30)))\n\n  # Try a few different values to see how the t distribution\n  # changes with the degrees of freedom parameter.\n\n\n\n\n\n\nNotice how at different degrees of freedom (5 to 30 shown here) the shape of the t distribution is shifts such that there is more weight in the tails.\n\n\n\n\nConsidering a \\(t\\) statistic of \\(-1.21\\) with a sample size of \\(n=16\\), the degrees of freedom is \\(15\\). As with the normal distribution, R provides a function for the area under the left tail of the t-distribution: pt(). Note that it requires both the statistic and the degrees of freedom.\n\n\n\n\n\n\n\n\n\nConsider the one-tailed (left) p-value for \\(t=-1.21\\) will be \\(0.1225\\). In other words, under the null hypothesis we would have seen this \\(t\\) statistic or one more extreme in the negative direction 12.25% of the time (fairly often). Where our threshold is \\(\\alpha = 0.05\\), we would not consider rejecting the null.\nQUESTION: What is the two-tailed p-value for \\(t=-1.6\\)?\nQUESTION: For the \\(t=-1.6\\), would you have concluded something different if you had set out to do a left-sided test? A right-sided test?",
+    "objectID": "Labs/Lab02.html#from-values-to-vectors",
+    "href": "Labs/Lab02.html#from-values-to-vectors",
+    "title": "Understanding Types of Data",
+    "section": "From Values to Vectors",
+    "text": "From Values to Vectors\nBefore we can begin, we need to develop a sense for how R handles datasets.\nIn our first lab, we demonstrated how to store single values in variables, effectively giving them a name we can reference later.\n\nn &lt;- 42\nlucky_number &lt;- 7\nIDriveA &lt;- \"honda civic\"\n\n# Find the radius of a circle.\nx &lt;- 3.14159\nr &lt;- 7\n2*x*r\n\n[1] 43.98226\n\n\n\n\nHere we assign values to a few variables with arbitrary names: n, lucky_number, IDriveA, x, r.  We can use variables in mathematical expressions as demonstrated here by calculating the circumference of a circle with radius 7cm.\nOf course, when we collect data it’s actually many values we need to work with. In R, we can create vectors to hold long columns of values, as we might obtain from real data.\n\nsome_numbers &lt;- c(3, 6, 8, 12)\n\nsome_numbers\n\n[1]  3  6  8 12\n\n\n\n\nThe c() function combines several values into a vector.  As a shorthand, you can create sequences of numbers using the :, like: 1:10. Try this out in the console.\nAny mathematical calculations will work on the whole vector all at once. For example, we could do the circumference calculation again, this time for circles of a few different diameters.\n\nr &lt;- c(7, 36, 28, 1, 0)\n2*x*r\n\n[1]  43.98226 226.19448 175.92904   6.28318   0.00000\n\n\n\n\nCheck the last two elements and see that it has correctly listed \\(2 \\pi \\cdot 1 = 2\\pi\\) and \\(2\\pi \\cdot 0 = 0\\), for example.  This property of being able to perform calculations over whole vectors is what makes this computer software useful for statistics. Routine calculations on a whole dataset can be done quickly and precisely without a pen or calculator.\n\nQualitative Data Types\nWe can create vectors of qualitative variables too. R has one data type for both nominal and ordinal variables: the factor.\n\nhandedness &lt;- factor(c(\"Right-Handed\", \"Left-Handed\", \"Ambidextrous\"))\n\nhandedness\n\n[1] Right-Handed Left-Handed  Ambidextrous\nLevels: Ambidextrous Left-Handed Right-Handed\n\n\nR refers to the unique names a factor can take on as its levels.\n\n\nRandom Data\nIt’s often useful to be able to generate random data, whether to randomly assign participants to groups or to simulate what our results might look like. There are several functions to do with randomness, but we’ll start by demonstrating how to use the sample() function.\nA simple example is the roll of a die. This code will randomly take from the six possible face values, sampling the equivalent of 25 die rolls.\n\nsample(c(1,2,3,4,5,6), 25, replace=TRUE)\n\n [1] 1 3 5 6 2 3 6 2 5 4 3 2 2 1 2 4 1 1 3 2 6 4 3 3 4\n\n\n\n\nThe replace=TRUE means “sample with replacement”. In other words: take a random number from 1 to 6 and then put it back before taking a random number a second time, a third time, etc.\nCombining this with what we learned above about factor variables (nominal or ordinal data types), we can demonstrate one way to randomly assign ten participants to two groups.\n\n# Define a nominal variable (factor) with two levels: treatment and placebo.\nconditions &lt;- factor(c(\"treatment\", \"placebo\"))\n\n# Start with alternating (repeat), five in each group.\nassignment &lt;- c(rep(conditions, 5))\n\n# Randomize the variable so that 5 participants are assigned randomly to each (10 in total).\nassignment &lt;- sample(assignment, 10)\n\nassignment\n\n [1] placebo   placebo   treatment treatment placebo   placebo   treatment\n [8] treatment placebo   treatment\nLevels: placebo treatment\n\n\n\n\nAs you run each line, take a look at the conditions and assignment variables in your R environment.",
     "crumbs": [
       "Home",
       "Lab Components",
-      "Making Decisions via the Sampling Distribution"
+      "Understanding Types of Data"
+    ]
+  },
+  {
+    "objectID": "Labs/Lab02.html#oodles-of-observations",
+    "href": "Labs/Lab02.html#oodles-of-observations",
+    "title": "Understanding Types of Data",
+    "section": "Oodles of Observations",
+    "text": "Oodles of Observations\nMost data we deal with is tabular; we’ve collected many observations of more than just one variable. To keep track of it all, we stack columns side-by-side together into tables. In R, we equivalently put vectors together into dataframes.\nWe saw an example of a dataframe last week, the data table from the ChickWeight experiment.\n\n# Remember head() lets us see just the first few rows - not the whole dataframe.\nChickWeight |&gt; head()\n\n  weight Time Chick Diet\n1     42    0     1    1\n2     51    2     1    1\n3     59    4     1    1\n4     64    6     1    1\n5     76    8     1    1\n6     93   10     1    1\n\n\nWith what we’ve learned in the last week, which of the four variables was the independent variable and which was the dependent variable in this experiment?\n\n\nThink for a moment and then click here to reveal an explanation.\n\nRecall that there were several diets a chick could be assigned to, and its weight was measured over time as it grew up.\n\nThe experiment manipulated Diet as an independent variable.\nThe dependent variable was weight in grams, observed every two days.\n\n\nIf we want to create our own data frame, we can build one using data.frame().\n\ndata.frame(trial=c(1,2,3), dice_roll=c(12,3,7))\n\n  trial dice_roll\n1     1        12\n2     2         3\n3     3         7\n\n\nPutting it all together, let’s create a table containing 10000 datapoints of random age and biological sex and call it demographics.\n\nN &lt;- 10000\n\ndemographics &lt;- data.frame(\n  age = sample(18:90, N, replace=TRUE),\n  biosex = sample(factor(c(\"male\", \"female\")), N, replace=TRUE)\n)\n\nhead(demographics)\n\n  age biosex\n1  65 female\n2  39   male\n3  82 female\n4  88 female\n5  87   male\n6  21   male\n\n\nBecause this is uniformly random, we should expect even-looking plots.\n\nlibrary(ggplot2)\n\nggplot(demographics) +\n  geom_boxplot(aes(x=biosex, y=age))\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipDeliverables\n\n\n\nIf you can get this plot, that’s the final product for today! Turn in a screenshot of your full RStudio screen, including code and box-and-whisker plot on Blackboard with Classwork/Homework Assignment 2.\n\n\nIn future classes, we’ll discuss more sophisticated ways to look at, obtain, and simulate datasets.",
+    "crumbs": [
+      "Home",
+      "Lab Components",
+      "Understanding Types of Data"
+    ]
+  },
+  {
+    "objectID": "Labs/Lab04.html",
+    "href": "Labs/Lab04.html",
+    "title": "Descriptive Statistics",
+    "section": "",
+    "text": "This lab will build students’ skills orienting to unkown data and summarizing variables using the descriptive methods learned in class. Students will independently recapitulate the descriptive analysis exercise they performed in Lab 3 on three new datasets.",
+    "crumbs": [
+      "Home",
+      "Lab Components",
+      "Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "Labs/Lab04.html#loading-datasets-into-r",
+    "href": "Labs/Lab04.html#loading-datasets-into-r",
+    "title": "Descriptive Statistics",
+    "section": "Loading Datasets into R",
+    "text": "Loading Datasets into R\nWe will need to download the following datasets for today’s activity:\n\nDataset A\nDataset B\nDataset C\n\nDownload each file to your computer. You can load CSV datasets into R using the read_csv() tidyverse function. For example:\n# Load Lab04_DatasetA.csv into R and keep it in a variable named dataA.\ndataA &lt;- read_csv(\"/Users/Michael/Downloads/Lab04_DatasetA.csv\")\nNote that the file path will be different on your computer than shown here.\nIf you are on MacOS and you are unsure of the path to the dataset you have downloaded, hold the Option key and Right Click on the file. Select “Copy Full Path” from the context menu.",
+    "crumbs": [
+      "Home",
+      "Lab Components",
+      "Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "Labs/Lab07.html",
+    "href": "Labs/Lab07.html",
+    "title": "Z-Score, Z-Statistic, Z-Test",
+    "section": "",
+    "text": "Consider a population with known parameters. For example, the IQ score distribution.\n# Population parameters\nmu  &lt;- 100\nsigma &lt;- 10\nWith any random sample from that distribution (e.g. data we collected on some group), we learned previously how to calculate the standard error (SEM).\n# A random sample of 25 datapoints.\nn &lt;- 25\nx &lt;- rnorm(n, mu, sigma)\nxbar &lt;- mean(x)\nxbar\n\n[1] 102.1556\n\n# Standard Error of the Mean with Samples of n=25\nsem &lt;- sigma / sqrt(n)\nsem\n\n[1] 2\nWe can use this to calculate the 95% confidence interval around the estimate.\n# Using just our sample, the estimate of the true mean (95% CI)\nci &lt;- c(xbar - sem * 1.96, xbar + sem * 1.96)\nci\n\n[1]  98.23565 106.07565\nBecause \\(\\mu\\) is within the confidence interval, we conclude that the sample mean \\(\\bar x\\) is not significantly different from \\(\\mu\\).",
+    "crumbs": [
+      "Home",
+      "Lab Components",
+      "Z-Score, Z-Statistic, Z-Test"
+    ]
+  },
+  {
+    "objectID": "Labs/Lab07.html#the-z-test",
+    "href": "Labs/Lab07.html#the-z-test",
+    "title": "Z-Score, Z-Statistic, Z-Test",
+    "section": "The Z-Test",
+    "text": "The Z-Test\nWe can alternatively discuss our data in terms of the standard normal curve.\nTo do this, we need the Z-statistic (NOT the same as the Z-score). The Z-statistic tells us how far the sample mean is from the center of the sampling distribution (for n=25 here).\n\n\nThe Z-statistic is not the same as a z-score.\nWhere the z-score tells us the average difference between datapoints (\\(x_i\\)) and the sample mean (\\(\\bar x\\)) in units of the sample standard deviation (\\(s\\)), the Z-statistic tells us the difference between a given sample mean (\\(\\bar x\\)) and the center of the sampling distribution \\(\\mu\\) in units of the standard error (\\(\\sigma \\over \\sqrt n\\)).\nIn other words, the z-score is calculated on the datapoints of a sample, while the Z-statistic is calculated on a sample mean from the sampling distribution.\n\n# Z-Statistic: How far away is the sample mean from the population mean?\nZ &lt;- (mean(x) - mu) / sem\nZ\n\n[1] 1.077823\n\n\nAs the Z-statistic is less than \\(1.96\\), again we can see that we could not reject the null.",
+    "crumbs": [
+      "Home",
+      "Lab Components",
+      "Z-Score, Z-Statistic, Z-Test"
+    ]
+  },
+  {
+    "objectID": "Labs/Lab07.html#the-p-value",
+    "href": "Labs/Lab07.html#the-p-value",
+    "title": "Z-Score, Z-Statistic, Z-Test",
+    "section": "The p-Value",
+    "text": "The p-Value\nRecall that the p-value is the probability of obtaining a sample mean at least as extreme as what was observed, under the null hypothesis.\nBy default, the pnorm() function represents the area (probability) underneath a standard normal distribution curve (mean of \\(0\\), standard deviation of \\(1\\)). We can use this to calculate the p-value.\nWhere the null hypothesis \\(H_0\\) is that the sample is not different from the population,\n\np &lt;- 2 * (1 - pnorm(abs(Z))) # Technically, a two-tailed p-value.\np  \n\n[1] 0.281113\n\n\nHere, our p-value was \\(&gt;0.05\\). Where our decision threshold \\(\\alpha = 0.05\\), we would not reject the null hypothesis, and we would again conclude that the sample is not significantly different from the population.\nAn alternate method is to calculate the p-value directly.\n\np &lt;- 2 * (1 - pnorm(abs(xbar), mean = mu, sd = sem))\np\n\n[1] 0.281113\n\n\nQUESTION: What Z-statistic, p-value, and confidence interval did you obtain? Report for each one why you would reject or fail to reject the null hypothesis.\n\n\nCritical Values\nConsider that this is where the 68.3-95.4-99.7 rule comes from:\n\npnorm(1) - pnorm(-1) # One standard deviation\n\n[1] 0.6826895\n\npnorm(2) - pnorm(-2) # Two standard deviations\n\n[1] 0.9544997\n\npnorm(3) - pnorm(-3) # Three standard deviations\n\n[1] 0.9973002\n\n\nWe use \\(1.96\\) as a critical value for the 95% confidence interval because it comes out at nearly \\(0.95\\) exactly.\n\npnorm(1.96) - pnorm(-1.96)\n\n[1] 0.9500042\n\n\nQUESTION: What percent of the data is captured within 0.5 standard deviations?\n\n\nz-Scores\nSee the note above on why z-scored data is NOT the same as the Z-statistic of a sample. In R, we can calcualte the z-score in the way you might expect.\n\n# The z-score allows us to compare datapoints within a sample in standard deviation units.\nz &lt;- (x - mean(x)) / sd(x)\nz\n\n [1]  0.751067947  0.360610116 -0.715518966 -0.634075229  0.180021094\n [6]  0.717037337  0.205401203  1.128853827 -1.127175668 -0.413406038\n[11]  0.677888478  0.882502426 -2.138742912 -0.012367409  1.812048233\n[16] -0.914902898  0.263018488 -1.171546783  1.524180618  1.127777458\n[21] -0.986189416 -1.501922572  0.002028404  0.658370501 -0.674958238\n\n\nAn equivalent is to use the scale() function.\n\nscale(x)\n\n              [,1]\n [1,]  0.751067947\n [2,]  0.360610116\n [3,] -0.715518966\n [4,] -0.634075229\n [5,]  0.180021094\n [6,]  0.717037337\n [7,]  0.205401203\n [8,]  1.128853827\n [9,] -1.127175668\n[10,] -0.413406038\n[11,]  0.677888478\n[12,]  0.882502426\n[13,] -2.138742912\n[14,] -0.012367409\n[15,]  1.812048233\n[16,] -0.914902898\n[17,]  0.263018488\n[18,] -1.171546783\n[19,]  1.524180618\n[20,]  1.127777458\n[21,] -0.986189416\n[22,] -1.501922572\n[23,]  0.002028404\n[24,]  0.658370501\n[25,] -0.674958238\nattr(,\"scaled:center\")\n[1] 102.1556\nattr(,\"scaled:scale\")\n[1] 10.2604\n\n\nQUESTION: Can you z-score the population data, if it is known?\n\n\n\n\n\n\nTipDeliverables\n\n\n\nAnswer the questions above and upload your code and screenshot to Blackboard for lab credit today.",
+    "crumbs": [
+      "Home",
+      "Lab Components",
+      "Z-Score, Z-Statistic, Z-Test"
+    ]
+  },
+  {
+    "objectID": "Labs/Lab10.html",
+    "href": "Labs/Lab10.html",
+    "title": "Final Project Practice, ANOVA",
+    "section": "",
+    "text": "We’ll start today’s lab with the two small samples (\\(n=12\\)) of simulated reaction times.\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ lubridate 1.9.4     ✔ tibble    3.2.1\n✔ purrr     1.0.1     ✔ tidyr     1.3.0\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nset.seed(3493)\ns1 &lt;- rnorm(12, 624, 53)\ns2 &lt;- rnorm(12, 697, 53)\n\n\n\nThe set.seed() command sets R’s random number generator such that every student finds the same results using simulated data when the data are generated in the same order.\nFirst, demonstrate how to create a histogram of the sample. With a sample this small, even by changing the bin size would not help us see the underlying distribution.\n\nggplot() +\n  geom_histogram(aes(x=s1))\n\n`stat_bin()` using `bins = 30`. Pick better value `binwidth`.\n\n\n\n\n\nThe histogram of variable s1 is not very informative as only one value falls into each bin. Because we simulated these data, we know they are normally distributed, but we would need good rationale for this assumption in any real sample.\n\n\n\n\nStill, we can present barplots including our calculation of the standard error. This sort of summary plot may benefit your final project writeup. We will first arrange the statistics into a table for plotting with ggplot.\n\nsem_s1 &lt;- sd(s1) / sqrt(12)\nsem_s2 &lt;- sd(s2) / sqrt(12)\n\ndata_summary &lt;- data.frame(\n  group = c(\"Sample 1\", \"Sample 2\"),\n  mean_rt = c(mean(s1), mean(s2)),\n  sem     = c(sem_s1, sem_s2)\n)\ndata_summary\n\n     group  mean_rt      sem\n1 Sample 1 615.1042 12.54050\n2 Sample 2 711.4750 13.77661\n\nggplot(data_summary) +\n  geom_col(aes(x=group, y=mean_rt)) +\n  geom_errorbar(aes(x=group, ymax=mean_rt + sem, ymin=mean_rt - sem))\n\n\n\n\n\n\n\n\nNow let’s consider an experiment with three independent groups, varying by cups of coffee administered to participants.\n\nset.seed(3493)\nn &lt;- 50\ng_2cups &lt;- rnorm(n, 624, 53)\ng_1cups &lt;- rnorm(n, 697, 53)\ng_0cups &lt;- rnorm(n, 705, 53)\n\ncoffeedata &lt;- data.frame(\n  groups = rep(c(\"No Coffee\", \"One Cup\", \"Two Cups\"), each=n),\n  rt     = c(g_0cups, g_1cups, g_2cups)\n)\n\nhead(coffeedata)\n\n     groups       rt\n1 No Coffee 730.8818\n2 No Coffee 704.1046\n3 No Coffee 775.7930\n4 No Coffee 631.5704\n5 No Coffee 701.6245\n6 No Coffee 739.3005\n\n\nA shorthand of what we did above is to use summarize() to produce a shortened statistical table.\n\ntab &lt;- summarise(coffeedata, .by=groups, mean_rt=mean(rt), n=n())\ntab\n\n     groups  mean_rt  n\n1 No Coffee 709.3300 50\n2   One Cup 706.4325 50\n3  Two Cups 627.5218 50\n\n\nWe’ll produce a beeswarm plot in preparation to understand the ANOVA.\n\nggplot(coffeedata) +\n  geom_point(aes(x=groups, y=rt), position=position_jitter(.1, 0)) +\n  geom_point(aes(x=groups, y=mean_rt, color=groups), data=tab)\n\n\n\n\n\n\n\n\nFinally, we can run the ANOVA with R’s aov(). Running summary() on this produces the ANOVA table.\n\nresults &lt;- aov(rt ~ groups, data=coffeedata)\nsummary(results)\n\n             Df Sum Sq Mean Sq F value   Pr(&gt;F)    \ngroups        2 215464  107732   41.24 6.06e-15 ***\nResiduals   147 384000    2612                     \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\n\n\n\n\nNote that the leftover variance we’ve been referring to as the “error” is also called the residual variance, or the residuals of the model.\n Back to top",
+    "crumbs": [
+      "Home",
+      "Lab Components",
+      "Final Project Practice, ANOVA"
     ]
   },
   {

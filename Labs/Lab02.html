@@ -444,6 +444,12 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Testing/L30.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Repeated Measures ANOVA</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -518,6 +524,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../Labs/Lab08.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Making Decisions via the Sampling Distribution</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Labs/Lab10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Final Project Practice, ANOVA</span></a>
   </div>
 </li>
       </ul>
@@ -664,7 +676,7 @@ Levels: Ambidextrous Left-Handed Right-Handed</code></pre>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>), <span class="dv">25</span>, <span class="at">replace=</span><span class="cn">TRUE</span>)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 1 5 2 5 4 4 6 3 3 2 6 2 3 1 4 5 5 6 5 3 2 6 4 6 6</code></pre>
+<pre><code> [1] 1 3 5 6 2 3 6 2 5 4 3 2 2 1 2 4 1 1 3 2 6 4 3 3 4</code></pre>
 </div>
 </div>
 
@@ -683,8 +695,8 @@ Levels: Ambidextrous Left-Handed Right-Handed</code></pre>
 <span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>assignment</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] placebo   treatment treatment treatment treatment placebo   placebo  
- [8] placebo   placebo   treatment
+<pre><code> [1] placebo   placebo   treatment treatment placebo   placebo   treatment
+ [8] treatment placebo   treatment
 Levels: placebo treatment</code></pre>
 </div>
 </div>
@@ -743,12 +755,12 @@ Think for a moment and then click here to reveal an explanation.
 <span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(demographics)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  age biosex
-1  19 female
-2  37   male
-3  86   male
-4  48 female
-5  36   male
-6  39 female</code></pre>
+1  65 female
+2  39   male
+3  82 female
+4  88 female
+5  87   male
+6  21   male</code></pre>
 </div>
 </div>
 <p>Because this is uniformly random, we should expect even-looking plots.</p>
