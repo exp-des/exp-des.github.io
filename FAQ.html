@@ -8,7 +8,7 @@
 
 <meta name="author" content="Michael Pascale">
 
-<title>Final Project FAQ – Introduction to Experimental Design</title>
+<title>Final Project Frequently Asked Questions – Introduction to Experimental Design</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -66,6 +66,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./Labs/Lab01.html" rel="next">
+<link href="./Projects/Project02.html" rel="prev">
 <link href="./assets/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -360,7 +362,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Final Project FAQ</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Projects/Project01.html">Projects</a></li><li class="breadcrumb-item"><a href="./FAQ.html">FAQ / R Cookbook</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -446,13 +448,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
  <span class="menu-text">Projects</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Projects/Project01.html" class="sidebar-item-text sidebar-link">
@@ -463,6 +465,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="https://learn.bu.edu/ultra/courses/_261733_1/outline/assessment/test/_16762041_1?courseId=_261733_1&amp;gradeitemView=details" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data Analysis Report</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./FAQ.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">FAQ / R Cookbook</span></a>
   </div>
 </li>
       </ul>
@@ -549,23 +557,24 @@ window.Quarto = {
    
   <ul>
   <li><a href="#importing-data-files" id="toc-importing-data-files" class="nav-link active" data-scroll-target="#importing-data-files">Importing Data Files</a></li>
-  <li><a href="#summarizing-datasets" id="toc-summarizing-datasets" class="nav-link" data-scroll-target="#summarizing-datasets">Summarizing Datasets</a>
+  <li><a href="#descriptive-statistics" id="toc-descriptive-statistics" class="nav-link" data-scroll-target="#descriptive-statistics">Descriptive Statistics</a>
   <ul class="collapse">
-  <li><a href="#between-subjects-descriptive-statistics-table" id="toc-between-subjects-descriptive-statistics-table" class="nav-link" data-scroll-target="#between-subjects-descriptive-statistics-table">Between-Subjects Descriptive Statistics Table</a></li>
-  <li><a href="#within-subjects-descriptive-statistics-table" id="toc-within-subjects-descriptive-statistics-table" class="nav-link" data-scroll-target="#within-subjects-descriptive-statistics-table">Within-Subjects Descriptive Statistics Table</a></li>
+  <li><a href="#how-do-i-summarize-a-variable-by-group" id="toc-how-do-i-summarize-a-variable-by-group" class="nav-link" data-scroll-target="#how-do-i-summarize-a-variable-by-group">How do I summarize a variable by group?</a></li>
+  <li><a href="#how-do-i-summarize-a-variable-with-paired-samples" id="toc-how-do-i-summarize-a-variable-with-paired-samples" class="nav-link" data-scroll-target="#how-do-i-summarize-a-variable-with-paired-samples">How do I summarize a variable with paired samples?</a></li>
   </ul></li>
   <li><a href="#statistical-recipes" id="toc-statistical-recipes" class="nav-link" data-scroll-target="#statistical-recipes">Statistical Recipes</a>
   <ul class="collapse">
-  <li><a href="#z-tests" id="toc-z-tests" class="nav-link" data-scroll-target="#z-tests"><span class="math inline">\(Z\)</span> Tests</a></li>
-  <li><a href="#t-tests" id="toc-t-tests" class="nav-link" data-scroll-target="#t-tests"><span class="math inline">\(t\)</span> Tests</a></li>
-  <li><a href="#non-parametric-tests" id="toc-non-parametric-tests" class="nav-link" data-scroll-target="#non-parametric-tests">Non-Parametric Tests</a></li>
-  <li><a href="#one-way-anova" id="toc-one-way-anova" class="nav-link" data-scroll-target="#one-way-anova">One-Way ANOVA</a></li>
+  <li><a href="#how-do-i-run-a-z-test" id="toc-how-do-i-run-a-z-test" class="nav-link" data-scroll-target="#how-do-i-run-a-z-test">How do I run a <span class="math inline">\(Z\)</span> test?</a></li>
+  <li><a href="#how-do-i-run-a-t-test" id="toc-how-do-i-run-a-t-test" class="nav-link" data-scroll-target="#how-do-i-run-a-t-test">How do I run a <span class="math inline">\(t\)</span> test?</a></li>
+  <li><a href="#how-do-i-run-a-non-parametric-test" id="toc-how-do-i-run-a-non-parametric-test" class="nav-link" data-scroll-target="#how-do-i-run-a-non-parametric-test">How do I run a non-parametric test?</a></li>
+  <li><a href="#how-do-i-run-a-one-way-anova" id="toc-how-do-i-run-a-one-way-anova" class="nav-link" data-scroll-target="#how-do-i-run-a-one-way-anova">How do I run a one-way ANOVA?</a></li>
   </ul></li>
   <li><a href="#plot-recipes" id="toc-plot-recipes" class="nav-link" data-scroll-target="#plot-recipes">Plot Recipes</a>
   <ul class="collapse">
-  <li><a href="#histogram" id="toc-histogram" class="nav-link" data-scroll-target="#histogram">Histogram</a></li>
-  <li><a href="#bar-plot" id="toc-bar-plot" class="nav-link" data-scroll-target="#bar-plot">Bar Plot</a></li>
-  <li><a href="#beeswarm-plot" id="toc-beeswarm-plot" class="nav-link" data-scroll-target="#beeswarm-plot">Beeswarm Plot</a></li>
+  <li><a href="#how-do-i-make-a-histogram" id="toc-how-do-i-make-a-histogram" class="nav-link" data-scroll-target="#how-do-i-make-a-histogram">How do I make a histogram?</a></li>
+  <li><a href="#how-do-i-make-a-bar-plot" id="toc-how-do-i-make-a-bar-plot" class="nav-link" data-scroll-target="#how-do-i-make-a-bar-plot">How do I make a bar plot?</a></li>
+  <li><a href="#how-do-i-make-a-beeswarm-plot" id="toc-how-do-i-make-a-beeswarm-plot" class="nav-link" data-scroll-target="#how-do-i-make-a-beeswarm-plot">How do I make a beeswarm plot?</a></li>
+  <li><a href="#how-do-i-make-a-scatterplot" id="toc-how-do-i-make-a-scatterplot" class="nav-link" data-scroll-target="#how-do-i-make-a-scatterplot">How do I make a scatterplot?</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -574,9 +583,9 @@ window.Quarto = {
 <main class="content page-columns page-full" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Projects/Project01.html">Projects</a></li><li class="breadcrumb-item"><a href="./FAQ.html">FAQ / R Cookbook</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Final Project FAQ</h1>
+<h1 class="title">Final Project Frequently Asked Questions</h1>
 <p class="subtitle lead">R Code Reference for Various Statistics, Graphs, Etc.</p>
 </div>
 
@@ -627,11 +636,11 @@ window.Quarto = {
 <p>Note that the file path will be different on your computer than shown here.</p>
 </section>
 </section>
-<section id="summarizing-datasets" class="level2">
-<h2 class="anchored" data-anchor-id="summarizing-datasets">Summarizing Datasets</h2>
+<section id="descriptive-statistics" class="level2">
+<h2 class="anchored" data-anchor-id="descriptive-statistics">Descriptive Statistics</h2>
 <p>How you take the descriptive statistics for your dataset will depend on how the table is formatted. We’ve frequently worked with two common layouts, but it’s possible that you will need to do some <code>filter()</code>ing to get just the data relevant to your analysis.</p>
-<section id="between-subjects-descriptive-statistics-table" class="level3">
-<h3 class="anchored" data-anchor-id="between-subjects-descriptive-statistics-table">Between-Subjects Descriptive Statistics Table</h3>
+<section id="how-do-i-summarize-a-variable-by-group" class="level3">
+<h3 class="anchored" data-anchor-id="how-do-i-summarize-a-variable-by-group">How do I summarize a variable by group?</h3>
 <p>When calculating descriptives for a between-subjects study, you’ll need to report statistics for each group. Check whether the data is formatted like so:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data)</span></code></pre></div>
@@ -654,8 +663,8 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="within-subjects-descriptive-statistics-table" class="level3">
-<h3 class="anchored" data-anchor-id="within-subjects-descriptive-statistics-table">Within-Subjects Descriptive Statistics Table</h3>
+<section id="how-do-i-summarize-a-variable-with-paired-samples" class="level3">
+<h3 class="anchored" data-anchor-id="how-do-i-summarize-a-variable-with-paired-samples">How do I summarize a variable with paired samples?</h3>
 <p>Consider a within-subjects design with two timepoints. Each subject has one row in the dataset, with two columns for the variable of interest (one at each timepoint). Check whether the data is formatted like so:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data_within)</span></code></pre></div>
@@ -686,8 +695,8 @@ window.Quarto = {
 <section id="statistical-recipes" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="statistical-recipes">Statistical Recipes</h2>
 <p>The following “cookbook” shows how to compute various hypothesis tests with the builtin R commands. It is up to you to determine which test to use, which arguments to provide to the functions, and how to <em>interpret the results</em>.</p>
-<section id="z-tests" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="z-tests"><span class="math inline">\(Z\)</span> Tests</h3>
+<section id="how-do-i-run-a-z-test" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="how-do-i-run-a-z-test">How do I run a <span class="math inline">\(Z\)</span> test?</h3>
 <p>You’ll need to calculate the <span class="math inline">\(Z\)</span> statistic yourself as described in class.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>n     <span class="ot">&lt;-</span> <span class="fu">length</span>(data<span class="sc">$</span>score)  <span class="co"># number of datapoints in the sample</span></span>
@@ -716,8 +725,8 @@ window.Quarto = {
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
 <p>With all of the tests, you’ll need to consider which tail of the sampling distribution will produce the p-value appropriate for your alternative hypothesis. The calculation may look different depending on the direction of the expected effect.</p>
 </div></div></section>
-<section id="t-tests" class="level3">
-<h3 class="anchored" data-anchor-id="t-tests"><span class="math inline">\(t\)</span> Tests</h3>
+<section id="how-do-i-run-a-t-test" class="level3">
+<h3 class="anchored" data-anchor-id="how-do-i-run-a-t-test">How do I run a <span class="math inline">\(t\)</span> test?</h3>
 <p>All the Student’s <span class="math inline">\(t\)</span> tests for single samples, independent samples, paired samples, and Welch’s can be computed with <code>t.test(x)</code> or <code>t.test(x, y)</code>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(</span>
@@ -745,8 +754,8 @@ mean of x mean of y
 </div>
 </div>
 </section>
-<section id="non-parametric-tests" class="level3">
-<h3 class="anchored" data-anchor-id="non-parametric-tests">Non-Parametric Tests</h3>
+<section id="how-do-i-run-a-non-parametric-test" class="level3">
+<h3 class="anchored" data-anchor-id="how-do-i-run-a-non-parametric-test">How do I run a non-parametric test?</h3>
 <p>The Wilcoxon Sign-Rank and the Mann-Whitney U test are computed by <code>wilcox.test(x)</code> and <code>wilcox.test(x, y)</code>, respectively.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wilcox.test</span>(</span>
@@ -771,8 +780,8 @@ alternative hypothesis: true location shift is not equal to 0</code></pre>
 </div>
 </div>
 </section>
-<section id="one-way-anova" class="level3">
-<h3 class="anchored" data-anchor-id="one-way-anova">One-Way ANOVA</h3>
+<section id="how-do-i-run-a-one-way-anova" class="level3">
+<h3 class="anchored" data-anchor-id="how-do-i-run-a-one-way-anova">How do I run a one-way ANOVA?</h3>
 <p>A one-way ANOVA with 3 groups, computed <code>aov(score ~ group)</code>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">aov</span>(score <span class="sc">~</span> group, <span class="at">data =</span> data))</span></code></pre></div>
@@ -790,8 +799,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <section id="plot-recipes" class="level2">
 <h2 class="anchored" data-anchor-id="plot-recipes">Plot Recipes</h2>
 <p>You can use the following code snippets to plot data.</p>
-<section id="histogram" class="level3">
-<h3 class="anchored" data-anchor-id="histogram">Histogram</h3>
+<section id="how-do-i-make-a-histogram" class="level3">
+<h3 class="anchored" data-anchor-id="how-do-i-make-a-histogram">How do I make a histogram?</h3>
 <p>We’ve plotted many histograms for single groups. For multiple groups, you can <code>filter()</code> the data to plot separate histograms. Alternatively, you can use <code>facet_wrap()</code> as below to automatically split up the data.</p>
 <p>Don’t forget to choose an appropriate <code>binwidth</code>/<code>bins</code>.</p>
 <div class="cell" data-layout-align="center">
@@ -811,8 +820,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
 </section>
-<section id="bar-plot" class="level3">
-<h3 class="anchored" data-anchor-id="bar-plot">Bar Plot</h3>
+<section id="how-do-i-make-a-bar-plot" class="level3">
+<h3 class="anchored" data-anchor-id="how-do-i-make-a-bar-plot">How do I make a bar plot?</h3>
 <p>A bar plot can be used to visualize the means in each group. Set <code>fun=length</code> to plot the counts (<span class="math inline">\(n\)</span> per group) instead.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x=</span>group, <span class="at">y=</span>score)) <span class="sc">+</span></span>
@@ -828,8 +837,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
 </section>
-<section id="beeswarm-plot" class="level3">
-<h3 class="anchored" data-anchor-id="beeswarm-plot">Beeswarm Plot</h3>
+<section id="how-do-i-make-a-beeswarm-plot" class="level3">
+<h3 class="anchored" data-anchor-id="how-do-i-make-a-beeswarm-plot">How do I make a beeswarm plot?</h3>
 <p>A beeswarm plot can provide a nice visualization of every datapoint in every group.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x=</span>group, <span class="at">y=</span>score)) <span class="sc">+</span></span>
@@ -843,6 +852,27 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="FAQ_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="384"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="how-do-i-make-a-scatterplot" class="level3">
+<h3 class="anchored" data-anchor-id="how-do-i-make-a-scatterplot">How do I make a scatterplot?</h3>
+<p>A scatterplot can be used to visualize relationships between any two variables.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the correlation coefficient.</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(data_within<span class="sc">$</span>score_day1, data_within<span class="sc">$</span>score_day2)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.2365652</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a scatterplot demonstrating the correlation visually.</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data_within, <span class="fu">aes</span>(<span class="at">x=</span>score_day1, <span class="at">y=</span>score_day2)) <span class="sc">+</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="FAQ_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="288"></p>
 </figure>
 </div>
 </div>
@@ -1204,6 +1234,18 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./Projects/Project02.html" class="pagination-link" aria-label="Data Analysis Report">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Data Analysis Report</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./Labs/Lab01.html" class="pagination-link" aria-label="Getting Ready to Code">
+        <span class="nav-page-text">Getting Ready to Code</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
